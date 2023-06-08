@@ -28,3 +28,13 @@ Nuestro equipo está conformado por profesionales altamente capacitados y apasio
 2. Leonardo Garcia : (Edad: 30 , Povincia: Buenos Aires, Ciudad: Laferrere )
 3. Débora Escobar : (Edad: 34, Provincia: Buenos Aires, Ciudad: Monte Grande)
 4. Rodrigo Hidalgo : (Edad: 24, Ciudad: Mendoza, Capital)
+
+## Se realizo una búsqueda de sitios similares, relacionados o que sean de interés para el proyecto:
+
+1. Por los productos o servicios que ofrecen:
+
+2. Por los clientes a los que apuntan:
+
+3. Por la estética que presentan:
+
+4. Por las funcionalidades implementadas:
