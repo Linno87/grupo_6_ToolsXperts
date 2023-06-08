@@ -36,5 +36,7 @@ Nuestro equipo está conformado por profesionales altamente capacitados y apasio
 2. Por los clientes a los que apuntan:
 
 3. Por la estética que presentan:
+    -https://www.bahco.com/ar_es/home , la manera en que se muestran los articulos
+    -https://www.makita.com.ar/ gama de colores utilizada
 
 4. Por las funcionalidades implementadas:
