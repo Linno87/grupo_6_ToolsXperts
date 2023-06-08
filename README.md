@@ -31,9 +31,13 @@ Nuestro equipo está conformado por profesionales altamente capacitados y apasio
 
 ## Se realizo una búsqueda de sitios similares, relacionados o que sean de interés para el proyecto:
 
-1. Por los productos o servicios que ofrecen:
+1. Links de los productos o servicios que ofrecen paginas como:
+- https://www.bahco.com/ar_es/home
+- https://ar.blackanddecker.global/
+- https://www.tiendanext.com.ar/
 
-2. Por los clientes a los que apuntan:
+2. Links de los clientes a los que apuntan paginas como:
+-https://ar.blackanddecker.global/ideas-inspiracion
 
 3. Por la estética que presentan:
 
