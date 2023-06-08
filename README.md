@@ -44,3 +44,12 @@ Nuestro equipo está conformado por profesionales altamente capacitados y apasio
     -https://www.makita.com.ar/ gama de colores utilizada
 
 4. Por las funcionalidades implementadas:
+
+- https://www.wahlargentina.com/detailer-cordless-li/p
+El menu que se despliega se visualiza con proligidad en cuanto a tipo de letra e iluminación en un color agradable al tocar cada itens.
+La visivilidad de las imagenes del producto se pueden apreciar mediante una lupa.
+Se pueden seleccionar las imagenes con la totalidad de productos.
+Al seleccionar la lupa se destaca del resto de la página.
+Al agregar algo al carrito, se despliega del lado derecho el producto cargado con el detalle del precio sin tener que cambiar de página, al menos que alla terminado de comprar.
+
+- https://ar.dewalt.global/productos/herramientas-electricas/taladros
