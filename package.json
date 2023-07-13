@@ -1,0 +1,16 @@
+{
+  "name": "grupo_6_proyectointegrador",
+  "version": "1.0.0",
+  "description": "Nuestro e-commerce ofrecerá una amplia variedad de productos y servicios en diferentes categorías. Estas categorías incluirán:",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start":"node app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "Express": "^3.0.1"
+  }
+}
