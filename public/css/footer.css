@@ -1,12 +1,11 @@
 footer article div img{   
     background-color: var(--celesteclaro);
 }
-.footer__caja-boton{
 
-}
 .footer__caja-boton-a{
-     color: white;
+  color: white;
   font-family: var(--tipodeletra); 
+  background-color: crimson;
 }
 p{
     font-family: var(--tipodeletra);

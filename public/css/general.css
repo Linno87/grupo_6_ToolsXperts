@@ -5,9 +5,9 @@
 }
 
 :root{
-    --celeste: var('457B9D');
-    --celeste-claro:var('A8DADC');
-    --rojo: var('E63946');
-    --azul: var('1D3557');
+    --celeste: #457B9D;
+    --celeste-claro:#A8DADC;
+    --rojo: #E63946;
+    --azul: #1D3557;
     --tipodeletra: var('Montserrat', 'sans-serif';)
 }
