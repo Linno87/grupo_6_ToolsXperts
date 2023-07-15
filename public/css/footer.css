@@ -1,3 +1,19 @@
-.footer__logo{
-    width: 50px;
+footer article div img{   
+    background-color: var(--celesteclaro);
+}
+.footer__caja-boton{
+
+}
+.footer__caja-boton-a{
+     color: white;
+  font-family: var(--tipodeletra); 
+}
+p{
+    font-family: var(--tipodeletra);
+    font-weight: 400;
+}
+h3{
+    font-family: var(--tipodeletra); 
+    font-weight: 700;
+    background-color: aqua;
 }
