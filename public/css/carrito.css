@@ -118,10 +118,6 @@
   .carrito__main__section__div-productos img {
     width: 70%;
   }
-
-  .carrito__main__botones {
-    
-  }
 }
 
 @media (min-width: 1024px) {
