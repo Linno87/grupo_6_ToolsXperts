@@ -36,8 +36,57 @@
   margin-bottom: 15px;
 }
 
-.boton__general {
-    margin-bottom: 180px;
+/* CARRITO CON PRODUCTOS */
+
+.carrito__main__section__div-producto {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: var(--AzulOscuro);
+  border-radius: 20px;
+  margin: 20px 0;
+}
+
+.carrito__main__section__div-producto img {
+  width: 100%;
+}
+.carrito__main__section__div-tarjeta {
+  background-color: var(--GrisClaro);
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  padding: 20px;
+  width: 100%;
+}
+
+.carrito__main__botones {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px;
+}
+
+.carrito__main_titulo_producto {
+  color: black;
+  font-size: 1.7rem;
+}
+
+.carrito__main__descripcion_producto {
+  color: black;
+  padding: 5px 0;
+}
+
+.carrito__main__precio_producto {
+  color: black;
+}
+
+.carrito__main__unidad__producto {
+  margin: 10px 0;
+}
+
+.carrito__main__unidad__producto label {
+  color: black;
+}
+
+.carrito__main__unidad__producto select {
+  width: 60%;
 }
 
 @media (min-width: 768px) {
@@ -46,21 +95,48 @@
     margin: 120px 0 30px;
   }
 
-  .carrito__main__section__div-article button {
-    font-size: 1rem;
-    margin-bottom: 180px;
+  /* PRODUCTOS */
+
+  .carrito__main__section__div-producto {
+    width: 46%;
+    margin: 2%;
+  }
+
+  .carrito__main__section__div-tarjeta {
+    margin: 0;
+    padding: 10px;
+  }
+
+  .carrito__main__producto {
+    text-align: left;
+  }
+
+  .carrito__main__precio_producto {
+    text-align: end;
+  }
+
+  .carrito__main__section__div-productos img {
+    width: 70%;
+  }
+
+  .carrito__main__botones {
+    
   }
 }
 
 @media (min-width: 1024px) {
-    .carrito__main__section__div-article-texto {
-      font-size: 2rem;
-      margin: 180px 0 30px;
-    }
-  
-    .carrito__main__section__div-article button {
-      font-size: 1.7rem;
-      border-radius: 30px;
-      margin-bottom: 170px;
-    }
+  .carrito__main__section__div-article {
+    display: none;
   }
+
+  .carrito__main__section__div-article-texto {
+    font-size: 2rem;
+    margin: 180px 0 30px;
+  }
+
+  /* PRODUCTOS */
+
+  .carrito__main__section__div-producto {
+    width: 29%;
+  }
+}
