@@ -63,6 +63,17 @@
   margin: 20px;
 }
 
+.btn_compras {
+  border: solid 2px var(--Rojo);
+  font-weight: 600;
+}
+
+.btn_compras:hover{
+  border: solid 2px var(--Rojo);
+  color: var(--Rojo);
+  background-color: var(--AzulOscuro);
+}
+
 .carrito__main_titulo_producto {
   color: black;
   font-size: 1.7rem;
