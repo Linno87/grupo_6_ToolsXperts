@@ -6,15 +6,14 @@ const app = express();
 
 app.use(express.static("public"));
 
-<<<<<<< HEAD
-app.get("/", (req, res) => {
+app.get("/login", (req, res) => {
     res.sendFile(path.join(__dirname,"views","login.html"))
 })
-=======
+
 app.get("/", (req, res) =>
   res.sendFile(path.join(__dirname, "views", "index.html"))
 );
->>>>>>> develop
+
 
 app.get("/detalle", (req, res) =>
   res.sendFile(path.join(__dirname, "views", "detalle.html"))
