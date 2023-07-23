@@ -126,11 +126,6 @@ a.footer__caja-boton-padre {
 
 }
 
-/* main de prueba */
-main {
-    height: 50vh;
-}
-
 /* -----------VISTA TABLET------------- */
 
 @media(min-width:768px) {
