@@ -1,18 +1,116 @@
-footer article div img{   
-    background-color: var(--celesteclaro);
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: var(--AzulClaro);
+    color: #ffffff;
+    padding: 40px;
+    text-align: center;
 }
 
-.footer__caja-boton-a{
-  color: white;
-  font-family: var(--tipodeletra); 
-  background-color: crimson;
+hr {
+    display: flex;
+    padding-left: 0 20px;
+    justify-content: center;
+    align-items: center;
+    border: solid 2px white;
+    width: 250px;
 }
-p{
-    font-family: var(--tipodeletra);
-    font-weight: 400;
+
+footer a {
+    text-decoration: none;
+    color: #ffffff;
+    display: block;
+}
+footer a, footer p {
+   letter-spacing: 1px;
+}
+
+.footer__caja-logo {
+    padding: 5px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.footer__caja-logo img {
+    width: 90%;
+}
+
+.footer__article-contenedor {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+}
+
+.footer__article-contenedor .contactanos {
+    text-decoration: underline;
+}
+
+.footer__article-contenedor a,
+.footer__article-contenedor p {
+    margin: 5px auto;
+    margin-bottom: 0;
+}
+.footer__article-contenedor a{
+    font-family: var(--tipografia02);
+    font-size: 900;
+}
+
+footer hr {
+    width: 100%;
+}
+
+.footer__article-contenedor-suscribite {
+    padding: 100px;
+}
+
+.footer__article-contenedor-suscribite a {}
+
+.footer__article-contenedor-seguinos-redes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 10px 0;
+
+}
+.footer__article-contenedor-seguinos-redes a i {
+    border-radius: 50%;
+    font-size: 40px;
+  
+}
+.footer__article-contenedor-seguinos-redes .face{
+    margin-left: -20px;
+}
+
+.footer__caja-boton-padre {
+    background-color: var(--AzulClaro);
+    width: 150px;
+    text-align: center;
+    border: solid 4px white;
+    border-radius: 35px;
+    padding: 10px 30px;
+    gap: 30px;
+    color: white;
+    font-family: var(--tipografia02);
+    font-size: 900;
+}
+
+.footer__caja-boton-padre:hover {
+    background-color: #022d47;
+    transition: all 3000ms;
+}
+hr{
+    margin: 10px 0;
 }
 h3{
-    font-family: var(--tipodeletra); 
-    font-weight: 700;
-    background-color: aqua;
+   font-family:var(--tipografia02);
+   color:var(--Celeste);
+   font-size: 900;
+
 }
+
+/* main de prueba */
+    main{
+        height: 50vh;
+    }
