@@ -4,8 +4,6 @@ const path = require('path');
 const PORT= 3030;
 const app = express();
 
-
-
 app.use(express.static("public"));
 
 app.get("/", (req, res) =>
