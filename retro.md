@@ -15,7 +15,7 @@ Los principales objetivos de esta retrospectiva son:
 2. Hacer más: Practicas en grupo para tener un mejor rendimiento
 3. Empezar a hacer: Reuniones cortas, investigasion de herramientas para programar
 4. Hacer menos: procrastinar tareas del sprint
-5. Reuniones muy largas
+5. Dejar de hacer: Reuniones muy largas
 
 ## Cierre de la restropectiva
 
