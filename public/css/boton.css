@@ -1,4 +1,4 @@
-/* .boton__general {
+.boton__general {
   background: var(--Rojo);
   border: solid 1px var(--Rojo);
   border-radius: 15px;
@@ -7,7 +7,3 @@
   color: white;
   text-transform: uppercase;
 }
-
-.boton__Footer {
-}
- */

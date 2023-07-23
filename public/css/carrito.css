@@ -1,0 +1,145 @@
+.carrito__main__section {
+  text-align: center;
+  background-color: var(--AzulTransparente);
+  border-radius: 20px;
+  color: white;
+  width: 90%;
+  height: 90%;
+  padding: 10px;
+  margin-top: 30px;
+}
+
+.carrito__main__section__div {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.carrito__main__section__div h3 {
+  width: 100%;
+  text-align: initial;
+  border-bottom: solid 1px white;
+}
+
+.carrito__main__section__div-article {
+  width: 100%;
+}
+
+.carrito__main__section__div-article-texto {
+  margin-top: 145px;
+}
+
+.carrito__main__section__div-article h4 {
+  margin: 15px;
+}
+
+.carrito__main__section__div-article p {
+  margin-bottom: 15px;
+}
+
+/* CARRITO CON PRODUCTOS */
+
+.carrito__main__section__div-producto {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: var(--AzulOscuro);
+  border-radius: 20px;
+  margin: 20px 0;
+}
+
+.carrito__main__section__div-producto img {
+  width: 100%;
+}
+.carrito__main__section__div-tarjeta {
+  background-color: var(--GrisClaro);
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  padding: 20px;
+  width: 100%;
+}
+
+.carrito__main__botones {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px;
+}
+
+.btn_compras {
+  border: solid 2px var(--Rojo);
+  font-weight: 600;
+}
+
+.btn_compras:hover{
+  border: solid 2px var(--Rojo);
+  color: var(--Rojo);
+  background-color: var(--AzulOscuro);
+}
+
+.carrito__main_titulo_producto {
+  color: black;
+  font-size: 1.7rem;
+}
+
+.carrito__main__descripcion_producto {
+  color: black;
+  padding: 5px 0;
+}
+
+.carrito__main__precio_producto {
+  color: black;
+}
+
+.carrito__main__unidad__producto {
+  margin: 10px 0;
+}
+
+.carrito__main__unidad__producto label {
+  color: black;
+}
+
+.carrito__main__unidad__producto select {
+  width: 60%;
+}
+
+@media (min-width: 768px) {
+  .carrito__main__section__div-article-texto {
+    font-size: 1.5rem;
+    margin: 120px 0 30px;
+  }
+
+  /* PRODUCTOS */
+
+  .carrito__main__section__div-producto {
+    width: 46%;
+    margin: 2%;
+  }
+
+  .carrito__main__section__div-tarjeta {
+    margin: 0;
+    padding: 10px;
+  }
+
+  .carrito__main__producto {
+    text-align: left;
+  }
+
+  .carrito__main__precio_producto {
+    text-align: end;
+  }
+
+  .carrito__main__section__div-productos img {
+    width: 70%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .carrito__main__section__div-article-texto {
+    font-size: 2rem;
+    margin: 180px 0 30px;
+  }
+
+  /* PRODUCTOS */
+
+  .carrito__main__section__div-producto {
+    width: 29%;
+  }
+}
