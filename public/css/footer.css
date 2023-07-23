@@ -1,0 +1,201 @@
+/* footer */
+footer {
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: var(--AzulClaro);
+    padding: 30px;
+    text-align: center;
+}
+
+/* LINEA DE SEPARACIÓN */
+
+footer hr {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: solid 2px rgb(255, 255, 255);
+
+}
+
+footer a,
+footer p {
+    text-decoration: none;
+    color: #ffffff;
+    display: block;
+    letter-spacing: 0.5px;
+    margin: 1.5px auto;
+    margin-bottom: 0;
+    font-family: var(--tipografia02);
+}
+
+
+.footer__caja-logo {
+    padding: 5px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+/* IMG DEL LOGO */
+.footer__caja-logo img {
+    width: 100%;
+}
+
+
+/* CAJA AYUDA Y SUSCRIBITE */
+.footer__article-contenedor {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+/* SEPARACIÓN DE LAS P Y EL BOTÓN */
+.footer__article-contenedor p {
+    padding-top: 10px;
+}
+
+/* PALABRA CONTACTANOS */
+.footer__article-contenedor .contactanos {
+    text-decoration: underline;
+}
+
+.footer__article-contenedor-suscribite {
+    padding: 10px;
+}
+
+
+.footer__article-contenedor-seguinos-redes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding-bottom: 15px;
+
+}
+
+ .footer__article-contenedor-seguinos-redes a i {
+    font-size: 40px;
+} 
+
+.footer__article-contenedor-seguinos-redes .face {
+    margin-left: -20px;
+}
+
+.sus-01 {
+    padding: 0 10px;
+}
+
+/* ESPACIO IZQ. BOTÓN DE SUSCRIBITE */
+a.footer__caja-boton-padre {
+    padding: 10px 20px;
+}
+
+/* PESO DE LETRA CONTACTANOS */
+.contactanos {
+    font-weight: 700;
+}
+
+
+.footer__caja-boton-padre {
+    background-color: var(--AzulClaro);
+    width: 170px;
+    text-align: center;
+    border: solid 4px white;
+    border-radius: 35px;
+    padding: 10px 30px;
+    color: white;
+    font-family: var(--tipografia02);
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+.footer__caja-boton-padre:hover {
+    background-color: #022d47;
+    transition: all 3000ms;
+}
+
+.footer__article-contenedor-ayuda h3{
+    font-family: var(--tipografia02);
+    color: var(--Celeste);
+    font-weight: 900;
+    font-size: 1.5rem;
+    padding: 15px;
+    margin-bottom: 20px;
+
+}
+
+/* main de prueba */
+main {
+    height: 50vh;
+}
+
+/* -----------VISTA TABLET------------- */
+
+@media(min-width:768px) {
+
+    footer {
+        padding: 15px;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+    }
+
+    footer hr {
+        width: auto;
+    }
+
+    /* PARA QUE SE ACOMODE VERTICALMENTE LA ESCRITURA */
+    .footer__article-p {
+        padding: 10px;
+    }
+
+    /* IMG DEL LOGO */
+    .footer__caja-logo img {
+        width: 60%;
+    }
+
+
+
+    .footer__article-contenedor,
+    .footer__article-contenedor-suscribite,
+    .footer__article-contenedor-ayuda {
+        padding: 0 2px;
+        width: 30%;
+
+    }
+    .footer__article-contenedor-seguinos-redes {
+        display: flex;
+        justify-content: space-between;
+        padding: 5px;
+        font-size: 40px;
+    } 
+
+  
+
+    .footer__article-contenedor-seguinos-redes .face {
+        margin-left: -7px;
+    }
+    .footer__article-contenedor-ayuda h3{
+   
+        font-weight: 800;
+        font-size:1.8rem;
+    
+    }}
+
+    /* ACÁ COMIENZA DESKTOP */
+    @media(min-width:1024px){
+
+  .footer__article-contenedor-seguinos-redes{
+        padding-bottom: 40px;
+    }
+
+    .footer__article-contenedor-seguinos-redes a i {
+        font-size: 55px;
+    } 
+    
+    }
+
+

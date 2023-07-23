@@ -8,7 +8,8 @@
     --Rojo: #e63946;
   
     /* Tiopografia */
-    --tipografiaGeneral: "Montserrat";
+    --tipografiaGeneral: "Montserrat" sans-serif;
+    --tipografía02: "Montserrat", sans-serif;
   }
   
   * {
