@@ -1,20 +1,23 @@
 :root {
-    /* Paleta de colores */
-    --AzulOscuro: #1d3557;
-    --AzulTransparente: #1d355780;
-    --AzulClaro: #457b9d;
-    --Celeste: #a8dadc;
-    --GrisClaro: #f1faee;
-    --Rojo: #e63946;
-  
-    /* Tiopografia */
-    --tipografiaGeneral: "Montserrat";
-  }
-  
-  * {
-    font-family: var(--tipografiaGeneral);
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
-  
+  /* Paleta de colores */
+  --AzulOscuro: #1d3557;
+  --AzulTransparente: #1d355780;
+  --AzulClaro: #457b9d;
+  --Celeste: #a8dadc;
+  --GrisClaro: #f1faee;
+  --Rojo: #e63946;
+
+  /* Tiopografia */
+  --tipografiaGeneral: "Montserrat";
+}
+
+* {
+  font-family: var(--tipografiaGeneral);
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 0;
+}
+
+a{
+  text-decoration: none;
+}
