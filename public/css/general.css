@@ -8,7 +8,7 @@
     --Rojo: #e63946;
   
     /* Tiopografia */
-    --tipografiaGeneral: "Montserrat" sans-serif;
+    --tipografiaGeneral: "Montserrat";
   }
   
   * {
@@ -17,3 +17,4 @@
     margin: 0;
     padding: 0;
   }
+  
