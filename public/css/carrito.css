@@ -121,10 +121,6 @@
 }
 
 @media (min-width: 1024px) {
-  .carrito__main__section__div-article {
-    display: none;
-  }
-
   .carrito__main__section__div-article-texto {
     font-size: 2rem;
     margin: 180px 0 30px;
