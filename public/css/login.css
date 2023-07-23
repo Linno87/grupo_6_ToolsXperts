@@ -42,7 +42,8 @@
 }
 
 .login_main_form_inp_box input:invalid{
-    border: solid 3px red;
+    border: solid 3px var(--Rojo);
+    background-color: var(--Rojo);
 }
 .login_main_form_inp_box input:valid{
     border:  solid 3px rgb(12, 252, 12);
@@ -57,11 +58,12 @@
     text-transform: capitalize;
     font-weight: 600;
     padding: 5px 30px;
+    border: solid 2px var(--Rojo);
 }
 
 .btn_login:hover{
-    border: solid 2px red;
-    color: red;
+    border: solid 2px var(--Rojo);
+    color: var(--Rojo);
     background-color: var(--AzulTransparente);
 }
 
@@ -83,6 +85,7 @@
     font-size: 31px;
     margin-top: -3px;
     margin-left: -1px;
+    color: var(--Rojo);
 }
 .login_main {
     
