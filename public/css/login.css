@@ -12,7 +12,8 @@
     padding: 13px;
 
 }
-.login_main_form_box h1{font-weight: 700;}
+.login_main_form_box h1{
+    font-weight: 700;}
 .login_main_form_box{
     text-align: center;
     border-radius: 22px;
@@ -39,6 +40,7 @@
     opacity: 25%;
     width: 100%;
 }
+
 .login_main_form_inp_box input:invalid{
     border: solid 3px red;
 }
@@ -52,10 +54,15 @@
 }
  
 .btn_login{
-    width: 102px;
     text-transform: capitalize;
-    text-align: center;
     font-weight: 600;
+    padding: 5px 30px;
+}
+
+.btn_login:hover{
+    border: solid 2px red;
+    color: red;
+    background-color: var(--AzulTransparente);
 }
 
 .login_main_redes{
@@ -67,13 +74,13 @@
 .login_main_redes a{
     background-color: #ffffff;
     border-radius: 53%;
-    height: 25px;
+    height: 26px;
     width: 25px;
     margin-left: 0px;
 }
 
 .login_main_redes i{
-    font-size: 30px;
+    font-size: 31px;
     margin-top: -3px;
     margin-left: -1px;
 }
@@ -84,7 +91,7 @@
     margin: 1rem;
 }
 
-@media (min-width:321px){
+@media (min-width:361px){
     .login_main_form_box{
          padding: 50px;
          padding-top: 70px;
@@ -94,6 +101,9 @@
         padding: 13px 61px;
         font-size: 29px;
         }
+    .btn_login {
+    padding: 5px 50px;
+    }
 }
 
 @media (min-width:769px){
@@ -132,11 +142,11 @@
     }
    
     .login_main_form{
-        padding: 3rem 13px;
-        font-size: 29px;
+        padding: 2rem 13px;
     }
     .login_main_form_box{
     width: 50%;
     padding: 50px;
     }
+   
 }
