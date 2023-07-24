@@ -7,5 +7,6 @@ const app = express();
 
 app.use(express.static("public"));
 
+app.get("/header",(req,res)=> res.sendFile(path.join(__dirname,"views", "header.html")))
 
 app.listen(PORT, () => { console.log(`Server listening on http://localhost:${PORT}`)})
