@@ -4,8 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="/css/styles.css" rel="stylesheet">
     <script src="https://kit.fontawesome.com/4a01fa7cad.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <link href="/css/styles.css" rel="stylesheet">
+
     <title>footer | detalle</title>
 </head>
 
@@ -14,23 +16,41 @@
         <section class="detalle__section-00">
 
             <article class="detalle__section-article-01">
-                <a href="#"><i class="far fa-heart"></i>Agregar a mis favoritos.</a>
+                
 
                 <div class="detalle__section-article-01-carousel">
-                    <div class="glider-contain">
-                        <div class="glider">
-                            <div><img src="/img/AMOLADORAS/9002-removebg-preview.png" alt=""></div>
-                            <div> <img src="/img/AMOLADORAS/AA2KB-removebg-preview.png" alt=""></div>
-                            <div> <img src="/img/AMOLADORAS/AA75B-removebg-preview.png" alt=""></div>
-                            <div> <img
-                                    src="/img/AMOLADORAS/gws91251-ed337eefab658875b316551254204038-640-0-removebg-preview (1).png"
-                                    alt=""></div>
-                        </div>
 
-                        <button aria-label="Previous" class="glider-prev">«</button>
-                        <button aria-label="Next" class="glider-next">»</button>
-                        <div role="tablist" class="dots"></div>
-                    </div>
+                    <div class="swiper mySwiper">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide">
+                            <div>
+                                <img src="/img/AMOLADORAS/9002-removebg-preview.png" alt="">
+                                <a href="#"><i class="far fa-heart"></i>Agregar a mis favoritos.</a>
+                            </div>
+                            
+                          </div>
+                          <div class="swiper-slide">
+                            <img src="/img/AMOLADORAS/AA2KB-removebg-preview.png" alt="">
+                            <a href="#"><i class="far fa-heart"></i>Agregar a mis favoritos.</a>
+
+                          </div>
+                          <div class="swiper-slide">
+                            <img src="/img/AMOLADORAS/AA75B-removebg-preview.png" alt="">
+                            <a href="#"><i class="far fa-heart"></i>Agregar a mis favoritos.</a>
+
+                          </div>
+                          <div class="swiper-slide">
+                            <img src="/img/AMOLADORAS/gws91251-ed337eefab658875b316551254204038-640-0-removebg-preview (1).png" alt="">
+                            <a href="#"><i class="far fa-heart"></i>Agregar a mis favoritos.</a>
+
+                          </div>
+                      
+                        </div>
+                        <div class="swiper-pagination"></div>
+                        <div class="swiper-button-next arrow-next"></div>
+                        <div class="swiper-button-prev"></div>
+                      </div>
+                
                 </div>
             </article>
 
@@ -78,14 +98,15 @@
                 </div>
             </article>
 
-            <article class="detalle__section-article-06">
+            <article class="detalle__section-article-01">
                 <h1>Productos relacionados</h1>
                 <div class="detalle__section-article-02-carousel">
-                    <div class="glider-contain" id="related-products">
-                        <div class="glider recomendados">
 
+                    <div class="swiper mySwiper2">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide">
                             <div class="card_recomendados">
-                                <img src="/img/LIJADORAS/LBP-80-removebg-preview.png" alt="#">
+                                <img width="100%" src="/img/LIJADORAS/LBP-80-removebg-preview.png" alt="#">
 
                                 <div class="descripcion_recomendados">
                                     <h5>30%</h5>
@@ -94,94 +115,112 @@
                                 </div>
 
                             </div>
-                            <div><img src="/img/LIJADORAS/LOR200-removebg-preview.png" alt="#"></div>
-                            <div><img src="/img/CALADORAS/4550-removebg-preview.png" alt="#"></div>
-                            <div><img src="/img/LIJADORAS/LBP-80-removebg-preview.png" alt="#"></div>
-                            <div><img src="/img/LIJADORAS/LOR200-removebg-preview.png" alt="#"></div>
-                            <div><img src="/img/CALADORAS/4550-removebg-preview.png" alt="#"></div>
-                            <button aria-label="Previous" class="glider-prev">«</button>
-                            <button aria-label="Next" class="glider-next">»</button>
-                            <div role="tablist" class="dots"></div>
+                            
+                          </div>
+                          <div class="swiper-slide">
+                            <div class="card_recomendados">
+                                <div><img width="100%" src="/img/LIJADORAS/LOR200-removebg-preview.png" alt="#"></div>
+
+                                <div class="descripcion_recomendados">
+                                    <h5>30%</h5>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum, ex?</p>
+                                    <a href="">Ver Producto</a>
+                                </div>
+
+                            </div>
+
+                          </div>
+                          <div class="swiper-slide">
+                            <div class="card_recomendados">
+                                <div><img width="100%" src="/img/CALADORAS/4550-removebg-preview.png" alt="#"></div>
+
+                                <div class="descripcion_recomendados">
+                                    <h5>30%</h5>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum, ex?</p>
+                                    <a href="">Ver Producto</a>
+                                </div>
+
+                            </div>
+
+                          </div>
+                          <div class="swiper-slide">
+                            <div class="card_recomendados">
+                                <div><img width="100%" src="/img/CALADORAS/4550-removebg-preview.png" alt="#"></div>
+
+                                <div class="descripcion_recomendados">
+                                    <h5>30%</h5>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum, ex?</p>
+                                    <a href="">Ver Producto</a>
+                                </div>
+
+                            </div>
+
+                          </div>
+                      
                         </div>
-                    </div>
+                        <div class="swiper-pagination"></div>
+                        <div class="swiper-button-next arrow-next"></div>
+                        <div class="swiper-button-prev"></div>
+                      </div>
+
             </article>
         </section>
     </main>
-    <script src="/js/glider.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <script>
-        window.addEventListener("load", function () {
-            new Glider(document.querySelector(".glider"), {
-                slidesToShow: 1,
-                dots: '.dots',
-                arrows: {
-                    prev: '.glider-prev',
-                    next: '.glider-next'
-                },
-                draggable: true,
-                responsive: [
-                    {
-                        // screens greater than >= 775px
-                        breakpoint: 768,
-                        settings: {
-                            // Set to `auto` and provide item width to adjust to viewport
-                            slidesToShow: 1,
-                            slidesToScroll: 1,
-                            duration: 0.90,
-                            itemWidth: 50,
+ var swiper = new Swiper(".mySwiper", {
+      slidesPerView: 1,
+      spaceBetween: 10,
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      breakpoints: {
+        640: {
+          slidesPerView: 2,
+          spaceBetween: 20,
+        },
+        768: {
+          slidesPerView: 2,
+          spaceBetween: 40,
+        },
+        1024: {
+          slidesPerView: 3,
+          spaceBetween: 50,
+        },
+      },
+    });
 
-                        }
-                    }, {
-                        // screens greater than >= 1024px
-                        breakpoint: 1024,
-                        settings: {
-                            slidesToShow: 1,
-                            slidesToScroll: 1,
-                            duration: 0.25,
-
-
-                        }
-                    }
-                ]
-            });
-        });
-        new Glider(document.getElementById("related-products").querySelector(".glider"), {
-
-            slidesToShow: 2.5,
-            dots: '.dots',
-            arrows: {
-                prev: '.glider-prev',
-                next: '.glider-next'
-            },
-            draggable: true,
-            responsive: [
-                {
-                    breakpoint: 768,
-                    settings: {
-                        slidesToShow: 1,
-                        slidesToScroll: 1,
-                        duration: 0.90,
-                        itemWidth: 50,
-                    }
-                }, {
-                    breakpoint: 1024,
-                    settings: {
-                        slidesToShow: 1,
-                        slidesToScroll: 1,
-                        duration: 0.25,
-                    }
-                }
-            ]
-        });
-            /*  new Glider(document.querySelector('.glider'), {
-     slidesToScroll: 1,
-     slidesToShow: 5.5,
-     draggable: true,
-     dots: '.dots',
-     arrows: {
-         prev: '.glider-prev',
-         next: '.glider-next'
-     }
- }); */
+    var swiper2 = new Swiper(".mySwiper2", {
+      slidesPerView: 1,
+      spaceBetween: 10,
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      breakpoints: {
+        640: {
+          slidesPerView: 2,
+          spaceBetween: 20,
+        },
+        768: {
+          slidesPerView: 2,
+          spaceBetween: 40,
+        },
+        1024: {
+          slidesPerView: 4,
+          spaceBetween: 50,
+        },
+      },
+    });
     </script>
 </body>
 

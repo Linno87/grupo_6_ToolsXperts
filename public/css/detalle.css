@@ -24,9 +24,10 @@ body {
 /* AGREGAR A MIS FAVORITOS */
 .detalle__section-article-01 a {
     color: black;
-    padding: 15px 0 25px 0;
+    /* padding: 15px 0 25px 0; */
     text-align: center;
     text-decoration: underline;
+    font-size: 10px;
 }
 
 .detalle__section-article-02 {
@@ -248,7 +249,7 @@ body {
         padding: 25px 0 35px 0;
         text-align: center;
         text-decoration: underline;
-        font-size: 45px;
+        /* font-size: 45px; */
     }
 
     /* ALTURA DE LA CAJA-COMPRAR ARTÍCULO */
