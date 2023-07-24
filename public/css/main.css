@@ -1,0 +1,45 @@
+.home__main {
+  width: 100%;
+}
+
+.home__main h1 {
+  margin: 10px;
+  text-align: center;
+}
+
+/* OFERTAS */
+
+.home__main__article-ofertas {
+  width: 100%;
+  display: flex;
+  margin: 10px 10px;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.home__main__article-ofertas a {
+  margin: 10px;
+  width: 43%;
+}
+
+.home__main__article-ofertas img {
+  width: 100%;
+}
+
+/* PRODUCTOS */
+.home__main__section-productos {
+  width: 100%;
+}
+
+.home__main__section__article-productos .card{
+  margin: 0 auto;
+}
+
+.home__main__section__article__a-productos{
+  background-color: var(--Rojo);
+  border: none;
+}
+
+.home__main__section__article-productos .card-body{
+  text-align: center;
+}

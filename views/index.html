@@ -3,12 +3,316 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="/css/styles.css" rel="stylessheet">
+
+    <!-- CSS -->
+    
+    <link rel="stylesheet" href="/css/styles.css">
+    
+                                               <!-- LINKS -->
+
+    <!-- Boostrap -->
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+
+    <!-- Font Awasome -->
     <script src="https://kit.fontawesome.com/4a01fa7cad.js" crossorigin="anonymous"></script>
     
     <title>index | footer</title>
 </head>
+
 <body>
-    
+    <main class="home__main">
+
+        <!-- CARRUSEL HOT SALE -->
+        <div id="carouselExampleAutoplaying" class="carousel slide home__main__div--carrusel-hot-sale"
+            data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="/img/OFERTAS/Diseño sin título.png" class="d-block w-100" alt="Hot sale 1">
+                </div>
+                <div class="carousel-item">
+                    <img src="/img/OFERTAS/Diseño sin título.png" class="d-block w-100" alt="Hot sale 2">
+                </div>
+                <div class="carousel-item">
+                    <img src="/img/OFERTAS/Diseño sin título.png" class="d-block w-100" alt="Hot sale 3">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+
+        <!-- OFERTAS -->
+
+        <h1>Ofertas Exclusivas</h1>
+
+        <article class="home__main__article-ofertas">
+            <a href="/"><img src="/img/OFERTAS/AMOLAORAS ofertas.png" alt="Oferta 1"></a>
+            <a href="/"><img src="/img/OFERTAS/CALADORAS oferta.png" alt="Oferta 2"></a>
+            <a href="/"><img src="/img/OFERTAS/Copia de TALADROS FACE.png" alt="Oferta 3"></a>
+            <a href="/"><img src="/img/OFERTAS/Copia de CALADORAS FACE.png" alt="Oferta 4"></a>
+        </article>
+
+        <!-- NUESTROS RUBROS -->
+
+        <div class="home__main__div--nuestros-rubros">
+            <h1>Nuestros Rubros</h1>
+
+            <!-- CARRUSEL DE RUBROS -->
+
+            <section class="home__main__div__section--nuestros-rubros">
+                <div id="carouselExampleCaptions" class="carousel slide">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0"
+                            class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                            aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                            aria-label="Slide 3"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="/img/rubros/Common Uses for Welding.jpg" class="d-block w-100" alt="rubro1">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>First slide label</h5>
+                                <p>Some representative placeholder content for the first slide.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="/img/rubros/istockphoto-538026470-1024x1024-transformed.jpeg" alt="rubro2">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Second slide label</h5>
+                                <p>Some representative placeholder content for the second slide.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="/img/rubros/istockphoto-1218386420-1024x1024-transformed (1).jpeg" alt="rubro3">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Third slide label</h5>
+                                <p>Some representative placeholder content for the third slide.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </section>
+
+        </div>
+
+        <!-- PRODUCTOS PRICIPALES -->
+
+        <div>
+            <h1>Los Productos Más Buscados</h1>
+
+            <!-- PRODUCTOS -->
+
+            <section class="home__main__section-productos">
+                <div id="carouselExample" class="carousel slide">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <article class="home__main__section__article-productos">
+                                <div class="card" style="width: 18rem;">
+                                    <img src="/img/AMOLADORAS/9002-removebg-preview.png" class="card-img-top"
+                                        alt="producto1">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Card title</h5>
+                                        <p class="card-text">Some quick example text to build on the card title and make
+                                            up the bulk
+                                            of
+                                            the card's
+                                            content.</p>
+                                        <a href="#" class="btn btn-primary home__main__section__article__a-productos">Go
+                                            somewhere</a>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="carousel-item">
+                            <article class="home__main__section__article-productos">
+                                <div class="card" style="width: 18rem;">
+                                    <img src="/img/CALADORAS/BAC400-removebg-preview-removebg-preview.png"
+                                        class="card-img-top" alt="producto2">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Card title</h5>
+                                        <p class="card-text">Some quick example text to build on the card title and make
+                                            up the bulk
+                                            of
+                                            the card's
+                                            content.</p>
+                                        <a href="#" class="btn btn-primary home__main__section__article__a-productos">Go
+                                            somewhere</a>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="carousel-item">
+                            <article class="home__main__section__article-productos">
+                                <div class="card" style="width: 18rem;">
+                                    <img src="/img/TALADROS/00000000000TE75B10345TALADRO-13-removebg-preview.png"
+                                        class="card-img-top" alt="producto3">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Card title</h5>
+                                        <p class="card-text">Some quick example text to build on the card title and make
+                                            up the bulk
+                                            of
+                                            the card's
+                                            content.</p>
+                                        <a href="#" class="btn btn-primary home__main__section__article__a-productos">Go
+                                            somewhere</a>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="carousel-item">
+                            <article class="home__main__section__article-productos">
+                                <div class="card" style="width: 18rem;">
+                                    <img src="/img/PINTOR/ATK-5-removebg-preview.png" class="card-img-top"
+                                        alt="producto4">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Card title</h5>
+                                        <p class="card-text">Some quick example text to build on the card title and make
+                                            up
+                                            the bulk
+                                            of the card's
+                                            content.</p>
+                                        <a href="#" class="btn btn-primary home__main__section__article__a-productos">Go
+                                            somewhere</a>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="carousel-item">
+                            <article class="home__main__section__article-productos">
+                                <div class="card" style="width: 18rem;">
+                                    <img src="/img/AMOLADORAS/9002-removebg-preview.png" class="card-img-top"
+                                        alt="producto5">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Card title</h5>
+                                        <p class="card-text">Some quick example text to build on the card title and make
+                                            up
+                                            the
+                                            bulk
+                                            of the card's
+                                            content.</p>
+                                        <a href="#" class="btn btn-primary home__main__section__article__a-productos">Go
+                                            somewhere</a>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="carousel-item">
+                            <article class="home__main__section__article-productos">
+                                <div class="card" style="width: 18rem;">
+                                    <img src="/img/TALADROS/BIL-TP13-removebg-preview.png" class="card-img-top"
+                                        alt="producto6">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Card title</h5>
+                                        <p class="card-text">Some quick example text to build on the card title and make
+                                            up
+                                            the
+                                            bulk
+                                            of the card's
+                                            content.</p>
+                                        <a href="#" class="btn btn-primary home__main__section__article__a-productos">Go
+                                            somewhere</a>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+
+                        <div class="carousel-item">
+                            <article class="home__main__section__article-productos">
+                                <div class="card" style="width: 18rem;">
+                                    <img src="/img/LIJADORAS/LBP-80-removebg-preview.png" class="card-img-top"
+                                        alt="producto7">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Card title</h5>
+                                        <p class="card-text">Some quick example text to build on the card title and make
+                                            up
+                                            the
+                                            bulk
+                                            of the card's
+                                            content.</p>
+                                        <a href="#" class="btn btn-primary home__main__section__article__a-productos">Go
+                                            somewhere</a>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+
+                        <div class="carousel-item">
+                            <article class="home__main__section__article-productos">
+                                <div class="card" style="width: 18rem;">
+                                    <img src="/img/LIJADORAS/LBP-80-removebg-preview.png" class="card-img-top"
+                                        alt="producto8">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Card title</h5>
+                                        <p class="card-text">Some quick example text to build on the card title and make
+                                            up the bulk
+                                            of the card's
+                                            content.</p>
+                                        <a href="#" class="btn btn-primary home__main__section__article__a-productos">Go
+                                            somewhere</a>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </section>
+
+            <!-- CARRUSEL DE LOGOS DE MARCAS -->
+
+            <div class="home__main__div--marcas">
+                        <a href="/"> <img src="/img/LOGOS/logo bahco.png" alt="Carrusel Logo 1"></a>
+                        <a href="/"><img src="/img/LOGOS/logo barovo.png" alt="Carrusel Logo 2"></a>
+                        <a href="/"><img src="/img/LOGOS/logo bosch.png" alt="Carrusel Logo 3"></a>
+                        <a href="/"><img src="/img/LOGOS/logo dremel.png" alt="Carrusel Logo 4"></a>
+                        <a href="/"><img src="/img/LOGOS/logo fischer.png" alt="Carrusel Logo 5"></a>
+                        <a href="/"><img src="/img/LOGOS/logo ford.png" alt="Carrusel Logo 6"></a>
+                        <a href="/"><img src="/img/LOGOS/logo irimo.png" alt="Carrusel Logo 7"></a>
+                        <a href="/"><img src="/img/LOGOS/logo makita.png" alt="Carrusel Logo 8"></a>
+                        <a href="/"><img src="/img/LOGOS/logo volt.png" alt="Carrusel Logo 9"></a>
+            </div>
+    </main>
+
+    <!-- BOOSTRAP -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
+
 </body>
+
+</html>
+
+</body>
+
 </html>
