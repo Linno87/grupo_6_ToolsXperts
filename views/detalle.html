@@ -1,15 +1,188 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link  href="/css/styles.css" rel="stylesheet">
+    <link href="/css/styles.css" rel="stylesheet">
     <script src="https://kit.fontawesome.com/4a01fa7cad.js" crossorigin="anonymous"></script>
     <title>footer | detalle</title>
 </head>
+
 <body>
-    <main>
-        <p>detalle de producto</p>
+    <main class="main__detalle__main">
+        <section class="detalle__section-00">
+
+            <article class="detalle__section-article-01">
+                <a href="#"><i class="far fa-heart"></i>Agregar a mis favoritos.</a>
+
+                <div class="detalle__section-article-01-carousel">
+                    <div class="glider-contain">
+                        <div class="glider">
+                            <div><img src="/img/AMOLADORAS/9002-removebg-preview.png" alt=""></div>
+                            <div> <img src="/img/AMOLADORAS/AA2KB-removebg-preview.png" alt=""></div>
+                            <div> <img src="/img/AMOLADORAS/AA75B-removebg-preview.png" alt=""></div>
+                            <div> <img
+                                    src="/img/AMOLADORAS/gws91251-ed337eefab658875b316551254204038-640-0-removebg-preview (1).png"
+                                    alt=""></div>
+                        </div>
+
+                        <button aria-label="Previous" class="glider-prev">«</button>
+                        <button aria-label="Next" class="glider-next">»</button>
+                        <div role="tablist" class="dots"></div>
+                    </div>
+                </div>
+            </article>
+
+            <article class="detalle__section-article-02">
+                <p>Lorem ipsum dolor. Illo ullam voluptatibus reiciendis culpa ipsam.Lorem ipsum dolor. Illo ullam
+                    voluptatibus reiciendis culpa ipsam.</p>
+                <div class="detalle__section-article-precio">Por: $ 19.704,39</div>
+                <div class="detalle__section-article-descuento">ou 3x de $ 6.568,10</div>
+                <section class="detalle__section-botones">
+                    <div class="detalle__div-botones">
+                        <a class="más" href="#"><i class="fas fa-plus"></i></a>
+                        <a class="uno" href="#">1</a>
+                        <a class="menos" href="#"><i class="fas fa-window-minimize"></i></a>
+                    </div><a class="detalle__a-boton" href="#">COMPRAR ARTÍCULO</a>
+                </section>
+            </article>
+            <article class="detalle__section-article-03">
+                <h2>Incluye</h2>
+                <ul>
+                    <li>Tuercas</li>
+                    <li>Taladro/Atornillador</li>
+                    <li>Puntas de atornillado</li>
+                </ul>
+            </article>
+
+            <article class="detalle__section-article-04">
+                <div>
+
+                    <h2 class="detalle-h2">Descripción</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo suscipit vel, iusto doloribus
+                        inventore reprehenderit harum deleniti error quibusdam! Tempore, excepturi nulla? Harum, ad
+                        doloremque!</p>
+                </div>
+                <div class="detalle__ul__div-article-05">
+                    <h2 class="detalle-h2">Características técnicas</h2>
+                    <ul class="detalle__ul__div">
+                        <li>Potencia de entrada: 1010W</li>
+                        <li>Capacidad máx. en mampostería/Concreto: 20 mm</li>
+                        <li>Capacidad máx. en mampostería/Concreto: 20 mm</li>
+                        <li>Capacidad máx. en mampostería/Concreto: 20 mm</li>
+                        <li>Capacidad máx. en mampostería/Concreto: 20 mm</li>
+                        <li>Capacidad máx. en mampostería/Concreto: 20 mm</li>
+                        <li>Capacidad máx. en mampostería/Concreto: 20 mm</li>
+                    </ul>
+                </div>
+            </article>
+
+            <article class="detalle__section-article-06">
+                <h1>Productos relacionados</h1>
+                <div class="detalle__section-article-02-carousel">
+                    <div class="glider-contain" id="related-products">
+                        <div class="glider recomendados">
+
+                            <div class="card_recomendados">
+                                <img src="/img/LIJADORAS/LBP-80-removebg-preview.png" alt="#">
+
+                                <div class="descripcion_recomendados">
+                                    <h5>30%</h5>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum, ex?</p>
+                                    <a href="">Ver Producto</a>
+                                </div>
+
+                            </div>
+                            <div><img src="/img/LIJADORAS/LOR200-removebg-preview.png" alt="#"></div>
+                            <div><img src="/img/CALADORAS/4550-removebg-preview.png" alt="#"></div>
+                            <div><img src="/img/LIJADORAS/LBP-80-removebg-preview.png" alt="#"></div>
+                            <div><img src="/img/LIJADORAS/LOR200-removebg-preview.png" alt="#"></div>
+                            <div><img src="/img/CALADORAS/4550-removebg-preview.png" alt="#"></div>
+                            <button aria-label="Previous" class="glider-prev">«</button>
+                            <button aria-label="Next" class="glider-next">»</button>
+                            <div role="tablist" class="dots"></div>
+                        </div>
+                    </div>
+            </article>
+        </section>
     </main>
+    <script src="/js/glider.js"></script>
+    <script>
+        window.addEventListener("load", function () {
+            new Glider(document.querySelector(".glider"), {
+                slidesToShow: 1,
+                dots: '.dots',
+                arrows: {
+                    prev: '.glider-prev',
+                    next: '.glider-next'
+                },
+                draggable: true,
+                responsive: [
+                    {
+                        // screens greater than >= 775px
+                        breakpoint: 768,
+                        settings: {
+                            // Set to `auto` and provide item width to adjust to viewport
+                            slidesToShow: 1,
+                            slidesToScroll: 1,
+                            duration: 0.90,
+                            itemWidth: 50,
+
+                        }
+                    }, {
+                        // screens greater than >= 1024px
+                        breakpoint: 1024,
+                        settings: {
+                            slidesToShow: 1,
+                            slidesToScroll: 1,
+                            duration: 0.25,
+
+
+                        }
+                    }
+                ]
+            });
+        });
+        new Glider(document.getElementById("related-products").querySelector(".glider"), {
+
+            slidesToShow: 2.5,
+            dots: '.dots',
+            arrows: {
+                prev: '.glider-prev',
+                next: '.glider-next'
+            },
+            draggable: true,
+            responsive: [
+                {
+                    breakpoint: 768,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                        duration: 0.90,
+                        itemWidth: 50,
+                    }
+                }, {
+                    breakpoint: 1024,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                        duration: 0.25,
+                    }
+                }
+            ]
+        });
+            /*  new Glider(document.querySelector('.glider'), {
+     slidesToScroll: 1,
+     slidesToShow: 5.5,
+     draggable: true,
+     dots: '.dots',
+     arrows: {
+         prev: '.glider-prev',
+         next: '.glider-next'
+     }
+ }); */
+    </script>
 </body>
+
 </html>

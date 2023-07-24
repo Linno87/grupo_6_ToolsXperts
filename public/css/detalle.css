@@ -1,3 +1,310 @@
-/* p{
-    background-color: var(--celeste-claro);
-} */
+body {
+    padding-top: 25px;
+    background-color: white;
+}
+
+/* CONTENEDOR DEL CAROUSEL */
+.detalle__section-article-01 {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-color: var(--AzulTransparente);
+    margin: 20px;
+    border-radius: 30px;
+    padding-top: 15px;
+}
+
+/* CORAZÓN */
+.detalle__section-article-01 i {
+    color: white;
+    position: relative;
+    top: -5px;
+}
+
+/* AGREGAR A MIS FAVORITOS */
+.detalle__section-article-01 a {
+    color: black;
+    padding: 15px 0 25px 0;
+    text-align: center;
+    text-decoration: underline;
+}
+
+.detalle__section-article-02 {
+    background-color: var(--Celeste);
+    padding-top: 10px;
+    text-align: center;
+    margin: 20px;
+    border-radius: 30px;
+    height: 350px;
+}
+
+.detalle__section-article-02 p {
+    color: var(--AzulOscuro);
+    font-weight: 200;
+    font-family: var(--tipografiaGeneral);
+    padding-bottom: 5px;
+    margin: 20px;
+    height:350px;
+}
+
+.detalle__a-boton {
+    background: var(--Rojo);
+    border: solid 1px var(--Rojo);
+    border-radius: 15px;
+    font-weight: 700;
+    padding: 5px 8px;
+    color: white;
+    text-transform: uppercase;
+}
+
+
+.detalle__section-article-01-carousel {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.detalle__section-article-01-carousel img {
+    width: 100%;
+}
+
+.detalle__div-botones {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px 95px;
+
+    justify-content: space-between;
+}
+
+.más {
+    color: white;
+    border-radius: 50%;
+    background-color: var(--Rojo);
+    padding-top: 5px;
+    height: 30px;
+    width: 30px;
+    margin-top: 5px;
+
+}
+
+.uno {
+    text-align: center;
+    width: 30px;
+    color: white;
+    border-radius: 50%;
+    background-color: var(--Rojo);
+    height: 40px;
+    width: 40px;
+    padding: 8px 15px;
+}
+
+.menos {
+    color: white;
+    border-radius: 50%;
+    background-color: var(--Rojo);
+    height: 30px;
+    width: 30px;
+    margin-top: 5px;
+
+}
+
+.menos i {
+    justify-content: center;
+    margin-top: -3px;
+}
+
+.detalle__section-article-03 {
+    margin: 20px;
+    padding-left: 20px;
+
+}
+
+.detalle__section-article-03 h2 {
+    width: 100%;
+    color: var(--Rojo);
+    font-family: var(--tipografiaGeneral);
+    font-weight: 700;
+
+}
+
+.detalle__section-article-03 ul li {
+    text-align: left;
+    padding-left: 10px;
+    color: var(--AzulClaro);
+}
+
+/* CONTENER DESCRIPCIÓN Y CARACTERÍSTICAS */
+.detalle__section-article-04 {
+    padding: 20px 25px;
+    margin: 20px;
+    border-radius: 30px;
+    background-color: var(--AzulClaro);
+}
+
+/* CAJA DE LAS LI-INCLUYE */
+.detalle__ul__div {
+    margin: 20px;
+    padding: 0
+}
+
+/* DESCRIPCIÓN Y CARACTERÍSTICAS */
+.detalle-h2 {
+
+    font-family: var(--tipografiaGeneral);
+    font-weight: 600;
+    text-decoration: underline;
+    color: black;
+
+}
+
+/* Caja padre 2do carrusel */
+.detalle__section-article-05 .recomendados {
+    display: flex;
+    width: 100%;
+
+}
+
+/* titulo 2do carrusel */
+.detalle__section-article-05 h1 {
+    text-align: center;
+    text-decoration: underline;
+    font-size: 25px;
+}
+
+#related-products div div {
+    width: 40vw;
+
+}
+
+#related-products div div img {
+    width: 100%;
+
+    padding: 10px;
+
+
+}
+
+.card_recomendados {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.detalle__section-article-05 .recomendados .descripcion_recomendados {
+    display: flex;
+    position: relative;
+    top: -35px;
+    align-items: flex-end;
+    font-size: 15px;
+    border: 3px solid red;
+
+}
+
+.detalle__section-article-05 .recomendados div h5 {
+    width: 50px;
+
+}
+
+.detalle__section-article-05 .recomendados div p {
+    text-align: center;
+
+
+}
+
+.detalle__section-article-05 .recomendados div a {
+    text-align: center;
+    width: 50px;
+}
+
+@media(min-width: 768px) {
+
+    /* SECTION GENERAL */
+    .detalle__section-00 {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    /* TODOS LOS ARTICLES QUE COMIENZAN IGUAL */
+    .detalle__section {
+        width: 90%;
+    }
+
+    /* CONTENEDOR DEL CAROUSEL */
+    .detalle__section-article-01 {
+        width:95%;
+        justify-content: center;
+        margin: 20px;
+        border-radius: 30px;
+        padding-top: 35px;
+    }
+    .detalle__section-article-01-carousel{
+        width: 70%;
+    }
+    /* CORAZÓN Y AGREGAR A FAVORITOS  */
+
+    .detalle__section-article-01 a {
+        color: black;
+        padding: 25px 0 35px 0;
+        text-align: center;
+        text-decoration: underline;
+        font-size: 45px;
+    }
+
+    /* ALTURA DE LA CAJA-COMPRAR ARTÍCULO */
+    .detalle__section-article-02 p {
+        height: 80px;
+        padding: 25px;
+    }
+    /* CAJA CONTENEDORA DE- COMPRAR PRODUCTO */
+section .detalle__section-botones{
+    padding: 5px 30px 25px 30px;
+}
+    .detalle__section-botones {
+        padding: 5px;
+        padding-bottom: 25px;
+      
+    }
+
+    .detalle__section-article-03 {}
+
+    .detalle__section-article-04 {}
+
+    .detalle__ul__div-article-05 {}
+
+    .detalle__section-article-06 {}
+/* TÍTULO-PRODUCTOS RELACIONADOS */
+    .detalle__section-article-06 h1 {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        color: black;
+        font-weight:700;
+        font-size: 35px;
+        font-family: var(--tipografiaGeneral);
+        text-decoration: underline;
+        text-transform: lowercase;
+
+    }
+
+    /* CAJA DE LOS BOTONES-COMPRAR-ARTÍCULOS */
+    .detalle__div-botones {
+        padding: 20px 250px;
+
+    }
+}
+@media(min-width: 1024px){
+
+
+
+
+
+    .detalle__section-botones {
+        padding:20px 350px;
+        padding-bottom: 25px;
+      
+    }
+
+
+}
+
