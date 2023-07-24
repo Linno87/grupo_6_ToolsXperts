@@ -43,3 +43,13 @@
 .home__main__section__article-productos .card-body{
   text-align: center;
 }
+
+/* CARRUSEL DE MARCAS */
+
+.home__main__div--marcas{
+  display: flex;
+}
+
+.home__main__div--marcas img{
+  width: 48%;
+}
