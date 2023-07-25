@@ -6,28 +6,28 @@
 }
 
 .header {
-    height: 100vh;
+    height: auto;
 }
 
 .top_bar {
     display: flex;
     flex-direction: row-reverse;
-    height: 25px;
+    height: 40px;
     width: 100%;
     background-color: #1d3557;
     position: relative;
 }
 
 .top_bar i {
-    color: var(--Rojo);
+    color: #e63946;
     font-size: 17px;
     position: absolute;
-    top: 3px;
+    top: 18px;
     right: 5px;
 }
 
 .mid_bar {
-    background-color: white;
+    background-color: #f1faee;
     height: 40px;
     width: 100%;
     display: flex;
@@ -39,6 +39,7 @@
 .mid_bar_left {
     display: flex;
     width: 50%;
+
 }
 
 .mid_bar_left img {
@@ -47,14 +48,14 @@
 }
 
 .mid_bar_right {
-    display: flex;
+    display: none;
     flex-direction: row-reverse;
     width: 50%;
     height: 100%;
 }
 
 .mid_bar_right i {
-    color: var(--Rojo);
+    color: #e63946;
 }
 
 .div_carrito {
@@ -76,12 +77,12 @@
 }
 
 .div_login_button button {
-    background: var(--Rojo);
-    border: solid 1px var(--Rojo);
+    background: #e63946;
+    border: solid 1px #e63946;
     border-radius: 20px;
     font-weight: 200;
     padding: 5px 5px;
-    color: white;
+    color: #f1faee;
     text-transform: uppercase;
     width: 120px;
     height: 35px;
@@ -90,20 +91,21 @@
 .bottom_bar {
     display: flex;
     justify-content: space-between;
-    height: 50px;
+    flex-direction: row-reverse;
+    height: 30px;
     width: 100%;
     background-color: #1d3557;
 }
 
 .search_bar {
     border-radius: 5px;
-    display: flex;
+    display: none;
     width: 250px;
     height: 30px;
     margin-left: 10px;
     margin-top: 10px;
     margin-bottom: 10px;
-    background-color: white;
+    background-color: #f1faee;
 }
 
 .search_bar input {
@@ -126,6 +128,7 @@
 }
 
 .burguer_menu {
+    display: none;
     width: 40px;
     height: 50px;
     margin-right: 5px;
@@ -142,6 +145,72 @@
     display: none;
 }
 
+.soporte {
+    margin-right: 20px;
+    margin-top: 3px;
+}
+
+.soporte a {
+    color: white;
+    list-style: none;
+}
+
+.main {
+    width: auto;
+
+    padding-top: 10%;
+    padding-bottom: 5%;
+}
+
+.cuadrado_contenedor {
+    width: 90vw;
+    background-color: #457b9d;
+    height: auto;
+    margin-left: 5%;
+    border-radius: 30px;
+    padding-bottom: 10%;
+}
+.sing_in{
+    padding-top: 10px;
+}
+
+.sing_in p {
+    color: #f1faee;
+    font-size: 50px;
+    text-align: center;
+
+}
+
+.formulario {
+    display: flex;
+    margin-left: 18%;
+    margin-top: 4%;
+
+}
+
+.formulario form {
+    width: 80%;
+    height: 20%;
+}
+
+.formulario p{
+    font-size: 15px;
+    padding-bottom: 3%;
+    padding-left: 5%;
+}
+
+.contenedor_items p {
+    color: #f1faee;
+}
+
+.contenedor_items input {
+    background-color: #a8dadc;
+    border-radius: 10px;
+    width: 100%;
+    height: 40px;
+}
+
+
 @media (min-width: 768px) {
     .bottom_bar {
         position: relative;
@@ -156,7 +225,7 @@
     }
 
     .mid_bar {
-        background-color: white;
+        background-color: #f1faee;
         margin: 0;
         height: 50px;
 
