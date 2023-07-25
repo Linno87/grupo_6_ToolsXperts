@@ -27,29 +27,11 @@
 }
 
 /* PRODUCTOS */
-.home__main__section-productos {
-  width: 100%;
-}
-
-.home__main__section__article-productos .card{
-  margin: 0 auto;
-}
-
-.home__main__section__article__a-productos{
+.swiper-slide .home__main__section__article__a-productos{
   background-color: var(--Rojo);
   border: none;
 }
 
-.home__main__section__article-productos .card-body{
+.swiper-slide .card-body{
   text-align: center;
-}
-
-/* CARRUSEL DE MARCAS */
-
-.home__main__div--marcas{
-  display: flex;
-}
-
-.home__main__div--marcas img{
-  width: 48%;
 }
