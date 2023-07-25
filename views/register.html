@@ -4,90 +4,74 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Home</title>
-    <link rel="stylesheet" href="/css/register.css">
+    <title>Register</title>
+    <link rel="stylesheet" href="/css/styles.css">
     <script src="https://kit.fontawesome.com/183b312a89.js" crossorigin="anonymous"></script>
 </head>
 
-<body>
+<body class="register">
     <header class="header">
-        <div class="top_bar">
+        <div class="register__top_bar">
             <i class="fa-solid fa-globe"></i>
         </div>
-        <div class="mid_bar">
-            <div class="mid_bar_left">
-                <img src="/img/Logo-Toolsxperts.png" alt="">
-            </div>
-            <div class="mid_bar_right">
-                <div class="div_login_button">
-                    <button>INICIAR SESION</button>
-                </div>
-                <div class="div_carrito">
-                    <i class="fa-solid fa-cart-shopping"></i>
-                </div>
+        <div class="register__mid_bar">
+            <div class="register__mid_bar_left">
+                <a href="/"><img src="/img/Logo-Toolsxperts.png" alt="imagen_logo_ToolsXperts "></a>
             </div>
         </div>
-        <div class="bottom_bar">
-            <nav class="navbar">
-                <ul>
-                    <li><a href="/productos">Productos</a></a></li>
-                    <li><a href="/contacto">Contacto</a></li>
-                    <li><a href="/envios">Envios</a></li>
-                </ul>
+        <div class="register__bottom_bar">
+            <nav class="register__navbar">
+                    <ul>
+                        <li><a href="/soporte">Soporte</a></li>
+                    </ul>
             </nav>
-            <div class="search_bar">
-                <div class="lupa">
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                </div>
-                <div class="search_bar_text">
-                    <input type="text" placeholder=" ¿Qué estas buscando? Que nosotros te lo encontramos...">
-                </div>
-                <div class="search_bar_x">
-                    <i class="fa-solid fa-x"></i>
-                </div>
-            </div>
-            <div class="burguer_menu">
-                <i class="fa-solid fa-bars"></i>
-            </div>
-            <div class="soporte"><a href="/soporte">Soporte</a></div>
         </div>
     </header>
-    <main class="main">
-        <div class="cuadrado_contenedor">
-            <div class="sing_in">
-                <p>Sing in</p>
+    <main class="register_main">
+        
+        <div class="register_main_logo_box">
+            
+            <a href="/"><img src="/img/Login/Logo-Toolsxperts_login.png" alt="logo_imagen"></a>
+            
+           
+            <div>
+                <h1>Registrate</h1>
+                <h4>Sign in to continue</h4>
+                <hr>
             </div>
-            <div class="formulario">
-                <form action="/registro" method="POST">
-                    <div class="contenedor_items">
-                        <p>NOMBRE</p>
-                        <input type="text" placeholder="Francois Mercer">
-                    </div>
-                </form>
+            <div>
+                <p>"Somos una empresa...</p>
+                <button class="boton__general btn_register">Learn More</button>
             </div>
-            <div class="formulario">
-                <form action="/registro" method="POST">
-                    <div class="contenedor_items">
-                        <p>EMAIL</p>
-                        <input type="email" placeholder="hello@reallygreatsite.com">
-                    </div>
-                </form>
-            </div>
-            <div class="formulario">
-                <form class="form" action="/registro" method="POST">
-                    <div class="contenedor_items">
-                        <p>PASSWORD</p>
-                        <input type="password" placeholder="*********">
-                    </div>
-                </form>
-            </div>
-            <div class="formulario">
-                <form action="/registro" method="POST">
-                    <div class="contenedor_items">
-                        <p>FECHA DE NACIMIENTO</p>
-                        <input type="date">
-                    </div>
-                </form>
+        </div>
+        <div class="register_main_form_box">
+            <h1>Registrate</h1>
+            <form class="register_main_form" action="/" method="GET">
+                <p class="register_main_form_inp_box">
+                    <label for="name">NOMBRE</label>
+                    <input type="text" name="name" id="name" value="Francois Mercer"/>
+                </p>
+                <p class="register_main_form_inp_box">
+                    <label for="email">EMAIL</label>
+                    <input type="email" name="email" id="email" value="hello@ejemplo.com"/>
+                </p>
+                <p class="register_main_form_inp_box">
+                    <label for="pass">PASSWORD</label>
+                    <input type="password" name="pass" id="pass" value="password"/> 
+                </p>
+                <p class="register_main_form_inp_box">
+                    <label for="date">FECHA DE NACIMIENTO</label>
+                    <input type="date" name="date" id="date" value="date"/> 
+                </p>
+                <div>
+                    <input class="boton__general btn_register" type="submit" value="rEGISTRATE"/>
+                </div>
+                
+            </form>
+            <div class="register_main_redes">
+                <a href="https://www.instagram.com/"><i class="fab fa-instagram-square"></i></a>
+                <a href="https://www.facebook.com/"><i class="fab fa-facebook" style="color:var(--AzulClaro)"></i></a>
+                <a href="https://myaccount.google.com"><i class="fab fa-google-plus-square"></i></a>
             </div>
         </div>
     </main>
