@@ -25,96 +25,59 @@
 </head>
 
 <body>
-    <header class="header">
-        <div class="top_bar">
-            <i class="fa-solid fa-globe"></i>
-        </div>
-        <div class="mid_bar">
-            <div class="mid_bar_left">
-                <a href="/"><img src="/img/Logo-Toolsxperts.png" alt="imagen_logo_ToolsXperts "></a>
-            </div>
-            <div class="mid_bar_right">
-                <div class="div_login_button">
-                    <a href="/register"><button>INICIAR SESION</button></a>
-                </div>
-                <div class="div_carrito">
-                    <a href="/carrito"><i class="fa-solid fa-cart-shopping"></i></a>
-                </div>
-            </div>
-        </div>
-        <div class="bottom_bar">
-            <nav class="navbar">
-                <ul>
-                    <li><a href="/productos">Productos</a></a></li>
-                    <li><a href="/contacto">Contacto</a></li>
-                    <li><a href="/envios">Envios</a></li>
-                </ul>
-            </nav>
-            <div class="search_bar">
-                <div class="lupa">
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                </div>
-                <div class="search_bar_text">
-                    <input type="text" placeholder=" ¿Qué estas buscando? Que nosotros te lo encontramos...">
-                </div>
-                <div class="search_bar_x">
-                    <i class="fa-solid fa-x"></i>
-                </div>
-            </div>
-            <div class="burguer_menu">
-                <i class="fa-solid fa-bars"></i>
-            </div>
-        </div>
+   
+    <header>
+
     </header>
 
-    
     <main class="home__main">
 
         <!-- CARRUSEL HOT SALE -->
+        <section class="section--hot-sale">
+            <div class="swiper mySwiper-hot-sale">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="/img/OFERTAS/Diseño sin título.png" class="d-block w-100" alt="Hot sale 1">
 
-        <div class="swiper mySwiper">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                    <img src="/img/OFERTAS/Diseño sin título.png" class="d-block w-100" alt="Hot sale 1">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="/img/OFERTAS/Diseño sin título.png" class="d-block w-100" alt="Hot sale 1">
 
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="/img/OFERTAS/Diseño sin título.png" class="d-block w-100" alt="Hot sale 1">
+
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="/img/OFERTAS/Diseño sin título.png" class="d-block w-100" alt="Hot sale 1">
+
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="/img/OFERTAS/Diseño sin título.png" class="d-block w-100" alt="Hot sale 1">
+
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="/img/OFERTAS/Diseño sin título.png" class="d-block w-100" alt="Hot sale 1">
+
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="/img/OFERTAS/Diseño sin título.png" class="d-block w-100" alt="Hot sale 1">
+
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="/img/OFERTAS/Diseño sin título.png" class="d-block w-100" alt="Hot sale 1">
+
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="/img/OFERTAS/Diseño sin título.png" class="d-block w-100" alt="Hot sale 1">
+
+                    </div>
                 </div>
-                <div class="swiper-slide">
-                    <img src="/img/OFERTAS/Diseño sin título.png" class="d-block w-100" alt="Hot sale 1">
-
-                </div>
-                <div class="swiper-slide">
-                    <img src="/img/OFERTAS/Diseño sin título.png" class="d-block w-100" alt="Hot sale 1">
-
-                </div>
-                <div class="swiper-slide">
-                    <img src="/img/OFERTAS/Diseño sin título.png" class="d-block w-100" alt="Hot sale 1">
-
-                </div>
-                <div class="swiper-slide">
-                    <img src="/img/OFERTAS/Diseño sin título.png" class="d-block w-100" alt="Hot sale 1">
-
-                </div>
-                <div class="swiper-slide">
-                    <img src="/img/OFERTAS/Diseño sin título.png" class="d-block w-100" alt="Hot sale 1">
-
-                </div>
-                <div class="swiper-slide">
-                    <img src="/img/OFERTAS/Diseño sin título.png" class="d-block w-100" alt="Hot sale 1">
-
-                </div>
-                <div class="swiper-slide">
-                    <img src="/img/OFERTAS/Diseño sin título.png" class="d-block w-100" alt="Hot sale 1">
-
-                </div>
-                <div class="swiper-slide">
-                    <img src="/img/OFERTAS/Diseño sin título.png" class="d-block w-100" alt="Hot sale 1">
-
-                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
             </div>
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-pagination"></div>
-        </div>
+        </section>
 
         <!-- OFERTAS -->
 
@@ -133,78 +96,79 @@
             <h1>Nuestros Rubros</h1>
 
             <!-- CARRUSEL DE RUBROS -->
-
-            <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff"
-                class="swiper mySwiper2-rubros">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <img src="/img/rubros/Common Uses for Welding.jpg" class="d-block w-100" alt="rubro1">
+            <section class="section--rubros">
+                <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff"
+                    class="swiper mySwiper2-rubros">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="/img/rubros/Common Uses for Welding.jpg" class="d-block w-100" alt="rubro1">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="/img/rubros/istockphoto-538026470-1024x1024-transformed.jpeg" alt="rubro2">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="/img/rubros/istockphoto-1218386420-1024x1024-transformed (1).jpeg" alt="rubro3">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="https://swiperjs.com/demos/images/nature-5.jpg" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="https://swiperjs.com/demos/images/nature-6.jpg" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="https://swiperjs.com/demos/images/nature-7.jpg" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="https://swiperjs.com/demos/images/nature-8.jpg" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="https://swiperjs.com/demos/images/nature-9.jpg" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="https://swiperjs.com/demos/images/nature-10.jpg" />
+                        </div>
                     </div>
-                    <div class="swiper-slide">
-                        <img src="/img/rubros/istockphoto-538026470-1024x1024-transformed.jpeg" alt="rubro2">
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="/img/rubros/istockphoto-1218386420-1024x1024-transformed (1).jpeg" alt="rubro3">
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="https://swiperjs.com/demos/images/nature-5.jpg" />
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="https://swiperjs.com/demos/images/nature-6.jpg" />
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="https://swiperjs.com/demos/images/nature-7.jpg" />
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="https://swiperjs.com/demos/images/nature-8.jpg" />
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="https://swiperjs.com/demos/images/nature-9.jpg" />
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="https://swiperjs.com/demos/images/nature-10.jpg" />
+                    <div class="swiper-button-next-rubros"></div>
+                    <div class="swiper-button-prev-rubros"></div>
+                </div>
+                <div thumbsSlider="" class="swiper mySwiper-rubros">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="/img/rubros/Common Uses for Welding.jpg" class="d-block w-100" alt="rubro1">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="/img/rubros/istockphoto-538026470-1024x1024-transformed.jpeg" alt="rubro2">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="/img/rubros/istockphoto-1218386420-1024x1024-transformed (1).jpeg" alt="rubro3">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="https://swiperjs.com/demos/images/nature-5.jpg" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="https://swiperjs.com/demos/images/nature-6.jpg" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="https://swiperjs.com/demos/images/nature-7.jpg" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="https://swiperjs.com/demos/images/nature-8.jpg" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="https://swiperjs.com/demos/images/nature-9.jpg" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="https://swiperjs.com/demos/images/nature-10.jpg" />
+                        </div>
                     </div>
                 </div>
-                <div class="swiper-button-next-rubros"></div>
-                <div class="swiper-button-prev-rubros"></div>
-            </div>
-            <div thumbsSlider="" class="swiper mySwiper-rubros">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <img src="/img/rubros/Common Uses for Welding.jpg" class="d-block w-100" alt="rubro1">
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="/img/rubros/istockphoto-538026470-1024x1024-transformed.jpeg" alt="rubro2">
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="/img/rubros/istockphoto-1218386420-1024x1024-transformed (1).jpeg" alt="rubro3">
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="https://swiperjs.com/demos/images/nature-5.jpg" />
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="https://swiperjs.com/demos/images/nature-6.jpg" />
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="https://swiperjs.com/demos/images/nature-7.jpg" />
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="https://swiperjs.com/demos/images/nature-8.jpg" />
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="https://swiperjs.com/demos/images/nature-9.jpg" />
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="https://swiperjs.com/demos/images/nature-10.jpg" />
-                    </div>
-                </div>
-            </div>
+            </section>
         </div>
 
         <!-- PRODUCTOS PRICIPALES -->
@@ -213,197 +177,199 @@
             <h1>Los Productos Más Buscados</h1>
 
             <!-- PRODUCTOS -->
-
-            <div class="swiper-productos">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <article class="home__main__section__article-productos">
-                            <div class="card">
-                                <img class="card__img" src="/img/AMOLADORAS/9002-removebg-preview.png"
-                                    class="card-img-top" alt="producto1">
-                                <div class="card-body">
-                                    <h5 class="card-title">Card title</h5>
-                                    <p class="card-text">Some quick example text to build on the card title and make
-                                        up the bulk
-                                        of
-                                        the card's
-                                        content.</p>
-                                    <a href="#" class="btn btn-primary home__main__section__article__a-productos">Go
-                                        somewhere</a>
+            <section class="section--productos">
+                <div class="swiper-productos">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <article class="home__main__section__article-productos">
+                                <div class="card">
+                                    <img class="card__img" src="/img/AMOLADORAS/9002-removebg-preview.png"
+                                        class="card-img-top" alt="producto1">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Card title</h5>
+                                        <p class="card-text">Some quick example text to build on the card title and make
+                                            up the bulk
+                                            of
+                                            the card's
+                                            content.</p>
+                                        <a href="#" class="btn btn-primary home__main__section__article__a-productos">Go
+                                            somewhere</a>
+                                    </div>
                                 </div>
-                            </div>
-                        </article>
-                    </div>
-                    <div class="swiper-slide">
-                        <article class="home__main__section__article-productos">
-                            <div class="card">
-                                <img class="card__img" src="/img/CALADORAS/BAC400-removebg-preview-removebg-preview.png"
-                                    class="card-img-top" alt="producto2">
-                                <div class="card-body">
-                                    <h5 class="card-title">Card title</h5>
-                                    <p class="card-text">Some quick example text to build on the card title and make
-                                        up the bulk
-                                        of
-                                        the card's
-                                        content.</p>
-                                    <a href="#" class="btn btn-primary home__main__section__article__a-productos">Go
-                                        somewhere</a>
+                            </article>
+                        </div>
+                        <div class="swiper-slide">
+                            <article class="home__main__section__article-productos">
+                                <div class="card">
+                                    <img class="card__img"
+                                        src="/img/CALADORAS/BAC400-removebg-preview-removebg-preview.png"
+                                        class="card-img-top" alt="producto2">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Card title</h5>
+                                        <p class="card-text">Some quick example text to build on the card title and make
+                                            up the bulk
+                                            of
+                                            the card's
+                                            content.</p>
+                                        <a href="#" class="btn btn-primary home__main__section__article__a-productos">Go
+                                            somewhere</a>
+                                    </div>
                                 </div>
-                            </div>
-                        </article>
-                    </div>
-                    <div class="swiper-slide">
-                        <article class="home__main__section__article-productos">
-                            <div class="card">
-                                <img src="/img/TALADROS/00000000000TE75B10345TALADRO-13-removebg-preview.png"
-                                    class="card-img-top" alt="producto3">
-                                <div class="card-body">
-                                    <h5 class="card-title">Card title</h5>
-                                    <p class="card-text">Some quick example text to build on the card title and make
-                                        up the bulk
-                                        of
-                                        the card's
-                                        content.</p>
-                                    <a href="#" class="btn btn-primary home__main__section__article__a-productos">Go
-                                        somewhere</a>
+                            </article>
+                        </div>
+                        <div class="swiper-slide">
+                            <article class="home__main__section__article-productos">
+                                <div class="card">
+                                    <img src="/img/TALADROS/00000000000TE75B10345TALADRO-13-removebg-preview.png"
+                                        class="card-img-top" alt="producto3">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Card title</h5>
+                                        <p class="card-text">Some quick example text to build on the card title and make
+                                            up the bulk
+                                            of
+                                            the card's
+                                            content.</p>
+                                        <a href="#" class="btn btn-primary home__main__section__article__a-productos">Go
+                                            somewhere</a>
+                                    </div>
                                 </div>
-                            </div>
-                        </article>
-                    </div>
-                    <div class="swiper-slide">
-                        <article class="home__main__section__article-productos">
-                            <div class="card">
-                                <img src="/img/PINTOR/ATK-5-removebg-preview.png" class="card-img-top" alt="producto4">
-                                <div class="card-body">
-                                    <h5 class="card-title">Card title</h5>
-                                    <p class="card-text">Some quick example text to build on the card title and make
-                                        up
-                                        the bulk
-                                        of the card's
-                                        content.</p>
-                                    <a href="#" class="btn btn-primary home__main__section__article__a-productos">Go
-                                        somewhere</a>
+                            </article>
+                        </div>
+                        <div class="swiper-slide">
+                            <article class="home__main__section__article-productos">
+                                <div class="card">
+                                    <img src="/img/PINTOR/ATK-5-removebg-preview.png" class="card-img-top"
+                                        alt="producto4">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Card title</h5>
+                                        <p class="card-text">Some quick example text to build on the card title and make
+                                            up
+                                            the bulk
+                                            of the card's
+                                            content.</p>
+                                        <a href="#" class="btn btn-primary home__main__section__article__a-productos">Go
+                                            somewhere</a>
+                                    </div>
                                 </div>
-                            </div>
-                        </article>
-                    </div>
-                    <div class="swiper-slide">
-                        <article class="home__main__section__article-productos">
-                            <div class="card">
-                                <img src="/img/AMOLADORAS/9002-removebg-preview.png" class="card-img-top"
-                                    alt="producto5">
-                                <div class="card-body">
-                                    <h5 class="card-title">Card title</h5>
-                                    <p class="card-text">Some quick example text to build on the card title and make
-                                        up
-                                        the
-                                        bulk
-                                        of the card's
-                                        content.</p>
-                                    <a href="#" class="btn btn-primary home__main__section__article__a-productos">Go
-                                        somewhere</a>
+                            </article>
+                        </div>
+                        <div class="swiper-slide">
+                            <article class="home__main__section__article-productos">
+                                <div class="card">
+                                    <img src="/img/AMOLADORAS/9002-removebg-preview.png" class="card-img-top"
+                                        alt="producto5">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Card title</h5>
+                                        <p class="card-text">Some quick example text to build on the card title and make
+                                            up
+                                            the
+                                            bulk
+                                            of the card's
+                                            content.</p>
+                                        <a href="#" class="btn btn-primary home__main__section__article__a-productos">Go
+                                            somewhere</a>
+                                    </div>
                                 </div>
-                            </div>
-                        </article>
-                    </div>
-                    <div class="swiper-slide">
-                        <article class="home__main__section__article-productos">
-                            <div class="card">
-                                <img src="/img/TALADROS/BIL-TP13-removebg-preview.png" class="card-img-top"
-                                    alt="producto6">
-                                <div class="card-body">
-                                    <h5 class="card-title">Card title</h5>
-                                    <p class="card-text">Some quick example text to build on the card title and make
-                                        up
-                                        the
-                                        bulk
-                                        of the card's
-                                        content.</p>
-                                    <a href="#" class="btn btn-primary home__main__section__article__a-productos">Go
-                                        somewhere</a>
+                            </article>
+                        </div>
+                        <div class="swiper-slide">
+                            <article class="home__main__section__article-productos">
+                                <div class="card">
+                                    <img src="/img/TALADROS/BIL-TP13-removebg-preview.png" class="card-img-top"
+                                        alt="producto6">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Card title</h5>
+                                        <p class="card-text">Some quick example text to build on the card title and make
+                                            up
+                                            the
+                                            bulk
+                                            of the card's
+                                            content.</p>
+                                        <a href="#" class="btn btn-primary home__main__section__article__a-productos">Go
+                                            somewhere</a>
+                                    </div>
                                 </div>
-                            </div>
-                        </article>
-                    </div>
-                    <div class="swiper-slide">
-                        <article class="home__main__section__article-productos">
-                            <div class="card">
-                                <img src="/img/LIJADORAS/LBP-80-removebg-preview.png" class="card-img-top"
-                                    alt="producto7">
-                                <div class="card-body">
-                                    <h5 class="card-title">Card title</h5>
-                                    <p class="card-text">Some quick example text to build on the card title and make
-                                        up
-                                        the
-                                        bulk
-                                        of the card's
-                                        content.</p>
-                                    <a href="#" class="btn btn-primary home__main__section__article__a-productos">Go
-                                        somewhere</a>
+                            </article>
+                        </div>
+                        <div class="swiper-slide">
+                            <article class="home__main__section__article-productos">
+                                <div class="card">
+                                    <img src="/img/LIJADORAS/LBP-80-removebg-preview.png" class="card-img-top"
+                                        alt="producto7">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Card title</h5>
+                                        <p class="card-text">Some quick example text to build on the card title and make
+                                            up
+                                            the
+                                            bulk
+                                            of the card's
+                                            content.</p>
+                                        <a href="#" class="btn btn-primary home__main__section__article__a-productos">Go
+                                            somewhere</a>
+                                    </div>
                                 </div>
-                            </div>
-                        </article>
-                    </div>
-                    <div class="swiper-slide">
-                        <article class="home__main__section__article-productos">
-                            <div class="card">
-                                <img src="/img/LIJADORAS/LBP-80-removebg-preview.png" class="card-img-top"
-                                    alt="producto8">
-                                <div class="card-body">
-                                    <h5 class="card-title">Card title</h5>
-                                    <p class="card-text">Some quick example text to build on the card title and make
-                                        up the bulk
-                                        of the card's
-                                        content.</p>
-                                    <a href="#" class="btn btn-primary home__main__section__article__a-productos">Go
-                                        somewhere</a>
+                            </article>
+                        </div>
+                        <div class="swiper-slide">
+                            <article class="home__main__section__article-productos">
+                                <div class="card">
+                                    <img src="/img/LIJADORAS/LBP-80-removebg-preview.png" class="card-img-top"
+                                        alt="producto8">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Card title</h5>
+                                        <p class="card-text">Some quick example text to build on the card title and make
+                                            up the bulk
+                                            of the card's
+                                            content.</p>
+                                        <a href="#" class="btn btn-primary home__main__section__article__a-productos">Go
+                                            somewhere</a>
+                                    </div>
                                 </div>
-                            </div>
-                        </article>
+                            </article>
+                        </div>
                     </div>
+                    <div class="swiper-button-next-productos"></div>
+                    <div class="swiper-button-prev-productos"></div>
                 </div>
-                <div class="swiper-button-next-productos"></div>
-                <div class="swiper-button-prev-productos"></div>
-            </div>
-
+            </section>
             <!-- CARRUSEL DE LOGOS DE MARCAS -->
-
-            <div class="swiper mySwiper-marcas">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <img class="mySwiper_img-marcas" src="/img/LOGOS/logo bahco.png" alt="Carrusel Logo 1">
+            <section class="section--marcas">
+                <div class="swiper mySwiper-marcas">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img class="mySwiper_img-marcas" src="/img/LOGOS/logo bahco.png" alt="Carrusel Logo 1">
+                        </div>
+                        <div class="swiper-slide">
+                            <img class="mySwiper_img-marcas" src="/img/LOGOS/logo barovo.png" alt="Carrusel Logo 2">
+                        </div>
+                        <div class="swiper-slide">
+                            <img class="mySwiper_img-marcas" src="/img/LOGOS/logo bosch.png" alt="Carrusel Logo 3">
+                        </div>
+                        <div class="swiper-slide">
+                            <img class="mySwiper_img-marcas" src="/img/LOGOS/logo bosch.png" alt="Carrusel Logo 3">
+                        </div>
+                        <div class="swiper-slide">
+                            <img class="mySwiper_img-marcas" src="/img/LOGOS/logo dremel.png" alt="Carrusel Logo 4">
+                        </div>
+                        <div class="swiper-slide">
+                            <img class="mySwiper_img-marcas" src="/img/LOGOS/logo fischer.png" alt="Carrusel Logo 5">
+                        </div>
+                        <div class="swiper-slide">
+                            <img class="mySwiper_img-marcas" src="/img/LOGOS/logo ford.png" alt="Carrusel Logo 6">
+                        </div>
+                        <div class="swiper-slide">
+                            <img class="mySwiper_img-marcas" src="/img/LOGOS/logo irimo.png" alt="Carrusel Logo 7">
+                        </div>
+                        <div class="swiper-slide">
+                            <img class="mySwiper_img-marcas" src="/img/LOGOS/logo makita.png" alt="Carrusel Logo 8">
+                        </div>
+                        <div class="swiper-slide">
+                            <img class="mySwiper_img-marcas" src="/img/LOGOS/logo volt.png" alt="Carrusel Logo 9">
+                        </div>
                     </div>
-                    <div class="swiper-slide">
-                        <img class="mySwiper_img-marcas" src="/img/LOGOS/logo barovo.png" alt="Carrusel Logo 2">
-                    </div>
-                    <div class="swiper-slide">
-                        <img class="mySwiper_img-marcas" src="/img/LOGOS/logo bosch.png" alt="Carrusel Logo 3">
-                    </div>
-                    <div class="swiper-slide">
-                        <img class="mySwiper_img-marcas" src="/img/LOGOS/logo bosch.png" alt="Carrusel Logo 3">
-                    </div>
-                    <div class="swiper-slide">
-                        <img class="mySwiper_img-marcas" src="/img/LOGOS/logo dremel.png" alt="Carrusel Logo 4">
-                    </div>
-                    <div class="swiper-slide">
-                        <img class="mySwiper_img-marcas" src="/img/LOGOS/logo fischer.png" alt="Carrusel Logo 5">
-                    </div>
-                    <div class="swiper-slide">
-                        <img class="mySwiper_img-marcas" src="/img/LOGOS/logo ford.png" alt="Carrusel Logo 6">
-                    </div>
-                    <div class="swiper-slide">
-                        <img class="mySwiper_img-marcas" src="/img/LOGOS/logo irimo.png" alt="Carrusel Logo 7">
-                    </div>
-                    <div class="swiper-slide">
-                        <img class="mySwiper_img-marcas" src="/img/LOGOS/logo makita.png" alt="Carrusel Logo 8">
-                    </div>
-                    <div class="swiper-slide">
-                        <img class="mySwiper_img-marcas" src="/img/LOGOS/logo volt.png" alt="Carrusel Logo 9">
-                    </div>
+                    <!-- <div class="swiper-pagination-marcas"></div> -->
                 </div>
-                <!-- <div class="swiper-pagination-marcas"></div> -->
-            </div>
-
+            </section>
     </main>
     <footer>
         <div class="footer__caja-logo">
@@ -448,7 +414,7 @@
 
     <!-- Initialize Swiper HOT SALE -->
     <script>
-        var swiper = new Swiper(".mySwiper", {
+        var swiper = new Swiper(".mySwiper-hot-sale", {
             spaceBetween: 30,
             centeredSlides: true,
             autoplay: {
@@ -489,7 +455,20 @@
     <!-- Initialize Swiper PRODUCTOS -->
     <script>
         var swiper = new Swiper('.swiper-productos', {
-            slidesPerView: 3,
+              breakpoints: {
+                640: {
+                    slidesPerView: 1,
+                    spaceBetween: 20,
+                },
+                768: {
+                    slidesPerView: 2,
+                    spaceBetween: 40,
+                },
+                1024: {
+                    slidesPerView: 3,
+                    spaceBetween: 50,
+                },
+            },
             direction: getDirection(),
             navigation: {
                 nextEl: '.swiper-button-next-productos',
