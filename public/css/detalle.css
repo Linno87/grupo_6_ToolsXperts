@@ -10,17 +10,17 @@ body {
     display: flex;
     flex-wrap: wrap;
     width: 100%;
-
 }
-
+.detalle__carrusel-02{
+width:  95%;
+margin: 0 auto;
+padding-bottom: 100px;
+}
 
 div.detalle__div-img {
     width: 100%;
     display: flex;
     flex-direction: column;
-
-
-
 }
 
 
@@ -40,7 +40,6 @@ div.detalle__div-img {
     top: -5px;
     padding: 5px;
 }
-
 
 
 /* CAJA-IMG-MOBILE*/
@@ -65,9 +64,7 @@ div.detalle__div-img {
     text-align: center;
     margin: 20px;
     border-radius: 30px;
-    /* height: 350px; */
     padding: 20px 25px;
-
 
 }
 
@@ -213,7 +210,7 @@ div.detalle__div-img {
 }
 
 
-
+/* fijarse que es !!!? */
 #related-products div div img {
     padding: 10px;
     background: none;
@@ -224,7 +221,6 @@ div.detalle__div-img {
     flex-direction: column;
     border: 2px black solid;
     border-radius: 30px;
-
     background-color: white;
 
 }
@@ -250,8 +246,6 @@ div.detalle__div-img {
 .card_recomendados {
     background-color: white;
     padding-bottom: 30px;
-
-
 }
 
 
@@ -273,14 +267,13 @@ div.detalle__div-img {
     font-size: 20px;
     font-weight: 900;
 
-
 }
+
 
 /* estilos swiper */
 .swiper {
     width: 100%;
     height: 100%;
-
 }
 
 .swiper-slide {
@@ -288,7 +281,6 @@ div.detalle__div-img {
 }
 
 .swiper-slide img {
-
     display: block;
     padding: 0;
     width: 100%;
@@ -318,10 +310,8 @@ div.detalle__div-img {
 }
 
 .card_recomendados img {
-
     padding: 20px;
     height: 400px;
-
     background-color: var(--AzulOscuro);
     border-radius: 20px 20px 0 0;
 
@@ -402,7 +392,6 @@ div.detalle__div-img {
     .detalle__div-botones {
         margin-bottom: 25px;
         padding: 0 230px;
-
     }
 
 
@@ -414,7 +403,6 @@ div.detalle__div-img {
         line-height: 50px;
         height: 60px;
         width: 60px;
-
     }
 
     .uno {
@@ -440,11 +428,7 @@ div.detalle__div-img {
         margin-top: 5px;
     }
 
-    /* .menos i {
-    justify-content: center;
-    margin-top: -3px;
-}
- */
+
     /* BOTÓN COMPRAR ARTÍCULO */
     .detalle__a-boton {
         background: var(--Rojo);
@@ -455,7 +439,6 @@ div.detalle__div-img {
         padding: 10px 30px;
         color: white;
         text-transform: uppercase;
-
     }
 
     /* CAJA CONTENEDORA DE- COMPRAR PRODUCTO */
@@ -464,7 +447,6 @@ div.detalle__div-img {
         width: 100%;
         height: 200px;
         padding-top: 20px;
-        /*   border: solid 2px yellow;  */
     }
 
     /* TÍTULO-PRODUCTOS RELACIONADOS */
@@ -516,6 +498,8 @@ div.detalle__div-img {
         text-decoration: underline;
         font-size: 35px;
     }
+    .detalle__carrusel-02{
+        padding-bottom: 100px;
 }
 
 @media (min-width: 1024px) {
@@ -584,10 +568,6 @@ div.detalle__div-img {
         padding: 10px 30px;
     }
 
-
-    /* BOTÓN PARA CAMBIAR DE FOTOS */
-    .button-carrusel {}
-
     /* CAJA CONTENEDORA DE- COMPRAR PRODUCTO */
     .detalle__section-botones {
         padding-bottom: 15px;
@@ -599,7 +579,6 @@ div.detalle__div-img {
         flex-wrap: wrap;
         width: 100%;
         padding: 5px 150px;
-
     }
 
     .más {
@@ -609,8 +588,8 @@ div.detalle__div-img {
         height: 58px;
         width: 60px;
         padding-bottom: 51px;
-
     }
+
 
     .uno {
         text-align: center;
@@ -632,24 +611,15 @@ div.detalle__div-img {
         margin-top: 5px;
     }
 
-    .menos i {}
-
     /* Contenedor article "INCLUYE"-DESKTOP*/
     .detalle__section-article-03 {
         width: 80%;
-
     }
 
     /* titulo incluye-DESKTOP*/
     .detalle__section-article-03 h2 {
         width: 50%;
-
     }
-
-    /* contenedor de listado descripcion incluye-DESKTOP */
-    .detalle__section-article-03 ul {}
-
-    .detalle__section-article-03 ul li {}
 
     /* CONTENER DESCRIPCIÓN Y CARACTERÍSTICAS-DESKTOP */
     article.detalle__section-article-04 {
@@ -658,7 +628,6 @@ div.detalle__div-img {
         flex-direction: row;
         width: 90%;
         height: 600px;
-
     }
 
     /* CAJA DE LAS LI-INCLUYE-DESKTOP */
@@ -666,9 +635,8 @@ div.detalle__div-img {
         width:95%;
         margin-left:25px;
         height: 450px;
-       
-
     }
+
     /* DESCRIPCIÓN-CAJA CELESTE-DESKTOP */
     article.detalle__section-article-04 p{
         text-align: left;
@@ -680,65 +648,34 @@ div.detalle__div-img {
         width: 50%;
         padding-top: 15px;
         height: 550px;
-      
     }
 
     /* DESCRIPCIÓN Y CARACTERÍSTICAS-DESKTOP*/
     .detalle-h2 {
         padding: 15px;
-
     }
 
 
     .detalle__section-article-05 {
-        height: 50%;
+       height: 50%;
     }
 
-    /* titulo 2do carrusel */
-    .tituloDestacados {}
-
-
-
-    #related-products div div img {}
-
-    .card_recomendados {}
 
     .descripcion_recomendados h5 {
-
         width: 60px;
-
-
     }
-
-    .detalle__section-article-02-carousel {}
-
-    .card_recomendados {}
-
-
-
-    .descripcion_recomendados {}
-
-    .descripcion_recomendados p {}
-
-    .descripcion_recomendados a {}
+ 
 
     /* estilos swiper-DESKTOP */
     .swiper {
         width: 100%;
         height: 100%;
-
     }
-
-    .swiper-slide {}
 
     .swiper-slide img {
-
         width: 100%;
-
     }
 
-    /* CAJA DE IMG-CARRUSEL-DESKTOP */
-    div.swiper-slide {}
 
     /* PÁGINADOR DEL CARROUSEL--DESKTOP-- */
 
@@ -755,8 +692,12 @@ div.detalle__div-img {
         background: rgba(255, 255, 255, 0.2);
     }
 
+    .card_recomendados img {
+        width: 100%;
+    }
 
-    .swiper-pagination-bullet-active {}
-
-    .card_recomendados img {}
-}
+    .detalle__carrusel-02{
+        width:  90%;
+        padding-bottom: 100px;
+        }
+}}
