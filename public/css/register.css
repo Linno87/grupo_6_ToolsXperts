@@ -36,6 +36,26 @@
     justify-content: end;
     padding-right: 10px;
     background-color: #1d3557;
+    height: 20px;
+}
+.mid_bar_right{
+    justify-content: end;
+}
+.div_login {
+    margin-top: 8px;
+    margin-right: 7px;
+    height: 30px;
+    width: 30px;
+}
+
+.div_login i {
+    font-size: 27px;
+}
+
+.div_login a {
+    display: block;
+    height: 30px;
+    width: 30px;
 }
 
 /* MAIN REGISTER */

@@ -93,6 +93,10 @@
     border-radius: 15px;
     margin: 1rem;
 }
+.mid_bar_right{
+    justify-content: end;
+}
+
 
 @media (min-width:361px){
     .login_main_form_box{
