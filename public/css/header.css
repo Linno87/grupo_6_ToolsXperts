@@ -3,7 +3,7 @@
     flex-direction: row-reverse;
     height: 25px;
     width: 100%;
-    background-color: var(--AzulOscuro);
+    background-color: #1d3557;
     position: relative;
 }
 
@@ -38,7 +38,7 @@
 .mid_bar_right {
     display: flex;
     flex-direction: row-reverse;
-    width: 50%;
+    width: 0%;
     height: 100%;
 }
 
@@ -81,7 +81,7 @@
     justify-content: space-between;
     height: 50px;
     width: 100%;
-    background-color: var(--AzulOscuro);
+    background-color: #1d3557;
 }
 
 .search_bar {
@@ -102,14 +102,14 @@
 }
 
 .lupa {
-    color: var(--AzulOscuro);
+    color: #1d3557;
     margin-top: 5px;
     padding-right: 30px;
     padding-left: 5px;
 }
 
 .search_bar_x {
-    color: var(--AzulOscuro);
+    color: #1d3557;
     margin-top: 5px;
     padding-left: 30px;
 }
@@ -141,7 +141,7 @@
         left: 250px;
         bottom: 30px;
         margin: 0;
-        border: var(--AzulOscuro) solid 1px;
+        border: #1d3557 solid 1px;
     }
 
     .mid_bar {
@@ -161,7 +161,7 @@
     }
 
     .bottom_bar ul {
-        background-color: var(--AzulOscuro);
+        background-color: #1d3557;
         display: flex;
         text-decoration: none;
     }
@@ -197,7 +197,7 @@
 
     .navbar {
         display: block;
-        padding-left: 8px;
+        padding-left: 5px;
     }
 }
 

@@ -1,6 +1,4 @@
-
 body {
-    padding-top: 25px;
     background-color: white;
 }
 
@@ -285,8 +283,6 @@ div.detalle__div-img {
     display: block;
     padding: 0;
     width: 100%;
-    max-height: 100%;
-    object-fit: cover;
 }
 
 /* PÁGINADOR DEL CARROUSEL--MOBILE-- */
