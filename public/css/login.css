@@ -96,6 +96,9 @@
 .mid_bar_right{
     justify-content: end;
 }
+.div_register{
+    margin-right: 5px;
+}
 
 
 @media (min-width:361px){

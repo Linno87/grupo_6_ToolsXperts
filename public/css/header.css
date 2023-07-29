@@ -42,7 +42,6 @@
 
 .mid_bar_right {
     display: flex;
-    flex-direction: row-reverse;
     width: 32%;
     height: 100%;
     justify-content: space-around;
