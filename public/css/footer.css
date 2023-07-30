@@ -85,23 +85,18 @@ footer p {
 .footer__article-contenedor-seguinos-redes {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
-    padding-bottom: 15px;
+    justify-content: space-between;
+    padding-bottom: 30px;
 
 }
-
-
 
 .footer__article-contenedor-seguinos-redes a i {
     font-size: 40px;
 }
 
-
-
-.sus-01 {
-    padding: 0 10px;
+.fa-facebook{
+    margin-left:-40px;
 }
-
 /* ESPACIO IZQ. BOTÓN DE SUSCRIBITE */
 a.footer__caja-boton-padre {
     padding: 10px 20px;
@@ -137,7 +132,7 @@ a.footer__caja-boton-padre {
     font-weight: 900;
     font-size: 1.5rem;
     padding: 15px;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 
 }
 
@@ -171,6 +166,7 @@ a.footer__caja-boton-padre {
     .footer__article-contenedor-suscribite,
     .footer__article-contenedor-ayuda {
         padding-top: 15px;
+        padding-bottom: 10px;
     }
 
     .footer__article-contenedor,
@@ -185,6 +181,7 @@ a.footer__caja-boton-padre {
         justify-content: space-between;
         padding: 5px;
         font-size: 40px;
+        padding-bottom: 15px;
     }
 
 
@@ -192,8 +189,11 @@ a.footer__caja-boton-padre {
 
         font-weight: 800;
         font-size: 1.8rem;
-
     }
+   /* icono face!! */ 
+.fa-facebook{
+    margin-left:-15px;
+}
 }
 
 /* ACÁ COMIENZA DESKTOP */
@@ -233,6 +233,7 @@ a.footer__caja-boton-padre {
     .footer__article-contenedor-suscribite,
     .footer__article-contenedor-ayuda {
         padding-top: 35px;
+        padding-bottom: 10px;
     }
 
 
@@ -250,6 +251,8 @@ a.footer__caja-boton-padre {
         justify-content: space-between;
         padding: 15px;
         font-size: 40px;
+        padding-bottom: 10px;
+        
     }
 
 
@@ -265,6 +268,8 @@ a.footer__caja-boton-padre {
     article .footer__article-contenedor {
         padding: 0 10px 5px 10px;
     }
-
+    .fa-facebook{
+        margin-left:-45px;
+    }
 
 }
