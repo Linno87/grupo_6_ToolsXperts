@@ -14,6 +14,7 @@
 }
 .login_main_form_box h1{
     font-weight: 700;}
+    
 .login_main_form_box{
     text-align: center;
     border-radius: 22px;
@@ -104,7 +105,7 @@
 
 
 
-@media (min-width:361px){
+@media (min-width:768px){
     .login_main_form_box{
          padding: 50px;
          padding-top: 70px;
@@ -120,7 +121,7 @@
    
 }
 
-@media (min-width:769px){
+@media (min-width:1024px){
     
     .login_main {
         display: flex;
