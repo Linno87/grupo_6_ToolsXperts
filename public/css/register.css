@@ -1,197 +1,170 @@
 /* Header */
-.register__top_bar {
-    display: flex;
-    flex-direction: row-reverse;
-    height: 25px;
-    width: 100%;
-    background-color: #1d3557;
-    position: relative;
+
+.register__div_register {
+  display: none;
 }
 
-.register__top_bar i {
-    color: var(--Rojo);
-    font-size: 17px;
-    position: absolute;
-    top: 3px;
-    right: 5px;
+.register__div_carrito {
+  display: none;
 }
 
-.register__mid_bar {
-    background-color: white;
-    height: 40px;
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin: 10px 0;
+.register__div_login {
+  display: none;
 }
 
-.register__mid_bar_left img {
-    width: 160px;
-    margin-top: -55px;
-}
-
-.register__bottom_bar {
-    display: flex;
-    justify-content: end;
-    padding-right: 10px;
-    background-color: #1d3557;
+.register__search_bar {
+  display: none;
 }
 
 /* MAIN REGISTER */
 
-.register{
-    color:#ffff;
+.register {
+  color: #ffff;
 }
-.register_main_logo_box{   
-    display: none;
-}
-
-.register_main_form{
-    text-align: left;
-    display: flex;
-    flex-direction: column;
-    padding: 13px;
-
-}
-.register_main_form_box h1{
-    font-weight: 700;}
-.register_main_form_box{
-    text-align: center;
-    border-radius: 22px;
-    background-color: var(--AzulTransparente);
-    padding: 19px;
+.register_main_logo_box {
+  display: none;
 }
 
-.register_main_form_inp_box{
-    margin: 9px 0;
-    color: white;
+.register_main_form {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  padding: 13px;
+}
+.register_main_form_box h1 {
+  font-weight: 700;
+}
+.register_main_form_box {
+  text-align: center;
+  border-radius: 22px;
+  background-color: var(--AzulTransparente);
+  padding: 19px;
 }
 
-.register_main_form_inp_box label{
-    display: block;
-    margin-bottom: 5px;
-    font-size: 11px;
-    margin-left: 10px;
-}
-.register_main_form_inp_box input{
-    padding: 10px;
-    border-radius: 20px;
-    border: none;
-    background-color: var(--GrisClaro);
-    opacity: 25%;
-    width: 100%;
+.register_main_form_inp_box {
+  margin: 9px 0;
+  color: white;
 }
 
-.register_main_form_inp_box input:invalid{
-    border: solid 3px var(--Rojo);
-    background-color: var(--Rojo);
+.register_main_form_inp_box label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 11px;
+  margin-left: 10px;
 }
-.register_main_form_inp_box input:valid{
-    border:  solid 3px rgb(12, 252, 12);
-}
-
-.register_main_form div{
-    text-align: center;
-    padding-top: 9px;
-}
- 
-.btn_register{
-    text-transform: capitalize;
-    font-weight: 600;
-    padding: 5px 30px;
-    border: solid 2px var(--Rojo);
+.register_main_form_inp_box input {
+  padding: 10px;
+  border-radius: 20px;
+  border: none;
+  background-color: var(--GrisClaro);
+  opacity: 25%;
+  width: 100%;
 }
 
-.btn_register:hover{
-    border: solid 2px var(--Rojo);
-    color: var(--Rojo);
-    background-color: var(--AzulTransparente);
+.register_main_form_inp_box input:invalid {
+  border: solid 3px var(--Rojo);
+  background-color: var(--Rojo);
+}
+.register_main_form_inp_box input:valid {
+  border: solid 3px rgb(12, 252, 12);
 }
 
-.register_main_redes{
-    display: flex;
-    justify-content: center;
-    gap: 7%;
+.register_main_form div {
+  text-align: center;
+  padding-top: 9px;
 }
 
-.register_main_redes a{
-    background-color: #ffffff;
-    border-radius: 53%;
-    height: 26px;
-    width: 25px;
-    margin-left: 0px;
+.register_main_redes {
+  display: flex;
+  justify-content: center;
+  gap: 7%;
 }
 
-.register_main_redes i{
-    font-size: 31px;
-    margin-top: -3px;
-    margin-left: -1px;
-    color: var(--Rojo);
+.register_main_redes a {
+  background-color: #ffffff;
+  border-radius: 53%;
+  height: 26px;
+  width: 25px;
+  margin-left: 0px;
+}
+
+.register_main_redes i {
+  font-size: 31px;
+  margin-top: -3px;
+  margin-left: -1px;
+  color: var(--Rojo);
 }
 .register_main {
-    
-    background-color: var(--AzulClaro);
-    border-radius: 15px;
+  background-color: var(--AzulClaro);
+  border-radius: 15px;
+  margin: 1rem;
+}
+
+@media (min-width: 769px) {
+  .register_main {
+    display: flex;
     margin: 1rem;
-}
+  }
 
-@media (min-width:361px){
-    .register_main_form_box{
-         padding: 50px;
-         padding-top: 70px;
-         font-size: 25px;
-    }
-    .register_main_form{
-        padding: 13px 61px;
-        font-size: 29px;
-        }
-    .btn_register {
-    padding: 5px 50px;
-    }
-}
+  .register_main_logo_box {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 20px;
+    width: 50%;
+  }
 
-@media (min-width:769px){
-    
-    .register_main {
-        display: flex;
-        margin: 1rem;
-    }
+  .register_main_form_box {
+    margin: 5%;
+  }
+  .register_main_logo_box div {
+    padding-bottom: 4rem;
+  }
+  .register_main_logo_box hr {
+    height: 3px;
+    background-color: #ffffff;
+  }
 
-    .register_main_logo_box{
-        display: flex;
-        justify-content: space-between;
-        flex-direction: column;
-        padding: 20px;
-        width: 50%;
-    }
+  .register_main_logo_box h1 {
+    font-weight: 800;
+    padding-bottom: 2px;
+    font-size: 53px;
+  }
+  .register_main_logo_box p {
+    margin-bottom: 7px;
+  }
 
-    .register_main_form_box{
-        margin: 5%;
-    }
-    .register_main_logo_box div{
-        padding-bottom: 4rem;
-    }
-    .register_main_logo_box hr{
-        height: 3px;
-        background-color: #ffffff;
-    }
-
-    .register_main_logo_box h1{
-        font-weight: 800;
-        padding-bottom: 2px;
-        font-size: 53px;
-    }
-    .register_main_logo_box p{
-        margin-bottom: 7px;
-    }
-   
-    .register_main_form{
-        padding: 2rem 13px;
-    }
-    .register_main_form_box{
+  .register_main_form {
+    padding: 2rem 13px;
+  }
+  .register_main_form_box {
     width: 50%;
     padding: 50px;
-    }
-   
+  }
+}
+
+@media (min-width: 1024px) {
+  .div_register {
+    margin-bottom: 20px;
+  }
+
+  .div_register i {
+    font-size: 50px;
+  }
+
+  .div_login {
+    margin-bottom: 20px;
+  }
+
+  .div_login i {
+    font-size: 50px;
+  }
+
+  .div_carrito {
+    margin-bottom: 20px;
+  }
+
+  .div_carrito i {
+    font-size: 50px;
+  }
 }

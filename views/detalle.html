@@ -5,12 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/4a01fa7cad.js" crossorigin="anonymous"></script>
-
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
     <link href="/css/styles.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
-
     <title>footer | detalle</title>
 </head>
+
 <body>
     <header class="header">
         <div class="top_bar">
@@ -21,31 +20,33 @@
                 <a href="/"><img src="/img/Logo-Toolsxperts.png" alt="imagen_logo_ToolsXperts "></a>
             </div>
             <div class="mid_bar_right">
-                <div class="div_login_button">
-                    <a href="/register"><button>INICIAR SESION</button></a>
+                <div class="div_login">
+                    <a href="/login"><i class="fas fa-sign-in-alt"></i></a>
                 </div>
-                <div class="div_carrito">
+
+                <div class="div_register">
+                    <a href="/register"><i class="fas fa-address-card"></i>
+                    </a>
+                </div>                <div class="div_carrito">
                     <a href="/carrito"><i class="fa-solid fa-cart-shopping"></i></a>
                 </div>
             </div>
         </div>
+        </div>
         <div class="bottom_bar">
             <nav class="navbar">
-                    <ul>
-                        <li><a href="/productos">Productos</a></a></li>
-                        <li><a href="/contacto">Contacto</a></li>
-                        <li><a href="/envios">Envios</a></li>
-                    </ul>
+                <ul>
+                    <li><a href="/detalle">Productos</a></a></li>
+                    <li><a href="/contacto">Contacto</a></li>
+                    <li><a href="/envios">Envios</a></li>
+                </ul>
             </nav>
             <div class="search_bar">
+                <div class="search_bar_text">
+                    <input type="text" placeholder="¿Qué estas buscando? Nosotros te lo encontramos...">
+                </div>
                 <div class="lupa">
                     <i class="fa-solid fa-magnifying-glass"></i>
-                </div>
-                <div class="search_bar_text">
-                    <input type="text" placeholder=" ¿Qué estas buscando? Que nosotros te lo encontramos...">
-                </div>
-                <div class="search_bar_x">
-                    <i class="fa-solid fa-x"></i>
                 </div>
             </div>
             <div class="burguer_menu">
@@ -57,11 +58,9 @@
         <section>
             <article class="detalle__section-article-01">
                 <div class="detalle__section-article-01-carousel">
-                    <!-- CLASE------------------------SWIPER -->
                     <div class="swiper mySwiper">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
-                                <!-- CLASE------------------------SWIPER -->
                                 <div class="detalle__div-img">
                                     <a href="#"><i class="far fa-heart"></i>Agregar a mis favoritos.</a>
                                     <img src="/img/AMOLADORAS/9002-removebg-preview.png" alt="">
@@ -182,36 +181,36 @@
             </article>
         </section>
     </main>
+    <footer>
+        <div class="footer__caja-logo">
+            <img src="/img/logo_footer.png" alt="logo">
+        </div>
+        <article class="footer__article-contenedor">
+            <a href="#" class="footer__caja-boton-padre">Ayuda</a>
+            <P>Si tenés sugerencias o comentarios</P>
+            <a class="contactanos">Contactanos</a>
+        </article>
+        <hr>
+        <article class="footer__article-contenedor footer__article-contenedor-suscribite ">
+            <a href="#" class="footer__caja-boton-padre">Suscribite</a>
+            <p>Registrate para enterarte de nuestras promociones</p>
+        </article>
+        <hr>
+        <!--CONTENEDOR  REDES  -->
+        <article class="footer__article-contenedor-ayuda">
+            <h3>Seguinos en</h3>
+            <!-- CONTENEDOR  ICONOS-->
+            <article class="footer__article-contenedor-seguinos-redes">
+                <a class="footer-01" href="#"><i class="fab fa-twitter-square"></i></a>
+                <a class="footer-02" href="#"><i class="fab fa-facebook"></i></a>
+                <a class="footer-03" href="#"><i class="fab fa-instagram"></i></a>
+                <a class="footer-04" href="#"><i class="fab fa-whatsapp"></i></a>
+            </article>
+        </article>
+    </footer>
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <script src="/js/detalle.js">
     </script>
 </body>
-<footer>
-    <div class="footer__caja-logo">
-        <img src="/img/logo_footer.png" alt="logo">
-    </div>
-    <article class="footer__article-contenedor">
-        <a href="#" class="footer__caja-boton-padre">Ayuda</a>
-        <P>Si tenés sugerencias o comentarios</P>
-        <a class="contactanos">Contactanos</a>
-    </article>
-    <hr>
-    <article class="footer__article-contenedor footer__article-contenedor-suscribite ">
-        <a href="#" class="footer__caja-boton-padre">Suscribite</a>
-        <p>Registrate para enterarte de nuestras promociones</p>
-    </article>
-    <hr>
-    <!--CONTENEDOR  REDES  -->
-    <article class="footer__article-contenedor-ayuda">
-        <h3>Seguinos en</h3>
-        <!-- CONTENEDOR  ICONOS-->
-        <article class="footer__article-contenedor-seguinos-redes">
-            <a class="footer-01" href="#"><i class="fab fa-twitter-square"></i><a>
-                    <a class="footer-02" href="#"><i class="fab fa-facebook"></i></a>
-                    <a class="footer-03" href="#"><i class="fab fa-instagram"></i></a>
-                    <a class="footer-04" href="#"><i class="fab fa-whatsapp"></i></a>
-        </article>
-    </article>
-</footer>
 
 </html>

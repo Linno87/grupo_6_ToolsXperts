@@ -7,6 +7,24 @@
   text-align: center;
 }
 
+/* HOT SALE */
+
+.section--hot-sale{
+  width: 100%;
+}
+
+.section--hot-sale .swiper-button-next{
+  transform: scale(0.5);
+}
+
+.section--hot-sale .swiper-button-prev{
+  transform: scale(0.5);
+}
+
+.section--hot-sale .swiper-pagination{
+  transform: scale(0.5);
+}
+
 /* OFERTAS */
 
 .home__main__article-ofertas {
