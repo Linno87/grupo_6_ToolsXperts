@@ -13,11 +13,6 @@
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
 
-    <!-- Boostrap -->
-
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-
     <!-- Font Awasome -->
     <script src="https://kit.fontawesome.com/4a01fa7cad.js" crossorigin="anonymous"></script>
 
@@ -25,9 +20,47 @@
 </head>
 
 <body>
-   
-    <header>
 
+    <header class="header">
+        <div class="top_bar">
+            <i class="fa-solid fa-globe"></i>
+        </div>
+        <div class="mid_bar">
+            <div class="mid_bar_left">
+                <a href="/"><img src="/img/Logo-Toolsxperts.png" alt="imagen_logo_ToolsXperts "></a>
+            </div>
+            <div class="mid_bar_right">
+                <div class="div_login_button">
+                    <a href="/register"><button>INICIAR SESION</button></a>
+                </div>
+                <div class="div_carrito">
+                    <a href="/carrito"><i class="fa-solid fa-cart-shopping"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="bottom_bar">
+            <nav class="navbar">
+                <ul>
+                    <li><a href="/productos">Productos</a></a></li>
+                    <li><a href="/contacto">Contacto</a></li>
+                    <li><a href="/envios">Envios</a></li>
+                </ul>
+            </nav>
+            <div class="search_bar">
+                <div class="lupa">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+                <div class="search_bar_text">
+                    <input type="text" placeholder=" ¿Qué estas buscando? Que nosotros te lo encontramos...">
+                </div>
+                <div class="search_bar_x">
+                    <i class="fa-solid fa-x"></i>
+                </div>
+            </div>
+            <div class="burguer_menu">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
     </header>
 
     <main class="home__main">
@@ -181,149 +214,179 @@
                 <div class="swiper-productos">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
-                            <article class="home__main__section__article-productos">
-                                <div class="card">
-                                    <img class="card__img" src="/img/AMOLADORAS/9002-removebg-preview.png"
-                                        class="card-img-top" alt="producto1">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Card title</h5>
-                                        <p class="card-text">Some quick example text to build on the card title and make
-                                            up the bulk
-                                            of
-                                            the card's
-                                            content.</p>
-                                        <a href="#" class="btn btn-primary home__main__section__article__a-productos">Go
-                                            somewhere</a>
+                            <article class="home__main__article--product">
+
+                                <img src="/img/AMOLADORAS/AA2KB-removebg-preview.png" alt="AA2KB">
+
+                                <div class="home__main__article--product-descripcion">
+
+                                    <h3 class="home__main__article--nombre-del-producto">Nombre del producto</h3>
+                                    <p class="home__main__article--descripcion">Lorem ipsum dolor sit, amet consectetur
+                                        adipisicing elit. Nulla odit vel dolor perspiciatis vero magni veritatis
+                                        quibusdam ratione totam eos, nemo, quam corrupti natus, ipsum dolorem? Sit
+                                        soluta quos veniam.</p>
+
+                                    <div class="home__main__article--product-precio-descuento">
+                                        <p class="home__main__article--precios">$0000</p>
+                                        <p class="home__main__article--descuentos">10% off</p>
                                     </div>
+
+                                    <button type="submit">Ver</button>
                                 </div>
                             </article>
                         </div>
                         <div class="swiper-slide">
-                            <article class="home__main__section__article-productos">
-                                <div class="card">
-                                    <img class="card__img"
-                                        src="/img/CALADORAS/BAC400-removebg-preview-removebg-preview.png"
-                                        class="card-img-top" alt="producto2">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Card title</h5>
-                                        <p class="card-text">Some quick example text to build on the card title and make
-                                            up the bulk
-                                            of
-                                            the card's
-                                            content.</p>
-                                        <a href="#" class="btn btn-primary home__main__section__article__a-productos">Go
-                                            somewhere</a>
+                            <article class="home__main__article--product">
+
+                                <img src="/img/AMOLADORAS/9002-removebg-preview.png" alt="9002">
+
+                                <div class="home__main__article--product-descripcion">
+
+                                    <h3 class="home__main__article--nombre-del-producto">Nombre del producto</h3>
+                                    <p class="home__main__article--descripcion">Lorem ipsum dolor sit, amet consectetur
+                                        adipisicing elit. Nulla odit vel dolor perspiciatis vero magni veritatis
+                                        quibusdam ratione totam eos, nemo, quam corrupti natus, ipsum dolorem? Sit
+                                        soluta quos veniam.</p>
+
+                                    <div class="home__main__article--product-precio-descuento">
+                                        <p class="home__main__article--precios">$0000</p>
+                                        <p class="home__main__article--descuentos">10% off</p>
                                     </div>
+
+                                    <button type="submit">Ver</button>
                                 </div>
                             </article>
                         </div>
                         <div class="swiper-slide">
-                            <article class="home__main__section__article-productos">
-                                <div class="card">
-                                    <img src="/img/TALADROS/00000000000TE75B10345TALADRO-13-removebg-preview.png"
-                                        class="card-img-top" alt="producto3">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Card title</h5>
-                                        <p class="card-text">Some quick example text to build on the card title and make
-                                            up the bulk
-                                            of
-                                            the card's
-                                            content.</p>
-                                        <a href="#" class="btn btn-primary home__main__section__article__a-productos">Go
-                                            somewhere</a>
+                            <article class="home__main__article--product">
+
+                                <img src="/img/CALADORAS/BAC400-removebg-preview-removebg-preview.png" alt="BAC400">
+
+                                <div class="home__main__article--product-descripcion">
+
+                                    <h3 class="home__main__article--nombre-del-producto">Nombre del producto</h3>
+                                    <p class="home__main__article--descripcion">Lorem ipsum dolor sit, amet consectetur
+                                        adipisicing elit. Nulla odit vel dolor perspiciatis vero magni veritatis
+                                        quibusdam ratione totam eos, nemo, quam corrupti natus, ipsum dolorem? Sit
+                                        soluta quos veniam.</p>
+
+                                    <div class="home__main__article--product-precio-descuento">
+                                        <p class="home__main__article--precios">$0000</p>
+                                        <p class="home__main__article--descuentos">10% off</p>
                                     </div>
+
+                                    <button type="submit">Ver</button>
                                 </div>
                             </article>
                         </div>
                         <div class="swiper-slide">
-                            <article class="home__main__section__article-productos">
-                                <div class="card">
-                                    <img src="/img/PINTOR/ATK-5-removebg-preview.png" class="card-img-top"
-                                        alt="producto4">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Card title</h5>
-                                        <p class="card-text">Some quick example text to build on the card title and make
-                                            up
-                                            the bulk
-                                            of the card's
-                                            content.</p>
-                                        <a href="#" class="btn btn-primary home__main__section__article__a-productos">Go
-                                            somewhere</a>
+                            <article class="home__main__article--product">
+
+                                <img src="/img/TALADROS/00000000000TE75B10345TALADRO-13-removebg-preview.png"
+                                    alt="TE75B">
+
+                                <div class="home__main__article--product-descripcion">
+
+                                    <h3 class="home__main__article--nombre-del-producto">Nombre del producto</h3>
+                                    <p class="home__main__article--descripcion">Lorem ipsum dolor sit, amet consectetur
+                                        adipisicing elit. Nulla odit vel dolor perspiciatis vero magni veritatis
+                                        quibusdam ratione totam eos, nemo, quam corrupti natus, ipsum dolorem? Sit
+                                        soluta quos veniam.</p>
+
+                                    <div class="home__main__article--product-precio-descuento">
+                                        <p class="home__main__article--precios">$0000</p>
+                                        <p class="home__main__article--descuentos">10% off</p>
                                     </div>
+
+                                    <button type="submit">Ver</button>
                                 </div>
                             </article>
                         </div>
                         <div class="swiper-slide">
-                            <article class="home__main__section__article-productos">
-                                <div class="card">
-                                    <img src="/img/AMOLADORAS/9002-removebg-preview.png" class="card-img-top"
-                                        alt="producto5">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Card title</h5>
-                                        <p class="card-text">Some quick example text to build on the card title and make
-                                            up
-                                            the
-                                            bulk
-                                            of the card's
-                                            content.</p>
-                                        <a href="#" class="btn btn-primary home__main__section__article__a-productos">Go
-                                            somewhere</a>
+                            <article class="home__main__article--product">
+
+                                <img src="/img/PINTOR/ATK-5-removebg-preview.png" alt="ATK5">
+
+                                <div class="home__main__article--product-descripcion">
+
+                                    <h3 class="home__main__article--nombre-del-producto">Nombre del producto</h3>
+                                    <p class="home__main__article--descripcion">Lorem ipsum dolor sit, amet consectetur
+                                        adipisicing elit. Nulla odit vel dolor perspiciatis vero magni veritatis
+                                        quibusdam ratione totam eos, nemo, quam corrupti natus, ipsum dolorem? Sit
+                                        soluta quos veniam.</p>
+
+                                    <div class="home__main__article--product-precio-descuento">
+                                        <p class="home__main__article--precios">$0000</p>
+                                        <p class="home__main__article--descuentos">10% off</p>
                                     </div>
+
+                                    <button type="submit">Ver</button>
                                 </div>
                             </article>
                         </div>
                         <div class="swiper-slide">
-                            <article class="home__main__section__article-productos">
-                                <div class="card">
-                                    <img src="/img/TALADROS/BIL-TP13-removebg-preview.png" class="card-img-top"
-                                        alt="producto6">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Card title</h5>
-                                        <p class="card-text">Some quick example text to build on the card title and make
-                                            up
-                                            the
-                                            bulk
-                                            of the card's
-                                            content.</p>
-                                        <a href="#" class="btn btn-primary home__main__section__article__a-productos">Go
-                                            somewhere</a>
+                            <article class="home__main__article--product">
+
+                                <img src="/img/PINTOR/ATK-5-removebg-preview.png" alt="ATK5">
+
+                                <div class="home__main__article--product-descripcion">
+
+                                    <h3 class="home__main__article--nombre-del-producto">Nombre del producto</h3>
+                                    <p class="home__main__article--descripcion">Lorem ipsum dolor sit, amet consectetur
+                                        adipisicing elit. Nulla odit vel dolor perspiciatis vero magni veritatis
+                                        quibusdam ratione totam eos, nemo, quam corrupti natus, ipsum dolorem? Sit
+                                        soluta quos veniam.</p>
+
+                                    <div class="home__main__article--product-precio-descuento">
+                                        <p class="home__main__article--precios">$0000</p>
+                                        <p class="home__main__article--descuentos">10% off</p>
                                     </div>
+
+                                    <button type="submit">Ver</button>
                                 </div>
                             </article>
                         </div>
                         <div class="swiper-slide">
-                            <article class="home__main__section__article-productos">
-                                <div class="card">
-                                    <img src="/img/LIJADORAS/LBP-80-removebg-preview.png" class="card-img-top"
-                                        alt="producto7">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Card title</h5>
-                                        <p class="card-text">Some quick example text to build on the card title and make
-                                            up
-                                            the
-                                            bulk
-                                            of the card's
-                                            content.</p>
-                                        <a href="#" class="btn btn-primary home__main__section__article__a-productos">Go
-                                            somewhere</a>
+                            <article class="home__main__article--product">
+
+                                <img src="/img/TALADROS/BIL-TP13-removebg-preview.png" alt="BILTP13">
+
+                                <div class="home__main__article--product-descripcion">
+
+                                    <h3 class="home__main__article--nombre-del-producto">Nombre del producto</h3>
+                                    <p class="home__main__article--descripcion">Lorem ipsum dolor sit, amet consectetur
+                                        adipisicing elit. Nulla odit vel dolor perspiciatis vero magni veritatis
+                                        quibusdam ratione totam eos, nemo, quam corrupti natus, ipsum dolorem? Sit
+                                        soluta quos veniam.</p>
+
+                                    <div class="home__main__article--product-precio-descuento">
+                                        <p class="home__main__article--precios">$0000</p>
+                                        <p class="home__main__article--descuentos">10% off</p>
                                     </div>
+
+                                    <button type="submit">Ver</button>
                                 </div>
                             </article>
                         </div>
                         <div class="swiper-slide">
-                            <article class="home__main__section__article-productos">
-                                <div class="card">
-                                    <img src="/img/LIJADORAS/LBP-80-removebg-preview.png" class="card-img-top"
-                                        alt="producto8">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Card title</h5>
-                                        <p class="card-text">Some quick example text to build on the card title and make
-                                            up the bulk
-                                            of the card's
-                                            content.</p>
-                                        <a href="#" class="btn btn-primary home__main__section__article__a-productos">Go
-                                            somewhere</a>
+                            <article class="home__main__article--product">
+
+                                <img src="/img/LIJADORAS/LBP-80-removebg-preview.png" alt="LBP80">
+
+                                <div class="home__main__article--product-descripcion">
+
+                                    <h3 class="home__main__article--nombre-del-producto">Nombre del producto</h3>
+                                    <p class="home__main__article--descripcion">Lorem ipsum dolor sit, amet consectetur
+                                        adipisicing elit. Nulla odit vel dolor perspiciatis vero magni veritatis
+                                        quibusdam ratione totam eos, nemo, quam corrupti natus, ipsum dolorem? Sit
+                                        soluta quos veniam.</p>
+
+                                    <div class="home__main__article--product-precio-descuento">
+                                        <p class="home__main__article--precios">$0000</p>
+                                        <p class="home__main__article--descuentos">10% off</p>
                                     </div>
+
+                                    <button type="submit">Ver</button>
                                 </div>
                             </article>
                         </div>
@@ -403,12 +466,6 @@
         </article>
     </footer>
 
-    <!-- BOOSTRAP -->
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
-        crossorigin="anonymous"></script>
-
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 
@@ -455,7 +512,7 @@
     <!-- Initialize Swiper PRODUCTOS -->
     <script>
         var swiper = new Swiper('.swiper-productos', {
-              breakpoints: {
+            breakpoints: {
                 640: {
                     slidesPerView: 1,
                     spaceBetween: 20,
