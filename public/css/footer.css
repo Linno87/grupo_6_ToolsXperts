@@ -94,9 +94,6 @@ footer p {
     font-size: 40px;
 }
 
-.fa-facebook{
-    margin-left:-40px;
-}
 /* ESPACIO IZQ. BOTÓN DE SUSCRIBITE */
 a.footer__caja-boton-padre {
     padding: 10px 20px;
@@ -267,9 +264,6 @@ a.footer__caja-boton-padre {
 
     article .footer__article-contenedor {
         padding: 0 10px 5px 10px;
-    }
-    .fa-facebook{
-        margin-left:-45px;
     }
 
 }
