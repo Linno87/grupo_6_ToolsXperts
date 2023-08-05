@@ -1,68 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- LINKS -->
-
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
-
-    <!-- Font Awasome -->
-    <script src="https://kit.fontawesome.com/4a01fa7cad.js" crossorigin="anonymous"></script>
-
-    <!-- CSS -->
-
-    <link rel="stylesheet" href="/stylesheets/styles.css">
-
-    <title>Home | Tools Xperts</title>
-</head>
+<%- include("./partials/head", { title: "HOME"}) %>
 
 <body>
-    <header class="header">
-        <div class="top_bar">
-            <i class="fa-solid fa-globe"></i>
-        </div>
-        <div class="mid_bar">
-            <div class="mid_bar_left">
-                <a href="/"><img src="/img/Logo-Toolsxperts.png" alt="imagen_logo_ToolsXperts "></a>
-            </div>
-            <div class="mid_bar_right">
-                <div class="div_login">
-                    <a href="/users/login"><i class="fas fa-sign-in-alt"></i></a>
-                </div>
-
-                <div class="div_register">
-                    <a href="/users/register"><i class="fas fa-address-card"></i>
-                    </a>
-                </div>
-                <div class="div_carrito">
-                    <a href="/products/carrito"><i class="fa-solid fa-cart-shopping"></i></a>
-                </div>
-            </div>
-        </div>
-        </div>
-        <div class="bottom_bar">
-            <nav class="navbar">
-                <ul>
-                    <li><a href="/products/detalle">Productos</a></a></li>
-                    <li><a href="/contacto">Contacto</a></li>
-                    <li><a href="/envios">Envios</a></li>
-                </ul>
-            </nav>
-            <div class="search_bar">
-                <div class="search_bar_text">
-                    <input type="text" placeholder="¿Qué estas buscando? Nosotros te lo encontramos...">
-                </div>
-                <div class="lupa">
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                </div>
-            </div>
-            <div class="burguer_menu">
-                <i class="fa-solid fa-bars"></i>
-            </div>
-        </div>
-    </header>
+    <%- include("./partials/header") %>
     <main class="home__main">
 
         <!-- CARRUSEL HOT SALE -->
@@ -298,39 +240,11 @@
             </div>
         </section>
     </main>
-    <footer>
-        <div class="footer__caja-logo">
-            <img src="/img/logo_footer.png" alt="logo">
-        </div>
+<%- include("./partials/footer") %>
 
-        <article class="footer__article-contenedor">
-            <a href="#" class="footer__caja-boton-padre">Ayuda</a>
-            <P>Si tenés sugerencias o comentarios</P>
-            <a class="contactanos">Contactanos</a>
-
-        </article>
-        <hr>
-        <article class="footer__article-contenedor footer__article-contenedor-suscribite ">
-            <a href="#" class="footer__caja-boton-padre">Suscribite</a>
-            <p>Registrate para enterarte de nuestras promociones</p>
-
-        </article>
-        <hr>
-        <!--CONTENEDOR  REDES  -->
-        <article class="footer__article-contenedor-ayuda">
-            <h3>Seguinos en</h3>
-            <!-- CONTENEDOR  ICONOS-->
-            <article class="footer__article-contenedor-seguinos-redes">
-
-                <a class="footer-01" href="#"><i class="fab fa-twitter-square"></i><a>
-                        <a class="footer-02" href="#"><i class="fab fa-facebook"></i></a>
-                        <a class="footer-03" href="#"><i class="fab fa-instagram"></i></a>
-                        <a class="footer-04" href="#"><i class="fab fa-whatsapp"></i></a>
-            </article>
-        </article>
-    </footer>
     <!-- Swiper JS -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  <%- include("./partials/script") %>
+
     <script src="/javascripts/main.js"></script>
 
 </body>
