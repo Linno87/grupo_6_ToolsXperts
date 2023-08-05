@@ -1,0 +1,269 @@
+/* footer */
+footer {
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: var(--AzulClaro);
+    padding: 30px;
+    text-align: center;
+}
+
+/* LINEA DE SEPARACIÓN */
+
+footer hr {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: solid 2px rgb(255, 255, 255);
+
+}
+
+footer a,
+footer p {
+    text-decoration: none;
+    color: #ffffff;
+    display: block;
+    letter-spacing: 0.5px;
+    margin: 1.5px auto;
+    margin-bottom: 0;
+    font-family: var(--tipografia02);
+}
+
+
+.footer__caja-logo {
+    padding: 5px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+/* IMG DEL LOGO */
+.footer__caja-logo img {
+    width: 100%;
+}
+
+
+/* CAJA AYUDA Y SUSCRIBITE */
+.footer__article-contenedor {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+/* SEPARACIÓN DE LAS P Y EL BOTÓN */
+.footer__article-contenedor p {
+    padding-top: 10px;
+}
+
+/* PALABRA CONTACTANOS */
+.footer__article-contenedor .contactanos {
+    text-decoration: underline;
+}
+
+.footer__article-contenedor-suscribite {
+    padding: 10px;
+}
+
+.footer-01 {
+    width: 20%;
+}
+
+.footer-02 {
+    width: 20%;
+}
+
+.footer-03 {
+    width: 20%;
+}
+
+.footer-04 {
+    width: 20%;
+}
+
+.footer__article-contenedor-seguinos-redes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-bottom: 30px;
+
+}
+
+.footer__article-contenedor-seguinos-redes a i {
+    font-size: 40px;
+}
+
+/* ESPACIO IZQ. BOTÓN DE SUSCRIBITE */
+a.footer__caja-boton-padre {
+    padding: 10px 20px;
+}
+
+/* PESO DE LETRA CONTACTANOS */
+.contactanos {
+    font-weight: 700;
+}
+
+
+.footer__caja-boton-padre {
+    background-color: var(--AzulClaro);
+    width: 170px;
+    text-align: center;
+    border: solid 4px white;
+    border-radius: 35px;
+    padding: 10px 30px;
+    color: white;
+    font-family: var(--tipografia02);
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+.footer__caja-boton-padre:hover {
+    background-color: #022d47;
+    transition: all 3000ms;
+}
+
+.footer__article-contenedor-ayuda h3 {
+    font-family: var(--tipografia02);
+    color: var(--Celeste);
+    font-weight: 900;
+    font-size: 1.5rem;
+    padding: 15px;
+    margin-bottom: 15px;
+
+}
+
+/* -----------VISTA TABLET------------- */
+
+@media(min-width:768px) {
+
+    footer {
+        padding: 15px;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    footer hr {
+        width: auto;
+    }
+
+    /* PARA QUE SE ACOMODE VERTICALMENTE LA ESCRITURA */
+    .footer__article-p {
+        padding: 10px 10px 0 10px;
+    }
+
+    /* IMG DEL LOGO */
+    .footer__caja-logo img {
+        width: 50%;
+    }
+
+
+    article.footer__article-contenedor,
+    .footer__article-contenedor-suscribite,
+    .footer__article-contenedor-ayuda {
+        padding-top: 15px;
+        padding-bottom: 10px;
+    }
+
+    .footer__article-contenedor,
+    .footer__article-contenedor-suscribite,
+    .footer__article-contenedor-ayuda {
+        padding: 0 2px;
+        width: 30%;
+    }
+
+    .footer__article-contenedor-seguinos-redes {
+        display: flex;
+        justify-content: space-between;
+        padding: 5px;
+        font-size: 40px;
+        padding-bottom: 15px;
+    }
+
+
+    .footer__article-contenedor-ayuda h3 {
+
+        font-weight: 800;
+        font-size: 1.8rem;
+    }
+   /* icono face!! */ 
+.fa-facebook{
+    margin-left:-15px;
+}
+}
+
+/* ACÁ COMIENZA DESKTOP */
+@media(min-width:1024px) {
+
+
+    footer {
+        padding: 15px;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+    }
+
+    footer hr {
+        width: auto;
+        margin-top: 20px;
+        height: 130px;
+    }
+
+    /* PARA QUE SE ACOMODE VERTICALMENTE LA ESCRITURA */
+    .footer__article-p {
+        padding: 10px 10px 0 10px;
+    }
+
+    .footer__caja-logo {
+        padding: 15px 0 5px 0;
+    }
+
+    /* IMG DEL LOGO */
+    .footer__caja-logo img {
+        width: 35%;
+    }
+
+
+    article.footer__article-contenedor,
+    .footer__article-contenedor-suscribite,
+    .footer__article-contenedor-ayuda {
+        padding-top: 35px;
+        padding-bottom: 10px;
+    }
+
+
+    .footer__article-contenedor-ayuda {
+
+        align-self: flex-end;
+        padding: 0;
+        width: 30%;
+        margin-bottom: 0;
+
+    }
+
+    .footer__article-contenedor-seguinos-redes {
+        display: flex;
+        justify-content: space-between;
+        padding: 15px;
+        font-size: 40px;
+        padding-bottom: 10px;
+        
+    }
+
+
+    .footer__article-contenedor-ayuda h3 {
+        padding: 0;
+        margin-bottom: 10px;
+        font-weight: 800;
+        font-size: 1.5rem;
+
+
+    }
+
+    article .footer__article-contenedor {
+        padding: 0 10px 5px 10px;
+    }
+
+}

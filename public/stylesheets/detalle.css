@@ -1,0 +1,662 @@
+body {
+  background-color: white;
+}
+
+/* CONTENEDOR PRIMER-CARRUSEL-mobile */
+
+.detalle__section-article-01-carousel {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.detalle__carrusel-02 {
+  width: 95%;
+  margin: 0 auto;
+  padding-bottom: 100px;
+}
+
+div.detalle__div-img {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* CONTENEDOR DEL CAROUSEL-MOBILE */
+.detalle__section-article-01 {
+  padding: 5px;
+  margin: 20px;
+  background-color: var(--AzulTransparente);
+  border-radius: 30px;
+}
+
+/* CORAZÓN */
+.detalle__section-article-01 i {
+  color: white;
+  position: relative;
+  top: -5px;
+  padding: 5px;
+}
+
+/* CAJA-IMG-MOBILE*/
+.detalle__section-article-01 img {
+  margin-bottom: 30px;
+}
+
+/* AGREGAR A MIS FAVORITOS-MOBILE*/
+.detalle__section-article-01 a {
+  color: black;
+  text-decoration: underline;
+  font-size: 18px;
+  text-align: center;
+  padding: 25px 0 35px 0;
+}
+
+.detalle__section-article-02 {
+  background-color: var(--Celeste);
+  padding-top: 10px;
+  text-align: center;
+  margin: 20px;
+  border-radius: 30px;
+  padding: 20px 25px;
+}
+
+.detalle__section-article-02 p {
+  color: var(--AzulOscuro);
+  font-weight: 200;
+  font-family: var(--tipografiaGeneral);
+  padding-bottom: 5px;
+}
+
+.detalle__a-boton {
+  background: var(--Rojo);
+  border: solid 1px var(--Rojo);
+  border-radius: 15px;
+  font-weight: 700;
+  padding: 5px 8px;
+  color: white;
+  text-transform: uppercase;
+}
+
+/* BOTÓN PARA CAMBIAR DE FOTOS */
+.button-carrusel {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 10px;
+}
+
+/* CAJA CONTENEDORA DE- COMPRAR PRODUCTO */
+.detalle__section-botones {
+  margin-bottom: 25px;
+}
+
+.detalle__div-botones {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 30px 40px;
+  justify-content: space-around;
+}
+
+.más {
+  color: white;
+  border-radius: 50%;
+  background-color: var(--Rojo);
+  padding-top: 5px;
+  height: 30px;
+  width: 30px;
+  margin-top: 5px;
+}
+
+.uno {
+  text-align: center;
+  width: 30px;
+  color: white;
+  border-radius: 50%;
+  background-color: var(--Rojo);
+  height: 40px;
+  width: 40px;
+  padding: 8px 15px;
+}
+
+.menos {
+  color: white;
+  border-radius: 50%;
+  background-color: var(--Rojo);
+  height: 30px;
+  width: 30px;
+  margin-top: 5px;
+}
+
+.menos i {
+  justify-content: center;
+  margin-top: -3px;
+}
+
+/* Contenedor article "INCLUYE" */
+.detalle__section-article-03 {
+  padding: 20px;
+}
+
+/* titulo incluye-MOBILE */
+.detalle__section-article-03 h2 {
+  width: 100%;
+  color: var(--Rojo);
+  font-family: var(--tipografiaGeneral);
+  font-weight: 700;
+}
+
+/* contenedor de listado descripcion incluye */
+.detalle__section-article-03 ul {
+  padding: 10px 0 0 40px;
+}
+
+.detalle__section-article-03 ul li {
+  text-align: left;
+  padding-left: 10px;
+  color: var(--AzulClaro);
+}
+
+/* CONTENER DESCRIPCIÓN Y CARACTERÍSTICAS-MOBILE */
+.detalle__section-article-04 {
+  background-color: var(--AzulTransparente);
+  margin: 20px;
+  border-radius: 30px;
+  padding: 20px;
+}
+
+/* CAJA DE LAS LI-INCLUYE */
+.detalle__ul__div {
+  margin: 20px;
+  padding: 0;
+}
+
+/* DESCRIPCIÓN Y CARACTERÍSTICAS-MOBILE */
+.detalle__section-article-04 P {
+  text-align: center;
+  padding-bottom: 15px;
+}
+
+/* DESCRIPCIÓN Y CARACTERÍSTICAS-MOBILE */
+.detalle-h2 {
+  font-family: var(--tipografiaGeneral);
+  font-weight: 600;
+  padding-bottom: 15px;
+  text-decoration: underline;
+  color: black;
+}
+
+/* Caja padre 2do carrusel */
+.detalle__section-article-05 .recomendados {
+  display: flex;
+}
+
+/* titulo 2do carrusel */
+.tituloDestacados {
+  text-align: center;
+  text-decoration: underline;
+  font-size: 20px;
+}
+
+/* fijarse que es !!!? */
+#related-products div div img {
+  padding: 10px;
+  background: none;
+}
+
+.card_recomendados {
+  display: flex;
+  flex-direction: column;
+  border: 2px black solid;
+  border-radius: 30px;
+  background-color: white;
+}
+
+.descripcion_recomendados h5 {
+  background-color: #000000;
+  color: #ffffff;
+  height: 60px;
+  line-height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.detalle__section-article-02-carousel {
+  background: none;
+}
+
+.card_recomendados {
+  background-color: white;
+  padding-bottom: 30px;
+}
+
+.descripcion_recomendados {
+  background-color: #ffffff;
+  border-radius: 0 0 30px 30px;
+  text-align: center;
+}
+
+.descripcion_recomendados p {
+  padding: 10px;
+}
+
+.descripcion_recomendados a {
+  font-size: 20px;
+  font-weight: 900;
+}
+
+/* estilos swiper */
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  font-size: 18px;
+}
+
+.swiper-slide img {
+  display: block;
+  padding: 0;
+  width: 100%;
+}
+
+/* PÁGINADOR DEL CARROUSEL--MOBILE-- */
+
+.swiper-pagination-bullet {
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  padding: 10px 15px 13px 10px;
+  line-height: 5px;
+  font-size: 12px;
+  color: #000;
+  opacity: 1;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.swiper-pagination-bullet-active {
+  color: white;
+  background-color: rgb(0, 0, 0) !important;
+}
+
+.card_recomendados img {
+  padding: 20px;
+  height: 400px;
+  background-color: var(--AzulOscuro);
+  border-radius: 20px 20px 0 0;
+}
+
+@media (min-width: 768px) {
+  .main__detalle__main {
+    margin-top: 50px;
+  }
+
+  /* CONTENEDOR DEL CAROUSEL-TABLET */
+  .detalle__section-article-01 {
+    width: 95%;
+    justify-content: center;
+    padding-top: 35px;
+  }
+
+  /* CONTENEDOR PRIMER-CARRUSEL */
+  .detalle__section-article-01-carousel {
+    width: 100%;
+  }
+
+  /* CAJA-IMG-TABLET */
+  .detalle__section-article-01 img {
+    margin-bottom: 73px;
+  }
+
+  /* CAJA CELESTE DE LA DESCRIPCIÓN-IMG-TABLET */
+  .detalle__section-article-02 {
+    padding: 5px;
+    height: 480px;
+  }
+
+  /* PÁGINADOR DEL CARROUSEL--TABLET--*/
+  .swiper-pagination-bullet {
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    padding: 10px 15px 15px 10px;
+    line-height: 5px;
+    font-size: 15px;
+    color: #000;
+    opacity: 1;
+    background: rgba(255, 255, 255, 0.2);
+  }
+
+  /* PADDING BOTONERA-TABLET */
+  .detalle__div__swiper-pagination {
+    padding-bottom: 25px;
+    margin-top: 30px;
+  }
+
+  /* CORAZÓN Y AGREGAR A FAVORITOS-TABLET  */
+  .detalle__section-article-01 a {
+    color: black;
+    text-align: center;
+    text-decoration: underline;
+    font-size: 35px;
+  }
+
+  /* PRECIO */
+  .detalle__section-article-precio {
+    font-size: 23px;
+  }
+
+  /* DESCUENTO */
+  .detalle__section-article-descuento {
+    font-size: 25px;
+  }
+
+  /* ALTURA DE LA CAJA CELESTE-COMPRAR ARTÍCULO-TABLET */
+  .detalle__section-article-02 p {
+    height: 125px;
+    font-size: 25px;
+    margin: 35px 25px 10px 35px;
+  }
+
+  /* CAJA CONTENEDORA DE- COMPRAR PRODUCTO-TABLET */
+  .detalle__div-botones {
+    margin-bottom: 25px;
+    padding: 0 230px;
+  }
+
+  .más {
+    color: white;
+    border-radius: 50%;
+    background-color: var(--Rojo);
+    line-height: 50px;
+    height: 60px;
+    width: 60px;
+  }
+
+  .uno {
+    text-align: center;
+    line-height: 65px;
+    width: 30px;
+    color: white;
+    font-size: 30px;
+    border-radius: 50%;
+    background-color: var(--Rojo);
+    height: 75px;
+    width: 60px;
+    padding: 5px 15px;
+  }
+
+  .menos {
+    color: white;
+    border-radius: 50%;
+    line-height: 50px;
+    background-color: var(--Rojo);
+    height: 60px;
+    width: 60px;
+    margin-top: 5px;
+  }
+
+  /* BOTÓN COMPRAR ARTÍCULO */
+  .detalle__a-boton {
+    background: var(--Rojo);
+    border: solid 1px var(--Rojo);
+    border-radius: 35px;
+    font-weight: 700;
+    font-size: 25px;
+    padding: 10px 30px;
+    color: white;
+    text-transform: uppercase;
+  }
+
+  /* CAJA CONTENEDORA DE- COMPRAR PRODUCTO */
+
+  .detalle__section-botones {
+    width: 100%;
+    height: 200px;
+    padding-top: 20px;
+  }
+
+  /* TÍTULO-PRODUCTOS RELACIONADOS */
+  .detalle__section-article-06 h1 {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    color: black;
+    font-weight: 700;
+    font-size: 35px;
+    font-family: var(--tipografiaGeneral);
+    text-decoration: underline;
+    text-transform: lowercase;
+  }
+
+  /* TÍTULO INCLUYE-TABLET */
+  .detalle__section-article-03 h2 {
+    font-size: 35px;
+  }
+
+  /* TAMAÑO DE LETRA-INCLUYE-DESCRIPCIÓN-TABLET */
+  .detalle__section-article-03 ul li {
+    font-size: 25px;
+  }
+
+  /* ALTURA-CAJA AZUL-DESCRIPCIÓN-TABLET */
+  .detalle__ul__div-article-05 {
+    height: 500px;
+  }
+
+  /* TÍTULO-DESCRIPCIÓN Y CARACTERÍSTICAS-TABLET */
+  .detalle-h2 {
+    font-size: 30px;
+  }
+
+  /* DESCRIPCIÓN Y CARACTERÍSTICAS-TABLET */
+  .detalle__section-article-04 P {
+    font-size: 25px;
+  }
+
+  .detalle__ul__div LI {
+    font-size: 25px;
+  }
+
+  /* titulo 2do carrusel */
+  .tituloDestacados {
+    text-align: center;
+    text-decoration: underline;
+    font-size: 35px;
+  }
+  .detalle__carrusel-02 {
+    padding-bottom: 100px;
+  }
+
+  @media (min-width: 1024px) {
+    .main__detalle__main {
+      margin-top: 30px;
+    }
+
+    .main__detalle__main section {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      width: 100%;
+      justify-content: center;
+    }
+
+    /* CONTENEDOR PRIMER-CARRUSEL */
+
+    .detalle__section-article-01-carousel {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+    }
+
+    /* imagen carrusel */
+    div.detalle__div-img {
+      width: 40%;
+      margin-left: 60px;
+    }
+
+    /* CONTENEDOR DEL CAROUSEL-DESKTOP */
+    .detalle__section-article-01 {
+      width: 40%;
+      height: 500px;
+      display: flex;
+      justify-content: center;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* CAJA-IMG-DESKTOP*/
+    .detalle__section-article-01 img {
+      width: 100%;
+    }
+
+    /* AGREGAR A MIS FAVORITOS-DESKTOP*/
+    .detalle__section-article-01 a {
+      padding-top: 30px;
+      font-size: 25px;
+    }
+
+    /* CAJA CELESTE DE LA DESCRIPCIÓN-IMG-DESKTOP*/
+
+    .detalle__section-article-02 {
+      width: 45%;
+      height: 500px;
+      margin: 0;
+      margin-left: 55px;
+    }
+
+    .detalle__a-boton {
+      padding: 10px 30px;
+    }
+
+    /* CAJA CONTENEDORA DE- COMPRAR PRODUCTO */
+    .detalle__section-botones {
+      padding-bottom: 15px;
+    }
+
+    /* CAJA-BOTONERA-COMPRA ARTÍCULO-DESKTOP */
+    .detalle__div-botones {
+      display: flex;
+      flex-wrap: wrap;
+      width: 100%;
+      padding: 5px 150px;
+    }
+
+    .más {
+      color: white;
+      border-radius: 50%;
+      background-color: var(--Rojo);
+      height: 58px;
+      width: 60px;
+      padding-bottom: 51px;
+    }
+
+    .uno {
+      text-align: center;
+      width: 30px;
+      color: white;
+      border-radius: 50%;
+      background-color: var(--Rojo);
+      height: 70px;
+      width: 60px;
+      padding: 5px 25px;
+    }
+
+    .menos {
+      color: white;
+      border-radius: 50%;
+      background-color: var(--Rojo);
+      height: 58px;
+      width: 60px;
+      margin-top: 5px;
+    }
+
+    /* Contenedor article "INCLUYE"-DESKTOP*/
+    .detalle__section-article-03 {
+      width: 80%;
+    }
+
+    /* titulo incluye-DESKTOP*/
+    .detalle__section-article-03 h2 {
+      width: 50%;
+    }
+
+    /* CONTENER DESCRIPCIÓN Y CARACTERÍSTICAS-DESKTOP */
+    article.detalle__section-article-04 {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      width: 90%;
+      height: 600px;
+    }
+
+    /* CAJA DE LAS LI-INCLUYE-DESKTOP */
+    .detalle__ul__div {
+      width: 95%;
+      margin-left: 25px;
+      height: 450px;
+    }
+
+    /* DESCRIPCIÓN-CAJA CELESTE-DESKTOP */
+    article.detalle__section-article-04 p {
+      text-align: left;
+      padding-left: 10px;
+    }
+
+    /* DESCRIPCIÓN Y CARACTERÍSTICAS-DESKTOP */
+    .detalle__section-article-04 div {
+      width: 50%;
+      padding-top: 15px;
+      height: 550px;
+    }
+
+    /* DESCRIPCIÓN Y CARACTERÍSTICAS-DESKTOP*/
+    .detalle-h2 {
+      padding: 15px;
+    }
+
+    .detalle__section-article-05 {
+      height: 50%;
+    }
+
+    .descripcion_recomendados h5 {
+      width: 60px;
+    }
+
+    /* estilos swiper-DESKTOP */
+    .swiper {
+      width: 100%;
+      height: 100%;
+    }
+
+    .swiper-slide img {
+      width: 100%;
+    }
+
+    /* PÁGINADOR DEL CARROUSEL--DESKTOP-- */
+
+    .swiper-pagination-bullet {
+      width: 40px;
+      height: 40px;
+      text-align: center;
+      padding: 10px 15px 13px 10px;
+      line-height: 5px;
+      font-size: 12px;
+      color: #000;
+      opacity: 1;
+      background: rgba(255, 255, 255, 0.2);
+    }
+
+    .card_recomendados img {
+      width: 100%;
+    }
+
+    .detalle__carrusel-02 {
+      width: 90%;
+      padding-bottom: 100px;
+    }
+  }
+}
