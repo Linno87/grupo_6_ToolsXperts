@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/700da961d8.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../css/styles.css">
+    <title>Login</title>
+</head>
+
+<body class="login">
+    <header class="header">
+        <div class="top_bar">
+            <i class="fa-solid fa-globe"></i>
+        </div>
+        <div class="mid_bar">
+            <div class="mid_bar_left">
+                <a href="/"><img src="/img/Logo-Toolsxperts.png" alt="imagen_logo_ToolsXperts "></a>
+            </div>
+            <div class="mid_bar_right">
+                <div class="div_login register__div_login">
+                    <a href="/users/login"><i class="fas fa-sign-in-alt"></i></a>
+                </div>
+
+                <div class="div_register">
+                    <a href="/users/register"><i class="fas fa-address-card"></i>
+                    </a>
+                </div>
+
+                <div class="div_carrito register__div_carrito">
+                    <a href="/users/carrito"><i class="fa-solid fa-cart-shopping"></i></a>
+                </div>
+            </div>
+        </div>
+        </div>
+        <div class="bottom_bar">
+            <nav class="navbar">
+                <ul>
+                    <li><a href="/detalle">Productos</a></a></li>
+                    <li><a href="/contacto">Contacto</a></li>
+                    <li><a href="/envios">Envios</a></li>
+                </ul>
+            </nav>
+            <div class="search_bar register__search_bar">
+                <div class="search_bar_text">
+                    <input type="text" placeholder="¿Qué estas buscando? Nosotros te lo encontramos...">
+                </div>
+                <div class="lupa">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+            </div>
+            <div class="burguer_menu">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- main -->
+
+    <main class="login_main">
+
+        <div class="login_main_logo_box">
+
+            <a href="/"><img src="/img/Login/Logo-Toolsxperts_login.png" alt="logo_imagen"></a>
+
+
+            <div>
+                <h1>Login</h1>
+                <h4>Sign in to continue</h4>
+                <hr>
+            </div>
+            <div>
+                <p>"Somos una empresa...</p>
+                <button class="boton__general btn_login">Learn More</button>
+            </div>
+        </div>
+        <div class="login_main_form_box">
+            <h1> Sign in</h1>
+            <form class="login_main_form" action="/" method="GET">
+                <p class="login_main_form_inp_box">
+                    <label for="email">EMAIL</label>
+                    <input type="email" name="email" id="email" value="hello@ejemplo.com" />
+                </p>
+                <p class="login_main_form_inp_box">
+                    <label for="pass">PASSWORD</label>
+                    <input type="password" name="pass" id="pass" value="password" />
+                </p>
+                <div>
+                    <input class="boton__general btn_login" type="submit" value="Login" />
+                </div>
+
+            </form>
+            <div class="login_main_redes">
+                <a href="https://www.instagram.com/"><i class="fab fa-instagram-square"></i></a>
+                <a href="https://www.facebook.com/"><i class="fab fa-facebook" style="color:var(--AzulClaro)"></i></a>
+                <a href="https://myaccount.google.com"><i class="fab fa-google-plus-square"></i></a>
+            </div>
+        </div>
+    </main>
+
+    <!-- footer -->
+
+    <footer>
+        <div class="footer__caja-logo">
+            <img src="/img/logo_footer.png" alt="logo">
+        </div>
+         <article class="footer__article-contenedor">
+            <a href="#" class="footer__caja-boton-padre">Ayuda</a>
+            <P>Si tenés sugerencias o comentarios</P>
+            <a class="contactanos">Contactanos</a>
+        </article>
+        <hr>
+        <article class="footer__article-contenedor footer__article-contenedor-suscribite">
+            <a href="#" class="footer__caja-boton-padre">Suscribite</a>
+            <p>Registrate para enterarte de nuestras promociones</p>
+        </article>
+        <hr>
+        <article class="footer__article-contenedor-ayuda">
+            <h3>Seguinos en</h3>
+            <article class="footer__article-contenedor-seguinos-redes">
+                <a class="footer-01" href="#"><i class="fab fa-twitter-square"></i></a>
+                <a class="footer-02" href="#"><i class="fab fa-facebook"></i></a>
+                <a class="footer-03" href="#"><i class="fab fa-instagram"></i></a>
+                <a class="footer-04" href="#"><i class="fab fa-whatsapp"></i></a>
+            </article>
+        </article>
+    </footer>
+</body>
+
+</html>
