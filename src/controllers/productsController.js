@@ -4,5 +4,8 @@ module.exports = {
     },
     detalle : (req,res) => {
         return res.render('detalle')
+    },
+    createProduct : (req,res) => {
+        return res.render('createProduct')
     }
 }

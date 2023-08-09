@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Header</title>
+        <link rel="stylesheet" href="/stylesheets/styles.css">
+        <script src="https://kit.fontawesome.com/183b312a89.js" crossorigin="anonymous"></script>
+    </head>
+    
+    <body>
+        <header class="header">
+            <div class="top_bar">
+                <i class="fa-solid fa-globe"></i>
+            </div>
+            <div class="mid_bar">
+                <div class="mid_bar_left">
+                    <a href="/"><img src="/images/Logo-Toolsxperts.png" alt="imagen_logo_ToolsXperts "></a>
+                </div>
+                <div class="mid_bar_right">
+                    <div class="div_login">
+                        <a href="/users/login"><i class="fas fa-sign-in-alt"></i></a>
+                    </div>
+    
+                    <div class="div_register">
+                        <a href="/users/register"><i class="fas fa-address-card"></i>
+                        </a>
+                    </div>                <div class="div_carrito">
+                        <a href="/product/carrito"><i class="fa-solid fa-cart-shopping"></i></a>
+                    </div>
+                </div>
+            </div>
+            </div>
+            <div class="bottom_bar">
+                <nav class="navbar">
+                    <ul>
+                        <li><a href="/products/detalle">Productos</a></a></li>
+                        <li><a href="/contacto">Contacto</a></li>
+                        <li><a href="/envios">Envios</a></li>
+                    </ul>
+                </nav>
+                <div class="search_bar">
+                    <div class="search_bar_text">
+                        <input type="text" placeholder="¿Qué estas buscando? Nosotros te lo encontramos...">
+                    </div>
+                    <div class="lupa">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </div>
+                </div>
+                <div class="burguer_menu">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+            </div>
+        </header>
+    <main class="main_create">
+        <div class="main_create_cont">
+            <div class="main_create_cont_container_form" >
+                <form class="clase_formularios" action="/createproduct" method="get">
+                    <div class="clase_formularios_cajas">
+                        <label for="name">Nombre:</label>
+                        <input type="text" id="name" minlength="3" maxlength="20" name="product_name" required/>
+                    </div>
+                    <div class="clase_formularios_cajas">
+                        <label for="categoria">Categoría:</label>
+                        <select name="categoria"> 
+                        <option value="amoladoras">Amoladoras</option>
+                        <option value="caladoras" >Caladoras</option>
+                        <option value="lijadoras">lijadoras</option>
+                        <option value="pintor">Pintor</option>
+                        <option value="cierras_circulares">Cierras circulares</option>
+                        <option value="taladros">Taladros</option>
+                        <option value="tornillos">Tornillos</option>
+                        <option value="varios">Varios</option>
+                      </select>
+                    </div>
+                    
+                    <div class="clase_formularios_cajas">
+                        <label for="marca">Marca:</label>
+                        <input type="text" id="marca" minlength="3" maxlength="20" name="product_marca" required/>
+                    </div>
+                    <div class="clase_formularios_cajas">
+                        <label for="modelo">Modelo:</label>
+                        <input type="text" id="modelo" minlength="3" maxlength="20" name="product_modelo" required/>
+                    </div>
+                    <div class="clase_formularios_cajas">
+                        <label for="precio">Precio ($):</label>
+                        <input type="number" id="precio"  name="product_precio" required/>
+                    </div>
+                    <div class="clase_formularios_cajas">
+                        <label for="oferta">Oferta (%): </label>
+                        <input type="number" id="oferta" name="product_oferta" required/>
+                    </div>
+                    <div class="clase_formularios_cajas ">
+                        <label class="boton__general btn_img" for="image"><i class="fa-solid fa-plus fa-2xl"></i>Agregar Imagen</label>
+                        <input hidden type="file" id="image" name="product_image" accept="jpg" />
+                            
+                    </div>
+                    <div class="clase_formularios_cajas">
+                        <textarea class="form_product_text_area" maxlength="256" rows="5" cols="20">Escribe una descripcion...</textarea>
+                    </div>
+                
+                </form>
+                <div class="clase_formulario_box_btn">
+                    <input class="boton__general btn_form" type="reset" value="Cancelar" />
+                    <input class="boton__general btn_form" type="submit" value="Crear" />
+                </div>
+            </div>
+        </div>
+
+    </main>
+</body>
+</html>

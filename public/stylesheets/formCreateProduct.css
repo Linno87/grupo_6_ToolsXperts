@@ -1,0 +1,95 @@
+
+.main_create_cont {
+  margin: 10px;
+  background-color: var(--AzulTransparente);
+  border-radius: 2%;
+  padding: 5px;
+}
+
+.clase_formularios {
+    width:100%;
+  }
+
+.clase_formularios_cajas {
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  gap: 5%;
+  align-items: center;
+}
+
+.clase_formularios_cajas label {
+  width: 35%;
+  text-transform: capitalize;
+  padding-left: 5px ;
+}
+.clase_formularios_cajas input {
+  width: 60%;
+  padding: 10px;
+  border-radius: 20px;
+  border: none;
+  background-color: var(--GrisClaro);
+  opacity: 25%;
+}
+.clase_formularios_cajas select {
+  width: 60%;
+  padding: 10px;
+  border-radius: 20px;
+  border: none;
+  background-color: var(--GrisClaro);
+  opacity: 25%;
+}
+.form_product_text_area {
+  width: 100%;
+  padding: 10px;
+  border-radius: 20px;
+  border: none;
+  background-color: var(--GrisClaro);
+  opacity: 25%;
+}
+
+.clase_formulario_box_btn {
+  text-align: right;
+  padding: 5px;
+}
+.clase_formularios_cajas .btn_img {
+  width: 80px;
+  font-size: 1rem;
+  text-align: center;
+}
+.btn_form{
+    width: 100px;
+}
+.btn_form:hover {
+  border: solid 2px var(--Rojo);
+  color: var(--Rojo);
+  background-color: var(--AzulTransparente);
+}
+
+@media (min-width:768px){
+    .main_create{
+        display: flex;
+        justify-content: center;
+    }
+    .main_create_cont {
+        width: 85%;
+    }
+    
+    .clase_formularios {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+    .clase_formularios_cajas {
+        width: 50%;
+    }
+    .clase_formularios_cajas .btn_img {
+        margin: 0 auto;
+      }
+}
+
+@media (min-width:1024px){
+    .main_create_cont {
+        width: 75%;
+    }
+}
