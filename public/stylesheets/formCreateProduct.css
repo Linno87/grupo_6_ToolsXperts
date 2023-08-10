@@ -1,4 +1,3 @@
-
 .main_create_cont {
   margin: 10px;
   background-color: var(--AzulTransparente);
@@ -7,8 +6,8 @@
 }
 
 .clase_formularios {
-    width:100%;
-  }
+  width: 100%;
+}
 
 .clase_formularios_cajas {
   padding: 10px;
@@ -16,49 +15,93 @@
   justify-content: space-between;
   gap: 5%;
   align-items: center;
+  flex-direction: column;
 }
 
 .clase_formularios_cajas label {
-  width: 35%;
+  width: 43%;
   text-transform: capitalize;
-  padding-left: 5px ;
+  padding-left: 5px;
 }
 .clase_formularios_cajas input {
-  width: 60%;
+  width: 100%;
   padding: 10px;
   border-radius: 20px;
   border: none;
-  background-color: var(--GrisClaro);
-  opacity: 25%;
+  background-color: var(--AzulTransparente);
+  font-weight: 400;
+  font-size: 15px;
+  color: #ffff;
+  box-shadow: none;
+  outline: none;
 }
+
 .clase_formularios_cajas select {
-  width: 60%;
+  width: 100%;
   padding: 10px;
   border-radius: 20px;
   border: none;
-  background-color: var(--GrisClaro);
-  opacity: 25%;
+  background-color: var(--AzulTransparente);
+  font-weight: 400;
+  font-size: 15px;
+  color: #ffff;
+  box-shadow: none;
+  outline: none;
+  text-align: center;
+}
+.clase_formularios_cajas option {
+  background-color: var(--AzulTransparente);
+  color: #ffff;
 }
 .form_product_text_area {
   width: 100%;
   padding: 10px;
   border-radius: 20px;
   border: none;
-  background-color: var(--GrisClaro);
-  opacity: 25%;
+  background-color: var(--AzulTransparente);
+  font-weight: 400;
+  font-size: 15px;
+  color: #ffff;
+  box-shadow: none;
+  outline: none;
 }
-
+.clase_formulario_botones {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2%;
+  margin-top: 10px;
+}
 .clase_formulario_box_btn {
   text-align: right;
+  width: 100%;
   padding: 5px;
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
 }
-.clase_formularios_cajas .btn_img {
-  width: 80px;
+.clase_formularios_cajas_btn_agregar .btn_img {
+  width: 150px;
   font-size: 1rem;
   text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  padding: 11px;
+  gap: 2%;
+  font-weight: 600;
 }
-.btn_form{
-    width: 100px;
+.clase_formularios_cajas_btn_agregar {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.btn_form {
+  width: 49%;
+  height: 40px;
+  font-weight: 600;
+  font-size: 17px;
 }
 .btn_form:hover {
   border: solid 2px var(--Rojo);
@@ -66,30 +109,57 @@
   background-color: var(--AzulTransparente);
 }
 
-@media (min-width:768px){
-    .main_create{
-        display: flex;
-        justify-content: center;
-    }
-    .main_create_cont {
-        width: 85%;
-    }
-    
-    .clase_formularios {
-        display: flex;
-        justify-content: space-around;
-        flex-wrap: wrap;
-    }
-    .clase_formularios_cajas {
-        width: 50%;
-    }
-    .clase_formularios_cajas .btn_img {
-        margin: 0 auto;
-      }
+@media (min-width: 768px) {
+  .main_create {
+    display: flex;
+    justify-content: center;
+  }
+  .main_create_cont {
+    width: 85%;
+  }
+
+  .clase_formularios {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  .clase_formularios_cajas {
+    width: 46%;
+    gap: 2%;
+    flex-direction: row;
+  }
+  .clase_formularios_cajas .btn_img {
+    margin: 0 auto;
+  }
+  .clase_formularios_cajas{
+    width: 50%;
+  }
+  .tex_area {
+    width: 100%;
+  }
+  .clase_formulario_botones {
+    width: 100%;
+
+    flex-wrap: nowrap;
+  }
+  .clase_formularios_cajas_btn_agregar {
+    width: 41%;
+    margin-bottom: 10px;
+  }
+  .clase_formulario_box_btn {
+    width: 50%;
+  }
+ 
 }
 
-@media (min-width:1024px){
-    .main_create_cont {
-        width: 75%;
-    }
+@media (min-width: 1024px) {
+  .main_create_cont {
+    width: 64%;
+  }
+  .tex_area {
+    width: 100%;
+  }
+  .clase_formularios_cajas label{
+    
+  }
 }

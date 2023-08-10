@@ -65,7 +65,7 @@
                         <select name="categoria"> 
                         <option value="amoladoras">Amoladoras</option>
                         <option value="caladoras" >Caladoras</option>
-                        <option value="lijadoras">lijadoras</option>
+                        <option value="lijadoras">Lijadoras</option>
                         <option value="pintor">Pintor</option>
                         <option value="cierras_circulares">Cierras circulares</option>
                         <option value="taladros">Taladros</option>
@@ -90,20 +90,25 @@
                         <label for="oferta">Oferta (%): </label>
                         <input type="number" id="oferta" name="product_oferta" required/>
                     </div>
-                    <div class="clase_formularios_cajas ">
+
+                    <div class="clase_formularios_cajas tex_area">
+                        <textarea class="form_product_text_area" maxlength="256" rows="5" cols="20" >Escribe una descripción...</textarea>
+                    </div>
+                    <div class="clase_formulario_botones">
+
+                    
+                    <div class="clase_formularios_cajas_btn_agregar">
                         <label class="boton__general btn_img" for="image"><i class="fa-solid fa-plus fa-2xl"></i>Agregar Imagen</label>
                         <input hidden type="file" id="image" name="product_image" accept="jpg" />
                             
                     </div>
-                    <div class="clase_formularios_cajas">
-                        <textarea class="form_product_text_area" maxlength="256" rows="5" cols="20">Escribe una descripcion...</textarea>
+                    <div class="clase_formulario_box_btn">
+                        <input class="boton__general btn_form" type="reset" value="Cancelar" />
+                        <input class="boton__general btn_form" type="submit" value="Crear" />
                     </div>
-                
+                    </div>
                 </form>
-                <div class="clase_formulario_box_btn">
-                    <input class="boton__general btn_form" type="reset" value="Cancelar" />
-                    <input class="boton__general btn_form" type="submit" value="Crear" />
-                </div>
+              
             </div>
         </div>
 
