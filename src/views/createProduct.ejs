@@ -1,57 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Header</title>
-        <link rel="stylesheet" href="/stylesheets/styles.css">
-        <script src="https://kit.fontawesome.com/183b312a89.js" crossorigin="anonymous"></script>
-    </head>
-    
-    <body>
-        <header class="header">
-            <div class="top_bar">
-                <i class="fa-solid fa-globe"></i>
-            </div>
-            <div class="mid_bar">
-                <div class="mid_bar_left">
-                    <a href="/"><img src="/images/Logo-Toolsxperts.png" alt="imagen_logo_ToolsXperts "></a>
-                </div>
-                <div class="mid_bar_right">
-                    <div class="div_login">
-                        <a href="/users/login"><i class="fas fa-sign-in-alt"></i></a>
-                    </div>
-    
-                    <div class="div_register">
-                        <a href="/users/register"><i class="fas fa-address-card"></i>
-                        </a>
-                    </div>                <div class="div_carrito">
-                        <a href="/product/carrito"><i class="fa-solid fa-cart-shopping"></i></a>
-                    </div>
-                </div>
-            </div>
-            </div>
-            <div class="bottom_bar">
-                <nav class="navbar">
-                    <ul>
-                        <li><a href="/products/detalle">Productos</a></a></li>
-                        <li><a href="/contacto">Contacto</a></li>
-                        <li><a href="/envios">Envios</a></li>
-                    </ul>
-                </nav>
-                <div class="search_bar">
-                    <div class="search_bar_text">
-                        <input type="text" placeholder="¿Qué estas buscando? Nosotros te lo encontramos...">
-                    </div>
-                    <div class="lupa">
-                        <i class="fa-solid fa-magnifying-glass"></i>
-                    </div>
-                </div>
-                <div class="burguer_menu">
-                    <i class="fa-solid fa-bars"></i>
-                </div>
-            </div>
-        </header>
+    <%- include("./partials/head", { title: "Productos"}) %>
+
+<body>
+    <%- include("./partials/header") %>
     <main class="main_create">
         <div class="main_create_cont">
             <div class="main_create_cont_container_form" >
@@ -113,5 +65,6 @@
         </div>
 
     </main>
+    <%- include("./partials/footer") %>
 </body>
 </html>
