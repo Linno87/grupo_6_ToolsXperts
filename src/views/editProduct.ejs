@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include("./partials/head", { title: "Productos"}) %>
+
+<body>
+    <%- include("./partials/header") %>
+    <main class="main_create">
+        <div class="main_create_cont">
+            <div class="main_create_cont_container_form" >
+                <form class="clase_formularios" action="/createproduct" method="get">
+                    <div class="clase_formularios_cajas">
+                        <label for="name">Nombre:</label>
+                        <input type="text" id="name" minlength="3" maxlength="20" name="product_name" required/>
+                    </div>
+                    <div class="clase_formularios_cajas">
+                        <label for="categoria">Categoría:</label>
+                        <select name="categoria"> 
+                        <option value="amoladoras">Amoladoras</option>
+                        <option value="caladoras" >Caladoras</option>
+                        <option value="lijadoras">Lijadoras</option>
+                        <option value="pintor">Pintor</option>
+                        <option value="cierras_circulares">Cierras circulares</option>
+                        <option value="taladros">Taladros</option>
+                        <option value="tornillos">Tornillos</option>
+                        <option value="varios">Varios</option>
+                      </select>
+                    </div>
+                    
+                    <div class="clase_formularios_cajas">
+                        <label for="marca">Marca:</label>
+                        <input type="text" id="marca" minlength="3" maxlength="20" name="product_marca" required/>
+                    </div>
+                    <div class="clase_formularios_cajas">
+                        <label for="modelo">Modelo:</label>
+                        <input type="text" id="modelo" minlength="3" maxlength="20" name="product_modelo" required/>
+                    </div>
+                    <div class="clase_formularios_cajas">
+                        <label for="precio">Precio ($):</label>
+                        <input type="number" id="precio"  name="product_precio" required/>
+                    </div>
+                    <div class="clase_formularios_cajas">
+                        <label for="oferta">Oferta (%): </label>
+                        <input type="number" id="oferta" name="product_oferta" required/>
+                    </div>
+
+                    <div class="clase_formularios_cajas tex_area">
+                        <textarea class="form_product_text_area" maxlength="256" rows="5" cols="20" >Escribe una descripción...</textarea>
+                    </div>
+                    <div class="clase_formulario_botones">
+
+                    
+                    <div class="clase_formularios_cajas_btn_agregar">
+                        <label class="boton__general btn_img" for="image"><i class="fa-solid fa-plus fa-2xl"></i>Agregar Imagen</label>
+                        <input hidden type="file" id="image" name="product_image" accept="jpg" />
+                            
+                    </div>
+                    <div class="clase_formulario_box_btn">
+                        <input class="boton__general btn_form" type="reset" value="Cancelar" />
+                        <input class="boton__general btn_form" type="submit" value="Editar" />
+                    </div>
+                    </div>
+                </form>
+              
+            </div>
+        </div>
+
+    </main>
+    <%- include("./partials/footer") %>
+</body>
+</html>
