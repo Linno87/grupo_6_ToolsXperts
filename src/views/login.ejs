@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include("./partials/head", { title: "LOGIN"}) %>
+
+<body class="login">
+    <%- include("./partials/header") %>
+
+    <!-- main -->
+
+    <main class="login_main">
+
+        <div class="login_main_logo_box">
+
+            <a href="/"><img src="/img/Login/Logo-Toolsxperts_login.png" alt="logo_imagen"></a>
+
+
+            <div>
+                <h1>Login</h1>
+                <h4>Sign in to continue</h4>
+                <hr>
+            </div>
+            <div>
+                <p>"Somos una empresa...</p>
+                <button class="boton__general btn_login">Learn More</button>
+            </div>
+        </div>
+        <div class="login_main_form_box">
+            <h1> Sign in</h1>
+            <form class="login_main_form" action="/" method="GET">
+                <p class="login_main_form_inp_box">
+                    <label for="email">EMAIL</label>
+                    <input type="email" name="email" id="email" value="hello@ejemplo.com" />
+                </p>
+                <p class="login_main_form_inp_box">
+                    <label for="pass">PASSWORD</label>
+                    <input type="password" name="pass" id="pass" value="password" />
+                </p>
+                <div>
+                    <input class="boton__general btn_login" type="submit" value="Login" />
+                </div>
+
+            </form>
+            <div class="login_main_redes">
+                <a href="https://www.instagram.com/"><i class="fab fa-instagram-square"></i></a>
+                <a href="https://www.facebook.com/"><i class="fab fa-facebook" style="color:var(--AzulClaro)"></i></a>
+                <a href="https://myaccount.google.com"><i class="fab fa-google-plus-square"></i></a>
+            </div>
+        </div>
+    </main>
+
+    <!-- footer -->
+
+    <%- include("./partials/footer") %>
+</body>
+
+</html>
