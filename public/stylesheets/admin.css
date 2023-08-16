@@ -1,0 +1,154 @@
+ .admin {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+
+.advertencia {
+  text-align: center;
+  background-color: var(--AzulTransparente);
+  border-radius: 20px;
+  color: white;
+  width: 90%;
+  padding: 10px;
+  margin: 50px auto;
+}
+.advertencia i{
+    font-size: 50px;
+}
+
+.advertencia h3{
+  margin: 10px;
+}
+
+
+.admin_main{
+  display: none;
+}
+
+@media (min-width: 768px) {
+  
+  .advertencia {
+    display: none;
+  }
+
+  .admin_main {
+    display: block;
+    background-color: var(--AzulTransparente);
+    border-radius: 20px;
+    color: white;
+    width: 95%;
+    height: 20em;
+    padding: 10px;
+    margin: 40px auto;
+  }
+
+  .admin_main h3 {
+    width: 100%;
+    text-align: initial;
+    border-bottom: solid 1px white;
+  }
+
+  .admin_main nav {
+    margin-top: 5px;
+    gap: 2%;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .admin_main nav li {
+    border: #ffff solid 1px;
+    border-bottom: none;
+    border-radius: 3px 3px 0 0;
+    padding: 3px;
+  }
+
+  .admin_filter {
+    display: flex;
+    margin: 10px 0;
+    gap: 3%;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .admin_filter button {
+    display: flex;
+    background: var(--Rojo);
+    border: solid 1px var(--Rojo);
+    border-radius: 15px;
+    font-weight: 200;
+    padding: 5px 5px;
+    color: white;
+    text-transform: uppercase;
+    align-items: center;
+  }
+
+  .admin_filter select {
+    width: 30%;
+    padding: 5px;
+    border-radius: 20px;
+    border: none;
+    background-color: var(--AzulTransparente);
+    font-weight: 400;
+    font-size: 15px;
+    color: #ffff;
+    box-shadow: none;
+    outline: none;
+    text-align: center;
+  }
+
+  .admin_filter label{
+  white-space: nowrap;
+  }
+
+  .admin_search_bar_text input {
+    width: 200px;
+    margin: 5px;
+    border: none;
+  }
+
+  .admin_lupa {
+    color: #1d3557;
+    margin-top: 5px;
+    margin-right: 10px;
+  }
+
+  .admin_search_bar {
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    width: 230px;
+    height: 30px;
+    background-color: white;
+  }
+
+  .admin_div-etiquetas {
+    margin-top: 10px;
+    display: flex;
+    gap: 5%;
+  }
+
+  .admin_section-lista {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 98%;
+  }
+
+  .admin_div-producto {
+    display: flex;
+    gap: 2%;
+    width: 99%;
+  }
+
+  .admin_div-tools {
+    display: flex;
+    justify-content: space-between;
+    gap: 20%;
+  }
+}
+
+@media (min-width: 1024px) {
+
+}
