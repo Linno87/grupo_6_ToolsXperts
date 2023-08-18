@@ -1,15 +1,17 @@
 .top_bar {
     display: flex;
     flex-direction: row-reverse;
-    height: 30px;
+    height: 32px;
     background-color: #1d3557;
     position: relative;
+    gap: 1%;
+    padding: 3px;
 }
 
 .top_bar i {
     color: var(--Rojo);
     font-size: 24px;
-    position: absolute;
+    /* position: absolute; */
     top: 3px;
     right: 5px;
 }
