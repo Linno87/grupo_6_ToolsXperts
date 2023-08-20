@@ -14,9 +14,7 @@
 }
 
 @media (min-width: 768px) {
-    .products_cards{
-        
-    }
+   
     .products_card{
         width: 48%;
         padding: 1rem;

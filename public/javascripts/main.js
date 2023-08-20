@@ -47,11 +47,11 @@ var swiper = new Swiper(".mySwiper3", {
       spaceBetween: 50,
     },
   },
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-  });
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+});
 
 var swiper = new Swiper(".mySwiper-marcas", {
   effect: "coverflow",
