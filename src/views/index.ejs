@@ -118,85 +118,20 @@
         <section class="home__main__section-productos">
             <div class="swiper mySwiper3">
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <div class="card">
-                            <img src="/img/AMOLADORAS/9002-removebg-preview.png" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up
-                                    the bulk of the card's content.</p>
-                                <a href="#" class="home__main__article--product-descripcion">ver más</a>
+                    <% listProduct.forEach(product =>{ %>
+                        <div class="swiper-slide">
+                            <div class="card">
+                                <img src="/img/<%= product.category %>/<%= product.image %>" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title"><%= product.name %></h5>
+                                    <p class="card-text"><%= product.description%>></p>
+                                    <a href="/products/detalle" class="home__main__article--product-descripcion">ver más</a>
+                                </div>
                             </div>
                         </div>
-
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="card">
-                            <img src="/img/CALADORAS/BAC400-removebg-preview-removebg-preview.png" 
-                                alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up
-                                    the bulk of the card's content.</p>
-                                <a href="#" class="home__main__article--product-descripcion">ver más</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="card">
-                            <img src="/img/TALADROS/00000000000TE75B10345TALADRO-13-removebg-preview.png" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up
-                                    the bulk of the card's content.</p>
-                                <a href="#" class="home__main__article--product-descripcion">ver más</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="card">
-                            <img src="/img/PINTOR/ATK-5-removebg-preview.png" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up
-                                    the bulk of the card's content.</p>
-                                <a href="#" class="home__main__article--product-descripcion">ver más</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="card">
-                            <img src="/img/AMOLADORAS/9002-removebg-preview.png" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up
-                                    the bulk of the card's content.</p>
-                                <a href="#" class="home__main__article--product-descripcion">ver más</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="card">
-                            <img src="/img/TALADROS/BIL-TP13-removebg-preview.png" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up
-                                    the bulk of the card's content.</p>
-                                <a href="#" class="home__main__article--product-descripcion">ver más</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="card">
-                            <img src="/img/LIJADORAS/LBP-80-removebg-preview.png" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up
-                                    the bulk of the card's content.</p>
-                                <a href="#" class="home__main__article--product-descripcion">ver más</a>
-                            </div>
-                        </div>
-                    </div>
+                    <% }) %>
+                    
+                    
                 </div>
             </div>
         </section>

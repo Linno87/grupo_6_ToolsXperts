@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include("./partials/head", { title: "PRODUCTOS"}) %>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+<body class="products_body">
+    <%- include("./partials/header") %>
+    <main class="products_main">
+        <div class="products_cards">
+        <% listProduct.forEach(product =>{ %>
+           
+                <div class="products_card">
+                    <img src="/img/<%= product.category %>/<%= product.image %>" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title"><%= product.name %></h5>
+                        <p class="card-text"><%= product.description%>></p>
+                        <a href="/products/detalle" class="home__main__article--product-descripcion">ver más</a>
+                    </div>
+                </div>
+        <% }) %>
+        </div>
+    </main>
+    <%- include("./partials/footer") %>
+</body>
+
+</html>

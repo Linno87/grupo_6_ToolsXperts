@@ -2,7 +2,7 @@
     {
         "id" : 1,
         "name" : "Amoladora Angular 700 W",
-        "category" : "amoladora",
+        "category" : "amoladoras",
         "brand" : "skil",
         "model" : "9002",
         "price" : 19500,
@@ -13,7 +13,7 @@
     {
         "id" : 2,
         "name" : "Amoladora angular 7″ BAROVO AA2KB",
-        "category" : "amoladora",
+        "category" : "amoladoras",
         "brand" : "barovo",
         "model" : "AA2KB",
         "price" : 15350,
@@ -24,18 +24,18 @@
     {
         "id" : 3,
         "name" : "Amoladora Esmeriladora Angular 750 W",
-        "category" : "amoladora",
+        "category" : "amoladoras",
         "brand" : "barovo",
         "model" : "AA758",
         "price" : 19500,
         "discount" : 10,
         "description" : "Amoladora Angular 700 W - Skill",
-        "image" : "AA75B-removebg-preview"
+        "image" : "AA75B-removebg-preview.png"
     },
     {
         "id" : 4,
         "name" : "Sierra Caladora Skil 4550",
-        "category" : "caladora",
+        "category" : "caladoras",
         "brand" : "skil",
         "model" : "4550",
         "price" : 34740,
@@ -46,7 +46,7 @@
     {
         "id" : 5,
         "name" : "Sierra Caladora Electrica 400w",
-        "category" : "caladora",
+        "category" : "caladoras",
         "brand" : "barovo",
         "model" : "BAC400",
         "price" : 20125,
@@ -57,7 +57,7 @@
     {
         "id" : 6,
         "name" : "Sierra Caladora De Banco Barovo Sc120a",
-        "category" : "caladora",
+        "category" : "caladoras",
         "brand" : "barovo",
         "model" : "SC120A",
         "price" : 80600,
@@ -68,7 +68,7 @@
     {
         "id" : 7,
         "name" : "Multifunción Ion Litio",
-        "category" : "lijadora",
+        "category" : "lijadoras",
         "brand" : "barovo",
         "model" : "BIL-MH",
         "price" : 30700,
@@ -79,7 +79,7 @@
     {
         "id" : 8,
         "name" : "Lijadora profesional de banda Barovo LBP-80",
-        "category" : "lijadora",
+        "category" : "lijadoras",
         "brand" : "skil",
         "model" : "LBP-80",
         "price" : 47981,
@@ -123,7 +123,7 @@
     {
         "id" : 12,
         "name" : "Sierra Circular 7 1/4 1500w",
-        "category" : "sierra circular",
+        "category" : "sierras circulares",
         "brand" : "ford",
         "model" : "fx1-70",
         "price" : 83000,
@@ -134,18 +134,18 @@
     {
         "id" : 13,
         "name" : "Sierra Circular 7 1/4 20mm Inalambrica",
-        "category" : "sierra circular",
+        "category" : "sierras circulares",
         "brand" : "barovo",
         "model" : "SCIL714",
         "price" : 75600,
         "discount" : 18,
         "description" : "Sierra Circular 7 1/4 20mm Inalambrica 18v Barovo Scil714",
-        "image" : "SCIL714-removebg-preview"
+        "image" : "SCIL714-removebg-preview.png"
     },
     {
         "id" : 14,
         "name" : "Atornillador 220v Durlero Durlock Barovo",
-        "category" : "taladro",
+        "category" : "taladros",
         "brand" : "barovo",
         "model" : "ADW10A",
         "price" : 14030,
@@ -156,7 +156,7 @@
     {
         "id" : 15,
         "name" : "Martillo Demoledor 15 Joules",
-        "category" : "taladro",
+        "category" : "taladros",
         "brand" : "barovo",
         "model" : "MPB-45L",
         "price" : 19500,
