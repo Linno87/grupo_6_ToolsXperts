@@ -1,0 +1,32 @@
+.products_cards{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 18px;
+    align-items: center;
+}
+
+.products_card{
+    width: 100%;
+}
+.products_card img{
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+   
+    .products_card{
+        width: 48%;
+        padding: 1rem;
+        margin: 5px 4px;
+        
+    }
+    .products_card img{
+        max-height: 300px;
+    }
+}
+@media (min-width: 1024px) {
+    .products_card{
+        width: 24%;
+    }
+}
