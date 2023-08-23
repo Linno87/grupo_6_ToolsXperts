@@ -1,6 +1,6 @@
 const { readJson } = require("../data");
 
-readJson
+
 
 module.exports = {
   products: (req, res) => {
