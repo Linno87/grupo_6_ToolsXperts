@@ -4,30 +4,31 @@ const { readJson, writeJson } = require("../../data");
 module.exports = (req, res) => {
   const products = readJson("products.json");
   const id = req.params.id;
-  const { name, category, brand, model, price, discount, description } =
-    req.body;
+  const { name, category, brand, model, price, discount, description } = req.body;
 
-  const productsModified = products.map((product) => {
-    if (product.id === +id) {
+  const productsModify = products.map((product) => {
+    if (product.id === id) {
+      
       req.file &&
         existsSync(`./public/images/${product.image}`) &&
         unlinkSync(`./public/images/${product.image}`);
 
-        product.name = name.trim();
-        product.category = category.trim();
-        product.brand = brand.trim();
-        product.model = model.trim();
-        product.price = +price;
-        product.discount = +discount;
-        product.description = description.trim();
-        product.createdAt = new Date();
-        product.image = req.file ? req.file.filename : product.image;
+      product.name = name.trim();
+      product.category = category.trim();
+      product.brand = brand;
+      product.model = model;
+      product.price = +price;
+      product.discount = +discount;
+      product.description = description.trim();
+      product.createdAt = new Date();
+      product.image = req.file ? req.file.filename : product.image;
+
     }
 
     return product
   });
 
-  writeJson(productsModified, "products.json");
+  writeJson(productsModify, "products.json");
 
-  return res.redirection("/admin")
+  return res.redirect("/admin")
 };
