@@ -90,7 +90,7 @@
     {
         "id" : 9,
         "name" : "Pistola Pintar Latex Salpicre",
-        "category" : "pintor",
+        "category" : "articulos de pintureria",
         "brand" : "skil",
         "model" : "ATK-5",
         "price" : 15500,
@@ -101,7 +101,7 @@
     {
         "id" : 10,
         "name" : "Maquina De Pintar 650w Kushiro",
-        "category" : "pintor",
+        "category" : "articulos de pintureria",
         "brand" : "kushiro",
         "model" : "k001",
         "price" : 20300,
@@ -112,7 +112,7 @@
     {
         "id" : 11,
         "name" : "Compresor de aire eléctrico Kushiro K100-4B",
-        "category" : "pintor",
+        "category" : "articulos de pintureria",
         "brand" : "kushiro",
         "model" : "K100-4B",
         "price" : 305841,
@@ -123,7 +123,7 @@
     {
         "id" : 12,
         "name" : "Sierra Circular 7 1/4 1500w",
-        "category" : "sierras circulares",
+        "category" : "sierras",
         "brand" : "ford",
         "model" : "fx1-70",
         "price" : 83000,
@@ -134,7 +134,7 @@
     {
         "id" : 13,
         "name" : "Sierra Circular 7 1/4 20mm Inalambrica",
-        "category" : "sierras circulares",
+        "category" : "sierras",
         "brand" : "barovo",
         "model" : "SCIL714",
         "price" : 75600,
