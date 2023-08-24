@@ -8,7 +8,8 @@
     "price": 19500,
     "discount": 10,
     "description": "Amoladora Angular 700 W - Skill",
-    "image": "9002-removebg-preview.png"
+    "image": "9002-removebg-preview.png",
+    "createdAt": "2023-08-24T21:13:05.820Z"
   },
   {
     "id": 2,
