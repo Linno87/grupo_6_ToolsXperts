@@ -8,27 +8,25 @@ module.exports = (req, res) => {
 
   const productsModify = products.map((product) => {
     if (product.id === id) {
-      
+    
       req.file &&
-        existsSync(`./public/images/${product.image}`) &&
-        unlinkSync(`./public/images/${product.image}`);
+        existsSync(`./public/img/${product.image}`) &&
+        unlinkSync(`./public/img/${product.image}`);
 
       product.name = name.trim();
-      product.category = category.trim();
+      product.category = category;
       product.brand = brand;
       product.model = model;
       product.price = +price;
       product.discount = +discount;
       product.description = description.trim();
-      product.createdAt = new Date();
       product.image = req.file ? req.file.filename : product.image;
 
     }
 
     return product
   });
-
   writeJson(productsModify, "products.json");
 
-  return res.redirect("/admin")
+  return res.redirect('/admin')
 };
