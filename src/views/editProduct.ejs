@@ -14,10 +14,10 @@
                      </div>
                     <div class="clase_formularios_cajas">
                         <label for="name">Nombre:</label>
-                        <input type="text" id="name" minlength="3" maxlength="20" name="product_name" value="<%= name %>" required/>
+                        <input type="text" id="name" minlength="3" maxlength="20" name="name" value="<%= name %>" required/>
                     </div>
                     <div class="clase_formularios_cajas">
-                        <label for="categoria">Categoría:</label>
+                        <label for="category">Categoría:</label>
                         <select class="form-select" name="category"> 
                             <% categorys.forEach(item => { %>
                                 <option <%= item.category === category && 'selected' %> value="<%= item.category %>"><%= item.category %></option>
@@ -26,20 +26,20 @@
                     </div>
                     
                     <div class="clase_formularios_cajas">
-                        <label for="marca">Marca:</label>
-                        <input type="text" id="marca" minlength="3" maxlength="20" name="product_marca" value="<%= brand %>" required/>
+                        <label for="brand">Marca:</label>
+                        <input type="text" id="brand" minlength="3" maxlength="20" name="brand" value="<%= brand %>" required/>
                     </div>
                     <div class="clase_formularios_cajas">
-                        <label for="modelo">Modelo:</label>
-                        <input type="text" id="modelo" minlength="3" maxlength="20" name="product_modelo" value="<%= model %>" required/>
+                        <label for="model">Modelo:</label>
+                        <input type="text" id="model" minlength="3" maxlength="20" name="model" value="<%= model %>" required/>
                     </div>
                     <div class="clase_formularios_cajas">
-                        <label for="precio">Precio ($):</label>
-                        <input type="number" id="precio"  name="product_precio" value="<%= price %>" required/>
+                        <label for="price">Precio ($):</label>
+                        <input type="number" id="price"  name="price" value="<%= price %>" required/>
                     </div>
                     <div class="clase_formularios_cajas">
-                        <label for="oferta">Oferta (%): </label>
-                        <input type="number" id="oferta" name="product_oferta" value="<%= discount %>" required/>
+                        <label for="discount">Oferta (%): </label>
+                        <input type="number" id="discount" name="discount" value="<%= discount %>" required/>
                     </div>
 
                     <div class="clase_formularios_cajas tex_area">
@@ -50,7 +50,7 @@
                     
                     <div class="clase_formularios_cajas_btn_agregar">
                         <label class="boton__general btn_img" for="image"><i class="fa-solid fa-plus fa-2xl"></i>Agregar Imagen</label>
-                        <input hidden type="file" id="image" name="product_image" accept="jpg" />
+                        <input hidden type="file" id="image" name="image" accept="jpg" />
                             
                     </div>
                     <div class="clase_formulario_box_btn">
