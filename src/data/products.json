@@ -174,5 +174,28 @@
     "discount": 13,
     "description": "Hoja Sierra Circular Bosch Para Madera 184mm 40 Dient 7 1/4",
     "image": "24D DISCO MADERA.png"
+  },
+  {
+    "id": "2947844f-7499-4ddf-953f-32143cd59583",
+    "name": "NUevo Producyyo",
+    "category": "amoladoras",
+    "brand": "pirulo",
+    "model": "pironcho",
+    "price": 2312,
+    "discount": 123,
+    "description": "asdasdasdasdasdasdasdasd",
+    "image": ""
+  },
+  {
+    "id": "8d57bd3d-a969-4dbc-a5de-d25217e17596",
+    "name": "NUevo Producyyo",
+    "category": "amoladoras",
+    "brand": "pirulo",
+    "model": "pironcho",
+    "price": 2312,
+    "discount": 123,
+    "description": "asdasdasdasdasdasdasdasd",
+    "image": "",
+    "createdAt": "2023-08-24T17:28:56.350Z"
   }
 ]
