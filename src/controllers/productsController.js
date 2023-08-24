@@ -1,5 +1,5 @@
 const { readJson } = require("../data");
-
+const {product} = require('../data/Product')
 
 
 module.exports = {
@@ -13,6 +13,7 @@ module.exports = {
     return res.render("carrito");
   },
   detalle: (req, res) => {
+
     return res.render("detalle");
   },
   createProduct: (req, res) => {
