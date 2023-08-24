@@ -1,0 +1,34 @@
+[
+    {
+        "id" : 1,
+        "category" : "amoladoras"
+    },
+    {
+        "id" : 2,
+        "category" : "caladoras"
+    },
+    {
+        "id" : 3,
+        "category" : "lijadoras"
+    },
+    {
+        "id" : 4,
+        "category" : "articulos de pintureria"
+    },
+    {
+        "id" : 5,
+        "category" : "sierras"
+    },
+    {
+        "id" : 6,
+        "category" : "taladros"
+    },
+    {
+        "id" : 7,
+        "category" : "tronillo"
+    },
+    {
+        "id" : 8,
+        "category" : "varios"
+    }
+]

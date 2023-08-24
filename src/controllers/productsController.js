@@ -1,7 +1,6 @@
 const { readJson } = require("../data");
 const {product} = require('../data/Product')
 
-
 module.exports = {
   products: (req, res) => {
     const listProduct = readJson("products.json");
@@ -19,7 +18,6 @@ module.exports = {
   createProduct: (req, res) => {
     return res.render("createProduct");
   },
-  editProduct: (req, res) => {
-    return res.render("editProduct");
-  },
+  editProduct: require('./products/edit'),
+  updateProduct : require('./products/update')
 };
