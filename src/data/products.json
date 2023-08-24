@@ -6,7 +6,8 @@
     "brand": "skil",
     "model": "9002",
     "price": 19500,
-    "discount": 50,
+    "discount": 10,
+    "description": "Amoladora Angular 700 W - Skill",
     "image": "9002-removebg-preview.png"
   },
   {
