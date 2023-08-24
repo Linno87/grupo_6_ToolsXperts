@@ -122,7 +122,7 @@
 
 .search_bar input {
     width: 200px;
-    margin: 5px;
+    margin: 2px;
     border: none;
 }
 
@@ -157,9 +157,9 @@
 
     .search_bar {
         position: absolute;
-        left: 250px;
-        bottom: 50px;
-        margin: 0;
+        width: 45%;
+        left: 185px;
+        bottom: 39px;
         border: #1d3557 solid 1px;
     }
 
@@ -172,7 +172,6 @@
     .bottom_bar {
         display: flex;
         position: relative;
-        padding: 10px;
     }
 
     .burguer_menu {
@@ -233,17 +232,12 @@
     }
 
     .search_bar {
-        justify-content: space-between;
         width: 50%;
-        margin-bottom: 12px;
-        margin-left: 30px;
+        margin-bottom: 25px;
+        margin-left: 70px;
     }
 
     .search_bar input {
-        width: 333px;
-    }
-
-    .bottom_bar {
-        padding: 10px;
+        width: 415px;
     }
 }

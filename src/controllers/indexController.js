@@ -22,6 +22,13 @@ module.exports = {
       return res.render("search", {
         listSearch
       });
+      },
+      admin : (req,res) => {
+        const listProduct = readJson('products.json');
+
+        return res.render('admin', {
+          listProduct
+        })
     }
     return res.send(req.params.name); */
   },
