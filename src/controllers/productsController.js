@@ -1,7 +1,5 @@
 const { readJson } = require("../data");
 
-readJson
-
 module.exports = {
   products: (req, res) => {
     const listProduct = readJson("products.json");
@@ -20,5 +18,5 @@ module.exports = {
   },
   editProduct: (req, res) => {
     return res.render("editProduct");
-  },
+  }
 };

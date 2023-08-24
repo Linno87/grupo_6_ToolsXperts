@@ -1,5 +1,6 @@
 const multer = require('multer');
 const path = require('path');
+const product = require('Product')
 
 
 const storage = multer.diskStorage({
