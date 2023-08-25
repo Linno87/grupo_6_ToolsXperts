@@ -121,9 +121,11 @@
                                                                         class="btn btn-sm btn-success">
                                                                         <i class="fas fa-edit"></i>
                                                                     </a>
-                                                                    <a href="" class="btn btn-sm btn-danger">
-                                                                        <i class="fas fa-trash"></i>
-                                                                    </a>
+                                                                    <form action="/products/deleteProduct/<%=id%>?_method=DELETE" method="POST">
+                                                                        <button type="submit"
+                                                                            class="btn btn-danger"><i class="fas fa-trash"></i>
+                                                                        </button>
+                                                                    </form>
                                                                 </div>
                                                             </td>
                                                         </tr>

@@ -17,5 +17,6 @@ module.exports = {
     return res.render("createProduct");
   },
   editProduct: require('./products/edit'),
-  updateProduct : require('./products/update')
+  updateProduct : require('./products/update'),
+  deleteProduct: require('./products/delete')
 };
