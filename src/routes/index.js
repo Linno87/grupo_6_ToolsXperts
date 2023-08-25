@@ -5,6 +5,6 @@ const router = express.Router();
 /* / */
 router.get('/', index);
 router.get('/admin', admin)
-router.get('search/:name', searchProduct)
+router.get('/search', searchProduct)
 
 module.exports = router;

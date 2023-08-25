@@ -9,27 +9,24 @@ module.exports = {
     });
   },
   searchProduct: (req, res) => {
+    const key = req.query.keywords;
     const listProduct = readJson("products.json");
-    return res.render("search",{
-      listProduct
-    })
-    /* 
-    const listSearch = listProduct.map(product=>
-      product.includes(req.query.name)
-    );
-
-    if (listSearch) {
+    const listSearch = listProduct.filter(product=> product.name.toLowerCase().includes(key.toLowerCase()));
+    
+    if (listSearch.length) {
       return res.render("search", {
-        listSearch
+        listSearch,
+        key
       });
-      },
-      admin : (req,res) => {
+    }else{
+    return res.redirect("/");
+    }},
+  admin : (req,res) => {
         const listProduct = readJson('products.json');
 
         return res.render('admin', {
           listProduct
         })
-    }
-    return res.send(req.params.name); */
+    
   },
 };
