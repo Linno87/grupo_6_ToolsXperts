@@ -1,6 +1,7 @@
-const { readJson } = require("../data");
+const { readJson, writeJson } = require("../data");
 
-readJson
+
+readJson;
 
 module.exports = {
   products: (req, res) => {
@@ -13,12 +14,18 @@ module.exports = {
     return res.render("carrito");
   },
   detalle: (req, res) => {
+
     return res.render("detalle");
+    const listProduct = readJson("products.json");
+    const id = req.params.id;
+    const product = listProduct.find((product) => product.id === +id);
+    return res.render("detalle", {
+      product,
+    });
   },
-  createProduct: (req, res) => {
-    return res.render("createProduct");
-  },
-  editProduct: (req, res) => {
-    return res.render("editProduct");
-  },
+  createProduct: require('./products/create'),
+  saveProduct: require('./products/saveProduct '),
+  editProduct: require('./products/edit'),
+  updateProduct : require('./products/update'),
+  deleteProduct: require('./products/delete')
 };

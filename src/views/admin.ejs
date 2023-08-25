@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<%- include("./partials/head", { title: "CART" }) %>
+<%- include("./partials/head", { title: "Admin" }) %>
 
     <body class="admin">
 
@@ -113,17 +113,19 @@
                                                             </td>
                                                             <td>
                                                                 <div class="d-flex gap-2">
-                                                                    <button type="button"
+                                                                    <a href="/products/<%= id %>"><button type="button"
                                                                         class="btn btn-sm  btn-primary">
                                                                         <i class="fas fa-eye"></i>
                                                                     </button>
-                                                                    <a href="/products/editProduct/"
+                                                                    <a href="/products/editProduct/<%= id %>"
                                                                         class="btn btn-sm btn-success">
                                                                         <i class="fas fa-edit"></i>
                                                                     </a>
-                                                                    <a href="" class="btn btn-sm btn-danger">
-                                                                        <i class="fas fa-trash"></i>
-                                                                    </a>
+                                                                    <form action="/products/deleteProduct/<%=id%>?_method=DELETE" method="POST">
+                                                                        <button type="submit"
+                                                                            class="btn btn-danger"><i class="fas fa-trash"></i>
+                                                                        </button>
+                                                                    </form>
                                                                 </div>
                                                             </td>
                                                         </tr>
