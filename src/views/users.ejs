@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include("./partials/head",{ title: "USUARIOS" }) %>
+</head>
+
+<body>
+    <%- include("./partials/header") %>
+
+        <main>
+            <h1>Usuarios</h1>
+            <hr>
+            <ul>
+                <% userList.forEach(user=> { %>
+                    <li>
+                        <a href="/users/<%= user.id %>">
+                            <%= user.firstName %>
+                                <%= user.lastName %>
+                        </a>
+                    </li>
+                    <% }); %>
+            </ul>
+
+        </main>
+
+        <%- include("./partials/footer") %>
+</body>
+
+</html>
