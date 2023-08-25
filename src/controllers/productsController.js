@@ -15,20 +15,8 @@ module.exports = {
 
     return res.render("detalle");
   },
-  createProduct: (req, res) => {
-    return res.render("createProduct");
-  },
-  saveProduct:(req, res)=>{
-   const productsJson = readJson('products.json');
-   const newProduct = new Product(req.body);
-   productsJson.push(newProduct);
-
-   writeJson(productsJson, 'products.json')
-
-
-    res.send(productsJson)
-  },
-
+  createProduct: require('./products/create'),
+  saveProduct: require('./products/saveProduct '),
   editProduct: require('./products/edit'),
   updateProduct : require('./products/update')
 };

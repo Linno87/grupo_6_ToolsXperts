@@ -176,26 +176,15 @@
     "image": "24D DISCO MADERA.png"
   },
   {
-    "id": "2947844f-7499-4ddf-953f-32143cd59583",
-    "name": "NUevo Producyyo",
-    "category": "amoladoras",
-    "brand": "pirulo",
-    "model": "pironcho",
-    "price": 2312,
-    "discount": 123,
-    "description": "asdasdasdasdasdasdasdasd",
-    "image": ""
-  },
-  {
-    "id": "8d57bd3d-a969-4dbc-a5de-d25217e17596",
-    "name": "NUevo Producyyo",
-    "category": "amoladoras",
-    "brand": "pirulo",
-    "model": "pironcho",
-    "price": 2312,
-    "discount": 123,
-    "description": "asdasdasdasdasdasdasdasd",
-    "image": "",
-    "createdAt": "2023-08-24T17:28:56.350Z"
+    "id": "017ce664-9967-42bf-bd2a-ae6e017ce9df",
+    "name": "Taladro",
+    "category": "taladros",
+    "brand": "Bosh",
+    "model": "bn-123",
+    "price": 12555,
+    "discount": 5,
+    "description": "taladro usado y quemado",
+    "image": "1692922324328_products_.jpeg",
+    "createdAt": "2023-08-25T00:12:04.374Z"
   }
 ]

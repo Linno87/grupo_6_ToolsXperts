@@ -8,7 +8,7 @@ router.get('/', products)
 router.get('/carrito', carrito)
 router.get('/detalle', detalle)
 router.get('/createProduct', createProduct)
-router.post('/createProduct',saveProduct)
+router.post('/createProduct', upload.single('image'), saveProduct)
 router.get('/editProduct/:id', editProduct)
 router.put('/updateProduct/:id', upload.single('image'), updateProduct )
 
