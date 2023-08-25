@@ -12,13 +12,18 @@
             <h1>Usuarios</h1>
             <hr>
             <ul>
-                <% userList.forEach(user=> { %>
-                    <li>
-                        <a href="/users/<%= user.id %>">
-                            <%= user.firstName %>
-                                <%= user.lastName %>
-                        </a>
-                    </li>
+                <% listUser.forEach( user=> { %>
+                    <h4>
+                        <%= user.firstName %>
+                            <%= user.lastName %>
+                    </h4>
+                    <p>ID: <%= user.id %>
+                    </p>
+                    <p>Categoría: <%= user.category %>
+                    </p>
+                    <p>Email: <%= user.email %>
+                    </p>
+                    <img src="<%= user.image %>" alt="<%= user.firstName %> <%= user.lastName %>" width="200">
                     <% }); %>
             </ul>
 

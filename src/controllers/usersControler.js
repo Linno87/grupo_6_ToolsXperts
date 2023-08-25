@@ -8,18 +8,12 @@ module.exports = {
     return res.render("login");
   },
   users: (req, res) => {
-
     const listUser = readJson("users.json");
-
+    const id = req.params.id;
+    const users = listUser.find((user) => user.id === +id);
     return res.render("users", {
       listUser,
-    });
-  },
-  /*   profile: (req, res) => {
-    const id = req.params.id;
-    const user = users.find((user) => user.id === +id);
-    return res.render("users", {
       users,
     });
-  } */
+  },
 };

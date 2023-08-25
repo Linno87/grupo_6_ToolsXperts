@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<%- include("./partials/head", { title: "CART" }) %>
+<%- include("./partials/head", { title: "Admin" }) %>
 
     <body class="admin">
 
@@ -116,8 +116,8 @@
                                                                     <a href="/products/<%= id %>"><button type="button"
                                                                         class="btn btn-sm  btn-primary">
                                                                         <i class="fas fa-eye"></i>
-                                                                    </button></a>
-                                                                    <a href="/products/editProduct/"
+                                                                    </button>
+                                                                    <a href="/products/editProduct/<%= id %>"
                                                                         class="btn btn-sm btn-success">
                                                                         <i class="fas fa-edit"></i>
                                                                     </a>
