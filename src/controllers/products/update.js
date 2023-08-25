@@ -20,6 +20,7 @@ module.exports = (req, res) => {
       product.price = +price;
       product.discount = +discount;
       product.description = description?.trim();
+      product.createdAt = new Date();
       product.image = req.file ? req.file.filename : product.image;
 
     }
