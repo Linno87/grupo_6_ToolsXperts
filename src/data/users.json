@@ -1,0 +1,29 @@
+[
+    {
+        "id": 1,
+        "firstName": "Leo",
+        "lastName": "Garcia",
+        "email": "garciaToolXperts@gmail.com",
+        "password": "password1",
+        "category": "Administrador",
+        "image": "leog.jpg"
+    },
+    {
+        "id": 2,
+        "firstName": "Deb",
+        "lastName": "Escobar",
+        "email": "escobarToolXperts@gmail.com",
+        "password": "password2",
+        "category": "Administrador",
+        "image": "debe.jpg"
+    },
+    {
+        "id": 3,
+        "firstName": "Lea",
+        "lastName": "Gillig",
+        "email": "gillig@ToolXperts@gmail.com",
+        "password": "password3",
+        "category": "Administrador",
+        "image": "leag.jpg"
+    }
+]
