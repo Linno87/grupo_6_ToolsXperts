@@ -90,7 +90,7 @@
   {
     "id": 9,
     "name": "Pistola Pintar Latex Salpicre",
-    "category": "articulos de pintureria",
+    "category": "pintor",
     "brand": "skil",
     "model": "ATK-5",
     "price": 15500,
@@ -101,7 +101,7 @@
   {
     "id": 10,
     "name": "Maquina De Pintar 650w Kushiro",
-    "category": "articulos de pintureria",
+    "category": "pintor",
     "brand": "kushiro",
     "model": "k001",
     "price": 20300,
@@ -112,7 +112,7 @@
   {
     "id": 11,
     "name": "Compresor de aire eléctrico Kushiro K100-4B",
-    "category": "articulos de pintureria",
+    "category": "pintor",
     "brand": "kushiro",
     "model": "K100-4B",
     "price": 305841,
@@ -123,7 +123,7 @@
   {
     "id": 12,
     "name": "Sierra Circular 7 1/4 1500w",
-    "category": "sierras",
+    "category": "sierras_circulares",
     "brand": "ford",
     "model": "fx1-70",
     "price": 83000,
@@ -134,7 +134,7 @@
   {
     "id": 13,
     "name": "Sierra Circular 7 1/4 20mm Inalambrica",
-    "category": "sierras",
+    "category": "sierras_circulares",
     "brand": "barovo",
     "model": "SCIL714",
     "price": 75600,
@@ -176,15 +176,83 @@
     "image": "24D DISCO MADERA.png"
   },
   {
-    "id": "017ce664-9967-42bf-bd2a-ae6e017ce9df",
-    "name": "Taladro",
-    "category": "taladros",
-    "brand": "Bosh",
-    "model": "bn-123",
-    "price": 12555,
-    "discount": 5,
-    "description": "taladro usado y quemado",
-    "image": "1692922324328_products_.jpeg",
-    "createdAt": "2023-08-25T00:12:04.374Z"
+    "id": "47804c7e-caa5-442a-b7ec-cb2185e1b7a6",
+    "name": "Iphone 11123",
+    "category": "amoladoras",
+    "brand": "pirulo",
+    "model": "pironcho",
+    "price": 123123,
+    "discount": 123,
+    "description": "123sadf",
+    "image": null,
+    "createdAt": "2023-08-25T02:31:24.911Z"
+  },
+  {
+    "id": "01e69384-2355-47d8-a7a5-15e96d965026",
+    "name": "estufa a gas",
+    "category": "amoladoras",
+    "brand": "fhfdh",
+    "model": "pironcho",
+    "price": 69999,
+    "discount": 15,
+    "description": "we",
+    "image": null,
+    "images": [
+      "1692930908386_products_.jpeg",
+      "1692930908398_products_.jpeg",
+      "1692930908412_products_.jpeg"
+    ],
+    "createdAt": "2023-08-25T02:35:08.422Z"
+  },
+  {
+    "id": "f2fa8646-cfd4-4e8a-97ad-f3bef3e86ef8",
+    "name": "estufa a gas",
+    "category": "amoladoras",
+    "brand": "ggg",
+    "model": "pironcho",
+    "price": 69999,
+    "discount": 15,
+    "description": "asdf",
+    "image": null,
+    "images": [
+      "1692931153465_products_.jpeg",
+      "1692931153474_products_.jpeg",
+      "1692931153482_products_.jpeg"
+    ],
+    "createdAt": "2023-08-25T02:39:13.493Z"
+  },
+  {
+    "id": "94e393d0-a2c0-47fc-a24e-4319feca8746",
+    "name": "estufa a gas",
+    "category": "amoladoras",
+    "brand": "ggg",
+    "model": "pironcho",
+    "price": 69999,
+    "discount": 15,
+    "description": "asdf",
+    "image": null,
+    "images": [
+      "1692931323102_products_.jpeg",
+      "1692931323117_products_.jpeg",
+      "1692931323122_products_.jpeg"
+    ],
+    "createdAt": "2023-08-25T02:42:03.138Z"
+  },
+  {
+    "id": "735e6076-75ce-4993-98f3-6998d063c6e1",
+    "name": "estufa a gas",
+    "category": "amoladoras",
+    "brand": "ggg",
+    "model": "pironcho",
+    "price": 69999,
+    "discount": 15,
+    "description": "asdf",
+    "image": "1692931510060_products_.jpeg",
+    "images": [
+      "1692931510071_products_.jpeg",
+      "1692931510089_products_.jpeg",
+      "1692931510105_products_.jpeg"
+    ],
+    "createdAt": "2023-08-25T02:45:10.139Z"
   }
 ]
