@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include("./partials/head",{ title: "USUARIOS" }) %>
+</head>
+
+<body>
+    <%- include("./partials/header") %>
+
+        <main>
+            <h1>Usuarios</h1>
+            <hr>
+            <ul>
+                <% listUser.forEach( user=> { %>
+                    <h4>
+                        <%= user.firstName %>
+                            <%= user.lastName %>
+                    </h4>
+                    <p>ID: <%= user.id %>
+                    </p>
+                    <p>Categoría: <%= user.category %>
+                    </p>
+                    <p>Email: <%= user.email %>
+                    </p>
+                    <img src="<%= user.image %>" alt="<%= user.firstName %> <%= user.lastName %>" width="200">
+                    <% }); %>
+            </ul>
+
+        </main>
+
+        <%- include("./partials/footer") %>
+</body>
+
+</html>
