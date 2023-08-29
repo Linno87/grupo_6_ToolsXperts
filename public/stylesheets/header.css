@@ -117,10 +117,11 @@
     margin-top: 10px;
     margin-bottom: 10px;
     background-color: white;
+    align-items: center;
 }
 
 .search_bar input {
-    width: 200px;
+    width: 100%;
     margin: 2px;
     border: none;
 }
@@ -129,7 +130,10 @@
     color: #1d3557;
     margin-top: 5px;
     padding-right: 9px;
-    padding-left: 5px;
+    padding-left: 0px;
+    border: none;
+    background-color: white;
+    margin-bottom: 4px;
 }
 
 .burguer_menu {
@@ -153,6 +157,7 @@
 
     .search_bar {
         position: absolute;
+        align-items: center;
         width: 45%;
         left: 185px;
         bottom: 39px;
