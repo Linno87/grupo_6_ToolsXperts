@@ -3,12 +3,13 @@
     "id": 1,
     "name": "Amoladora Angular 700 W",
     "category": "amoladoras",
-    "brand": "skil",
+    "brand": "skill",
     "model": "9002",
     "price": 19500,
     "discount": 10,
     "description": "Amoladora Angular 700 W - Skill",
-    "image": "9002-removebg-preview.png"
+    "image": "9002-removebg-preview.png",
+    "createdAt": "2023-08-29T01:00:04.434Z"
   },
   {
     "id": 2,
@@ -19,7 +20,8 @@
     "price": 15350,
     "discount": 15,
     "description": "Amoladora Angular 7” Barovo (AA2KB)",
-    "image": "AA2KB-removebg-preview.png"
+    "image": "AA2KB-removebg-preview.png",
+    "createdAt": "2023-08-29T01:04:07.126Z"
   },
   {
     "id": 3,
@@ -174,85 +176,5 @@
     "discount": 13,
     "description": "Hoja Sierra Circular Bosch Para Madera 184mm 40 Dient 7 1/4",
     "image": "24D DISCO MADERA.png"
-  },
-  {
-    "id": "47804c7e-caa5-442a-b7ec-cb2185e1b7a6",
-    "name": "Iphone 11123",
-    "category": "amoladoras",
-    "brand": "pirulo",
-    "model": "pironcho",
-    "price": 123123,
-    "discount": 123,
-    "description": "123sadf",
-    "image": null,
-    "createdAt": "2023-08-25T02:31:24.911Z"
-  },
-  {
-    "id": "01e69384-2355-47d8-a7a5-15e96d965026",
-    "name": "estufa a gas",
-    "category": "amoladoras",
-    "brand": "fhfdh",
-    "model": "pironcho",
-    "price": 69999,
-    "discount": 15,
-    "description": "we",
-    "image": null,
-    "images": [
-      "1692930908386_products_.jpeg",
-      "1692930908398_products_.jpeg",
-      "1692930908412_products_.jpeg"
-    ],
-    "createdAt": "2023-08-25T02:35:08.422Z"
-  },
-  {
-    "id": "f2fa8646-cfd4-4e8a-97ad-f3bef3e86ef8",
-    "name": "estufa a gas",
-    "category": "amoladoras",
-    "brand": "ggg",
-    "model": "pironcho",
-    "price": 69999,
-    "discount": 15,
-    "description": "asdf",
-    "image": null,
-    "images": [
-      "1692931153465_products_.jpeg",
-      "1692931153474_products_.jpeg",
-      "1692931153482_products_.jpeg"
-    ],
-    "createdAt": "2023-08-25T02:39:13.493Z"
-  },
-  {
-    "id": "94e393d0-a2c0-47fc-a24e-4319feca8746",
-    "name": "estufa a gas",
-    "category": "amoladoras",
-    "brand": "ggg",
-    "model": "pironcho",
-    "price": 69999,
-    "discount": 15,
-    "description": "asdf",
-    "image": null,
-    "images": [
-      "1692931323102_products_.jpeg",
-      "1692931323117_products_.jpeg",
-      "1692931323122_products_.jpeg"
-    ],
-    "createdAt": "2023-08-25T02:42:03.138Z"
-  },
-  {
-    "id": "735e6076-75ce-4993-98f3-6998d063c6e1",
-    "name": "estufa a gas",
-    "category": "amoladoras",
-    "brand": "ggg",
-    "model": "pironcho",
-    "price": 69999,
-    "discount": 15,
-    "description": "asdf",
-    "image": "1692931510060_products_.jpeg",
-    "images": [
-      "1692931510071_products_.jpeg",
-      "1692931510089_products_.jpeg",
-      "1692931510105_products_.jpeg"
-    ],
-    "createdAt": "2023-08-25T02:45:10.139Z"
   }
 ]
