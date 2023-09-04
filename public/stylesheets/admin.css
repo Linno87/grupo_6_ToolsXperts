@@ -38,6 +38,14 @@
   display: none;
 }
 
+.modal-advertencia {
+  color: white;
+}
+
+.modal-body-background {
+  background-color: var(--GrisClaro);
+}
+
 @media (min-width: 768px) {
   
   .advertencia {
