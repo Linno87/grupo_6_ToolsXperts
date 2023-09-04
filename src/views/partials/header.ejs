@@ -30,14 +30,17 @@
                 <li><a href="/envios">Envios</a></li>
             </ul>
         </nav>
-        <div class="search_bar">
-            <div class="search_bar_text">
-                <input type="text" placeholder="¿Qué estas buscando? Nosotros te lo encontramos...">
-            </div>
-            <div class="lupa">
-                <i class="fa-solid fa-magnifying-glass"></i>
-            </div>
-        </div>
+       
+           
+        <form class="search_bar" action="/search" method="GET" >
+          
+                <input type="search" name="keywords" placeholder="¿Qué estas buscando? Nosotros te lo encontramos...">
+                
+                <button class="lupa" type="submit">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+        </form>
+
         <div class="burguer_menu">
             <i class="fa-solid fa-bars"></i>
         </div>

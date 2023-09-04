@@ -6,7 +6,7 @@ module.exports = (req,res) => {
     const categorys =readJson('categorys.json')
 
     const id = req.params.id;
-    const product = products.find(product => product.id === +id);
+    const product = products.find(product => product.id === id);
 
     return res.render('editProduct', {
         ...product,

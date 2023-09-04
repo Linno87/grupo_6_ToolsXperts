@@ -59,10 +59,10 @@
         <h1>Ofertas Exclusivas</h1>
 
         <article class="home__main__article-ofertas">
-            <a href="/"><img src="/img/OFERTAS/AMOLAORAS ofertas.png" alt="Oferta 1"></a>
-            <a href="/"><img src="/img/OFERTAS/CALADORAS oferta.png" alt="Oferta 2"></a>
-            <a href="/"><img src="/img/OFERTAS/Copia de TALADROS FACE.png" alt="Oferta 3"></a>
-            <a href="/"><img src="/img/OFERTAS/Copia de CALADORAS FACE.png" alt="Oferta 4"></a>
+            <a href="/search?keywords=amoladora"><img src="/img/OFERTAS/AMOLAORAS ofertas.png" alt="Oferta 1"></a>
+            <a href="/search?keywords=caladora"><img src="/img/OFERTAS/CALADORAS oferta.png" alt="Oferta 2"></a>
+            <a href="/search?keywords=taladro"><img src="/img/OFERTAS/Copia de TALADROS FACE.png" alt="Oferta 3"></a>
+            <a href="/search?keywords=sierra"><img src="/img/OFERTAS/Copia de CALADORAS FACE.png" alt="Oferta 4"></a>
         </article>
 
         <!-- NUESTROS RUBROS -->
@@ -125,7 +125,7 @@
                                 <div class="card-body">
                                     <h5 class="card-title"><%= product.name %></h5>
                                     <p class="card-text"><%= product.description%>></p>
-                                    <a href="/products/detalle" class="home__main__article--product-descripcion">ver más</a>
+                                    <a href="/products/detalle/<%= product.id %>" class="home__main__article--product-descripcion">ver más</a>
                                 </div>
                             </div>
                         </div>
@@ -134,7 +134,7 @@
             </div>
         </section>
 
-
+        
         <!-- CARRUSEL DE LOGOS DE MARCAS -->
         <section class="section--marcas">
             <div class="swiper mySwiper-marcas">
