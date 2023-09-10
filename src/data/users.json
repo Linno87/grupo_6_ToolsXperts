@@ -35,5 +35,15 @@
     "password": "",
     "categoryUser": "administrador",
     "profile_image": "1694313121598_users_.jpg"
+  },
+  {
+    "id": "b07b7e85-dff0-47e7-a810-cf4e330d7241",
+    "firstName": "Rodrigo",
+    "lastName": "Hidalgo",
+    "date": "66666-06-06",
+    "email": "rodrihidalgo20@gmail.com",
+    "password": "66666666",
+    "categoryUser": "administrador",
+    "profile_image": "1694387332838_users_.jpg"
   }
 ]
