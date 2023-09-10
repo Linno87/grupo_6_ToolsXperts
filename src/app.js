@@ -4,11 +4,16 @@ const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const methodOverride = require('method-override');
+const session = require('express-session')
 
+/* enrutadores */
 const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
 const productsRouter = require('./routes/products');
 
+/* middlewares */
+const cookieCheck = require('./middlewares/cookieCheck');
+const localsCheck = require('./middlewares/localsCheck')
 
 const app = express();
 
@@ -22,10 +27,20 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, '..', 'public')));
 app.use(methodOverride('_method'));
+app.use(session({
+  secret:"mi secreto",
+  resave:false,
+  saveUninitialized:false
+
+}))
+app.use(cookieCheck);
+app.use(localsCheck);
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/products', productsRouter);
+
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
