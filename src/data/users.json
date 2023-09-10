@@ -1,29 +1,39 @@
 [
-    {
-        "id": 1,
-        "firstName": "Leo",
-        "lastName": "Garcia",
-        "email": "garciaToolXperts@gmail.com",
-        "password": "password1",
-        "category": "Administrador",
-        "image": "leog.jpg"
-    },
-    {
-        "id": 2,
-        "firstName": "Deb",
-        "lastName": "Escobar",
-        "email": "escobarToolXperts@gmail.com",
-        "password": "password2",
-        "category": "Administrador",
-        "image": "debe.jpg"
-    },
-    {
-        "id": 3,
-        "firstName": "Lea",
-        "lastName": "Gillig",
-        "email": "gillig@ToolXperts@gmail.com",
-        "password": "password3",
-        "category": "Administrador",
-        "image": "leag.jpg"
-    }
+  {
+    "id": 1,
+    "firstName": "Leo",
+    "lastName": "Garcia",
+    "email": "garciaToolXperts@gmail.com",
+    "password": "password1",
+    "categoryUser": "Administrador",
+    "profile_image": "leog.jpg"
+  },
+  {
+    "id": 2,
+    "firstName": "Deb",
+    "lastName": "Escobar",
+    "email": "escobarToolXperts@gmail.com",
+    "password": "password2",
+    "categoryUser": "Administrador",
+    "profile_image": "debe.jpg"
+  },
+  {
+    "id": 3,
+    "firstName": "Lea",
+    "lastName": "Gillig",
+    "email": "gillig@ToolXperts@gmail.com",
+    "password": "password3",
+    "categoryUser": "Administrador",
+    "profile_image": "leag.jpg"
+  },
+  {
+    "id": "d121b514-dfb3-49d1-850e-fbcb2c7f2d51",
+    "firstName": "Rodrigo",
+    "lastName": "Hidalgo",
+    "date": "",
+    "email": "rodrihidalgo20@gmail.com",
+    "password": "",
+    "categoryUser": "administrador",
+    "profile_image": "1694313121598_users_.jpg"
+  }
 ]

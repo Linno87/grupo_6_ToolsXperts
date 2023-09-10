@@ -19,11 +19,12 @@
                     </h4>
                     <p>ID: <%= user.id %>
                     </p>
-                    <p>Categoría: <%= user.category %>
+                    <p>Categoría: <%= user.categoryUser %>
                     </p>
                     <p>Email: <%= user.email %>
                     </p>
-                    <img src="<%= user.image %>" alt="<%= user.firstName %> <%= user.lastName %>" width="200">
+                    <img src="/img/users/<%= user.profile_image %>"
+                        alt="<%= user.firstName %> <%= user.lastName %>" width="200">
                     <% }); %>
             </ul>
 
