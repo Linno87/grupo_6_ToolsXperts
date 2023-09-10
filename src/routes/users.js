@@ -7,6 +7,7 @@ const router = express.Router();
 router.get('/register', register);
 router.post("/register", uploadUser.single("profile_image"), saveUser);
 router.get('/login', login);
+router.post('/login', processLogin);
 router.get("/", users);
 
 module.exports = router;
