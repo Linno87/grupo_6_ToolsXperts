@@ -16,4 +16,6 @@ module.exports = {
       users,
     });
   },
+  profile: require('./users/profile'),
+  successProfile: require('./users/successProfile'),
 };

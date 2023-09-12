@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include("partials/head", { title: "Perfil"}) %>
+
+    <body>
+        <%- include("partials/header") %>
+        <main class="main_profile">
+            <div class="row">
+                <form class="d-flex justify-content-center flex-column align-items-center gap-2 my-3">
+                    <div class="col-8 col-md-6 ">
+                        <label for="name">Nombre:</label>
+                        <input class="form-control" name="name" id="name" value="<%= firstName %>"/>
+                    </div>
+                    <div class="col-8 col-md-6 ">
+                        <label for="lastName">Apellido:</label>
+                        <input class="form-control" name="lastName" id="lastName" value="<%= lastName %>"/>
+                    </div>
+                    <div class="col-8 col-md-6 ">
+                        <label for="email">Email:</label>
+                        <input class="form-control email" name="email" id="email" value="<%= email %>"/>
+                    </div>
+                    <div class="col-8 col-md-6 ">
+                        <label for="direction">Dirección:</label>
+                        <input class="form-control direction" name="direction" id="direction" value="<%= direction %>"/>
+                    </div>
+                    
+                    <div class="form-floating col-8 col-md-6">
+                        <textarea class="form-control " placeholder="<%= direction %>" id="floatingTextarea2"></textarea>
+                        <label for="floatingTextarea2">Acerca de mi...</label>
+                    </div>
+                    <div class="col-8 col-md-6 ">
+                        
+                    </div>
+                <form>
+            </div>
+        </main>
+
+        <%- include("partials/footer") %>
+    </body>
+</html>

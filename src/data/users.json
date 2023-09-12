@@ -5,7 +5,8 @@
         "lastName": "Garcia",
         "email": "garciaToolXperts@gmail.com",
         "password": "password1",
-        "category": "Administrador",
+        "direction" : null,
+        "rol": "Administrador",
         "image": "leog.jpg"
     },
     {
@@ -14,7 +15,8 @@
         "lastName": "Escobar",
         "email": "escobarToolXperts@gmail.com",
         "password": "password2",
-        "category": "Administrador",
+        "direction" : null,
+        "rol": "Administrador",
         "image": "debe.jpg"
     },
     {
@@ -23,7 +25,8 @@
         "lastName": "Gillig",
         "email": "gillig@ToolXperts@gmail.com",
         "password": "password3",
-        "category": "Administrador",
+        "direction" : null,
+        "rol": "Administrador",
         "image": "leag.jpg"
     }
 ]
