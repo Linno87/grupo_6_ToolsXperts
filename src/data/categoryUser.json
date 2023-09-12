@@ -1,0 +1,34 @@
+[
+    {
+        "id": 1,
+        "category": "administrador"
+    },
+    {
+        "id": 2,
+        "category": "deposito"
+    },
+    {
+        "id": 3,
+        "category": "repositor"
+    },
+    {
+        "id": 4,
+        "category": "supervisor"
+    },
+    {
+        "id": 5,
+        "category": "limpieza"
+    },
+    {
+        "id": 6,
+        "category": "caja"
+    },
+    {
+        "id": 7,
+        "category": "vendedor"
+    },
+    {
+        "id": 8,
+        "category": "soporte"
+    }
+]
