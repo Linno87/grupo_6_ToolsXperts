@@ -1,15 +1,23 @@
 const { v4: uuidv4 } = require("uuid");
 const { readJson, writeJson } = require("../../data");
-const validationResult = require("express-validator");
+const { validationResult } = require("express-validator");
 
 module.exports = (req, res) => {
+  const errors = validationResult(req);
+
+  if (!errors.isEmpty()) {
+    return res.render("register", {
+      errors: errors.mapped(),
+      old: req.body,
+    });
+  }
+
   const {
     firstName,
     lastName,
     date,
     email,
     password,
-    password_confirmation,
     categoryUser,
   } = req.body;
 

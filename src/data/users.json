@@ -1,49 +1,32 @@
 [
   {
-    "id": 1,
-    "firstName": "Leo",
-    "lastName": "Garcia",
-    "email": "garciaToolXperts@gmail.com",
-    "password": "password1",
-    "categoryUser": "Administrador",
-    "profile_image": "leog.jpg"
+    "id": "c7db3cc7-ce71-4872-b60e-10b25050436a",
+    "firstName": "Rodrigo",
+    "lastName": "Hidalgo",
+    "date": "1998-06-18",
+    "email": "rodrihidalgo20@gmail.com",
+    "password": "123456789",
+    "categoryUser": "carpinteria",
+    "profile_image": "1694566178858_users_.jpg"
   },
   {
-    "id": 2,
-    "firstName": "Deb",
+    "id": "c7db3cc7-ce71-4872-b60e-10b25050436e",
+    "firstName": "Débora",
     "lastName": "Escobar",
-    "email": "escobarToolXperts@gmail.com",
-    "password": "password2",
-    "categoryUser": "Administrador",
-    "profile_image": "debe.jpg"
-  },
-  {
-    "id": 3,
-    "firstName": "Lea",
-    "lastName": "Gillig",
-    "email": "gillig@ToolXperts@gmail.com",
-    "password": "password3",
-    "categoryUser": "Administrador",
-    "profile_image": "leag.jpg"
-  },
-  {
-    "id": "d121b514-dfb3-49d1-850e-fbcb2c7f2d51",
-    "firstName": "Rodrigo",
-    "lastName": "Hidalgo",
-    "date": "",
-    "email": "rodrihidalgo20@gmail.com",
-    "password": "",
+    "date": "1988-01-01",
+    "email": "escobardebo@gmail.com",
+    "password": "0108",
     "categoryUser": "administrador",
-    "profile_image": "1694313121598_users_.jpg"
+    "profile_image": ""
   },
   {
-    "id": "b07b7e85-dff0-47e7-a810-cf4e330d7241",
-    "firstName": "Rodrigo",
-    "lastName": "Hidalgo",
-    "date": "66666-06-06",
-    "email": "rodrihidalgo20@gmail.com",
-    "password": "66666666",
-    "categoryUser": "administrador",
-    "profile_image": "1694387332838_users_.jpg"
+    "id": "c923a874-1890-4db5-99fa-166b3cfbaae9",
+    "firstName": "Leonardo",
+    "lastName": "Garcia",
+    "date": "1993-01-16",
+    "email": "gleonardo666@gmail.com",
+    "password": "123456789",
+    "categoryUser": "soldadura",
+    "profile_image": "1694646024391_users_.png"
   }
 ]
