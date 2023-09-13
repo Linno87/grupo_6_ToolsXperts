@@ -101,9 +101,25 @@
 .div_register{
     margin-right: 5px;
 }
+.login_errorMsg{
+    width: 100%;
+    font-size: 16px;
+    font-weight:500;
+    color:#e63946;
+    
+}
 
-
-
+.logout{
+    color: #f1faee;
+    font-size: 17px;
+    margin-top: 5px;
+}
+.weldcome{
+    width: 80%;
+    color:#e63946;
+    text-align:left;
+    margin-top: 5px;
+}
 
 @media (min-width:768px){
     .login_main_form_box{

@@ -24,7 +24,7 @@ req.body.remember != undefined && res.cookie('userRemember',req.session.userLogi
 res.redirect('/')
 }else{
     /* devuelve al login los errores con el método mapped/ el objeto old devuelve los datos ingresados que no tuvieron errores/se termina de configurar en la vista de loguin  */
-   res.send(errors.mapped())
+   /* res.send(errors.mapped()) */
       res.render('login',{
         errors: errors.mapped(),
         old: req.body

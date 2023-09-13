@@ -4,4 +4,5 @@ module.exports = {
   processLogin: require('./users/processLogin'),
   users: require('./users/users'),
   saveUser: require("./users/saveUser"),
+  logout : require('./users/logout')
 };
