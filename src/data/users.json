@@ -18,5 +18,15 @@
     "password": "0108",
     "categoryUser": "administrador",
     "profile_image": ""
+  },
+  {
+    "id": "c923a874-1890-4db5-99fa-166b3cfbaae9",
+    "firstName": "Leonardo",
+    "lastName": "Garcia",
+    "date": "1993-01-16",
+    "email": "gleonardo666@gmail.com",
+    "password": "123456789",
+    "categoryUser": "soldadura",
+    "profile_image": "1694646024391_users_.png"
   }
 ]

@@ -5,7 +5,6 @@ module.exports = [
   check("lastName").notEmpty().withMessage("El apellido es requerido").bail(),
   check("date")
     .notEmpty()
-    .isNumeric()
     .withMessage("La fecha de nacimiento es obligatoria")
     .bail(),
   check("email")
