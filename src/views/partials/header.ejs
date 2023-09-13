@@ -13,10 +13,14 @@
             <div class="div_login">
                 <a href="/users/login"><i class="fas fa-sign-in-alt"></i></a>
             </div>
-
+            
             <div class="div_register">
-                <a href="/users/register"><i class="fas fa-address-card"></i>
-                </a>
+                <% if (locals.userLogin) { %>
+                    <a href="/users/profile"><i class="fas fa-address-card"></i></a>
+                <% }else{ %>
+                    <a href="/users/register"><i class="fas fa-address-card"></i></a>
+                <% } %>
+                
             </div>
             <div class="div_carrito">
                 <a href="/products/carrito"><i class="fa-solid fa-cart-shopping"></i></a>

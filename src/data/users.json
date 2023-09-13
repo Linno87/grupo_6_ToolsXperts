@@ -6,7 +6,10 @@
     "email": "garciaToolXperts@gmail.com",
     "password": "password1",
     "categoryUser": "Administrador",
-    "profile_image": "leog.jpg"
+    "profile_image": "1694566395496_users_.jpg",
+    "direction": "Avenida siempre viva 123123",
+    "description": "Soy Leo",
+    "preference": "carpinteria"
   },
   {
     "id": 2,
@@ -15,16 +18,22 @@
     "email": "escobarToolXperts@gmail.com",
     "password": "password2",
     "categoryUser": "Administrador",
-    "profile_image": "debe.jpg"
+    "profile_image": "debe.jpg",
+    "direction": null,
+    "description": "hola mundo",
+    "preference": "herreria"
   },
   {
     "id": 3,
     "firstName": "Lea",
     "lastName": "Gillig",
-    "email": "gillig@ToolXperts@gmail.com",
+    "email": "gilligToolXperts@gmail.com",
     "password": "password3",
     "categoryUser": "Administrador",
-    "profile_image": "leag.jpg"
+    "profile_image": "1694313069533_users_.jpg",
+    "direction": null,
+    "description": "hola Leo",
+    "preference": "construccion"
   },
   {
     "id": "d121b514-dfb3-49d1-850e-fbcb2c7f2d51",
@@ -34,7 +43,10 @@
     "email": "rodrihidalgo20@gmail.com",
     "password": "",
     "categoryUser": "administrador",
-    "profile_image": "1694313121598_users_.jpg"
+    "profile_image": "1694313121598_users_.jpg",
+    "direction": null,
+    "description": "hola mundo",
+    "preference": "all"
   },
   {
     "id": "b07b7e85-dff0-47e7-a810-cf4e330d7241",
@@ -44,6 +56,20 @@
     "email": "rodrihidalgo20@gmail.com",
     "password": "66666666",
     "categoryUser": "administrador",
-    "profile_image": "1694387332838_users_.jpg"
+    "profile_image": "1694387332838_users_.jpg",
+    "direction": null,
+    "description": "hola mundo",
+    "preference": "carpinteria"
+  },
+  {
+    "id": "b07b7e85-dff0-47e7-a810-cf4e330d7243",
+    "firstName": "Leo",
+    "lastName": "Gillig",
+    "password": "123456",
+    "categoryUser": "Administrador",
+    "profile_image": "1694646724879_users_.jpg",
+    "direction": "Avenida siempre viva 123123",
+    "description": "Soy Leo",
+    "preference": "carpinteria"
   }
 ]

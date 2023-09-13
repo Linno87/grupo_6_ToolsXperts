@@ -5,5 +5,5 @@ module.exports = {
   users: require('./users/users'),
   saveUser: require("./users/saveUser"),
   profile: require("./users/profile"),
-  successProfile: require("./users/successProfile")
+  updateProfile: require("./users/updateProfile")
 };

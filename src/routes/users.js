@@ -1,6 +1,7 @@
 const express = require('express');
-const { register, login, users, saveUser, processLogin, profile, successProfile } = require('../controllers/usersController');
+const { register, login, users, saveUser, processLogin, profile, updateProfile } = require('../controllers/usersController');
 const uploadUser = require("../middlewares/uploadUser");
+const profileValidations = require('../validations/profileValidations');
 const router = express.Router();
 
 /* /users */
@@ -11,6 +12,6 @@ router.post('/login', processLogin);
 router.get("/", users);
 
 router.get("/profile", profile);
-router.put('/profile', successProfile)
+router.put('/profile',uploadUser.single("profile_image"), updateProfile)
 
 module.exports = router;
