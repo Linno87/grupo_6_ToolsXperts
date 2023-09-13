@@ -1,7 +1,17 @@
 <header class="header">
     <div class="top_bar">
+    
         <i class="fa-solid fa-globe"></i>
         <a href="/admin"><i class="fa-solid fa-user-gear"></i></a>
+<!--si de locals.loguin tiene información del usuario traeme su nombre, si no lo muestres-->
+        <% if (locals.userLogin) { %>
+         <!-- el botón cerrar sesión se muestra si hay usuario loguedo  -->
+         <a class="logout" href="/users/logout">Cerrar sesión</a> 
+         <h5 class="weldcome"><%= `Bienvenid@ ${locals.userLogin.firstName}` %></h5> 
+       
+        <% } %>
+        
+
     </div>
     <div class="mid_bar">
         <div class="mid_bar_left">

@@ -1,29 +1,32 @@
 [
-    {
-        "id": 1,
-        "firstName": "Leo",
-        "lastName": "Garcia",
-        "email": "garciaToolXperts@gmail.com",
-        "password": "password1",
-        "category": "Administrador",
-        "image": "leog.jpg"
-    },
-    {
-        "id": 2,
-        "firstName": "Deb",
-        "lastName": "Escobar",
-        "email": "escobarToolXperts@gmail.com",
-        "password": "password2",
-        "category": "Administrador",
-        "image": "debe.jpg"
-    },
-    {
-        "id": 3,
-        "firstName": "Lea",
-        "lastName": "Gillig",
-        "email": "gillig@ToolXperts@gmail.com",
-        "password": "password3",
-        "category": "Administrador",
-        "image": "leag.jpg"
-    }
+  {
+    "id": "c7db3cc7-ce71-4872-b60e-10b25050436a",
+    "firstName": "Rodrigo",
+    "lastName": "Hidalgo",
+    "date": "1998-06-18",
+    "email": "rodrihidalgo20@gmail.com",
+    "password": "123456789",
+    "categoryUser": "carpinteria",
+    "profile_image": "1694566178858_users_.jpg"
+  },
+  {
+    "id": "c7db3cc7-ce71-4872-b60e-10b25050436e",
+    "firstName": "Débora",
+    "lastName": "Escobar",
+    "date": "1988-01-01",
+    "email": "escobardebo@gmail.com",
+    "password": "0108",
+    "categoryUser": "administrador",
+    "profile_image": ""
+  },
+  {
+    "id": "c923a874-1890-4db5-99fa-166b3cfbaae9",
+    "firstName": "Leonardo",
+    "lastName": "Garcia",
+    "date": "1993-01-16",
+    "email": "gleonardo666@gmail.com",
+    "password": "123456789",
+    "categoryUser": "soldadura",
+    "profile_image": "1694646024391_users_.png"
+  }
 ]

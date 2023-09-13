@@ -1,60 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<%- include("./partials/head",{
-    title: "REGISTER"
-}) %>
+<%- include("./partials/head",{ title: "REGISTER" }) %>
 
-<body class="register">
-    <%- include("./partials/header") %>
-    
-    <main class="register_main">
+    <body class="register">
+        <%- include("./partials/header") %>
 
-        <div class="register_main_logo_box">
+            <main class="register_main">
 
-            <a href="/"><img src="/img/Login/Logo-Toolsxperts_login.png" alt="logo_imagen"></a>
+                <div class="register_main_logo_box">
+
+                    <a href="/"><img src="/img/Login/Logo-Toolsxperts_login.png" alt="logo_imagen"></a>
 
 
-            <div>
-                <h1>Registrate</h1>
-                <h4>Sign in to continue</h4>
-                <hr>
-            </div>
-            <div>
-                <p>"Somos una empresa...</p>
-                <button class="boton__general btn_register">Learn More</button>
-            </div>
-        </div>
-        <div class="register_main_form_box">
-            <h1>Registrate</h1>
-            <form class="register_main_form" action="/" method="GET">
-                <p class="register_main_form_inp_box">
-                    <label for="name">NOMBRE</label>
-                    <input type="text" name="name" id="name" value="Francois Mercer" />
-                </p>
-                <p class="register_main_form_inp_box">
-                    <label for="email">EMAIL</label>
-                    <input type="email" name="email" id="email" value="hello@ejemplo.com" />
-                </p>
-                <p class="register_main_form_inp_box">
-                    <label for="pass">PASSWORD</label>
-                    <input type="password" name="pass" id="pass" value="password" />
-                </p>
-                <p class="register_main_form_inp_box">
-                    <label for="date">FECHA DE NACIMIENTO</label>
-                    <input type="date" name="date" id="date" value="date" />
-                </p>
-                <div>
-                    <input class="boton__general btn_register" type="submit" value="rEGISTRATE" />
+                    <div>
+                        <h1>Registrate</h1>
+                        <h4>Sign in to continue</h4>
+                        <hr>
+                    </div>
+                    <div>
+                        <p>"Somos una empresa...</p>
+                        <button class="boton__general btn_register">Learn More</button>
+                    </div>
                 </div>
-
-            </form>
-            <div class="register_main_redes">
-                <a href="https://www.instagram.com/"><i class="fab fa-instagram-square"></i></a>
-                <a href="https://www.facebook.com/"><i class="fab fa-facebook" style="color:var(--AzulClaro)"></i></a>
-                <a href="https://myaccount.google.com"><i class="fab fa-google-plus-square"></i></a>
-            </div>
-        </div>
-    </main>
-    <%- include("./partials/footer") %>
-</body>
+                <div class="register_main_form_box">
+                    <h1>Registrate</h1>
+                    <form class="register_main_form" action="" method="POST" enctype="multipart/form-data">
+                        <input type="hidden" name="csrfmiddlewaretoken" value="{{ csrf_token }}">
+                        <p class="register_main_form_inp_box">
+                            <label for="name">Nombre</label>
+                            <input type="text" class="form-control" id="firstName" name="firstName">
+                            <span class="text-danger fw-bold">
+                                <%=locals.errors?.firstName?.msg%>
+                            </span>
+                        </p>
+                        <p class="register_main_form_inp_box">
+                            <label for="name">Apellido</label>
+                            <input type="text" class="form-control" id="lastName" name="lastName">
+                            <span class="text-danger fw-bold">
+                                <%=locals.errors?.lastName?.msg%>
+                            </span>
+                        </p>
+                        <p class="register_main_form_inp_box">
+                            <label for="date">FECHA DE NACIMIENTO</label>
+                            <input type="date" name="date" id="date">
+                            <span class="text-danger fw-bold">
+                                <%=locals.errors?.date?.msg%>
+                            </span>
+                        </p>
+                        <p class="register_main_form_inp_box">
+                            <label for="email">Correo electrónico</label>
+                            <input type="email" class="form-control" id="email" name="email">
+                            <span class="text-danger fw-bold">
+                                <%=locals.errors?.email?.msg%>
+                            </span>
+                        </p>
+                        <p class="register_main_form_inp_box">
+                            <label for="password">Contraseña</label>
+                            <input type="password" class="form-control" id="password" name="password">
+                            <span class="text-danger fw-bold">
+                                <%=locals.errors?.password?.msg%>
+                            </span>
+                        </p>
+                        <p class="register_main_form_inp_box">
+                            <label for="password_confirmation">Confirmar contraseña</label>
+                            <input type="password" class="form-control" id="password_confirmation"
+                                name="password_confirmation">
+                            <span class="text-danger fw-bold">
+                                <%=locals.errors?.password_confirmation?.msg%>
+                            </span>
+                        </p>
+                        <select name="categoryUser" id="categoryUser">
+                            <option value="carpinteria">carpinteria</option>
+                            <option value="soldadura">soldadura</option>
+                            <option value="metalurgica">metalurgica</option>
+                            <span class="text-danger fw-bold">
+                                <%=locals.errors?.categoryUser?.msg%>
+                            </span>
+                        </select>
+                        <div class="register_main_form_inp_box">
+                            <label for="profile_image">Imagen de perfil</label>
+                            <input type="file" class="form-control-file" id="profile_image" name="profile_image">
+                            <span class="text-danger fw-bold">
+                                <%=locals.errors?.profile_image?.msg%>
+                            </span>
+                        </div>
+                        <div>
+                            <input class="boton__general btn_register" type="submit" value="REGISTRATE" />
+                        </div>
+                    </form>
+                    <div class="register_main_redes">
+                        <a href="https://www.instagram.com/"><i class="fab fa-instagram-square"></i></a>
+                        <a href="https://www.facebook.com/"><i class="fab fa-facebook"
+                                style="color:var(--AzulClaro)"></i></a>
+                        <a href="https://myaccount.google.com"><i class="fab fa-google-plus-square"></i></a>
+                    </div>
+                </div>
+            </main>
+            <%- include("./partials/footer") %>
+    </body>

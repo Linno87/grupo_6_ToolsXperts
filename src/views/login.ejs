@@ -27,15 +27,23 @@
         </div>
         <div class="login_main_form_box">
             <h1> Sign in</h1>
-            <form class="login_main_form" action="/" method="GET">
+            <form class="login_main_form" method="POST">
                 <p class="login_main_form_inp_box">
                     <label for="email">EMAIL</label>
-                    <input type="email" name="email" id="email" value="hello@ejemplo.com" />
+                    <!-- value contiene lo que viaja por old y llega a traves del req.body (lo que ya escribió en el input que es tomado del name) -->
+                    <input type="email" name="email" id="email" value="<%= locals.old && old.email %>" placeholder="hello@ejemplo.com" />
+                    
+                        <% if (locals.errors && errors.email) { %>
+                            <small class="login_errorMsg"><%= errors.email.msg %></small>
+                            <% } %>
                 </p>
                 <p class="login_main_form_inp_box">
-                    <label for="pass">PASSWORD</label>
-                    <input type="password" name="pass" id="pass" value="password" />
+                    <label for="password">PASSWORD</label>
+                    <input type="password" name="password" id="password" value="<%= locals.old && old.password %>" placeholder="Ingresa tu contraseña" />
                 </p>
+                    <small class="login_errorMsg"><%= locals.errors && errors.password.msg%></small>
+                    <label for="remember"><small style="font-size:1rem;">Recordarme!</small>  <input type="checkbox" name="remember" id="remember"></label>
+                
                 <div>
                     <input class="boton__general btn_login" type="submit" value="Login" />
                 </div>
