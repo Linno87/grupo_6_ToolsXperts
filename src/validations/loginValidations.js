@@ -1,7 +1,6 @@
 const {body}= require('express-validator');
-const users = require('../data/users.json');
-const { readJson, writeJson } = require("../../data");
-const { compareSync } = require('bcryptjs');
+const {readJson} = require("../data");
+const {compareSync} = require('bcryptjs');
 
 
 module.exports=[

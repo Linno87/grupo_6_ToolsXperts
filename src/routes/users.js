@@ -3,12 +3,13 @@ const { register, login, users, saveUser, processLogin } = require('../controlle
 const uploadUser = require("../middlewares/uploadUser");
 const userValidator = require('../validations/userValidator')
 const router = express.Router();
+const loginValiations = require("../validations/loginValidations")
 
 /* /users */
 router.get('/register', register);
 router.post("/register", uploadUser.single("profile_image"), userValidator, saveUser);
 router.get('/login', login);
-router.post('/login', processLogin);
+router.post('/login',loginValiations, processLogin);
 router.get("/", users);
 
 module.exports = router;

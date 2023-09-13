@@ -3,7 +3,9 @@
     
         <i class="fa-solid fa-globe"></i>
         <a href="/admin"><i class="fa-solid fa-user-gear"></i></a>
-          <h5>Bienveni@ <%= locals.userLogin ? locals.userLogin.firstName : ""%> </h5> 
+<!--si de locals.loguin tiene información del usuario traeme su nombre, si no   -->
+          <h5><%= locals.userLogin ? `Bienvenid@ ${locals.userLogin.firstName}` : "" %> </h5> 
+
     </div>
     <div class="mid_bar">
         <div class="mid_bar_left">
