@@ -10,18 +10,6 @@
     "profile_image": "1694566178858_users_.jpg"
   },
   {
-    "id": "c7db3cc7-ce71-4872-b60e-10b25050436e",
-    "firstName": "Débora",
-    "lastName": "Escobar",
-    "email": "escobardebo@gmail.com",
-    "password": "0108",
-    "categoryUser": "Administrador",
-    "profile_image": "debe.jpg",
-    "direction": null,
-    "description": "hola mundo",
-    "preference": "herreria"
-  },
-  {
     "id": 3,
     "firstName": "Lea",
     "lastName": "Gillig",
@@ -84,5 +72,18 @@
     "direction": null,
     "description": null,
     "preference": null
+  },
+  {
+    "id": "8f253415-c363-4362-b9c9-94ce33de27a9",
+    "firstName": "Débora",
+    "lastName": "Escobar",
+    "date": "2023-08-01",
+    "email": "escobardebo@gmail.com",
+    "password": "0108",
+    "categoryUser": "carpinteria",
+    "profile_image": "1694718312222_users_.jpg",
+    "direction": "islas orcadas",
+    "description": "copada la pagína, el botón de cancelar podría achicarse un poco, para que quede igual al de editar.",
+    "preference": "carpinteria"
   }
 ]
