@@ -1,19 +1,17 @@
 [
   {
-    "id": 1,
-    "firstName": "Leo",
-    "lastName": "Garcia",
-    "email": "garciaToolXperts@gmail.com",
-    "password": "password1",
-    "categoryUser": "Administrador",
-    "profile_image": "1694566395496_users_.jpg",
-    "direction": "Avenida siempre viva 123123",
-    "description": "Soy Leo",
-    "preference": "carpinteria"
+    "id": "c7db3cc7-ce71-4872-b60e-10b25050436a",
+    "firstName": "Rodrigo",
+    "lastName": "Hidalgo",
+    "date": "1998-06-18",
+    "email": "rodrihidalgo20@gmail.com",
+    "password": "123456789",
+    "categoryUser": "carpinteria",
+    "profile_image": "1694566178858_users_.jpg"
   },
   {
-    "id": 2,
-    "firstName": "Deb",
+    "id": "c7db3cc7-ce71-4872-b60e-10b25050436e",
+    "firstName": "Débora",
     "lastName": "Escobar",
     "email": "escobarToolXperts@gmail.com",
     "password": "password2",
