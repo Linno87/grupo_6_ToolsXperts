@@ -7,3 +7,10 @@
   color: white;
   text-transform: uppercase;
 }
+
+.profile_btn_edit{
+  position: absolute;
+  top: 16px;
+  right: 7px;
+  color: var(--Rojo);
+}
