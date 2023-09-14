@@ -2,7 +2,9 @@
     <div class="top_bar">
     
         <i class="fa-solid fa-globe"></i>
-        <a href="/admin"><i class="fa-solid fa-user-gear"></i></a>
+         <% if (locals.userLogin && locals.userLogin.categoryUser === "administrador") { %>
+            <a href="/admin"><i class="fa-solid fa-user-gear"></i></a>
+        <% } %>
 <!--si de locals.loguin tiene información del usuario traeme su nombre, si no lo muestres-->
         <% if (locals.userLogin) { %>
          <!-- el botón cerrar sesión se muestra si hay usuario loguedo  -->
@@ -18,9 +20,11 @@
             <a href="/"><img src="/img/Logo-Toolsxperts.png" alt="imagen_logo_ToolsXperts "></a>
         </div>
         <div class="mid_bar_right">
-            <div class="div_login">
-                <a href="/users/login"><i class="fas fa-sign-in-alt"></i></a>
-            </div>
+            <% if (!locals.userLogin) { %>
+                <div class="div_login">
+                    <a href="/users/login"><i class="fas fa-sign-in-alt"></i></a>
+                </div>
+            <% } %>
             
             <div class="div_register">
                 <% if (locals.userLogin) { %>

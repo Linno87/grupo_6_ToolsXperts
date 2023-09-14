@@ -13,7 +13,9 @@ const productsRouter = require('./routes/products');
 
 /* middlewares */
 const cookieCheck = require('./middlewares/cookieCheck');
-const localsCheck = require('./middlewares/localsCheck')
+const localsCheck = require('./middlewares/localsCheck');
+const { admin } = require('./controllers/indexController');
+const admincheck = require('./middlewares/admincheck');
 
 const app = express();
 
