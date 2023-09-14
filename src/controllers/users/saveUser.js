@@ -32,10 +32,13 @@ module.exports = (req, res) => {
     password: password,
     categoryUser: categoryUser,
     profile_image: req.file ? req.file.filename : null,
+    direction: null,
+    description: null,
+    preference: null
   };
 
   usersJson.push(newUser);
   writeJson(usersJson, "users.json");
 
-  res.redirect("/users");
+  res.redirect("/users/login");
 };

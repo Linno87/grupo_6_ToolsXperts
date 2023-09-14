@@ -71,5 +71,18 @@
     "direction": "Avenida siempre viva 1234",
     "description": "Soy programador",
     "preference": "all"
+  },
+  {
+    "id": "495919f0-d3ad-462f-9d55-4d5d06d6f508",
+    "firstName": "Leonardo",
+    "lastName": "Garcia",
+    "date": "7993-01-16",
+    "email": "gleonardo666@gmail.com",
+    "password": "123456789",
+    "categoryUser": "soldadura",
+    "profile_image": "1694716879776_users_.png",
+    "direction": null,
+    "description": null,
+    "preference": null
   }
 ]
