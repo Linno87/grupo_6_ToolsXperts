@@ -6,12 +6,13 @@ module.exports = (req, res) => {
     const errors = validationResult(req);
     
   const users = readJson("users.json");
-  
+  if(errors.isEmpty()){
   const {
     firstName,
     lastName,
     email,
     direction,
+    date,
     profile_image,
     description,
     preference
@@ -22,12 +23,13 @@ module.exports = (req, res) => {
     if (user.id === req.session.userLogin.id) {
       
       req.file &&
-        existsSync(`/public/img/users/${user.profile_image}`) &&
-        unlinkSync(`/public/img/users/${user.profile_image}`);
+        existsSync(`./public/img/users/${user.profile_image}`) &&
+        unlinkSync(`./public/img/users/${user.profile_image}`);
         
         user.firstName = firstName?.trim();
         user.lastName = lastName?.trim();
-        user.email = email;
+        user.date = date;
+        user.email = email ? email : user.email;
         user.profile_image = req.file ? req.file.filename : user.profile_image;
         user.direction = direction;
         user.preference = preference;
@@ -40,7 +42,15 @@ module.exports = (req, res) => {
   
   writeJson(usersModify, "users.json");
   
-  res.redirect('/users/profile')
+  return res.redirect('/users/profile')
+}else{
+  const user = users.find(user => user.id === req.session.userLogin.id);
+  return res.render('userProfile',{
+    ...user,
+    old: req.body,
+    errors: errors.mapped()
+  })
+}
 
 
 }

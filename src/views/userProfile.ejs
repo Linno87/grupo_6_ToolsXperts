@@ -17,22 +17,27 @@
                     <div class="d-flex justify-content-between flex-wrap gap-2 col-md-5">
                     <div class="col-12 col-md-6">
                         <label for="firstName"> Nombre:</label>
-                        <input class="form-control" name="firstName" id="name" value="<%= firstName %>"/>
-                        
+                        <input class="form-control" name="firstName" id="name" value="<%= locals.old && (old.firstName && old.firstName) || firstName %>"/>
+                        <small class="ms-2 text-danger d-block"><%= locals.errors && (errors.firstName && errors.firstName.msg) %></small>
                     </div>
                     <div class="col-12 col-md-5">
                         <label for="lastName">Apellido:</label>
-                        <input class="form-control" name="lastName" id="lastName" value="<%= lastName %>"/>
+                        <input class="form-control" name="lastName" id="lastName" value="<%= locals.old && (old.lastName && old.lastName) || lastName %>"/>
                         <small class="ms-2 text-danger d-block"><%= locals.errors && (errors.lastName && errors.lastName.msg) %></small>
                     </div>
-                    <div class="col-12 col-md-12">
+                    <div class="col-12 col-md-7">
                         <label for="email">Email:</label>
                         <input class="form-control email" name="email" id="email" value="<%= email %>" disabled/>
 
                     </div>
+                    <div class="col-12 col-md-4">
+                        <label for="date">Nacimiento:</label>
+                        <input class="form-control" type="date" name="date" id="date" value="<%= locals.old && (old.date && old.date) || date %>"/>
+                        <small class="ms-2 text-danger d-block"><%= locals.errors && (errors.date && errors.date.msg) %></small>
+                    </div>
                     <div class="col-12 col-md-12">
                         <label for="direction">Dirección:</label>
-                        <input class="form-control direction" name="direction" id="direction" value="<%= locals.userLogin &&( direction && direction)%>"/>
+                        <input class="form-control direction" name="direction" id="direction" value="<%= locals.old && (old.direction && old.direction) || direction %>"/>
                         <small class="ms-2 text-danger d-block"><%= locals.errors && (errors.direction && errors.direction.msg) %></small>
                     </div>
                     <div class="col-12 col-md-12 d-flex flex-wrap">
@@ -84,7 +89,7 @@
                     </div>
                     <div class="form-floating col-12 col-md-8">
                         
-                        <textarea class="form-control" name="description" style="height: 100px" id="floatingTextarea2"><%= locals.userLogin &&(description && description)%></textarea>
+                        <textarea class="form-control" name="description" style="height: 100px" id="floatingTextarea2"><%= locals.old && (old.description && old.description) || description %></textarea>
                         <small class="ms-2 text-danger d-block"><%= locals.errors && (errors.description && errors.description.msg) %></small>
                         
                     </div>

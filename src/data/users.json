@@ -63,11 +63,13 @@
     "id": "b07b7e85-dff0-47e7-a810-cf4e330d7243",
     "firstName": "Leo",
     "lastName": "Gillig",
+    "date": "1991-10-23",
+    "email": "linno824@gmail.com",
     "password": "123456",
     "categoryUser": "Administrador",
-    "profile_image": "1694646724879_users_.jpg",
-    "direction": "Avenida siempre viva 123123",
-    "description": "Soy Leo",
-    "preference": "carpinteria"
+    "profile_image": "1694703161801_users_.jpg",
+    "direction": "Avenida siempre viva 1234",
+    "description": "Soy programador",
+    "preference": "all"
   }
 ]
