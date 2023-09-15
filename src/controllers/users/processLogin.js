@@ -9,12 +9,12 @@ const users = readJson('users.json')
 
 const searchUser = users.find(user => user.email == req.body.email)
 
-const {id,firstName,category} = searchUser
+const {id,firstName,categoryUser} = searchUser
 
 req.session.userLogin = {
     id,
     firstName,
-    category
+    categoryUser
 }
 /* Si el req.body.remember (no esta indefinido) o sea que trae algo
  entonces creame una cookie con el nombre userRemember la cual va a durar 1 minuto*/
