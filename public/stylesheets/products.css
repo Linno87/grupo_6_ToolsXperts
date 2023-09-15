@@ -11,6 +11,13 @@
 }
 .products_card img{
     width: 100%;
+    height: 300px;
+    object-fit: contain;
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
 }
 
 @media (min-width: 768px) {
@@ -22,7 +29,7 @@
         
     }
     .products_card img{
-        max-height: 300px;
+        max-height: 200px;
     }
 }
 @media (min-width: 1024px) {
