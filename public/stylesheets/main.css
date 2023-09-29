@@ -72,14 +72,14 @@
   width: 90%;
   margin: 0 auto;
 }
-.card {
-  height: 500px;
-  max-width: 300px;
+.card_p {
+  height: 500px; 
+   max-width: 300px; 
 }
-.card:hover{
+.card_p:hover{
   box-shadow: 5px 5px 10px var(--Celeste);
 }
-.card img {
+.card_p img {
   display: block;
   max-width: 300px;
   height: 300px;
