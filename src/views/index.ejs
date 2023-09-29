@@ -50,7 +50,6 @@
                 </div>
                 <div class="swiper-button-next"></div>
                 <div class="swiper-button-prev"></div>
-                <div class="swiper-pagination home__main__swiper-pagination"></div>
             </div>
         </section>
 
@@ -120,14 +119,9 @@
                 <div class="swiper-wrapper">
                     <% listProduct.forEach(product =>{ %>
                         <div class="swiper-slide">
-                            <div class="card">
-                                <img src="/img/<%= product.category %>/<%= product.image %>" alt="...">
-                                <div class="card-body">
-                                    <h5 class="card-title"><%= product.name %></h5>
-                                    <p class="card-text"><%= product.description%>></p>
-                                    <a href="/products/detalle/<%= product.id %>" class="home__main__article--product-descripcion">ver más</a>
-                                </div>
-                            </div>
+                            <%- include('./partials/product',{
+                                ...product
+                               }) %>
                         </div>
                     <% }) %>
                 </div>
