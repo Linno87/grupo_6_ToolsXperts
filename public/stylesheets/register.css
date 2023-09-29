@@ -41,8 +41,6 @@
   border-radius: 22px;
   background-color: var(--AzulTransparente);
   padding: 19px;
-  width: fit-content;
-  margin: 0px 8rem;
 }
 
 .register_main_form_inp_box {
