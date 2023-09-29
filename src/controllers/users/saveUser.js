@@ -32,6 +32,7 @@ module.exports = (req, res) => {
     password: password,
     categoryUser: categoryUser,
     profile_image: req.file ? req.file.filename : null,
+    
   };
 
   usersJson.push(newUser);

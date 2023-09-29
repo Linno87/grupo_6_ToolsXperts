@@ -11,7 +11,8 @@ class User {
     profile_image,
     direction, 
     preference, 
-    description
+    description, 
+    listSearch,
   }) {
     this.id = uuidv4();
     this.firstName = firstName.trim();
@@ -23,6 +24,7 @@ class User {
     this.direction = direction.trim();
     this.preference = preference;
     this.desciption = description.trim();
+    this.listSearch = listSearch;
   }
 }
 

@@ -6,19 +6,23 @@
 <body class="products_body">
     <%- include("./partials/header") %>
     <main class="products_main">
-        <div class="products_cards" style="justify-content: flex-start;">
-        <% listSearch.forEach(product =>{ %>
-           
-                <div class="products_card">
-                    <img src="/img/<%= product.category %>/<%= product.image %>" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title"><%= product.name %></h5>
-                        <p class="card-text"><%= product.description%>></p>
-                        <a href="/products/detalle" class="home__main__article--product-descripcion">ver más</a>
-                    </div>
+        <% if (listSearch.length) { %>
+            <div class="products_cards ">
+                <% listSearch.forEach(product =>{ %>
+                   <%- include('./partials/product',{
+                    ...product
+                   }) %>
+                       
+                <% }) %>
+                
+        <% } else{ %>
+                <div class="col-12 d-flex justify-content-center align-items-center p-5">
+                    <h2 class="py-4" style="color: black;"> No se encontraron coincidencias</h2>
                 </div>
-        <% }) %>
-        </div>
+
+        <% } %>
+    </div>
+        
     </main>
     <%- include("./partials/footer") %>
 </body>
