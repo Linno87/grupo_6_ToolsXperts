@@ -137,23 +137,32 @@
 }
 
 .burguer_menu {
-    width: 40px;
     height: 50px;
-    margin-right: 5px;
 }
 
 .burguer_menu i {
     font-size: 40px;
-    padding-left: 5px;
     color: white;
-    padding-top: 5px;
 }
 
 .navbar {
     display: none;
 }
 
+.dropdown-menu-background {
+    background-color: var(--AzulClaro);
+    padding: 0;
+}
+
+.dropdown-item {
+    border-bottom: solid 1px var(--AzulOscuro);
+}
+
 @media (min-width: 768px) {
+
+    .dropdown-menu-background li{
+        display: none;
+    }
 
     .search_bar {
         position: absolute;
@@ -179,7 +188,7 @@
         display: none;
     }
 
-    .bottom_bar ul {
+    .bottom_bar_ul {
         background-color: #1d3557;
         display: flex;
         text-decoration: none;
