@@ -10,13 +10,40 @@
                     <article class="detalle__section-article-01">
                         <div class="detalle__div-img">
                             <a href="#"><i class="far fa-heart"></i>Agregar a mis favoritos.</a>
-                            <img src="/img/<%= product.category %>/<%= product.image %>" alt="">
+                            <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active" data-bs-interval="10000">
+                                        <img src="/img/<%= product.category %>/<%= product.image %>" alt="">
+                                    </div>
+                                    <div class="carousel-item" data-bs-interval="2000">
+                                        <img src="/img/<%= product.category %>/<%= product.image %>" alt="">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="/img/<%= product.category %>/<%= product.image %>" alt="">
+                                    </div>
+                                </div>
+                                <button class="carousel-control-prev" type="button"
+                                    data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Anterior</span>
+                                </button>
+                                <button class="carousel-control-next" type="button"
+                                    data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Siguiente</span>
+                                </button>
+                            </div>
+
                         </div>
                     </article>
+
+
                     <article class="detalle__section-article-02">
-                        <p><%= product.name %>
+                        <p>
+                            <%= product.name %>
                         </p>
-                        <div class="detalle__section-article-precio">Por: $ <%= product.price %></div>
+                        <div class="detalle__section-article-precio">Por: $ <%= product.price %>
+                        </div>
                         <div class="detalle__section-article-descuento">ou 3x de $ 6.568,10</div>
                         <section class="detalle__section-botones">
                             <div class="detalle__div-botones">
@@ -37,7 +64,9 @@
                     <article class="detalle__section-article-04">
                         <div>
                             <h2 class="detalle-h2">Descripción</h2>
-                            <p><%= product.description %></p>
+                            <p>
+                                <%= product.description %>
+                            </p>
                         </div>
                         <div class="detalle__ul__div-article-05">
                             <h2 class="detalle-h2">Características técnicas</h2>

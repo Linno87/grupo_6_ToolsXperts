@@ -31,6 +31,7 @@
   flex-direction: column;
   padding: 13px;
 }
+
 .register_main_form_box h1 {
   font-weight: 700;
 }
@@ -50,7 +51,8 @@
   display: block;
   margin-bottom: 5px;
   font-size: 11px;
-  margin-left: 10px;
+  margin-right: 10px;
+  text-align: start;
 }
 .register_main_form_inp_box input {
   padding: 10px;
@@ -123,6 +125,8 @@
   margin: 1rem;
 }
 
+
+
 @media (min-width: 769px) {
   .register_main {
     display: flex;
@@ -140,6 +144,12 @@
   .register_main_form_box {
     margin: 5%;
   }
+
+  .register_main_form_div {
+    display: flex;
+    justify-content: space-between;
+  }
+
   .register_main_logo_box div {
     padding-bottom: 4rem;
   }
