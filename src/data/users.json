@@ -1,39 +1,5 @@
 [
   {
-    "id": "c7db3cc7-ce71-4872-b60e-10b25050436a",
-    "firstName": "Rodrigo",
-    "lastName": "Hidalgo",
-    "date": "1998-06-18",
-    "email": "rodrihidalgo20@gmail.com",
-    "password": "123456789",
-    "categoryUser": "carpinteria",
-    "profile_image": "1694566178858_users_.jpg"
-  },
-  {
-    "id": "c7db3cc7-ce71-4872-b60e-10b25050436e",
-    "firstName": "Débora",
-    "lastName": "Escobar",
-    "email": "escobarToolXperts@gmail.com",
-    "password": "password2",
-    "categoryUser": "Administrador",
-    "profile_image": "debe.jpg",
-    "direction": null,
-    "description": "hola mundo",
-    "preference": "herreria"
-  },
-  {
-    "id": 3,
-    "firstName": "Lea",
-    "lastName": "Gillig",
-    "email": "gilligToolXperts@gmail.com",
-    "password": "password3",
-    "categoryUser": "Administrador",
-    "profile_image": "1694313069533_users_.jpg",
-    "direction": null,
-    "description": "hola Leo",
-    "preference": "construccion"
-  },
-  {
     "id": "d121b514-dfb3-49d1-850e-fbcb2c7f2d51",
     "firstName": "Rodrigo",
     "lastName": "Hidalgo",
@@ -66,10 +32,36 @@
     "date": "1991-10-23",
     "email": "linno824@gmail.com",
     "password": "123456",
-    "categoryUser": "Administrador",
-    "profile_image": "1694716110497_users_.jpg",
+    "categoryUser": "administrador",
+    "profile_image": "1694703161801_users_.jpg",
     "direction": "Avenida siempre viva 1234",
     "description": "Soy programador",
-    "preference": "construccion"
+    "preference": "all"
+  },
+  {
+    "id": "495919f0-d3ad-462f-9d55-4d5d06d6f508",
+    "firstName": "Leonardo",
+    "lastName": "Garcia",
+    "date": "7993-01-16",
+    "email": "gleonardo666@gmail.com",
+    "password": "123456789",
+    "categoryUser": "administrador",
+    "profile_image": "1694716879776_users_.png",
+    "direction": null,
+    "description": null,
+    "preference": null
+  },
+  {
+    "id": "8f253415-c363-4362-b9c9-94ce33de27a9",
+    "firstName": "Débora",
+    "lastName": "Escobar",
+    "date": "2023-08-01",
+    "email": "escobardebo@gmail.com",
+    "password": "0108",
+    "categoryUser": "carpinteria",
+    "profile_image": "1694718312222_users_.jpg",
+    "direction": "islas orcadas",
+    "description": "copada la pagína, el botón de cancelar podría achicarse un poco, para que quede igual al de editar.",
+    "preference": "carpinteria"
   }
 ]

@@ -70,17 +70,20 @@
                                 <%=locals.errors?.password_confirmation?.msg%>
                             </span>
                         </p>
-                        <select name="categoryUser" id="categoryUser">
-                            <option value="carpinteria">carpinteria</option>
-                            <option value="soldadura">soldadura</option>
-                            <option value="metalurgica">metalurgica</option>
+                        <p class="register_main_form_inp_box">
+                            <select name="categoryUser" id="categoryUser">
+                            <option selected>Tu categoria favorita</option>
+                            <option value="carpinteria">Carpinteria</option>
+                            <option value="soldadura">Soldadura</option>
+                            <option value="metalurgica">Metalurgica</option>
                             <span class="text-danger fw-bold">
                                 <%=locals.errors?.categoryUser?.msg%>
                             </span>
+                        </p>
                         </select>
-                        <div class="register_main_form_inp_box">
+                        <div class="register_main_form_inp_box" class="input-group mb-3">
                             <label for="profile_image">Imagen de perfil</label>
-                            <input type="file" class="form-control-file" id="profile_image" name="profile_image">
+                            <input type="file" class="form-control" id="profile_image" name="profile_image">
                             <span class="text-danger fw-bold">
                                 <%=locals.errors?.profile_image?.msg%>
                             </span>

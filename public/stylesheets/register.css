@@ -69,6 +69,29 @@
   border: solid 3px rgb(12, 252, 12);
 }
 
+.register_main_form_inp_box select {
+  padding: 10px;
+  border-radius: 20px;
+  border: none;
+  background-color: var(--GrisClaro);
+  opacity: 25%;
+  width: 100%;
+}
+
+.register_main_form_inp_box select:invalid {
+  border: solid 3px var(--Rojo);
+  background-color: var(--Rojo);
+}
+.register_main_form_inp_box select:valid {
+  border: solid 3px rgb(12, 252, 12);
+}
+
+.register_main_form_inp_box option {
+  background-color: var(--AzulTransparente);
+  color: #ffff;
+  border-radius: 5px;
+}
+
 .register_main_form div {
   text-align: center;
   padding-top: 9px;
