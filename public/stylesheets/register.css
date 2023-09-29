@@ -35,11 +35,14 @@
 .register_main_form_box h1 {
   font-weight: 700;
 }
+
 .register_main_form_box {
   text-align: center;
   border-radius: 22px;
   background-color: var(--AzulTransparente);
   padding: 19px;
+  width: fit-content;
+  margin: 0px 8rem;
 }
 
 .register_main_form_inp_box {
@@ -125,7 +128,12 @@
   margin: 1rem;
 }
 
-
+@media (min-width: 768px) {
+  .register_main_form_div {
+    display: flex;
+    justify-content: space-between;
+  }
+}
 
 @media (min-width: 769px) {
   .register_main {
@@ -143,11 +151,6 @@
 
   .register_main_form_box {
     margin: 5%;
-  }
-
-  .register_main_form_div {
-    display: flex;
-    justify-content: space-between;
   }
 
   .register_main_logo_box div {
@@ -170,9 +173,11 @@
   .register_main_form {
     padding: 2rem 13px;
   }
+
   .register_main_form_box {
-    width: 50%;
-    padding: 50px;
+    padding: 19px;
+    width: fit-content;
+    margin: inherit;
   }
 }
 

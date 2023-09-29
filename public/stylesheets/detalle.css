@@ -16,7 +16,7 @@ body {
 }
 
 div.detalle__div-img {
-  width: min-content;
+  width: -webkit-fill-available;
   flex-direction: column;
 }
 
