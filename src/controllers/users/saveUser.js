@@ -1,5 +1,6 @@
 const { v4: uuidv4 } = require("uuid");
-const { readJson, writeJson } = require("../../data");
+const { readJson, writeJson} = require("../../data");
+const User = require('../../data/User')
 const { validationResult } = require("express-validator");
 const { hashSync } = require("bcryptjs");
 
@@ -13,32 +14,11 @@ module.exports = (req, res) => {
       old: req.body,
     });
   }
-  
-
-  const {
-    firstName,
-    lastName,
-    date,
-    email,
-    password,
-    categoryUser,
-  } = req.body;
+ 
 
   const usersJson = readJson("users.json");
-
-  const newUser = {
-    id: uuidv4(),
-    firstName: firstName.trim(),
-    lastName: lastName.trim(),
-    date: date,
-    email: email.trim(),
-    password: hashSync(password, 8),
-    categoryUser: categoryUser,
-    profile_image: req.file ? req.file.filename : "defaultUserImg.jpg",
-    direction: null,
-    description: null,
-    preference: null
-  };
+  const profile_image = req.file ? req.file.filename : "defaultUserImg.jpg";
+  const newUser = new User({...req.body, profile_image})
 
   usersJson.push(newUser);
   

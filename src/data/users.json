@@ -52,16 +52,17 @@
     "preference": "carpinteria"
   },
   {
-    "id": "6eb2d1b3-3d76-40ec-bb60-a6ad4208659a",
+    "id": "3a107736-acdc-460d-93fd-2cf7738f34b6",
     "firstName": "Leandro",
     "lastName": "Gillig",
-    "date": "1991-10-23",
     "email": "linno824@gmail.com",
-    "password": "$2a$08$lt.khv/esvtJNCwURtuGJuomz2XwIVPdh4nrhTJNA4GqfC4dGcMNi",
-    "categoryUser": "carpinteria",
-    "profile_image": "1696072391038_users_.jpg",
+    "date": "1911-10-23",
+    "password": "$2a$08$qcG5OmRjhSl9UCz2lZ2zJeML13syGqJpkRbDAZRWXwUVUtR.XeeqC",
+    "categoryUser": "user",
+    "profile_image": "1696076985417_users_.jpg",
     "direction": "Luis salguero 1337",
-    "description": "soy admin",
-    "preference": "construccion"
+    "preference": "construccion",
+    "description": "asdasd",
+    "listSearch": null
   }
 ]
