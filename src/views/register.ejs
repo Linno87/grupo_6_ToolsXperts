@@ -29,16 +29,16 @@
                         <input type="hidden" name="csrfmiddlewaretoken" value="{{ csrf_token }}">
                         <div class="register_main_form_div">
                             <p class="register_main_form_inp_box">
-                                <label for="name">Nombre</label>
-                                <input type="text" class="form-control" id="firstName" name="firstName"
+                                <label for="firstName">Nombre</label>
+                                <input type="text" class="form-control" id="firstName" name="firstName" value="<%= locals.old && (old.firstName && old.firstName)%>"
                                     placeholder="Nombre">
                                 <span class="text-danger fw-bold">
                                     <%=locals.errors?.firstName?.msg%>
                                 </span>
                             </p>
                             <p class="register_main_form_inp_box">
-                                <label for="name">Apellido</label>
-                                <input type="text" class="form-control" id="lastName" name="lastName"
+                                <label for="lastName">Apellido</label>
+                                <input type="text" class="form-control" id="lastName" name="lastName" value="<%= locals.old && (old.lastName && old.lastName)  %>"
                                     placeholder="Apellido">
                                 <span class="text-danger fw-bold">
                                     <%=locals.errors?.lastName?.msg%>
@@ -74,7 +74,7 @@
                         <div class="register_main_form_div">
                             <p class="register_main_form_inp_box">
                                 <label for="date">FECHA DE NACIMIENTO</label>
-                                <input type="date" name="date" id="date">
+                                <input type="date" name="date" id="date" value="<%= locals.old && (old.date && old.date) %>">
                                 <span class="text-danger fw-bold">
                                     <%=locals.errors?.date?.msg%>
                                 </span>
@@ -82,10 +82,10 @@
                             <p class="register_main_form_inp_box">
                                 <label for="categoryUser">Rubro Favorito</label>
                                 <select name="categoryUser" id="categoryUser">
-                                    <option selected>Todos</option>
-                                    <option value="carpinteria">Carpinteria</option>
-                                    <option value="soldadura">Soldadura</option>
-                                    <option value="metalurgica">Metalurgica</option>
+                                    <option value="todos" <%= locals.old && (old.categoryUser==='todos' && 'selected') %>>Todos</option>
+                                    <option value="carpinteria" <%= locals.old && (old.categoryUser==='carpinteria' && 'selected') %>>Carpinteria</option>
+                                    <option value="soldadura" <%= locals.old && (old.categoryUser==='soldadura' && 'selected') %>>Soldadura</option>
+                                    <option value="metalurgica"<%= locals.old && (old.categoryUser==='metalurgica' && 'selected') %>>Metalurgica</option>
                                     <span class="text-danger fw-bold">
                                         <%=locals.errors?.categoryUser?.msg%>
                                     </span>
