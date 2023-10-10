@@ -11,8 +11,8 @@ module.exports = (req, res) => {
     if (product.id === id) {
       
       req.file &&
-        existsSync(`/public/img/${product.image}`) &&
-        unlinkSync(`/public/img/${product.image}`);
+        existsSync(`/public/img/${product.category} /${product.image}`) &&
+        unlinkSync(`/public/img/${product.category} /${product.image}`);
 
       product.name = name.trim();
       product.category = category;

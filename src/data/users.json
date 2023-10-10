@@ -58,11 +58,11 @@
     "email": "linno824@gmail.com",
     "date": "1911-10-23",
     "password": "$2a$08$qcG5OmRjhSl9UCz2lZ2zJeML13syGqJpkRbDAZRWXwUVUtR.XeeqC",
-    "categoryUser": "user",
+    "categoryUser": "administrador",
     "profile_image": "1696076985417_users_.jpg",
     "direction": "Luis salguero 1337",
     "preference": "construccion",
-    "description": "asdasd",
+    "description": "soy admin",
     "listSearch": null
   }
 ]
