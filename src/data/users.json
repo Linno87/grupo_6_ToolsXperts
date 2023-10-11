@@ -31,7 +31,7 @@
     "lastName": "Garcia",
     "date": "7993-01-16",
     "email": "gleonardo666@gmail.com",
-    "password": "123456789",
+    "password": "$2a$08$nLG66Q3Z2Ha5u1PSEtatFeJApaL8x2tOiff0Hyv6dkO6sjD44/oa.",
     "categoryUser": "administrador",
     "profile_image": "1694716879776_users_.png",
     "direction": null,
