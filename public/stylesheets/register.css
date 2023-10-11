@@ -31,9 +31,11 @@
   flex-direction: column;
   padding: 13px;
 }
+
 .register_main_form_box h1 {
   font-weight: 700;
 }
+
 .register_main_form_box {
   text-align: center;
   border-radius: 22px;
@@ -50,7 +52,8 @@
   display: block;
   margin-bottom: 5px;
   font-size: 11px;
-  margin-left: 10px;
+  margin-right: 10px;
+  text-align: start;
 }
 .register_main_form_inp_box input {
   padding: 10px;
@@ -67,6 +70,29 @@
 }
 .register_main_form_inp_box input:valid {
   border: solid 3px rgb(12, 252, 12);
+}
+
+.register_main_form_inp_box select {
+  padding: 10px;
+  border-radius: 20px;
+  border: none;
+  background-color: var(--GrisClaro);
+  opacity: 25%;
+  width: 100%;
+}
+
+.register_main_form_inp_box select:invalid {
+  border: solid 3px var(--Rojo);
+  background-color: var(--Rojo);
+}
+.register_main_form_inp_box select:valid {
+  border: solid 3px rgb(12, 252, 12);
+}
+
+.register_main_form_inp_box option {
+  background-color: var(--AzulTransparente);
+  color: #ffff;
+  border-radius: 5px;
 }
 
 .register_main_form div {
@@ -100,6 +126,13 @@
   margin: 1rem;
 }
 
+@media (min-width: 768px) {
+  .register_main_form_div {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
 @media (min-width: 769px) {
   .register_main {
     display: flex;
@@ -117,6 +150,7 @@
   .register_main_form_box {
     margin: 5%;
   }
+
   .register_main_logo_box div {
     padding-bottom: 4rem;
   }
@@ -137,9 +171,11 @@
   .register_main_form {
     padding: 2rem 13px;
   }
+
   .register_main_form_box {
-    width: 50%;
-    padding: 50px;
+    padding: 19px;
+    width: fit-content;
+    margin: inherit;
   }
 }
 

@@ -1,16 +1,20 @@
 <header class="header">
     <div class="top_bar">
-    
+
         <i class="fa-solid fa-globe"></i>
-        <a href="/admin"><i class="fa-solid fa-user-gear"></i></a>
-<!--si de locals.loguin tiene información del usuario traeme su nombre, si no lo muestres-->
-        <% if (locals.userLogin) { %>
-         <!-- el botón cerrar sesión se muestra si hay usuario loguedo  -->
-         <a class="logout" href="/users/logout">Cerrar sesión</a> 
-         <h5 class="weldcome"><%= `Bienvenid@ ${locals.userLogin.firstName}` %></h5> 
-       
-        <% } %>
-        
+        <% if (locals.userLogin && locals.userLogin.categoryUser==="administrador" ) { %>
+            <a href="/admin"><i class="fa-solid fa-user-gear"></i></a>
+            <% } %>
+                <!--si de locals.loguin tiene información del usuario traeme su nombre, si no lo muestres-->
+                <% if (locals.userLogin) { %>
+                    <!-- el botón cerrar sesión se muestra si hay usuario loguedo  -->
+                    <a class="logout" href="/users/logout">Cerrar sesión</a>
+                    <h5 class="weldcome">
+                        <%= `Bienvenid@ ${locals.userLogin.firstName}` %>
+                    </h5>
+
+                    <% } %>
+
 
     </div>
     <div class="mid_bar">
@@ -18,41 +22,54 @@
             <a href="/"><img src="/img/Logo-Toolsxperts.png" alt="imagen_logo_ToolsXperts "></a>
         </div>
         <div class="mid_bar_right">
-            <div class="div_login">
-                <a href="/users/login"><i class="fas fa-sign-in-alt"></i></a>
-            </div>
+            <% if (!locals.userLogin) { %>
+                <div class="div_login">
+                    <a href="/users/login"><i class="fas fa-sign-in-alt"></i></a>
+                </div>
+                <% } %>
 
-            <div class="div_register">
-                <a href="/users/register"><i class="fas fa-address-card"></i>
-                </a>
-            </div>
-            <div class="div_carrito">
-                <a href="/products/carrito"><i class="fa-solid fa-cart-shopping"></i></a>
-            </div>
+                    <div class="div_register">
+                        <% if (locals.userLogin) { %>
+                            <a href="/users/profile"><i class="fas fa-address-card"></i></a>
+                            <% }else{ %>
+                                <a href="/users/register"><i class="fas fa-address-card"></i></a>
+                                <% } %>
+
+                    </div>
+                    <div class="div_carrito">
+                        <a href="/products/carrito"><i class="fa-solid fa-cart-shopping"></i></a>
+                    </div>
         </div>
     </div>
     </div>
     <div class="bottom_bar">
         <nav class="navbar">
-            <ul>
+            <ul class="bottom_bar_ul">
                 <li><a href="/products/">Productos</a></a></li>
-                <li><a href="/contacto">Contacto</a></li>
-                <li><a href="/envios">Envios</a></li>
+                <li><a href="#footer">Contacto</a></li>
+                <li><a href="#footer">Envios</a></li>
             </ul>
         </nav>
-       
-           
-        <form class="search_bar" action="/search" method="GET" >
-          
-                <input type="search" name="keywords" placeholder="¿Qué estas buscando? Nosotros te lo encontramos...">
-                
-                <button class="lupa" type="submit">
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                </button>
+
+
+        <form class="search_bar" action="/search" method="GET">
+            <input type="search" class="w-100" name="keywords"
+                placeholder="¿Qué estas buscando? Nosotros te lo encontramos...">
+
+            <button class="lupa" type="submit">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
         </form>
 
-        <div class="burguer_menu">
-            <i class="fa-solid fa-bars"></i>
+        <div class="dropdown dropdown-menu-div">
+            <button class="btn burguer_menu" type="button" data-bs-toggle="dropdown" aria-expanded="false"><i
+                    class="fa-solid fa-bars"></i>
+            </button>
+            <ul class="dropdown-menu dropdown-menu-background">
+                <li><a class="dropdown-item" href="/products/">Productos</a></li>
+                <li><a class="dropdown-item" href="#footer">Contacto</a></li>
+                <li><a class="dropdown-item" href="#footer">Envios</a></li>
+            </ul>
         </div>
     </div>
 </header>

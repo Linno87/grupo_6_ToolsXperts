@@ -12,45 +12,44 @@
             <div class="swiper mySwiper-hot-sale">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
-                        <img src="/img/OFERTAS/Diseño sin título.png" class="d-block w-100" alt="Hot sale 1">
+                        <img src="/img/ofertas/Diseño sin título.png" class="d-block w-100" alt="Hot sale 1">
 
                     </div>
                     <div class="swiper-slide">
-                        <img src="/img/OFERTAS/Diseño sin título.png" class="d-block w-100" alt="Hot sale 1">
+                        <img src="/img/ofertas/Diseño sin título.png" class="d-block w-100" alt="Hot sale 1">
 
                     </div>
                     <div class="swiper-slide">
-                        <img src="/img/OFERTAS/Diseño sin título.png" class="d-block w-100" alt="Hot sale 1">
+                        <img src="/img/ofertas/Diseño sin título.png" class="d-block w-100" alt="Hot sale 1">
 
                     </div>
                     <div class="swiper-slide">
-                        <img src="/img/OFERTAS/Diseño sin título.png" class="d-block w-100" alt="Hot sale 1">
+                        <img src="/img/ofertas/Diseño sin título.png" class="d-block w-100" alt="Hot sale 1">
 
                     </div>
                     <div class="swiper-slide">
-                        <img src="/img/OFERTAS/Diseño sin título.png" class="d-block w-100" alt="Hot sale 1">
+                        <img src="/img/ofertas/Diseño sin título.png" class="d-block w-100" alt="Hot sale 1">
 
                     </div>
                     <div class="swiper-slide">
-                        <img src="/img/OFERTAS/Diseño sin título.png" class="d-block w-100" alt="Hot sale 1">
+                        <img src="/img/ofertas/Diseño sin título.png" class="d-block w-100" alt="Hot sale 1">
 
                     </div>
                     <div class="swiper-slide">
-                        <img src="/img/OFERTAS/Diseño sin título.png" class="d-block w-100" alt="Hot sale 1">
+                        <img src="/img/ofertas/Diseño sin título.png" class="d-block w-100" alt="Hot sale 1">
 
                     </div>
                     <div class="swiper-slide">
-                        <img src="/img/OFERTAS/Diseño sin título.png" class="d-block w-100" alt="Hot sale 1">
+                        <img src="/img/ofertas/Diseño sin título.png" class="d-block w-100" alt="Hot sale 1">
 
                     </div>
                     <div class="swiper-slide">
-                        <img src="/img/OFERTAS/Diseño sin título.png" class="d-block w-100" alt="Hot sale 1">
+                        <img src="/img/ofertas/Diseño sin título.png" class="d-block w-100" alt="Hot sale 1">
 
                     </div>
                 </div>
                 <div class="swiper-button-next"></div>
                 <div class="swiper-button-prev"></div>
-                <div class="swiper-pagination home__main__swiper-pagination"></div>
             </div>
         </section>
 
@@ -59,10 +58,10 @@
         <h1>Ofertas Exclusivas</h1>
 
         <article class="home__main__article-ofertas">
-            <a href="/search?keywords=amoladora"><img src="/img/OFERTAS/AMOLAORAS ofertas.png" alt="Oferta 1"></a>
-            <a href="/search?keywords=caladora"><img src="/img/OFERTAS/CALADORAS oferta.png" alt="Oferta 2"></a>
-            <a href="/search?keywords=taladro"><img src="/img/OFERTAS/Copia de TALADROS FACE.png" alt="Oferta 3"></a>
-            <a href="/search?keywords=sierra"><img src="/img/OFERTAS/Copia de CALADORAS FACE.png" alt="Oferta 4"></a>
+            <a href="/search?keywords=amoladora"><img src="/img/ofertas/AMOLAORAS ofertas.png" alt="Oferta 1"></a>
+            <a href="/search?keywords=caladora"><img src="/img/ofertas/CALADORAS oferta.png" alt="Oferta 2"></a>
+            <a href="/search?keywords=taladro"><img src="/img/ofertas/Copia de TALADROS FACE.png" alt="Oferta 3"></a>
+            <a href="/search?keywords=sierra"><img src="/img/ofertas/Copia de CALADORAS FACE.png" alt="Oferta 4"></a>
         </article>
 
         <!-- NUESTROS RUBROS -->
@@ -120,14 +119,9 @@
                 <div class="swiper-wrapper">
                     <% listProduct.forEach(product =>{ %>
                         <div class="swiper-slide">
-                            <div class="card">
-                                <img src="/img/<%= product.category %>/<%= product.image %>" alt="...">
-                                <div class="card-body">
-                                    <h5 class="card-title"><%= product.name %></h5>
-                                    <p class="card-text"><%= product.description%>></p>
-                                    <a href="/products/detalle/<%= product.id %>" class="home__main__article--product-descripcion">ver más</a>
-                                </div>
-                            </div>
+                            <%- include('./partials/product',{
+                                ...product
+                               }) %>
                         </div>
                     <% }) %>
                 </div>
@@ -140,34 +134,34 @@
             <div class="swiper mySwiper-marcas">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide home__main__carousel-marcas">
-                        <img src="/img/LOGOS/logo bahco.png" alt="Carrusel Logo 1">
+                        <img src="/img/logos/logo bahco.png" alt="Carrusel Logo 1">
                     </div>
                     <div class="swiper-slide home__main__carousel-marcas">
-                        <img src="/img/LOGOS/logo barovo.png" alt="Carrusel Logo 2">
+                        <img src="/img/logos/logo barovo.png" alt="Carrusel Logo 2">
                     </div>
                     <div class="swiper-slide home__main__carousel-marcas">
-                        <img src="/img/LOGOS/logo bosch.png" alt="Carrusel Logo 3">
+                        <img src="/img/logos/logo bosch.png" alt="Carrusel Logo 3">
                     </div>
                     <div class="swiper-slide home__main__carousel-marcas">
-                        <img src="/img/LOGOS/logo bosch.png" alt="Carrusel Logo 3">
+                        <img src="/img/logos/logo bosch.png" alt="Carrusel Logo 3">
                     </div>
                     <div class="swiper-slide home__main__carousel-marcas">
-                        <img src="/img/LOGOS/logo dremel.png" alt="Carrusel Logo 4">
+                        <img src="/img/logos/logo dremel.png" alt="Carrusel Logo 4">
                     </div>
                     <div class="swiper-slide home__main__carousel-marcas">
-                        <img src="/img/LOGOS/logo fischer.png" alt="Carrusel Logo 5">
+                        <img src="/img/logos/logo fischer.png" alt="Carrusel Logo 5">
                     </div>
                     <div class="swiper-slide home__main__carousel-marcas">
-                        <img src="/img/LOGOS/logo ford.png" alt="Carrusel Logo 6">
+                        <img src="/img/logos/logo ford.png" alt="Carrusel Logo 6">
                     </div>
                     <div class="swiper-slide home__main__carousel-marcas">
-                        <img src="/img/LOGOS/logo irimo.png" alt="Carrusel Logo 7">
+                        <img src="/img/logos/logo irimo.png" alt="Carrusel Logo 7">
                     </div>
                     <div class="swiper-slide home__main__carousel-marcas">
-                        <img src="/img/LOGOS/logo makita.png" alt="Carrusel Logo 8">
+                        <img src="/img/logos/logo makita.png" alt="Carrusel Logo 8">
                     </div>
                     <div class="swiper-slide home__main__carousel-marcas">
-                        <img src="/img/LOGOS/logo volt.png" alt="Carrusel Logo 9">
+                        <img src="/img/logos/logo volt.png" alt="Carrusel Logo 9">
                     </div>
                 </div>
             </div>

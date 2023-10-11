@@ -17,6 +17,8 @@ module.exports = {
     const listProduct = readJson("products.json");
     const id = req.params.id;
     const product = listProduct.find((product) => product.id === id);
+   
+    
     return res.render("detalle", {
       product,
     });

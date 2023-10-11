@@ -5,13 +5,14 @@ module.exports = (req, res) => {
   const products = readJson("products.json");
   const id = req.params.id;
   const { name, category, brand, model, price, discount, description } = req.body;
+  
 
   const productsModify = products.map((product) => {
     if (product.id === id) {
-    
+      
       req.file &&
-        existsSync(`/public/img/${product.image}`) &&
-        unlinkSync(`/public/img/${product.image}`);
+        existsSync(`/public/img/${product.category} /${product.image}`) &&
+        unlinkSync(`/public/img/${product.category} /${product.image}`);
 
       product.name = name.trim();
       product.category = category;
@@ -23,11 +24,12 @@ module.exports = (req, res) => {
       product.createdAt = new Date();
       product.image = req.file ? req.file.filename : product.image;
 
+      
     }
 
-    return product
+    return product;
   });
   writeJson(productsModify, "products.json");
-
+  
   return res.redirect('/admin')
 };

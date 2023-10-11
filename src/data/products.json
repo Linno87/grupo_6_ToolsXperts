@@ -9,7 +9,7 @@
     "discount": 10,
     "description": "Amoladora Angular 700 W - Skill",
     "image": "9002-removebg-preview.png",
-    "createdAt": "2023-08-25T20:20:32.425Z"
+    "createdAt": "2023-08-29T00:37:28.390Z"
   },
   {
     "id": "906d506a-33ef-47c5-8bb7-7b45eec84579",
@@ -21,7 +21,7 @@
     "discount": 15,
     "description": "Amoladora Angular 7” Barovo (AA2KB)",
     "image": "AA2KB-removebg-preview.png",
-    "createdAt": "2023-08-25T19:58:41.201Z"
+    "createdAt": "2023-08-29T00:56:48.857Z"
   },
   {
     "id": "926d506a-33ef-47c5-8bb7-7b45eec84579",
@@ -176,5 +176,18 @@
     "discount": 13,
     "description": "Hoja Sierra Circular Bosch Para Madera 184mm 40 Dient 7 1/4",
     "image": "24D DISCO MADERA.png"
+  },
+  {
+    "id": "a8813817-5f89-4a8f-add6-fa2389ee6337",
+    "name": "amoladora",
+    "category": "amoladoras",
+    "brand": "bosch",
+    "model": "asdas",
+    "price": 2333,
+    "discount": 10,
+    "description": "asdasdasd",
+    "image": "1696273086787_products_.jpeg",
+    "images": [],
+    "createdAt": "2023-10-02T18:58:06.797Z"
   }
 ]

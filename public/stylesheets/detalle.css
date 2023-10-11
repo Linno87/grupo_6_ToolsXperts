@@ -16,8 +16,7 @@ body {
 }
 
 div.detalle__div-img {
-  width: 100%;
-  display: flex;
+  width: -webkit-fill-available;
   flex-direction: column;
 }
 
@@ -27,6 +26,11 @@ div.detalle__div-img {
   margin: 20px;
   background-color: var(--AzulTransparente);
   border-radius: 30px;
+  display: flex;
+  justify-content: space-around;
+  align-content: space-around;
+  align-items: center;
+  flex-direction: column;
 }
 
 /* CORAZÓN */
@@ -39,7 +43,7 @@ div.detalle__div-img {
 
 /* CAJA-IMG-MOBILE*/
 .detalle__section-article-01 img {
-  margin-bottom: 30px;
+  width: -webkit-fill-available;
 }
 
 /* AGREGAR A MIS FAVORITOS-MOBILE*/
@@ -49,6 +53,7 @@ div.detalle__div-img {
   font-size: 18px;
   text-align: center;
   padding: 25px 0 35px 0;
+  margin: 10px;
 }
 
 .detalle__section-article-02 {
@@ -289,7 +294,7 @@ div.detalle__div-img {
   border-radius: 20px 20px 0 0;
 }
 
-@media (min-width: 768px) {
+ @media (min-width: 768px) {
   .main__detalle__main {
     margin-top: 50px;
   }
@@ -297,8 +302,8 @@ div.detalle__div-img {
   /* CONTENEDOR DEL CAROUSEL-TABLET */
   .detalle__section-article-01 {
     width: 95%;
-    justify-content: center;
     padding-top: 35px;
+    flex-direction: column;
   }
 
   /* CONTENEDOR PRIMER-CARRUSEL */
@@ -308,7 +313,7 @@ div.detalle__div-img {
 
   /* CAJA-IMG-TABLET */
   .detalle__section-article-01 img {
-    margin-bottom: 73px;
+    
   }
 
   /* CAJA CELESTE DE LA DESCRIPCIÓN-IMG-TABLET */
@@ -341,7 +346,8 @@ div.detalle__div-img {
     color: black;
     text-align: center;
     text-decoration: underline;
-    font-size: 35px;
+    font-size: 18px;
+    margin: 8rem;
   }
 
   /* PRECIO */
@@ -470,6 +476,8 @@ div.detalle__div-img {
   .detalle__carrusel-02 {
     padding-bottom: 100px;
   }
+ 
+}
 
   @media (min-width: 1024px) {
     .main__detalle__main {
@@ -494,18 +502,19 @@ div.detalle__div-img {
 
     /* imagen carrusel */
     div.detalle__div-img {
-      width: 40%;
-      margin-left: 60px;
+      width: min-content;
+      display: flex;
+      align-items: center;
     }
 
     /* CONTENEDOR DEL CAROUSEL-DESKTOP */
     .detalle__section-article-01 {
       width: 40%;
       height: 500px;
-      display: flex;
-      justify-content: center;
       margin: 0;
       padding: 0;
+      display: flex;
+      align-items: center;
     }
 
     /* CAJA-IMG-DESKTOP*/
@@ -517,6 +526,8 @@ div.detalle__div-img {
     .detalle__section-article-01 a {
       padding-top: 30px;
       font-size: 25px;
+      width: max-content;
+      margin: auto;
     }
 
     /* CAJA CELESTE DE LA DESCRIPCIÓN-IMG-DESKTOP*/
@@ -659,4 +670,3 @@ div.detalle__div-img {
       padding-bottom: 100px;
     }
   }
-}

@@ -46,10 +46,10 @@
                                                 <a href="/products/createProduct"><button><i
                                                             class="fa-solid fa-plus fa-2xl"></i>Agregar</button></a>
                                             </div>
-                                            <form action="/products/search" class="d-flex flex-column flex-md-row gap-2"
+                                            <form action="/admin/search" class="d-flex flex-column flex-md-row gap-2"
                                                 method="GET">
                                                 <select class="form-select" name="marca">
-                                                    <option selected hidden>Filtrar por marca</option>
+                                                    <option selected hidden value="">Filtrar por marca</option>
                                                     <option value="barovo">Barovo</option>
                                                     <option value="Black&Decker">Black&Decker</option>
                                                     <option value="Bosch">Bosch</option>
@@ -59,9 +59,8 @@
                                                     <option value="Makita">Makita</option>
                                                     <option value="Bremel">Bremel</option>
                                                 </select>
-
                                                 <input type="text" class="form-control" placeholder="Buscar..."
-                                                    name="keyword">
+                                                    name="keywords">
                                                 <button type="submit" class="btn btn-danger">
                                                     <i class="fas fa-search"></i>
                                                 </button>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include("partials/head", { title: "Perfil"}) %>
+
+    <body>
+        <%- include("partials/header") %>
+        <main class="main_profile">
+            <div class="login_main">
+                
+                <form class="d-flex justify-content-center flex-wrap gap-3 p-3" action="/users/profile?_method=PUT" method="POST" enctype="multipart/form-data">
+                    <div class="col-11 col-md-3 my-auto py-2 position-relative">
+                        <img src="/img/users/<%= profile_image %>" class="img-fluid rounded-1 shadow-sm">
+                        <label for="profile_image" class="profile_btn_edit"><i class="fa-solid fa-file-pen fs-3"></i>
+                        <input hidden class="form-control" type="file" id="profile_image" name="profile_image"></label>
+                    </div>
+                    <div class="d-flex justify-content-between flex-wrap gap-2 col-md-5">
+                    <div class="col-12 col-md-6">
+                        <label for="firstName"> Nombre:</label>
+                        <input class="form-control" name="firstName" id="name" value="<%= locals.old && (old.firstName && old.firstName) || firstName %>"/>
+                        <small class="ms-2 text-danger d-block"><%= locals.errors && (errors.firstName && errors.firstName.msg) %></small>
+                    </div>
+                    <div class="col-12 col-md-5">
+                        <label for="lastName">Apellido:</label>
+                        <input class="form-control" name="lastName" id="lastName" value="<%= locals.old && (old.lastName && old.lastName) || lastName %>"/>
+                        <small class="ms-2 text-danger d-block"><%= locals.errors && (errors.lastName && errors.lastName.msg) %></small>
+                    </div>
+                    <div class="col-12 col-md-7">
+                        <label for="email">Email:</label>
+                        <input class="form-control email" name="email" id="email" value="<%= email %>" disabled/>
+
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <label for="date">Nacimiento:</label>
+                        <input class="form-control" type="date" name="date" id="date" value="<%= locals.old && (old.date && old.date) || date %>"/>
+                        <small class="ms-2 text-danger d-block"><%= locals.errors && (errors.date && errors.date.msg) %></small>
+                    </div>
+                    <div class="col-12 col-md-12">
+                        <label for="direction">Dirección:</label>
+                        <input class="form-control direction" name="direction" id="direction" value="<%= locals.old && (old.direction && old.direction) || direction %>"/>
+                        <small class="ms-2 text-danger d-block"><%= locals.errors && (errors.direction && errors.direction.msg) %></small>
+                    </div>
+                    <div class="col-12 col-md-12 d-flex flex-wrap">
+                        <label for="preference" class="col-12">Preferencias</label>
+                        <div class="form-check col-6">
+                            <% if (preference==="carpinteria") { %>
+                            <input class="form-check-input" checked type="radio" value="carpinteria" id="carpinteria" name="preference">
+                            <% } else { %>
+                                <input class="form-check-input" type="radio" value="carpinteria" id="carpinteria" name="preference">
+                            <% } %>
+                            <label class="form-check-label" for="carpinteria">
+                              Carpinteria
+                            </label>
+                        </div>
+                        <div class="form-check col-6">
+                            <% if (preference==="herreria") { %>
+                                <input class="form-check-input" checked type="radio" value="herreria" id="herreria" name="preference">
+                                <% } else { %>
+                                    <input class="form-check-input" type="radio" value="herreria" id="herreria" name="preference">
+                                <% } %>
+                            
+                            <label class="form-check-label" for="herreria">
+                              Herreria
+                            </label>
+                        </div>
+                        <div class="form-check col-6">
+                            <% if (preference==="construccion") { %>
+                                <input class="form-check-input" checked type="radio" value="construccion" id="construccion" name="preference">
+                                <% } else { %>
+                                    <input class="form-check-input" type="radio" value="construccion" id="construccion" name="preference">
+                                <% } %>
+            
+                            <label class="form-check-label" for="construccion">
+                              Construccion
+                            </label>
+                        </div>
+                        <div class="form-check col-6">
+                            <% if (preference ==="all") { %>
+                                <input class="form-check-input" checked type="radio" value="all" id="all" name="preference">
+                                <% } else { %>
+                                    <input class="form-check-input" type="radio" value="all" id="all" name="preference">
+                                <% } %>
+                            <label class="form-check-label" for="all">
+                              Todo
+                            </label>
+                        </div>
+                    </div>
+                    
+                    </div>
+                    <div class="form-floating col-12 col-md-8">
+                        
+                        <textarea class="form-control" name="description" style="height: 100px" id="floatingTextarea2"><%= locals.old && (old.description && old.description) || description %></textarea>
+                        <small class="ms-2 text-danger d-block"><%= locals.errors && (errors.description && errors.description.msg) %></small>
+                        
+                    </div>
+                    <div class="col-12 col-md-7 d-flex justify-content-end gap-3 ">
+                        <button type="reset" class=" w-20 boton__general btn_login">Cancelar</button>
+                        <button type="submit" class="w-20 boton__general btn_login">Editar</button>
+                    </div>
+                    
+                <form>
+                </div>
+        </main>
+
+        <%- include("partials/footer") %>
+    </body>
+</html>

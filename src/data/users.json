@@ -1,32 +1,68 @@
 [
   {
-    "id": "c7db3cc7-ce71-4872-b60e-10b25050436a",
+    "id": "d121b514-dfb3-49d1-850e-fbcb2c7f2d51",
     "firstName": "Rodrigo",
     "lastName": "Hidalgo",
-    "date": "1998-06-18",
+    "date": "",
     "email": "rodrihidalgo20@gmail.com",
-    "password": "123456789",
-    "categoryUser": "carpinteria",
-    "profile_image": "1694566178858_users_.jpg"
+    "password": "",
+    "categoryUser": "administrador",
+    "profile_image": "1694313121598_users_.jpg",
+    "direction": null,
+    "description": "hola mundo",
+    "preference": "all"
   },
   {
-    "id": "c7db3cc7-ce71-4872-b60e-10b25050436e",
+    "id": "b07b7e85-dff0-47e7-a810-cf4e330d7241",
+    "firstName": "Rodrigo",
+    "lastName": "Hidalgo",
+    "date": "66666-06-06",
+    "email": "rodrihidalgo20@gmail.com",
+    "password": "66666666",
+    "categoryUser": "administrador",
+    "profile_image": "1694387332838_users_.jpg",
+    "direction": null,
+    "description": "hola mundo",
+    "preference": "carpinteria"
+  },
+  {
+    "id": "495919f0-d3ad-462f-9d55-4d5d06d6f508",
+    "firstName": "Leonardo",
+    "lastName": "Garcia",
+    "date": "7993-01-16",
+    "email": "gleonardo666@gmail.com",
+    "password": "123456789",
+    "categoryUser": "administrador",
+    "profile_image": "1694716879776_users_.png",
+    "direction": null,
+    "description": null,
+    "preference": null
+  },
+  {
+    "id": "8f253415-c363-4362-b9c9-94ce33de27a9",
     "firstName": "Débora",
     "lastName": "Escobar",
-    "date": "1988-01-01",
+    "date": "2023-08-01",
     "email": "escobardebo@gmail.com",
     "password": "0108",
     "categoryUser": "administrador",
-    "profile_image": ""
+    "profile_image": "1696003118793_users_.avif",
+    "direction": "islas orcadas",
+    "description": "hola !!!!!",
+    "preference": "carpinteria"
   },
   {
-    "id": "c923a874-1890-4db5-99fa-166b3cfbaae9",
-    "firstName": "Leonardo",
-    "lastName": "Garcia",
-    "date": "1993-01-16",
-    "email": "gleonardo666@gmail.com",
-    "password": "123456789",
-    "categoryUser": "soldadura",
-    "profile_image": "1694646024391_users_.png"
+    "id": "3a107736-acdc-460d-93fd-2cf7738f34b6",
+    "firstName": "Leandro",
+    "lastName": "Gillig",
+    "email": "linno824@gmail.com",
+    "date": "1911-10-23",
+    "password": "$2a$08$qcG5OmRjhSl9UCz2lZ2zJeML13syGqJpkRbDAZRWXwUVUtR.XeeqC",
+    "categoryUser": "administrador",
+    "profile_image": "1696076985417_users_.jpg",
+    "direction": "Luis salguero 1337",
+    "preference": "construccion",
+    "description": "soy admin",
+    "listSearch": null
   }
 ]
