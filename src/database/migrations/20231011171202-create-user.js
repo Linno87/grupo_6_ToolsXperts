@@ -32,6 +32,12 @@ module.exports = {
       avatar: {
         type: Sequelize.STRING
       },
+      gender: {
+        type: Sequelize.STRING
+      },
+      date: {
+        type: Sequelize.DATE
+      },
       roleId: {
         type: Sequelize.INTEGER,
         references: {
