@@ -27,4 +27,33 @@ module.exports = {
         })
     
   },
+  searchAdmin: (req, res) => {
+    const listProducts = readJson("products.json");
+    let listProduct = readJson('products.json');
+
+    const key = req.query.marca;
+    const key2 = req.query.keywords;
+    if(key){
+      listProduct = listProducts.filter(product=> product.brand.toLowerCase().includes(key.toLowerCase()));
+      if(key2){
+        listProduct = listProduct.filter(product=> product.name.toLowerCase().includes(key2.toLowerCase()));
+        
+      }
+      return res.render("admin", {
+        listProduct
+      });
+    }
+    
+    if(key2){
+        listProduct = listProducts.filter(product=> product.name.toLowerCase().includes(key2.toLowerCase()));
+        return res.render("admin", {
+          listProduct
+        });
+      }
+      return res.render("admin", {
+        listProduct
+      });
+    
+  }
+    
 };

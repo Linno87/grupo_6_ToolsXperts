@@ -23,7 +23,7 @@ module.exports = (req, res) => {
     if (user.id === req.session.userLogin.id) {
       
       req.file &&
-        existsSync(`./public/img/users/${user.profile_image}`) &&
+        existsSync(`./public/img/users/${user.profile_image}`) && (user.profile_image!=='defaultUserImg.jpg') &&
         unlinkSync(`./public/img/users/${user.profile_image}`);
         
         user.firstName = firstName?.trim();

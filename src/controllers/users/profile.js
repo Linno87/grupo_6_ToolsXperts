@@ -7,6 +7,7 @@ module.exports = (req,res)=>{
     
     
     const user = listUser.find((user)=>user.id === req.session.userLogin.id )
+    
     console.log(user)
     return res.render('userProfile',{
         ...user

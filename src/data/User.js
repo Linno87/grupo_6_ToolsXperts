@@ -6,6 +6,7 @@ class User {
     firstName,
     lastName,
     email,
+    date,
     password,
     categoryUser,
     profile_image,
@@ -15,16 +16,17 @@ class User {
     listSearch,
   }) {
     this.id = uuidv4();
-    this.firstName = firstName.trim();
-    this.lastName = lastName.trim();
-    this.email = email.trim();
+    this.firstName = firstName?.trim();
+    this.lastName = lastName?.trim();
+    this.email = email?.trim();
+    this.date = date;
     this.password = hashSync(password, 8); 
-    this.categoryUser = categoryUser;
+    this.categoryUser = "user";
     this.profile_image = profile_image;
-    this.direction = direction.trim();
-    this.preference = preference;
-    this.desciption = description.trim();
-    this.listSearch = listSearch;
+    this.direction = direction ? direction?.trim() : null;
+    this.preference = preference ? preference : null;
+    this.description = description ? description?.trim() : null;
+    this.listSearch = listSearch ? listSearch : null;
   }
 }
 

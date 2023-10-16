@@ -1,4 +1,5 @@
 const { check, body } = require("express-validator");
+const { readJson } = require("../data");
 
 module.exports = [
   check("firstName").notEmpty().withMessage("El nombre es obligatorio").bail(),
@@ -11,20 +12,30 @@ module.exports = [
     .notEmpty()
     .withMessage("El correo electrónico es obligatorio")
     .bail()
-    .isEmail()
-    .withMessage("El correo electrónico no es válido"),
+    .isEmail().withMessage("El correo electrónico no es válido").bail()
+    .custom((value, { req }) => {
+      const usersFromJson = readJson('users.json');
+      const user = usersFromJson.find(user => user.email === req.body.email)
+      
+      if (!user) {
+          
+          return true
+      }
+      return false
+    }).withMessage("El correo ya existe"),
+
   check("password")
     .notEmpty()
     .withMessage("La contraseña es obligatoria")
     .bail(),
   check("password_confirmation")
     .notEmpty()
-    .withMessage("La confirmación de la contraseña es obligatoria")
+    .withMessage("Este campo es obligatorio")
     .bail()
     .custom((value, { req }) => {
       if (value !== req.body.password) {
         throw new Error(
-          "La confirmación de la contraseña no coincide con la contraseña"
+          "Las contraseñas no coinciden"
         );
       }
       return true;
@@ -33,10 +44,5 @@ module.exports = [
     .notEmpty()
     .withMessage("Debes seleccionar una categoría")
     .bail(),
-  body("profile_image").custom((value, { req }) => {
-    if (!req.file) {
-      throw new Error("No has subido ninguna imagen").bail();
-    }
-    return true;
-  }),
+ 
 ];

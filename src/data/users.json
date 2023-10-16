@@ -26,25 +26,12 @@
     "preference": "carpinteria"
   },
   {
-    "id": "b07b7e85-dff0-47e7-a810-cf4e330d7243",
-    "firstName": "Leo",
-    "lastName": "Gillig",
-    "date": "1991-10-23",
-    "email": "linno824@gmail.com",
-    "password": "123456",
-    "categoryUser": "administrador",
-    "profile_image": "1694703161801_users_.jpg",
-    "direction": "Avenida siempre viva 1234",
-    "description": "Soy programador",
-    "preference": "all"
-  },
-  {
     "id": "495919f0-d3ad-462f-9d55-4d5d06d6f508",
     "firstName": "Leonardo",
     "lastName": "Garcia",
     "date": "7993-01-16",
     "email": "gleonardo666@gmail.com",
-    "password": "123456789",
+    "password": "$2a$08$nLG66Q3Z2Ha5u1PSEtatFeJApaL8x2tOiff0Hyv6dkO6sjD44/oa.",
     "categoryUser": "administrador",
     "profile_image": "1694716879776_users_.png",
     "direction": null,
@@ -58,10 +45,24 @@
     "date": "2023-08-01",
     "email": "escobardebo@gmail.com",
     "password": "0108",
-    "categoryUser": "carpinteria",
+    "categoryUser": "administrador",
     "profile_image": "1696003118793_users_.avif",
     "direction": "islas orcadas",
     "description": "hola !!!!!",
     "preference": "carpinteria"
+  },
+  {
+    "id": "3a107736-acdc-460d-93fd-2cf7738f34b6",
+    "firstName": "Leandro",
+    "lastName": "Gillig",
+    "email": "linno824@gmail.com",
+    "date": "1911-10-23",
+    "password": "$2a$08$qcG5OmRjhSl9UCz2lZ2zJeML13syGqJpkRbDAZRWXwUVUtR.XeeqC",
+    "categoryUser": "administrador",
+    "profile_image": "1696076985417_users_.jpg",
+    "direction": "Luis salguero 1337",
+    "preference": "construccion",
+    "description": "soy admin",
+    "listSearch": null
   }
 ]

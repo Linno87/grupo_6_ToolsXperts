@@ -176,5 +176,18 @@
     "discount": 13,
     "description": "Hoja Sierra Circular Bosch Para Madera 184mm 40 Dient 7 1/4",
     "image": "24D DISCO MADERA.png"
+  },
+  {
+    "id": "a8813817-5f89-4a8f-add6-fa2389ee6337",
+    "name": "amoladora",
+    "category": "amoladoras",
+    "brand": "bosch",
+    "model": "asdas",
+    "price": 2333,
+    "discount": 10,
+    "description": "asdasdasd",
+    "image": "1696273086787_products_.jpeg",
+    "images": [],
+    "createdAt": "2023-10-02T18:58:06.797Z"
   }
 ]
