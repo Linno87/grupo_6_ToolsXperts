@@ -10,7 +10,7 @@ module.exports = [
         const usersFromJson = readJson('users.json');
         const user = usersFromJson.find(user => user.email === req.body.email)/*usuario leido/usuario encontrado con find, compara el email ingresado con el email registrado en el json de usuarios */
         
-        if (!user || !user.password == value/*  !compareSync(value, user.password */) {
+        if (!user || user.password == value/*  !compareSync(value, user.password */) {
             /* si el usuario es distinto y el password es distinto = usuario falso */
             return false
         }
