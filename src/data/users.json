@@ -64,5 +64,19 @@
     "preference": "construccion",
     "description": "soy admin",
     "listSearch": null
+  },
+  {
+    "id": "061fc785-e145-4922-a59b-0eb0c9375164",
+    "firstName": "Maxi",
+    "lastName": "Alonso",
+    "email": "Maximiliano@Alonso.com",
+    "date": "2023-10-11",
+    "password": "$2a$08$huDHHxUjfzkWA3SSd/ToteCtYkH0WIgvjk91eD5/CrjnsaPo8YtPK",
+    "categoryUser": "user",
+    "profile_image": "defaultUserImg.jpg",
+    "direction": null,
+    "preference": null,
+    "description": null,
+    "listSearch": null
   }
 ]
