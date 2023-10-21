@@ -1,8 +1,8 @@
 const { v4: uuidv4 } = require("uuid");
-const { readJson, writeJson} = require("../../data");
-const User = require('../../data/User')
+
 const { validationResult } = require("express-validator");
 const { hashSync } = require("bcryptjs");
+const db = require('../../database/models')
 
 module.exports = (req, res) => {
   const errors = validationResult(req);
@@ -14,15 +14,28 @@ module.exports = (req, res) => {
       old: req.body,
     });
   }
- 
-
-  const usersJson = readJson("users.json");
-  const profile_image = req.file ? req.file.filename : "defaultUserImg.jpg";
-  const newUser = new User({...req.body, profile_image})
-
-  usersJson.push(newUser);
   
-  writeJson(usersJson, "users.json");
+  const {first_name,
+  last_name,
+  email,
+  password,
+  about,
+  date} = req.body
 
-  res.redirect("/users/login");
+  db.User.create({
+    first_name,
+    last_name,
+    email,
+    password : hashSync(password),
+    about,
+    date,
+    roleId : 2,
+    avatar : "defaultUserImg.jpg"
+
+  })
+  .then(user =>{
+    
+    return res.redirect("/users/login");
+  })
+  .catch(error => console.log(error))
 };
