@@ -12,9 +12,9 @@ const notUserLogin = require('../middlewares/notUserLogin');
 
 /* /users */
 router.get('/register', notUserLogin, register);
-router.post("/register", uploadUser.single("profile_image"), registerValidator, saveUser);
+router.post("/register", uploadUser.single("profile_image"),registerValidator , saveUser);
 router.get('/login', notUserLogin, login);
-router.post('/login',loginValiations, processLogin);
+router.post('/login' /*, loginValiations */, processLogin);
 router.get("/", users);
 router.get("/logout",logout);/* ruta para cerrar session */
 router.get("/profile", userLoginchek, profile);

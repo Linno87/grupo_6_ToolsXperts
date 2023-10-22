@@ -1,22 +1,31 @@
 const { body } = require('express-validator');
 const { readJson } = require("../data");
-const { compareSync } = require('bcryptjs');
+const { compareSync, hashSync } = require('bcryptjs');
+const db = require('../database/models')
 
 
 module.exports = [
     body("email").notEmpty().withMessage("El email es obligatorio").bail()
     .isEmail().withMessage("Email no válido").bail(),
-    body("password").notEmpty().withMessage('La contraseña es requerida').bail().custom((value, { req }) => {
-        const usersFromJson = readJson('users.json');
-        const user = usersFromJson.find(user => user.email === req.body.email)/*usuario leido/usuario encontrado con find, compara el email ingresado con el email registrado en el json de usuarios */
-        
-        if (!user ||/*  !user.password !== */ compareSync(value, user.password)) {
-            /* si el usuario es distinto y el password es distinto = usuario falso */
-            return false
-        }
-        return true/* si coincide las credenciales= se loguea */
-    }).withMessage('Credenciales Inválidas')
-
-
+    body("password").notEmpty().withMessage('La contraseña es requerida').bail()
+        .custom((value) => {
+            return db.User.findOne({
+                where: {
+                    email : value
+                    
+               }
+            })
+             .then(user =>{
+            console.log(user)
+               if (!user || !compareSync(value, user.password)) {
+                
+                   return Promise.reject()
+                 }
+          })
+         .catch(error => {
+            console.log(error)
+            return Promise.reject('Las credenciales son invalidas')
+        })
+    })
 
 ]

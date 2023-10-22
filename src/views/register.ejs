@@ -29,19 +29,19 @@
                         <input type="hidden" name="csrfmiddlewaretoken" value="{{ csrf_token }}">
                         <div class="register_main_form_div">
                             <p class="register_main_form_inp_box">
-                                <label for="firstName">Nombre</label>
-                                <input type="text" class="form-control" id="firstName" name="firstName" value="<%= locals.old && (old.firstName && old.firstName)%>"
+                                <label for="first_name">Nombre</label>
+                                <input type="text" class="form-control" id="first_name" name="first_name" value="<%= locals.old && (old.first_name && old.first_name)%>"
                                     placeholder="Nombre">
                                 <span class="text-danger fw-bold">
-                                    <%=locals.errors?.firstName?.msg%>
+                                    <%=locals.errors?.first_name?.msg%>
                                 </span>
                             </p>
                             <p class="register_main_form_inp_box">
-                                <label for="lastName">Apellido</label>
-                                <input type="text" class="form-control" id="lastName" name="lastName" value="<%= locals.old && (old.lastName && old.lastName)  %>"
+                                <label for="last_name">Apellido</label>
+                                <input type="text" class="form-control" id="last_name" name="last_name" value="<%= locals.old && (old.last_name && old.last_name)  %>"
                                     placeholder="Apellido">
                                 <span class="text-danger fw-bold">
-                                    <%=locals.errors?.lastName?.msg%>
+                                    <%=locals.errors?.last_name?.msg%>
                                 </span>
                             </p>
                         </div>

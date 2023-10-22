@@ -1,28 +1,37 @@
 const { check, body } = require("express-validator");
-const { readJson } = require("../data");
+
+const db = require('../database/models')
 
 module.exports = [
-  check("firstName").notEmpty().withMessage("El nombre es obligatorio").bail(),
-  check("lastName").notEmpty().withMessage("El apellido es requerido").bail(),
+  check("first_name").notEmpty().withMessage("El nombre es obligatorio").bail(),
+  check("last_name").notEmpty().withMessage("El apellido es requerido").bail(),
   check("date")
     .notEmpty()
     .withMessage("La fecha de nacimiento es obligatoria")
     .bail(),
-  check("email")
+  body("email")
     .notEmpty()
     .withMessage("El correo electrónico es obligatorio")
     .bail()
     .isEmail().withMessage("El correo electrónico no es válido").bail()
-    .custom((value, { req }) => {
-      const usersFromJson = readJson('users.json');
-      const user = usersFromJson.find(user => user.email === req.body.email)
-      
-      if (!user) {
-          
-          return true
-      }
-      return false
-    }).withMessage("El correo ya existe"),
+    .custom((value) => {
+      return db.User.findOne({
+        where:{
+            email : value
+        }
+      })
+      .then(user =>{
+        if(user){
+          return Promise.reject()
+        }
+       
+      })
+      .catch(error=>{
+        console.log(error)
+        return Promise.reject('Email ya registrado')
+      })
+    
+    }),
 
   check("password")
     .notEmpty()
@@ -34,12 +43,10 @@ module.exports = [
     .bail()
     .custom((value, { req }) => {
       if (value !== req.body.password) {
-        throw new Error(
-          "Las contraseñas no coinciden"
-        );
+        return false
       }
       return true;
-    }),
+    }).withMessage("Las contraseñas no coinciden"),
   check("categoryUser")
     .notEmpty()
     .withMessage("Debes seleccionar una categoría")

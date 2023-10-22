@@ -2,7 +2,7 @@
     <div class="top_bar">
 
         <i class="fa-solid fa-globe"></i>
-        <% if (locals.userLogin && locals.userLogin.categoryUser==="administrador" ) { %>
+        <% if (locals.userLogin && locals.userLogin.roleId=== 1 ) { %>
             <a href="/admin"><i class="fa-solid fa-user-gear"></i></a>
             <% } %>
                 <!--si de locals.loguin tiene información del usuario traeme su nombre, si no lo muestres-->
@@ -10,7 +10,7 @@
                     <!-- el botón cerrar sesión se muestra si hay usuario loguedo  -->
                     <a class="logout" href="/users/logout">Cerrar sesión</a>
                     <h5 class="weldcome">
-                        <%= `Bienvenid@ ${locals.userLogin.firstName}` %>
+                        <%= `Bienvenid@ ${locals.userLogin.first_name}` %>
                     </h5>
 
                     <% } %>
