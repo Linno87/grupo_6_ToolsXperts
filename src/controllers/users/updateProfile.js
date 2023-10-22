@@ -1,55 +1,62 @@
 const { existsSync, unlinkSync } = require("fs");
-const { readJson, writeJson } = require("../../data");
 const {validationResult} = require('express-validator');
+const db = require('../../database/models')
 
 module.exports = (req, res) => {
-    const errors = validationResult(req);
-    
-  const users = readJson("users.json");
-  if(errors.isEmpty()){
-  const {
-    firstName,
-    lastName,
-    email,
-    direction,
+  const errors = validationResult(req);
+   const {
+    first_name,
+    last_name,
+  
+    address,
+    city,
+    province,
     date,
-    profile_image,
-    description,
-    preference
+    about,
+    avatar,
   } = req.body;
-  
 
-  const usersModify = users.map((user) => {
-    if (user.id === req.session.userLogin.id) {
-      
-      req.file &&
-        existsSync(`./public/img/users/${user.profile_image}`) && (user.profile_image!=='defaultUserImg.jpg') &&
-        unlinkSync(`./public/img/users/${user.profile_image}`);
-        
-        user.firstName = firstName?.trim();
-        user.lastName = lastName?.trim();
-        user.date = date;
-        user.email = email ? email : user.email;
-        user.profile_image = req.file ? req.file.filename : user.profile_image;
-        user.direction = direction;
-        user.preference = preference;
-        user.description = description?.trim();
-      
-    }
+  if(errors.isEmpty()){
 
-    return  user;
-  });
-  
-  writeJson(usersModify, "users.json");
-  
-  return res.redirect('/users/profile')
+ db.User.findByPk(req.session.userLogin.id)
+.then((user)=>{
+  req.file.avatar &&
+  existsSync(`./public/img/users/${user.avatar}`) && (user.profile_image!=='defaultUserImg.jpg') &&
+  unlinkSync(`./public/img/users/${user.avatar}`);
+
+  db.User.update({
+    first_name,
+    last_name,
+    address,
+    city,
+    province,
+    date,
+    about,
+    avatar: req.file.avatar ? req.file.avatar.filename : user.avatar
+  },
+  {
+      where: {
+    id: req.session.userLogin.id
+  }
+  }
+
+)
+return  res.send(user)
+
+})
+
+
+
 }else{
-  const user = users.find(user => user.id === req.session.userLogin.id);
-  return res.render('userProfile',{
-    ...user,
+ const user = db.User.findByPk(req.session.userLogin.id)
+ .then(user =>{
+   return res.render('userProfile',{
+    ...user.dataValues,
     old: req.body,
-    errors: errors.mapped()
-  })
+    errors: errors.mapped() 
+   }) 
+ }).catch(error => console.log(error))
+ 
 }
 
 
