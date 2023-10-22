@@ -13,6 +13,7 @@ module.exports = (req,res)=>{
     })
     .then(user => {
        /*  res.send(user) */
+      
             res.render('userProfile',{
             ...user.dataValues
     })   

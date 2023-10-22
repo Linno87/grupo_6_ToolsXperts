@@ -7,32 +7,44 @@ module.exports = (req, res) => {
    const {
     first_name,
     last_name,
-  
     address,
     city,
     province,
     date,
     about,
-    avatar,
-  } = req.body;
+    avatar
 
+  } = req.body;
   if(errors.isEmpty()){
 
- db.User.findByPk(req.session.userLogin.id)
+ db.User.findByPk(req.session.userLogin.id,{
+  include:['address']
+ })
 .then((user)=>{
-  req.file.avatar &&
-  existsSync(`./public/img/users/${user.avatar}`) && (user.profile_image!=='defaultUserImg.jpg') &&
+  req.file &&   req.file.avatar &&
+  existsSync(`./public/img/users/${user.avatar}`) && 
+  (user.avatar!=='defaultUserImg.jpg') &&
   unlinkSync(`./public/img/users/${user.avatar}`);
+  /* actualiza datos de ubicacion */
+  db.Address.update({
 
+    address,
+    city,
+    province,
+  },
+  {
+      where: {
+    userId: req.session.userLogin.id
+  }
+  })
+  /* actualiza datos de usuario */
   db.User.update({
     first_name,
     last_name,
-    address,
-    city,
-    province,
     date,
     about,
-    avatar: req.file.avatar ? req.file.avatar.filename : user.avatar
+   avatar:  req.file ? req.file.avatar.filename : user.avatar
+
   },
   {
       where: {
@@ -41,7 +53,10 @@ module.exports = (req, res) => {
   }
 
 )
-return  res.send(user)
+return res.send(user)
+return res.render('userProfile',{
+  ...user.dataValues})
+
 
 })
 

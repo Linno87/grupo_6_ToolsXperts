@@ -10,45 +10,55 @@
             <h2 class="text-center w-100 p-1 perfil_usuario"><strong>Perfil de usuario</strong></h2>
 
             <div class="login_main profile_main">
+
+                <!-- FORMULARIO  -->
                 <form class="d-flex justify-content-center flex-wrap gap-3 p-5 " action="/users/profile?_method=PUT" method="POST" enctype="multipart/form-data">
-                    
+
+                <!-- AVATAR -->    
                     <div class="col-11 col-md-4 my-auto py-2 position-relative">
-                        <img src="/img/users/<%= avatar ? avatar : "defaultUserImg.jpg" %>" class="img-fluid rounded-1 shadow-sm">
+                        <img src="/img/users/<%= avatar ? avatar : "defaultUserImg.jpg" %>" 
+                        class="img-fluid rounded-1 shadow-sm">
                         <label for="avatar" class="profile_btn_edit"><i class="fa-solid fa-file-pen fs-3"></i>
                         <input hidden class="form-control" type="file" id="avatar" name="avatar"></label>
                     </div>
                     <div class="d-flex justify-content-between flex-wrap gap-2 col-md-6">
+
+                <!-- FIRT NAME -->
                     <div class="col-12 col-md-6">
                         <label for="first_name"> Nombre:</label>
                         <input class="form-control" name="first_name" id="name" value="<%= locals.old && (old.first_name && old.first_name) || first_name %>"/>
                         <small class="ms-2 text-danger d-block"><%= locals.errors && (errors.first_name && errors.first_name.msg) %></small>
                     </div>
+                    <!-- LAST NAME -->
                     <div class="col-12 col-md-5">
                         <label for="last_name">Apellido:</label>
                         <input class="form-control" name="last_name" id="last_name" value="<%= locals.old && (old.last_name && old.last_name) || last_name %>"/>
                         <small class="ms-2 text-danger d-block"><%= locals.errors && (errors.last_name && errors.last_name.msg) %></small>
                     </div>
+                    <!-- EMAIL -->
                     <div class="col-12 col-md-7">
                         <label for="email">Email:</label>
                         <input class="form-control email" name="email" id="email" value="<%= email %>" disabled/>
 
                     </div>
+                    <!-- DATE -->
                     <div class="col-12 col-md-4">
                         <label for="date">Nacimiento:</label>
                         <input class="form-control" type="date" name="date" id="date" value="<%= locals.old && (old.date && old.date) || date %>"/>
                         <small class="ms-2 text-danger d-block"><%= locals.errors && (errors.date && errors.date.msg) %></small>
                     </div>
-                    
+
+                    <!-- ADDRESS -->
                     <div class="col-12 col-md-12">
                         <label for="direction">Dirección:</label>
-                        <input class="form-control direction" name="address" id="direction" value="<%= locals.old && (old.address && old.address) || address[0].address %>">
+                        <input class="form-control direction" name="address" id="direction" value="<%= locals.old && old.address ? old.address : address[0].address %>">
                    
 
                        <label for="city">Ciudad:</label>
-                       <input class="form-control direction" name="city" type="text" id="city" value="<%= locals.old && (old.address && address[0].city) || address[0].city %>" >
+                       <input class="form-control direction" name="city" type="text" id="city" value="<%= locals.old && old.address ? old.city : address[0].city %>" >
 
                        <label for="province">Provincia:</label>
-                       <input class="form-control direction" name="province" type="text" id="province" value="<%= locals.old && (old.address && address[0].province) || address[0].province %>">
+                       <input class="form-control direction" name="province" type="text" id="province" value="<%= locals.old && old.address ? old.province : address[0].province %>">
 
 
                         <small class="ms-2 text-danger d-block"><%= locals.errors && (errors.address && errors.address.msg) %></small>
@@ -58,6 +68,7 @@
                    
                     
                     </div>
+                    <!-- ABOUT -->
                     <div class=" col-12 col-md-10">
                         <label for="about">Sobre Mí: </label>
                         <textarea class="form-control" name="about" style="height: 100px;" id="floatingTextarea2"><%= locals.old && (old.about && old.about) || about %></textarea>

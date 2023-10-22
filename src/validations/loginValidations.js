@@ -1,5 +1,4 @@
 const { body } = require('express-validator');
-const { readJson } = require("../data");
 const { compareSync, hashSync } = require('bcryptjs');
 const db = require('../database/models')
 
@@ -16,7 +15,7 @@ module.exports = [
                }
             })
              .then(user =>{
-            console.log(user)
+            console.log(user) 
                if (!user || !compareSync(value, user.password)) {
                 
                    return Promise.reject()
