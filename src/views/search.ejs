@@ -6,9 +6,9 @@
 <body class="products_body">
     <%- include("./partials/header") %>
     <main class="products_main">
-        <% if (listSearch.length) { %>
+        <% if (products.length) { %>
             <div class="products_cards ">
-                <% listSearch.forEach(product =>{ %>
+                <% products.forEach(product =>{ %>
                    <%- include('./partials/product',{
                     ...product
                    }) %>

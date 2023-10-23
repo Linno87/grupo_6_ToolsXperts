@@ -26,7 +26,7 @@ module.exports = (req, res) => {
     first_name,
     last_name,
     email,
-    password : hashSync(password),
+    password : hashSync(password,8),
     about,
     date,
     roleId : 2,
@@ -34,8 +34,13 @@ module.exports = (req, res) => {
 
   })
   .then(user =>{
+    db.Address.create({
+      userId : user.id
+    })
+
+    .then(() => res.redirect("/users/login"))
     
-    return res.redirect("/users/login");
+    
   })
   .catch(error => console.log(error))
 };

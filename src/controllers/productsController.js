@@ -1,14 +1,17 @@
 const { readJson, writeJson } = require("../data");
 
-
+const db = require('../database/models')
 
 
 module.exports = {
   products: (req, res) => {
-    const listProduct = readJson("products.json");
-    return res.render("products", {
-      listProduct,
-    });
+    db.Product.findAll()
+    .then(products =>{
+      return res.render("products", {
+        products,
+      });
+    })
+    .catch(error => console.log(error))
   },
   carrito: (req, res) => {
     return res.render("carrito");

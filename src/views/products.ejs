@@ -7,7 +7,7 @@
     <%- include("./partials/header") %>
     <main class="products_main">
         <div class="products_cards">
-        <% listProduct.forEach(product =>{ %>
+        <% products.forEach(product =>{ %>
             <%- include('./partials/product',{
                 ...product
                }) %>

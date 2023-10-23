@@ -48,7 +48,7 @@
                                             </div>
                                             <form action="/admin/search" class="d-flex flex-column flex-md-row gap-2"
                                                 method="GET">
-                                                <select class="form-select" name="marca">
+                                                <select class="form-select" name="brand">
                                                     <option selected hidden value="">Filtrar por marca</option>
                                                     <option value="barovo">Barovo</option>
                                                     <option value="Black&Decker">Black&Decker</option>
@@ -83,7 +83,7 @@
                                                     </tr>
                                                 </thead>
                                                 <tbody>
-                                                    <% listProduct.forEach(({id, name, brand, price, discount,
+                                                    <% products.forEach(({id, name, brand, price, discount,
                                                         model,category, description},index)=> { %>
                                                         <tr>
                                                             <th scope="row">

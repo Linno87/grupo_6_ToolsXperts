@@ -8,15 +8,14 @@ module.exports = [
     body("email").notEmpty().withMessage("El email es obligatorio").bail()
     .isEmail().withMessage("Email no válido").bail(),
     body("password").notEmpty().withMessage('La contraseña es requerida').bail()
-        .custom((value) => {
+        .custom((value, {req}) => {
             return db.User.findOne({
                 where: {
-                    email : value
+                    email : req.body.email
                     
                }
             })
              .then(user =>{
-            console.log(user)
                if (!user || !compareSync(value, user.password)) {
                 
                    return Promise.reject()
