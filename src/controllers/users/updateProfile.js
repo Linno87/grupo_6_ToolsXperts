@@ -12,7 +12,7 @@ module.exports = (req, res) => {
     province,
     date,
     about,
-    avatar
+    
 
   } = req.body;
   if(errors.isEmpty()){
@@ -27,13 +27,12 @@ module.exports = (req, res) => {
   unlinkSync(`./public/img/users/${user.avatar}`);
   /* actualiza datos de ubicacion */
   db.Address.update({
-
     address,
     city,
     province,
   },
   {
-      where: {
+    where: {
     userId: req.session.userLogin.id
   }
   })
@@ -43,7 +42,7 @@ module.exports = (req, res) => {
     last_name,
     date,
     about,
-   avatar:  req.file ? req.file.avatar.filename : user.avatar
+   avatar:  req.file ? req.file.filename : user.avatar
 
   },
   {
@@ -52,8 +51,8 @@ module.exports = (req, res) => {
   }
   }
 
-)
-return res.send(user)
+).catch(error => console.log(error))
+
 return res.render('userProfile',{
   ...user.dataValues})
 

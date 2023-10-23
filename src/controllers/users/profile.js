@@ -13,9 +13,10 @@ module.exports = (req,res)=>{
     })
     .then(user => {
        /*  res.send(user) */
-      
-            res.render('userProfile',{
-            ...user.dataValues
+       const date = new Date(user.date).toISOString().split('T')[0];
+          return res.render('userProfile',{
+            ...user.dataValues,
+            date 
     })   
     }).catch(error => console.log(error))
   
