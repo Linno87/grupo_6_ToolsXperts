@@ -1,35 +1,56 @@
 const { existsSync, unlinkSync } = require("fs");
-const { readJson, writeJson } = require("../../data");
+const db = require("../../database/models")
 
 module.exports = (req, res) => {
-  const products = readJson("products.json");
+
   const id = req.params.id;
-  const { name, category, brand, model, price, discount, description } = req.body;
+  const { name, categoryId, brandId, price, discount, description, rubroId, image } = req.body;
   
 
-  const productsModify = products.map((product) => {
-    if (product.id === id) {
-      
-      req.file &&
+  db.product.findByPk(id,{
+    include:['images']
+  })
+  .then((product)=>{
+ req.file &&
         existsSync(`/public/img/${product.category} /${product.image}`) &&
-        unlinkSync(`/public/img/${product.category} /${product.image}`);
+        unlinkSync(`/public/img/${product.category} /${product.image}`)
+  })
+ db.Product.update({
+    name : name.trim(),
+    description :description.trim(),
+    price,
+    discount,
+    brandId,
+    categoryId :categoryId,
+    rubroId,
+    image :req.files.image ? req.files.image[0].filename : product.image,
+ },
+ {
+  where:{
+    id,
+  }
+ }
+ ).then(()=>{
+  const images= req.file.images.map((file)=>{
+    return {
+      file: file.filename,
+      main: false,
+      productId: product.id
+    };
+  });
+  db.bulkCreate(images,{
+    
+  })
+ })
 
-      product.name = name.trim();
-      product.category = category;
-      product.brand = brand;
-      product.model = model;
-      product.price = +price;
-      product.discount = +discount;
-      product.description = description?.trim();
-      product.createdAt = new Date();
-      product.image = req.file ? req.file.filename : product.image;
+ 
+      
+     
+
+      
 
       
     }
 
-    return product;
-  });
-  writeJson(productsModify, "products.json");
-  
-  return res.redirect('/admin')
-};
+ 
+

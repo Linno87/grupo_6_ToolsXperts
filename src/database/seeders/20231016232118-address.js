@@ -7,10 +7,18 @@ module.exports = {
       "Addresses",
       [
         {
-          address: 'Queirel 1889',
-          city:"Monte Grande",
-          province:"Buenos Aires",
-          userId: "3",
+          address: 'Direccion',
+          city:"Ciudad",
+          province:"Provincia",
+          userId: 1,
+          createdAt: new Date(),
+          updatedAt: new Date(),
+        },
+        {
+          address: 'Direccion',
+          city:"Ciudad",
+          province:"Provincia",
+          userId: 2,
           createdAt: new Date(),
           updatedAt: new Date(),
         }

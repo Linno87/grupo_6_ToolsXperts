@@ -29,19 +29,7 @@ module.exports = {
           roleId: 2,
           createdAt: new Date(),
           updatedAt: new Date(),
-        },
-        {
-          first_name: "Debora",
-          last_name: "Escobar",
-          email: "escobardebo@gmail.com",
-          password:
-            "$2a$08$tFdXvNu9CTGWK2IetYdSbelgaX1ZuZ38c8HU2/TS1h9FZ08nmewD6",
-          about: "Hola Soy Debo",
-          avatar: null,
-          roleId: 1,
-          createdAt: new Date(),
-          updatedAt: new Date(),
-        },
+        }
       ],
       {}
     );

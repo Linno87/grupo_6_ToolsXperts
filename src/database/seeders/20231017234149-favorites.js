@@ -8,10 +8,16 @@ module.exports = {
       [
         {
           productId: 1,
-          userId: 3,
+          userId: 1,
           createdAt: new Date(),
           updatedAt: new Date(),
-        }
+        },
+        {
+          productId: 1,
+          userId: 2,
+          createdAt: new Date(),
+          updatedAt: new Date(),
+        },
       ],
       {}
     );
