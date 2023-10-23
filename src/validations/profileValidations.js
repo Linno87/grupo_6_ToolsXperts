@@ -23,7 +23,7 @@ module.exports = [
         .isLength({min:3, max:70}).withMessage("El campo no puede superar los 50 caracteres").bail()
         .isString().withMessage("Solo se permiten caracteres alfanumericos"),
 
-        check('province')
+    check('province')
         .isLength({min:3, max:70}).withMessage("El campo no puede superar los 50 caracteres").bail()
         .isString().withMessage("Solo se permiten caracteres alfanumericos"),
 

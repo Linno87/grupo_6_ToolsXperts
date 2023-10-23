@@ -36,22 +36,34 @@
                         <small class="ms-2 text-danger d-block"><%= locals.errors && (errors.last_name && errors.last_name.msg) %></small>
                     </div>
                     <!-- EMAIL -->
-                    <div class="col-12 col-md-7">
+                    <div class="col-12 col-md-12">
                         <label for="email">Email:</label>
                         <input class="form-control email" name="email" id="email" value="<%= email %>" disabled/>
 
                     </div>
                     <!-- DATE -->
-                    <div class="col-12 col-md-4">
+                    <div class="col-12 col-md-5">
                         <label for="date">Nacimiento:</label>
                         
                         <input class="form-control" type="date" name="date" id="date" value="<%= locals.old && (old.date && old.date) || date %>"/>
                         <small class="ms-2 text-danger d-block"><%= locals.errors && (errors.date && errors.date.msg) %></small>
                     </div>
+                    <!-- GENDER-->
+                    <div class="col-12 col-md-5">
+                        <label for="gender">Género</label>
+                        <select  class="form-control" name="gender" id="gender">
+                            <option value="hombre" <%= gender==='hombre' && 'selected' %>>Hombre</option>
+                            <option value="mujer" <%= gender==='mujer' && 'selected' %>>Mujer</option>
+                            <option value="otro" <%= gender==='otro' && 'selected' %>>Prefiero no decirlo</option>
+                            <span class="text-danger fw-bold">
+                                <%=locals.errors?.gender?.msg%>
+                            </span>
+                        </select>
+                    </div>
 
                     <!-- ADDRESS -->
                     <div class="col-12 col-md-12">
-                        <label for="direction">Dirección:</label>
+                        <label for="address">Dirección:</label>
                         <input class="form-control direction" name="address" id="direction" value="<%= locals.old && old.address ? old.address : address[0].address %>">
                    
 

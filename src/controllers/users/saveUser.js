@@ -1,4 +1,4 @@
-const { v4: uuidv4 } = require("uuid");
+
 
 const { validationResult } = require("express-validator");
 const { hashSync } = require("bcryptjs");
@@ -20,6 +20,7 @@ module.exports = (req, res) => {
   email,
   password,
   about,
+  gender,
   date} = req.body
 
   db.User.create({
@@ -28,6 +29,7 @@ module.exports = (req, res) => {
     email,
     password : hashSync(password,8),
     about,
+    gender,
     date,
     roleId : 2,
     avatar : "defaultUserImg.jpg"

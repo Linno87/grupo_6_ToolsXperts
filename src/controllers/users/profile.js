@@ -5,7 +5,7 @@ const db = require("../../database/models")
 module.exports = (req,res)=>{
            
     db.User.findByPk(req.session.userLogin.id,{
-        attributes:["first_name", "last_name", "email", "about","avatar", "date"],
+        attributes:["first_name", "last_name", "email", "about","avatar", "date","gender"],
         include: [{
             association: 'address',
             attributes: ['address','city','province']

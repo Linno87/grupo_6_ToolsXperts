@@ -11,6 +11,7 @@ module.exports = (req, res) => {
     city,
     province,
     date,
+    gender,
     about,
     
 
@@ -42,6 +43,7 @@ module.exports = (req, res) => {
     last_name,
     date,
     about,
+    gender,
    avatar:  req.file ? req.file.filename : user.avatar
 
   },
@@ -53,7 +55,9 @@ module.exports = (req, res) => {
 
 ).catch(error => console.log(error))
 
+
 return res.render('userProfile',{
+  
   ...user.dataValues})
 
 
@@ -62,8 +66,9 @@ return res.render('userProfile',{
 
 
 }else{
- const user = db.User.findByPk(req.session.userLogin.id)
+ db.User.findByPk(req.session.userLogin.id)
  .then(user =>{
+  
    return res.render('userProfile',{
     ...user.dataValues,
     old: req.body,

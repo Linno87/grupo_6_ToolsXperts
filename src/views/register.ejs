@@ -80,14 +80,13 @@
                                 </span>
                             </p>
                             <p class="register_main_form_inp_box">
-                                <label for="categoryUser">Rubro Favorito</label>
-                                <select name="categoryUser" id="categoryUser">
-                                    <option value="todos" <%= locals.old && (old.categoryUser==='todos' && 'selected') %>>Todos</option>
-                                    <option value="carpinteria" <%= locals.old && (old.categoryUser==='carpinteria' && 'selected') %>>Carpinteria</option>
-                                    <option value="soldadura" <%= locals.old && (old.categoryUser==='soldadura' && 'selected') %>>Soldadura</option>
-                                    <option value="metalurgica"<%= locals.old && (old.categoryUser==='metalurgica' && 'selected') %>>Metalurgica</option>
+                                <label for="gender">Género</label>
+                                <select name="gender" id="gender">
+                                    <option value="hombre" <%= locals.old && (old.gender==='hombre' && 'selected') %>>Hombre</option>
+                                    <option value="mujer" <%= locals.old && (old.gender==='mujer' && 'selected') %>>Mujer</option>
+                                    <option value="otro" <%= locals.old && (old.gender==='otro' && 'selected') %>>Prefiero no decirlo</option>
                                     <span class="text-danger fw-bold">
-                                        <%=locals.errors?.categoryUser?.msg%>
+                                        <%=locals.errors?.gender?.msg%>
                                     </span>
                                 </select>
                             </p>
