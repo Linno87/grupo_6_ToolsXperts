@@ -1,55 +1,76 @@
 const { existsSync, unlinkSync } = require("fs");
-const { readJson, writeJson } = require("../../data");
 const {validationResult} = require('express-validator');
+const db = require('../../database/models')
 
 module.exports = (req, res) => {
-    const errors = validationResult(req);
-    
-  const users = readJson("users.json");
-  if(errors.isEmpty()){
-  const {
-    firstName,
-    lastName,
-    email,
-    direction,
+  const errors = validationResult(req);
+   const {
+    first_name,
+    last_name,
+    address,
+    city,
+    province,
     date,
-    profile_image,
-    description,
-    preference
+    about,
+    
+
   } = req.body;
-  
+  if(errors.isEmpty()){
 
-  const usersModify = users.map((user) => {
-    if (user.id === req.session.userLogin.id) {
-      
-      req.file &&
-        existsSync(`./public/img/users/${user.profile_image}`) && (user.profile_image!=='defaultUserImg.jpg') &&
-        unlinkSync(`./public/img/users/${user.profile_image}`);
-        
-        user.firstName = firstName?.trim();
-        user.lastName = lastName?.trim();
-        user.date = date;
-        user.email = email ? email : user.email;
-        user.profile_image = req.file ? req.file.filename : user.profile_image;
-        user.direction = direction;
-        user.preference = preference;
-        user.description = description?.trim();
-      
-    }
-
-    return  user;
-  });
-  
-  writeJson(usersModify, "users.json");
-  
-  return res.redirect('/users/profile')
-}else{
-  const user = users.find(user => user.id === req.session.userLogin.id);
-  return res.render('userProfile',{
-    ...user,
-    old: req.body,
-    errors: errors.mapped()
+ db.User.findByPk(req.session.userLogin.id,{
+  include:['address']
+ })
+.then((user)=>{
+  req.file &&   req.file.avatar &&
+  existsSync(`./public/img/users/${user.avatar}`) && 
+  (user.avatar!=='defaultUserImg.jpg') &&
+  unlinkSync(`./public/img/users/${user.avatar}`);
+  /* actualiza datos de ubicacion */
+  db.Address.update({
+    address,
+    city,
+    province,
+  },
+  {
+    where: {
+    userId: req.session.userLogin.id
+  }
   })
+  /* actualiza datos de usuario */
+  db.User.update({
+    first_name,
+    last_name,
+    date,
+    about,
+   avatar:  req.file ? req.file.filename : user.avatar
+
+  },
+  {
+      where: {
+    id: req.session.userLogin.id
+  }
+  }
+
+).catch(error => console.log(error))
+
+return res.render('userProfile',{
+  ...user.dataValues})
+
+
+})
+
+
+
+}else{
+ const user = db.User.findByPk(req.session.userLogin.id)
+ .then(user =>{
+   return res.render('userProfile',{
+    ...user.dataValues,
+    old: req.body,
+    errors: errors.mapped() 
+   }) 
+ }).catch(error => console.log(error))
+ 
 }
 
 

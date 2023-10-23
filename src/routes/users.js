@@ -14,10 +14,10 @@ const notUserLogin = require('../middlewares/notUserLogin');
 router.get('/register', notUserLogin, register);
 router.post("/register", uploadUser.single("profile_image"),registerValidator , saveUser);
 router.get('/login', notUserLogin, login);
-router.post('/login', loginValiations, processLogin);
+router.post('/login' , loginValiations, processLogin);
 router.get("/", users);
 router.get("/logout",logout);/* ruta para cerrar session */
 router.get("/profile", userLoginchek, profile);
-router.put('/profile', uploadUser.single("profile_image"), profileValidations, updateProfile)
+router.put('/profile', uploadUser.single("avatar"), profileValidations, updateProfile)
 
 module.exports = router;

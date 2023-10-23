@@ -29,7 +29,7 @@ module.exports = {
           roleId: 2,
           createdAt: new Date(),
           updatedAt: new Date(),
-        },
+        }
       ],
       {}
     );
