@@ -56,13 +56,7 @@ module.exports = (req, res) => {
 ).catch(error => console.log(error))
 
 
-<<<<<<< HEAD
 return res.redirect("/users/profile")
-=======
-return res.redirect('/users/profile',{
-  
-  ...user.dataValues})
->>>>>>> develop
 
 
 })

@@ -5,7 +5,9 @@ const db = require('../database/models')
 
 module.exports = {
   products: (req, res) => {
-    db.Product.findAll()
+    db.Product.findAll({
+      include: ['images']
+    })
     .then(products =>{
       return res.render("products", {
         products,
