@@ -30,16 +30,8 @@ router.post(
     },
   ]),
   productAddValidator,
-  saveProduct
+  createProduct
 );
-
-/* router.get("/createProduct", createProduct);
-router.post(
-  "/createProduct",
-  upload.fields([{ name: "image" }, { name: "images" }]),
-  saveProduct
-); */
-
 router.get("/editProduct/:id", editProduct);
 router.put("/updateProduct/:id", upload.single("image"), updateProduct);
 router.get("/editProduct", editProduct);
