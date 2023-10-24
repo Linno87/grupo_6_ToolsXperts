@@ -1,8 +1,9 @@
 const { readJson, writeJson} = require("../../data")
+const db = require("../../database/models");
 
 module.exports = (req,res) => {
 //JSON
-/*     const products = readJson('products.json');
+     const products = readJson('products.json');
     const id = req.params.id;
 
     const productsModify = products.filter(product => product.id !== id);
@@ -10,7 +11,7 @@ module.exports = (req,res) => {
 
     writeJson(productsModify, 'products.json')
 
-    return res.redirect('/admin') */
+    return res.redirect('/admin')
 
     //SQL
     

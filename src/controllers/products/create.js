@@ -14,7 +14,7 @@ module.exports = (req, res) => {
       description: description.trim(),
       brandId: brand,
       categoryId: category,
-      image: req.files && req.files.image ? req.files.image[0].filename : null,
+      image: req.files.image ? req.files.image[0].filename : null,
     })
       .then((product) => {
         if (req.files.images) {
