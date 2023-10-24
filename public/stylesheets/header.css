@@ -136,6 +136,12 @@
     margin-bottom: 4px;
 }
 
+.burguer_menu_globe {
+    padding: 0;
+    position: relative;
+    right: 6px;
+}
+
 .burguer_menu {
     height: 50px;
 }
@@ -152,6 +158,10 @@
 .dropdown-menu-background {
     background-color: var(--AzulClaro);
     padding: 0;
+}
+
+.dropdown-menu-globe {
+    background-color: var(--AzulClaro);
 }
 
 .dropdown-item {
