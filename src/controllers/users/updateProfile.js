@@ -50,16 +50,14 @@ module.exports = (req, res) => {
   {
       where: {
     id: req.session.userLogin.id
-  }
-  }
-
-).catch(error => console.log(error))
-
-
-return res.redirect("/users/profile")
-
-
+    }
+  })
+  .then(()=>{
+    return res.redirect("/users/profile")
+  })
+  
 })
+.catch(error => console.log(error))
 
 
 

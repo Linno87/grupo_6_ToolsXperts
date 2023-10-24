@@ -5,7 +5,8 @@ const { Op } = require('sequelize')
 module.exports = {
   index: (req, res) => {
     const products = db.Product.findAll({
-      include: ['images']
+      include: ['images'],
+      order : ['name']
     } )
     const brands = db.Brand.findAll()
     Promise.all([products,brands])
@@ -35,7 +36,9 @@ module.exports = {
     .catch(error => console.log(error))
   },
   admin : (req,res) => {
-        db.Product.findAll()
+        db.Product.findAll({
+          include: ['images','category','brand']
+        })
         .then(products =>{
           return res.render('admin', {
             products
@@ -60,7 +63,6 @@ module.exports = {
                 name : { [Op.like]: `%${key2}%`}
               }})
               .then(products =>{
-                return res.send(products)
                 return res.render("admin", {
                   products
                 })
@@ -72,7 +74,6 @@ module.exports = {
                 brandId : brand.id}
           })
           .then(products =>{
-              return res.send(products)
               return res.render("admin", {
                 products
               })

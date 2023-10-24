@@ -73,7 +73,6 @@
                                                     <tr>
                                                         <th scope="col">#</th>
                                                         <th scope="col">Nombre</th>
-                                                        <th scope="col">Modelo</th>
                                                         <th scope="col">Categoria</th>
                                                         <th scope="col">Marca</th>
                                                         <th scope="col">Precio</th>
@@ -83,8 +82,7 @@
                                                     </tr>
                                                 </thead>
                                                 <tbody>
-                                                    <% products.forEach(({id, name, brand, price, discount,
-                                                        model,category, description},index)=> { %>
+                                                    <% products.forEach(({id, name, brand, price, discount, category, description},index)=> { %>
                                                         <tr>
                                                             <th scope="row">
                                                                 <%= index + 1%>
@@ -92,14 +90,12 @@
                                                             <td>
                                                                 <%= name %>
                                                             </td>
+                                                            
                                                             <td>
-                                                                <%= model %>
+                                                                <%= category.name %>
                                                             </td>
                                                             <td>
-                                                                <%= category %>
-                                                            </td>
-                                                            <td>
-                                                                <%= brand ? brand : "Sin especificar" %>
+                                                                <%= brand ? brand.name : "Sin especificar" %>
                                                             </td>
                                                             <td>
                                                                 <%= price + ' $' %>
