@@ -42,22 +42,6 @@
 
                             </div>
 
-
-                            <!-- <div class="clase_formularios_cajas">
-                                <label for="category">Categoría:</label>
-                                <select name="category">
-                                    <option value="amoladoras">Amoladora</option>
-                                    <option value="caladoras">Caladora</option>
-                                    <option value="lijadoras">Lijadora</option>
-                                    <option value="pintor">Pintor</option>
-                                    <option value="sierras_circulares">Sierra circular</option>
-                                    <option value="taladros">Taladro</option>
-                                    <option value="tornillos">Tornillo</option>
-                                    <option value="varios">Varios</option>
-                                </select>
-                            </div> -->
-
-
                             <div class="clase_formularios_cajas">
                                 <label for="brand" class="form-label">Marca</label>
                                 <select class="form-select <%= locals.errors && (errors.brand && 'is-invalid') %>"
@@ -76,12 +60,6 @@
                                 </small>
                             </div>
 
-
-                            <!--                             <div class="clase_formularios_cajas">
-                                <label for="marca">Marca:</label>
-                                <input type="text" id="marca" minlength="3" maxlength="20" name="brand" required />
-                            </div> -->
-
                             <div class="clase_formularios_cajas">
                                 <label for="modelo" class="form-label">Modelo:</label>
                                 <input type="text" id="modelo" minlength="3" maxlength="20" name="model" required />
@@ -97,19 +75,10 @@
                                 </small>
                             </div>
 
-
-
-                            <!--                             <div class="clase_formularios_cajas">
-                                <label for="precio">Precio ($):</label>
-                                <input type="number" id="precio" name="price" required />
-                            </div> -->
-
-
                             <div class="clase_formularios_cajas">
                                 <label for="discount" class="form-label">Oferta (%): </label>
                                 <input type="number" id="discount" name="discount" value="0" required />
                             </div>
-
 
                             <div class="clase_formularios_cajas tex_area">
                                 <label for="description" class="form-label">Descripción</label>
@@ -122,12 +91,6 @@
                                 </small>
                             </div>
 
-
-                            <!--                             <div class="clase_formularios_cajas tex_area">
-                                <textarea class="form_product_text_area" maxlength="256" rows="5" cols="20"
-                                    name="description" placeholder="Escribe una descripción..."></textarea>
-                            </div> -->
-
                             <div class="clase_formulario_botones">
 
                                 <small class="ms-2 text-danger">
@@ -136,7 +99,8 @@
 
 
                                 <div class="clase_formularios_cajas_btn_agregar">
-                                    <label class="boton__general btn_img" for="image" class="fa-solid fa-plus fa-2xl">Imagen principal</label>
+                                    <label class="boton__general btn_img" for="image"><i
+                                            class="fa-solid fa-plus fa-2xl"></i>Imagen principal</label>
                                     <input hidden class="form-control" type="file" id="image" name="image">
                                 </div>
                                 <div class="clase_formularios_cajas_btn_agregar">
