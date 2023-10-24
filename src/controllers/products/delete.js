@@ -2,7 +2,7 @@ const { readJson, writeJson} = require("../../data")
 const db = require("../../database/models");
 
 module.exports = (req,res) => {
-//JSON
+  /* //JSON
      const products = readJson('products.json');
     const id = req.params.id;
 
@@ -12,17 +12,31 @@ module.exports = (req,res) => {
     writeJson(productsModify, 'products.json')
 
     return res.redirect('/admin')
+ */
+  //SQL
 
-    //SQL
-    
-        db.Product.destroy({
-          where: {
-            id: req.params.id,
-          },
-        })
-          .then((response) => {
-            console.log(response);
-            return res.redirect("/products");
-          })
-          .catch((error) => console.log(error));
+db.Favorite.destroy({
+  where: {
+    productId: req.params.id,
+  },
+})
+  .then(() => {
+    return db.Image.destroy({
+      where: {
+        productId: req.params.id,
+      },
+    });
+  })
+  .then(() => {
+    return db.Product.destroy({
+      where: {
+        id: req.params.id,
+      },
+    });
+  })
+  .then((response) => {
+    console.log(response);
+    return res.redirect("/products");
+  })
+  .catch((error) => console.log(error));
 }

@@ -1,24 +1,23 @@
 const { readJson, writeJson } = require("../data");
 
-const db = require('../database/models')
-
+const db = require("../database/models");
 
 module.exports = {
   products: (req, res) => {
     db.Product.findAll({
-      include: ['images']
+      include: ["images"],
     })
-    .then(products =>{
-      return res.render("products", {
-        products,
-      });
-    })
-    .catch(error => console.log(error))
+      .then((products) => {
+        return res.render("products", {
+          products,
+        });
+      })
+      .catch((error) => console.log(error));
   },
   carrito: (req, res) => {
     return res.render("carrito");
   },
-  detalle: (req, res) => {
+  /*   detalle: (req, res) => {
     const listProduct = readJson("products.json");
     const id = req.params.id;
     const product = listProduct.find((product) => product.id === id);
@@ -26,6 +25,17 @@ module.exports = {
     return res.render("detalle", {
       product,
     });
+  }, */
+  detalle: (req, res) => {
+    db.Product.findByPk(req.params.id, {
+      include: ["images"],
+    })
+      .then((product) => {
+        return res.render("detalle", {
+          product,
+        });
+      })
+      .catch((error) => console.log(error));
   },
   createProduct: require("./products/create"),
   add: require("./products/add"),
