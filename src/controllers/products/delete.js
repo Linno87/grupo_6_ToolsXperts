@@ -1,7 +1,8 @@
 const { readJson, writeJson} = require("../../data")
 
 module.exports = (req,res) => {
-    const products = readJson('products.json');
+//JSON
+/*     const products = readJson('products.json');
     const id = req.params.id;
 
     const productsModify = products.filter(product => product.id !== id);
@@ -9,5 +10,18 @@ module.exports = (req,res) => {
 
     writeJson(productsModify, 'products.json')
 
-    return res.redirect('/admin')
+    return res.redirect('/admin') */
+
+    //SQL
+    
+        db.Product.destroy({
+          where: {
+            id: req.params.id,
+          },
+        })
+          .then((response) => {
+            console.log(response);
+            return res.redirect("/products");
+          })
+          .catch((error) => console.log(error));
 }
