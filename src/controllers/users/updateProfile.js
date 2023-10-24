@@ -56,9 +56,7 @@ module.exports = (req, res) => {
 ).catch(error => console.log(error))
 
 
-return res.render('userProfile',{
-  
-  ...user.dataValues})
+return res.redirect("/users/profile")
 
 
 })

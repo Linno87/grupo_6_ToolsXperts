@@ -120,7 +120,7 @@
                     <% products.forEach(product =>{ %>
                         <div class="swiper-slide">
                             <%- include('./partials/product',{
-                                ...product
+                                ...product.dataValues
                                }) %>
                         </div>
                     <% }) %>
@@ -133,36 +133,12 @@
         <section class="section--marcas">
             <div class="swiper mySwiper-marcas">
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide home__main__carousel-marcas">
-                        <img src="/img/logos/logo bahco.png" alt="Carrusel Logo 1">
-                    </div>
-                    <div class="swiper-slide home__main__carousel-marcas">
-                        <img src="/img/logos/logo barovo.png" alt="Carrusel Logo 2">
-                    </div>
-                    <div class="swiper-slide home__main__carousel-marcas">
-                        <img src="/img/logos/logo bosch.png" alt="Carrusel Logo 3">
-                    </div>
-                    <div class="swiper-slide home__main__carousel-marcas">
-                        <img src="/img/logos/logo bosch.png" alt="Carrusel Logo 3">
-                    </div>
-                    <div class="swiper-slide home__main__carousel-marcas">
-                        <img src="/img/logos/logo dremel.png" alt="Carrusel Logo 4">
-                    </div>
-                    <div class="swiper-slide home__main__carousel-marcas">
-                        <img src="/img/logos/logo fischer.png" alt="Carrusel Logo 5">
-                    </div>
-                    <div class="swiper-slide home__main__carousel-marcas">
-                        <img src="/img/logos/logo ford.png" alt="Carrusel Logo 6">
-                    </div>
-                    <div class="swiper-slide home__main__carousel-marcas">
-                        <img src="/img/logos/logo irimo.png" alt="Carrusel Logo 7">
-                    </div>
-                    <div class="swiper-slide home__main__carousel-marcas">
-                        <img src="/img/logos/logo makita.png" alt="Carrusel Logo 8">
-                    </div>
-                    <div class="swiper-slide home__main__carousel-marcas">
-                        <img src="/img/logos/logo volt.png" alt="Carrusel Logo 9">
-                    </div>
+                    <% brands.forEach(brand =>{ %>
+                        <div class="swiper-slide home__main__carousel-marcas">
+                            <img src="/img/logos/<%= brand.image %>" alt="Carrusel Logo 1">
+                        </div>
+                    <% }) %>
+                    
                 </div>
             </div>
         </section>

@@ -13,6 +13,9 @@ module.exports = (sequelize, DataTypes) => {
         foreignKey:'productId',
         otherKey:'userId'
     });
+
+      
+
     }
   }
   Product.init({

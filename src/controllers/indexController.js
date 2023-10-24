@@ -4,10 +4,17 @@ const { Op } = require('sequelize')
 
 module.exports = {
   index: (req, res) => {
-    db.Product.findAll()
-    .then(products =>{
+    const products = db.Product.findAll({
+      include: ['image']
+    })
+    const brands = db.Brand.findAll()
+    Promise.all([products,brands])
+   
+    .then(([products,brands]) =>{
+      return res.send(products)
       return res.render("index", {
         products,
+        brands
       });
     })
     .catch(error => console.log(error))

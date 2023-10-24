@@ -3,8 +3,8 @@
 const brandsJSON = require("../../data/brands.json");
 const brands = brandsJSON.map(brand => {
   return {
-    name: brand,
-    image: null,
+    name: brand.name,
+    image: brand.image,
     createdAt: new Date(),
     updatedAt: new Date(),
   };

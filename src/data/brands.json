@@ -1,29 +1,24 @@
 [
-    "Black & Decker",
-    "Barovo",
-    "bahco",
-    "Bosch",
-    "Belarra",
-    "Daewoo",
-    "Daihatsu",
-    "Dremel",
-    "Dogo",
-    "Einhell",
-    "Fluvial",
-    "Ford",
-    "Gamma",
-    "Hyundai",
-    "Irimo",
-    "Konan",
-    "Lusqtoff",
-    "Makita",
-    "Omaha",
-    "Pektra",
-    "Philco",
-    "Pluvius",
-    "Rowa",
-    "Skil",
-    "Stanley",
-    "UMI",
-    "Volt"
+    {
+        "name" : "Black & Decker",
+        "image" : "black_and_decker.png"
+    },{
+        "name" :"Barovo",
+        "image" : "logo barovo.png"
+    },{
+        "name" : "bahco",
+        "image" : "logo bahco.png"
+    },
+    {
+        "name" : "Bosch",
+        "image" : "logo bosch.png"
+    },
+    {
+        "name" : "Dremel",
+        "image" :"logo dremel.png"
+    },
+    {
+        "name" : "Fischer",
+        "image" : "logo fischer.png"
+    }
 ]
