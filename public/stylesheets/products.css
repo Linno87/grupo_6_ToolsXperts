@@ -30,6 +30,10 @@
     max-height: 200px;
 }
 
+.card_body h5{
+    color: black
+}
+
 @media (min-width: 768px) {
    
     .products_card{
