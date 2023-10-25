@@ -35,84 +35,74 @@ module.exports = {
     })
     .catch(error => console.log(error))
   },
+
   admin : (req,res) => {
-        db.Product.findAll({
-          include: ['images','category','brand']
-        })
-        .then(products =>{
-          return res.render('admin', {
-            products
-          })
-        })
-        .catch(error => console.log(error))
+    const products = db.Product.findAll({
+      include: ['images','category','brand'],
+      order : ['name']
+    } )
+    const brands = db.Brand.findAll()
+    Promise.all([products,brands])
+   
+    .then(([products,brands]) =>{
+      return res.render("admin", {
+        products,
+        brands
+      });
+    })
+    .catch(error => console.log(error))
   },
+
   searchAdmin: (req, res) => {
     const key = req.query.brand;
     const key2 = req.query.keywords;
+    console.log(key2);
+    if(!key && !key2){
+      return res.redirect('/admin')
+    }
+    let products = []
     if(key){
-      db.Brand.findOne({
-        where:{
-          name : { [Op.like]: `%${key}%`}
-        }
-      })
-      .then(brand=>{
           if(key2){
-            db.Product.findAll({
+            products = db.Product.findAll({
               where:{
-                brandId : brand.id,
+                brandId : key,
                 name : { [Op.like]: `%${key2}%`}
-              }})
-              .then(products =>{
-                return res.render("admin", {
-                  products
-                })
-              })
-              .catch(error => console.log(error))
-          }
-          db.Product.findAll({
+              },
+              include: ['images','category','brand']
+            })
+          }else{
+          products = db.Product.findAll({
               where:{
-                brandId : brand.id}
-          })
-          .then(products =>{
-              return res.render("admin", {
-                products
-              })
-          })
-          .catch(error => console.log(error))
+                brandId : key},
+                include: ['images','category','brand']
+            })
+          }
+         
+      }
+
+      if(!key && key2){
+        
+        products =  db.Product.findAll({
+          where:{
+            name : { [Op.like]: `%${key2}%`}
+            
+          },
+          include: ['images','category','brand']
+        })
           
       }
-      )}
+    const brands = db.Brand.findAll()
+    Promise.all([products,brands])
+   
+    .then(([products,brands]) =>{
+      
+      return res.render("admin", {
+        products,
+        brands
+      });
+    })
+    .catch(error => console.log(error))
 
-      if(key2){
-        db.Product.findAll({
-          where:{
-            brandId : brand.id,
-            name : { [Op.like]: `%${key2}%`}
-          }})
-          .then(products =>{
-            return res.render("admin", {
-              products
-            })
-          })
-          .catch(error => console.log(error))
-      }
-/* 
-      listProduct = listProducts.filter(product=> product.brand.toLowerCase().includes(key.toLowerCase()));
-      if(key2){
-        listProduct = listProduct.filter(product=> product.name.toLowerCase().includes(key2.toLowerCase()));
-        
-      }
-      ;
-    }
-    
-    if(key2){
-        listProduct = listProducts.filter(product=> product.name.toLowerCase().includes(key2.toLowerCase()));
-        return res.render("admin", {
-          listProduct
-        });
-      } */
-      return res.redirect("/admin");
-    
   }
     
 }
