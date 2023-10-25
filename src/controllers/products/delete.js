@@ -36,7 +36,7 @@ db.Favorite.destroy({
   })
   .then((response) => {
     console.log(response);
-    return res.redirect("/products");
+    return res.redirect("/admin");
   })
   .catch((error) => console.log(error));
 }
