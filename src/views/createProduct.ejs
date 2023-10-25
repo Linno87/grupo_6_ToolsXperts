@@ -84,7 +84,7 @@
                                 <label for="description" class="form-label">Descripción</label>
                                 <textarea class="form_product_text_area" maxlength="256" rows="5" cols="20"
                                     <%=locals.errors && (errors.description && 'is-invalid' )
-                                    %>" style="resize: none;"
+                                    %> style="resize: none;"
                                     name="description" id="description" placeholder="Escribe una descripción..."><%= locals.old && (old.description && old.description) %></textarea>
                                 <small class="ms-2 text-danger">
                                     <%= locals.errors && (errors.description && errors.description.msg) %>
