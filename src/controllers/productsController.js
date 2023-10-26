@@ -23,7 +23,7 @@ module.exports = {
       
    const productsRel = db.Product.findAll({
          
-          include: ['images','category','brand']
+          include: ['category','brand']
         })
     Promise.all([product,productsRel])
         .then(([product,productsRel]) => {
