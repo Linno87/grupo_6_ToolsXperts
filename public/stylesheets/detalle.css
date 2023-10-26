@@ -43,7 +43,8 @@ div.detalle__div-img {
 
 /* CAJA-IMG-MOBILE*/
 .detalle__section-article-01 img {
-  width: -webkit-fill-available;
+  width: 300px;
+  height: 300px; 
 }
 
 /* AGREGAR A MIS FAVORITOS-MOBILE*/

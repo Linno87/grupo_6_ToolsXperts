@@ -21,7 +21,7 @@
                                                 <img src="/img/products/<%= image.file %>" alt="">
                                             </div>
                                             <% } %>
-                                                <% }) %>
+                                     <% }) %>
 
                                 </div>
                                 <button class="carousel-control-prev" type="button"
@@ -41,12 +41,18 @@
 
 
                     <article class="detalle__section-article-02">
-                        <p>
+                        <h3 class="text-uppercase mt-5">
                             <%= product.name %>
-                        </p>
-                        <div class="detalle__section-article-precio">Por: $ <%= product.price %>
-                        </div>
-                        <div class="detalle__section-article-descuento">ou 3x de $ 6.568,10</div>
+                        </h3>
+                        <% if (product.discount!== 0) { %>
+                            <div class="detalle__section-article-precio text-decoration-line-through">Por: $ <%= product.price %>
+                            </div>
+                            <div class="detalle__section-article-descuento">$ <%= product.price - product.discount%></div>
+                        <% } else { %>
+                            <div class="detalle__section-article-precio">Por: $ <%= product.price %>
+                            </div>
+                        <% }  %>
+                        
                         <section class="detalle__section-botones">
                             <div class="detalle__div-botones">
                                 <a class="más" href="#"><i class="fas fa-plus"></i></a>
@@ -89,48 +95,22 @@
                             <!-- swiper ---------- -->
                             <div class="swiper mySwiper2 ">
                                 <div class="swiper-wrapper">
-                                    <div class="swiper-slide ">
+                                    
                                         <!-- swiper -->
-                                        <div class="card_recomendados">
-                                            <img src="/img/lijadoras/LBP-80-removebg-preview.png" alt="#">
-                                            <div class="descripcion_recomendados">
-                                                <h5>30%</h5>
-                                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum, ex?</p>
-                                                <a href="">Ver Producto</a>
+                                        <% productsRel.forEach(product => { %>
+                                            <div class="swiper-slide">
+                                            <% if (product.discount!== 0) { %>
+                                                <div class="card_recomendados">
+                                                    <img src="/img/products/<%= product.image %> img-fluid" alt="#">
+                                                    <div class="descripcion_recomendados">
+                                                        <h5><%= product.discount %></h5>
+                                                        <p><%= product.description %></p>
+                                                        <a class="btn btn-primary" href="/products/detalle/<%= product.id %>">Ver Producto</a>
+                                                    </div>
+                                                </div>
+                                            <% } %>
                                             </div>
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <div class="card_recomendados">
-                                            <div><img src="/img/lijadoras/LOR200-removebg-preview.png" alt="#">
-                                            </div>
-                                            <div class="descripcion_recomendados">
-                                                <h5>30%</h5>
-                                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum, ex?</p>
-                                                <a href="">Ver Producto</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <div class="card_recomendados">
-                                            <div><img src="/img/caladoras/4550-removebg-preview.png" alt="#"></div>
-                                            <div class="descripcion_recomendados">
-                                                <h5>30%</h5>
-                                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum, ex?</p>
-                                                <a href="">Ver Producto</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <div class="card_recomendados">
-                                            <div><img src="/img/caladoras/4550-removebg-preview.png" alt="#"></div>
-                                            <div class="descripcion_recomendados">
-                                                <h5>30%</h5>
-                                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum, ex?</p>
-                                                <a href="">Ver Producto</a>
-                                            </div>
-                                        </div>
-                                    </div>
+                                        <% }) %>
                                 </div>
                                 <div class="swiper-pagination detalle__div__swiper-pagination"></div>
                                 <div class="swiper-button-next arrow-next"></div>

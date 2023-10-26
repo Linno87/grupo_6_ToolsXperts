@@ -17,12 +17,20 @@ module.exports = {
   },
 
   detalle: (req, res) => {
-    db.Product.findByPk(req.params.id, {
-      include: ["images"],
+    const product = db.Product.findByPk(req.params.id, {
+      include: ["images","category"],
     })
-      .then((product) => {
+      
+   const productsRel = db.Product.findAll({
+         
+          include: ['images','category','brand']
+        })
+    Promise.all([product,productsRel])
+        .then(([product,productsRel]) => {
+        
         return res.render("detalle", {
           product,
+          productsRel
         });
       })
       .catch((error) => console.log(error));
