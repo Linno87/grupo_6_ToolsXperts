@@ -6,63 +6,129 @@
     <%- include("./partials/header") %>
     <main class="main_create">
         <div class="main_create_cont">
-            <div class="main_create_cont_container_form" >
-                <form class="clase_formularios" action="/products/updateProduct/<%= id %>?_method=PUT" method="POST" enctype="multipart/form-data">
+            <div class="main_create_cont_container_form">
+                <form class="clase_formularios" action="/products/editProduct/<%= product.id %>?_method=PUT"  method="POST" enctype="multipart/form-data">
                     <div class="main__titulo-h1">
                         <h1>Editar producto</h1>
                         <hr>
-                     </div>
-                    <div class="clase_formularios_cajas">
-                        <label for="name">Nombre:</label>
-                        <input type="text" id="name" minlength="3" maxlength="20" name="name" value="<%= name %>" required/>
                     </div>
+<!-- NOMBRE -->
                     <div class="clase_formularios_cajas">
-                        <label for="category">Categoría:</label>
-                        <select class="form-select" name="category"> 
-                            <% categorys.forEach(item => { %>
-                                <option <%= item.category === category && 'selected' %> value="<%= item.category %>"><%= item.category %></option>
+                        <label for="name" class="form-label">Nombre:</label>
+                        <input type="text"
+                            class="form-control <%= locals.errors && (errors.name && 'is-invalid') %>"  id="name"
+                            minlength="3" maxlength="20" name="name"
+                            value="<%= product.name %>" required />
+                        <small class="ms-2 text-danger">
+                            <%= locals.errors && (errors.name && errors.name.msg) %>
+                        </small>
+                    </div>
+<!-- CATEGORIAS -->
+                    <div class="clase_formularios_cajas">
+                        <label for="category" class="form-label">Categoría:</label>
+                        <select class="form-select <%= locals.errors && (errors.category && 'is-invalid') %>"
+                            aria-label="Default select example" name="category" id="category">
+                            <option selected hidden value=" ">
+                                <% categories.find(category => { %>
+                                <% if (category.id === product.categoryId) { %>
+                                 <%= category.name %>
+                                <% } %>
+                               <% }) %>
+                          </option>
+                            <% categories.forEach(category=> { %>
+                                <option value="<%= category.id %>" <%=locals.old && (old.category===category.id
+                                    && 'selected' )%> >
+                                    <%= category.name %>
+                                </option>
                                 <% }) %>
-                      </select>
+                        </select>
+                        <small class="ms-2 text-danger">
+                            <%= locals.errors && (errors.category && errors.category.msg) %>
+                        </small>
                     </div>
-                    
+<!-- MARCAS -->
                     <div class="clase_formularios_cajas">
-                        <label for="brand">Marca:</label>
-                        <input type="text" id="brand" minlength="3" maxlength="20" name="brand" value="<%= brand %>" required/>
+                        <label for="brand" class="form-label">Marca</label>
+                        <select class="form-select <%= locals.errors && (errors.brand && 'is-invalid') %>"
+                            aria-label="Default select example" minlength="3" maxlength="20" name="brand"
+                            id="brand">
+                            <option selected hidden value="">
+                                <% brands.find(brands => { %>
+                                    <% if (brands.id === product.brandId) { %>
+                                     <%= brands.name %>
+                                    <% } %>
+                                   <% }) %>                            
+                            </option>
+                            <% brands.forEach(brand=> { %>
+                                <option value="<%= brand.id %>" <%=locals.old && (old.brand===brand.id
+                                    && 'selected' )%> >
+                                    <%= brand.name %>
+                                </option>
+                                <% }) %>
+                        </select>
+                        <small class="ms-2 text-danger">
+                            <%= locals.errors && (errors.brand && errors.brand.msg) %>
+                        </small>
                     </div>
+ <!-- PRECIO -->
                     <div class="clase_formularios_cajas">
-                        <label for="model">Modelo:</label>
-                        <input type="text" id="model" minlength="3" maxlength="20" name="model" value="<%= model %>" required/>
+                        <label for="price" class="form-label">Precio ($):</label>
+                        <input type="number"
+                            class="form-control <%= locals.errors && (errors.price && 'is-invalid') %>"
+                            id="price" name="price" value="<%= product.price %>">
+                        <small class="ms-2 text-danger">
+                            <%= locals.errors && (errors.price && errors.price.msg) %>
+                        </small>
                     </div>
-                    <div class="clase_formularios_cajas">
-                        <label for="price">Precio ($):</label>
-                        <input type="number" id="price"  name="price" value="<%= price %>" required/>
-                    </div>
-                    <div class="clase_formularios_cajas">
-                        <label for="discount">Oferta (%): </label>
-                        <input type="number" id="discount" name="discount" value="<%= discount %>" required/>
-                    </div>
+<!-- DESCUENTO -->
+                    <div class="clase_formularios_cajas"></div>
 
+                    <div class="clase_formularios_cajas descuento">
+                        <label for="discount" class="form-label">Descuento(%):</label>
+                        <input class="form-control" type="number" id="discount" name="discount" value="<%= product.discount%>" required />
+                    </div>
+<!-- DESCRIPCION -->
                     <div class="clase_formularios_cajas tex_area">
-                        <textarea class="form_product_text_area" maxlength="256" rows="5" cols="20" name="description" id="description" ><%= description %></textarea>
+                        <label for="description" class="form-label ">Descripción</label>
+                        <textarea class="form_product_text_area" maxlength="256" rows="5" cols="20"
+                            <%=locals.errors && (errors.description && 'is-invalid' )
+                            %> style="resize: none"
+                            name="description" id="description" placeholder="Escribe una descripción..."><%= product.description %></textarea>
+                        <small class="ms-2 text-danger">
+                            <%= locals.errors && (errors.description && errors.description.msg) %>
+                        </small>
                     </div>
-                    <div class="clase_formulario_botones">
+<!-- IMAGEN PRINCIPAL --> 
 
-                    
-                    <div class="clase_formularios_cajas_btn_agregar">
-                        <label class="boton__general btn_img" for="image"><i class="fa-solid fa-plus fa-2xl"></i>Agregar Imagen</label>
-                        <input hidden type="file" id="image" name="image" accept="jpg" />   
+<small class="ms-2 text-danger errorsUpdate">
+                            <%= locals.errors && (errors.images && errors.images.msg) %>
+                        </small>
+                     <div class="clase_formulario_botones">
+                       
+                        <div class="clase_formularios_cajas_btn_agregar">
+                            <label class="boton__general btn_img" for="image"><i
+                                    class="fa-solid fa-plus fa-2xl"></i>Imagen principal</label>
+                            <input hidden class="form-control" type="file" id="image" name="image">
+                        </div>
+<!-- IMAGENES SECUNDARIAS -->
+                        <div class="clase_formularios_cajas_btn_agregar">
+                            <label class="boton__general btn_img" for="images"><i
+                                    class="fa-solid fa-plus fa-2xl"></i>Imagenes Secundarias</label>
+                            <input hidden multiple type="file" id="images" name="images"/>
+
+                        </div>
+                        <div class="clase_formularios_cajas_btn_agregar">
+                            <input class="boton__general btn_form" type="reset" value="Cancelar" />
+                      
+                        </div>
+                        <div class="clase_formularios_cajas_btn_agregar">
+                            
+                            <input class="boton__general btn_form" type="submit" value="Editar" />
+                        </div>
                     </div>
-                    <div class="clase_formularios_cajas_btn_agregar">
-                        <label class="boton__general btn_img" for="images"><i class="fa-solid fa-plus fa-2xl"></i>Agregar Imagenes</label>
-                        <input hidden type="file" id="images" name="images" accept="jpg" />   
-                    </div>
-                    <div class="clase_formulario_box_btn">
-                        <input class="boton__general btn_form" type="reset" value="Cancelar" />
-                        <input class="boton__general btn_form" type="submit" value="Editar" />
-                    </div>
-                    </div>
+                 
                 </form>
-              
+
             </div>
         </div>
 

@@ -6,9 +6,8 @@ const {
   createProduct,
   products,
   editProduct,
-  updateProduct,
+  updateProduct, 
   deleteProduct,
-  saveProduct,
 } = require("../controllers/productsController");
 const upload = require("../middlewares/upload");
 const productAddValidator = require("../validations/productAddValidator");
@@ -33,8 +32,18 @@ router.post(
   createProduct
 );
 router.get("/editProduct/:id", editProduct);
-router.put("/updateProduct/:id", upload.single("image"), updateProduct);
-router.get("/editProduct", editProduct);
+router.put(
+  "/editProduct/:id",
+   upload.fields([
+    {
+      name: "image"
+    },
+    {
+      name: "images"
+    }
+  ]), 
+  updateProduct
+);
 router.get("/detalle/:id", detalle);
 router.delete("/deleteProduct/:id", deleteProduct);
 
