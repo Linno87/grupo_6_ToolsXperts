@@ -21,7 +21,7 @@
                                                 <img src="/img/products/<%= image.file %>" alt="">
                                             </div>
                                             <% } %>
-                                     <% }) %>
+                                                <% }) %>
 
                                 </div>
                                 <button class="carousel-control-prev" type="button"
@@ -44,30 +44,24 @@
                         <h3 class="text-uppercase mt-5">
                             <%= product.name %>
                         </h3>
-                        <% if (product.discount!== 0) { %>
-                            <div class="detalle__section-article-precio text-decoration-line-through">Por: $ <%= product.price %>
+                        <% if (product.discount!==0) { %>
+                            <div class="detalle__section-article-precio text-decoration-line-through">Por: $ <%=
+                                    product.price %>
                             </div>
-                            <div class="detalle__section-article-descuento">$ <%= product.price - product.discount%></div>
-                        <% } else { %>
-                            <div class="detalle__section-article-precio">Por: $ <%= product.price %>
+                            <div class="detalle__section-article-descuento">$ <%= product.price - product.discount%>
                             </div>
-                        <% }  %>
-                        
-                        <section class="detalle__section-botones">
-                            <div class="detalle__div-botones">
-                                <a class="más" href="#"><i class="fas fa-plus"></i></a>
-                                <a class="uno" href="#">1</a>
-                                <a class="menos" href="#"><i class="fas fa-window-minimize"></i></a>
-                            </div><a class="detalle__a-boton" href="#">COMPRAR ARTÍCULO</a>
-                        </section>
-                    </article>
-                    <article class="detalle__section-article-03">
-                        <h2>Incluye</h2>
-                        <ul>
-                            <li>Tuercas</li>
-                            <li>Taladro/Atornillador</li>
-                            <li>Puntas de atornillado</li>
-                        </ul>
+                            <% } else { %>
+                                <div class="detalle__section-article-precio">Por: $ <%= product.price %>
+                                </div>
+                                <% } %>
+
+                                    <section class="detalle__section-botones">
+                                        <div class="detalle__div-botones">
+                                            <a class="más" href="#"><i class="fas fa-plus"></i></a>
+                                            <a class="uno" href="#">1</a>
+                                            <a class="menos" href="#"><i class="fas fa-window-minimize"></i></a>
+                                        </div><a class="detalle__a-boton" href="#">COMPRAR ARTÍCULO</a>
+                                    </section>
                     </article>
                     <article class="detalle__section-article-04">
                         <div>
@@ -76,18 +70,6 @@
                                 <%= product.description %>
                             </p>
                         </div>
-                        <div class="detalle__ul__div-article-05">
-                            <h2 class="detalle-h2">Características técnicas</h2>
-                            <ul class="detalle__ul__div">
-                                <li>Potencia de entrada: 1010W</li>
-                                <li>Capacidad máx. en mampostería/Concreto: 20 mm</li>
-                                <li>Capacidad máx. en mampostería/Concreto: 20 mm</li>
-                                <li>Capacidad máx. en mampostería/Concreto: 20 mm</li>
-                                <li>Capacidad máx. en mampostería/Concreto: 20 mm</li>
-                                <li>Capacidad máx. en mampostería/Concreto: 20 mm</li>
-                                <li>Capacidad máx. en mampostería/Concreto: 20 mm</li>
-                            </ul>
-                        </div>
                     </article>
                     <article class="detalle__carrusel-02">
                         <h1 class="tituloDestacados">Productos relacionados</h1>
@@ -95,22 +77,32 @@
                             <!-- swiper ---------- -->
                             <div class="swiper mySwiper2 ">
                                 <div class="swiper-wrapper">
-                                    
-                                        <!-- swiper -->
-                                        <% productsRel.forEach(product => { %>
+
+                                    <!-- swiper -->
+
+                                    <% productsRel.forEach(productRel=> { %>
+                                        <% if (productRel.category.id===product.category.id) { %>
                                             <div class="swiper-slide">
-                                            <% if (product.discount!== 0) { %>
                                                 <div class="card_recomendados">
-                                                    <img src="/img/products/<%= product.image %>" class=" img-fluid" alt="#">
+                                                    <img src="/img/products/<%= productRel.image %>" class="img-fluid"
+                                                        alt="#">
                                                     <div class="descripcion_recomendados">
-                                                        <h5><%= product.discount %></h5>
-                                                        <p><%= product.description %></p>
-                                                        <a class="btn btn-primary" href="/products/detalle/<%= product.id %>">Ver Producto</a>
+                                                        <h5>
+                                                            <%= productRel.discount %>%
+                                                        </h5>
+                                                        <p>
+                                                            <%= productRel.description %>
+                                                        </p>
+                                                        <a class="btn btn-primary"
+                                                            href="/productRels/detalle/<%= productRel.id %>">Ver
+                                                            Producto</a>
                                                     </div>
                                                 </div>
-                                            <% } %>
                                             </div>
-                                        <% }) %>
+                                            <% } %>
+
+                                                <% }) %>
+
                                 </div>
                                 <div class="swiper-pagination detalle__div__swiper-pagination"></div>
                                 <div class="swiper-button-next arrow-next"></div>

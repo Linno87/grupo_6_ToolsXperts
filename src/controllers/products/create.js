@@ -39,8 +39,8 @@ module.exports = (req, res) => {
   } else {
     if (req.files.length) {
       req.files.forEach((file) => {
-        existsSync("./public/images/" + file.filename) &&
-          unlinkSync("./public/images/" + file.filename);
+        existsSync("./public/img/products" + file.filename) &&
+          unlinkSync("./public/img/products" + file.filename);
       });
     }
 
