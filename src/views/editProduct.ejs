@@ -13,10 +13,10 @@
                         <hr>
                     </div>
 <!-- NOMBRE -->
-                    <div class="clase_formularios_cajas">
-                        <label for="name" class="form-label">Nombre:</label>
+                    <div class="w-100 clase_formularios_cajas">
+                        <label for="name" class="form-label" style="width: 120px;" >Nombre:</label>
                         <input type="text"
-                            class="form-control <%= locals.errors && (errors.name && 'is-invalid') %>"  id="name"
+                            class="<%= locals.errors && (errors.name && 'is-invalid') %> "  id="name"
                             minlength="3" maxlength="20" name="name"
                             value="<%= product.name %>" required />
                         <small class="ms-2 text-danger">
@@ -81,7 +81,6 @@
                         </small>
                     </div>
 <!-- DESCUENTO -->
-                    <div class="clase_formularios_cajas"></div>
 
                     <div class="clase_formularios_cajas descuento">
                         <label for="discount" class="form-label">Descuento(%):</label>

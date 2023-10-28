@@ -145,6 +145,9 @@
   .clase_formularios_cajas{
     width: 50%;
   }
+  .clase_formularios_cajas_nombre{
+    width: 15%;
+  }
   .tex_area {
     width:100%;
     display: flex;

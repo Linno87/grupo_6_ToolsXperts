@@ -167,7 +167,7 @@ div.detalle__div-img {
   background-color: var(--AzulTransparente);
   margin: 20px;
   border-radius: 30px;
-  padding: 20px;
+  padding: 10px;
 }
 
 /* CAJA DE LAS LI-INCLUYE */
@@ -179,7 +179,7 @@ div.detalle__div-img {
 /* DESCRIPCIÓN Y CARACTERÍSTICAS-MOBILE */
 .detalle__section-article-04 P {
   text-align: center;
-  padding-bottom: 15px;
+  padding-bottom: 5px;
 }
 
 /* DESCRIPCIÓN Y CARACTERÍSTICAS-MOBILE */
@@ -598,11 +598,9 @@ div.detalle__div-img {
 
     /* CONTENER DESCRIPCIÓN Y CARACTERÍSTICAS-DESKTOP */
     article.detalle__section-article-04 {
-      display: flex;
-      flex-wrap: wrap;
-      flex-direction: row;
+      display: block;
       width: 90%;
-      height: 600px;
+      max-height : 400px;
     }
 
     /* CAJA DE LAS LI-INCLUYE-DESKTOP */

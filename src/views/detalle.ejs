@@ -86,16 +86,23 @@
                                                 <div class="card_recomendados">
                                                     <img src="/img/products/<%= productRel.image %>" class="img-fluid"
                                                         alt="#">
-                                                    <div class="descripcion_recomendados">
-                                                        <h5>
-                                                            <%= productRel.discount %>%
-                                                        </h5>
-                                                        <p>
-                                                            <%= productRel.description %>
-                                                        </p>
-                                                        <a class="btn btn-primary"
-                                                            href="/productRels/detalle/<%= productRel.id %>">Ver
-                                                            Producto</a>
+                                                    <div >
+                                                        <% if (productRel.discount!==0) { %>
+                                                                <div class="descripcion_recomendados">
+                                                                    <h5 >
+                                                                        <%= productRel.discount %>%
+                                                                    </h5>
+                                                                </div>
+                                                        <% } %>
+                                                        
+                                                        <div class="d-flex flex-column align-items-center">
+                                                            <p class="card-text">
+                                                               <%= productRel.description %>
+                                                            </p>
+                                                         <a class="btn btn-primary "
+                                                                href="/products/detalle/<%= productRel.id %>">Ver
+                                                                Producto</a>
+                                                            </div>
                                                     </div>
                                                 </div>
                                             </div>
