@@ -17,7 +17,7 @@
                                 <label for="name" class="form-label" style="width: 120px;">Nombre:</label>
                                 <input type="text"
                                     class="form-control <%= locals.errors && (errors.name && 'is-invalid') %>" id="name"
-                                    placeholder="Nombre del producto" minlength="3" maxlength="20" name="name"
+                                    placeholder="Nombre del producto" minlength="3" maxlength="50" name="name"
                                     value="<%= locals.old && (old.name && old.name) %>" required />
                                 <small class="ms-2 text-danger">
                                     <%= locals.errors && (errors.name && errors.name.msg) %>
