@@ -48,7 +48,7 @@
                             <div class="detalle__section-article-precio text-decoration-line-through">Por: $ <%=
                                     product.price %>
                             </div>
-                            <div class="detalle__section-article-descuento">$ <%= product.price - product.discount%>
+                            <div class="detalle__section-article-descuento">$ <%= product.price - ((product.price*product.discount)/100)%>
                             </div>
                             <% } else { %>
                                 <div class="detalle__section-article-precio">Por: $ <%= product.price %>
@@ -64,9 +64,9 @@
                                     </section>
                     </article>
                     <article class="detalle__section-article-04">
-                        <div>
+                        <div class="w-100">
                             <h2 class="detalle-h2">Descripción</h2>
-                            <p class="w-100">
+                            <p >
                                 <%= product.description %>
                             </p>
                         </div>
