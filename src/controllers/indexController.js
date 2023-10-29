@@ -10,8 +10,9 @@ module.exports = {
     } )
     const brands = db.Brand.findAll()
     Promise.all([products,brands])
-   
+     
     .then(([products,brands]) =>{
+      
       return res.render("index", {
         products,
         brands
