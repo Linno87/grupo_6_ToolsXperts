@@ -10,6 +10,7 @@ const session = require('express-session')
 const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
 const productsRouter = require('./routes/products');
+const apiRouter = require('./routes/apis');
 
 /* middlewares */
 const cookieCheck = require('./middlewares/cookieCheck');
@@ -41,6 +42,7 @@ app.use(localsCheck);
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/products', productsRouter);
+app.use('/apis', apiRouter);
 
 
 

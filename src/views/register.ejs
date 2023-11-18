@@ -25,14 +25,14 @@
                 </div>
                 <div class="register_main_form_box">
                     <h1>Registrate</h1>
-                    <form class="register_main_form" action="" method="POST" enctype="multipart/form-data">
+                    <form id="formRegister" class="register_main_form" action="" method="POST" enctype="multipart/form-data">
                         <input type="hidden" name="csrfmiddlewaretoken" value="{{ csrf_token }}">
                         <div class="register_main_form_div">
                             <p class="register_main_form_inp_box">
                                 <label for="first_name">Nombre</label>
                                 <input type="text" class="form-control" id="first_name" name="first_name" value="<%= locals.old && (old.first_name && old.first_name)%>"
                                     placeholder="Nombre">
-                                <span class="text-danger fw-bold">
+                                <span id="msgError-first_name" class="text-danger fw-bold">
                                     <%=locals.errors?.first_name?.msg%>
                                 </span>
                             </p>
@@ -40,7 +40,7 @@
                                 <label for="last_name">Apellido</label>
                                 <input type="text" class="form-control" id="last_name" name="last_name" value="<%= locals.old && (old.last_name && old.last_name)  %>"
                                     placeholder="Apellido">
-                                <span class="text-danger fw-bold">
+                                <span id="msgError-last_name" class="text-danger fw-bold">
                                     <%=locals.errors?.last_name?.msg%>
                                 </span>
                             </p>
@@ -49,7 +49,7 @@
                             <label for="email">Correo electrónico</label>
                             <input type="email" class="form-control" id="email" name="email"
                                 placeholder="hello@ejemplo.com">
-                            <span class="text-danger fw-bold">
+                            <span id="msgError-email" class="text-danger fw-bold">
                                 <%=locals.errors?.email?.msg%>
                             </span>
                         </p>
@@ -57,35 +57,36 @@
                             <p class="register_main_form_inp_box">
                                 <label for="password">Contraseña</label>
                                 <input type="password" class="form-control" id="password" name="password"
-                                    placeholder="Ingresa tu contraseña">
-                                <span class="text-danger fw-bold">
+                                    placeholder="Ingresa tu contraseña"><i id="viewPassword" class="fa fa-eye"></i>
+                                <span id="msgError-password" class="text-danger fw-bold">
                                     <%=locals.errors?.password?.msg%>
                                 </span>
                             </p>
                             <p class="register_main_form_inp_box">
                                 <label for="password_confirmation">Confirmar contraseña</label>
                                 <input type="password" class="form-control" id="password_confirmation"
-                                    name="password_confirmation" placeholder="Confirma tu contraseña">
-                                <span class="text-danger fw-bold">
+                                    name="password_confirmation" placeholder="Confirma tu contraseña"><i id="viewPassword2" class="fa fa-eye"></i>
+                                <span id="msgError-password_confirmation" class="text-danger fw-bold">
                                     <%=locals.errors?.password_confirmation?.msg%>
                                 </span>
                             </p>
                         </div>
                         <div class="register_main_form_div">
                             <p class="register_main_form_inp_box">
-                                <label for="date">FECHA DE NACIMIENTO</label>
+                                <label for="date">Fecha de nacimiento</label>
                                 <input type="date" name="date" id="date" value="<%= locals.old && (old.date && old.date) %>">
-                                <span class="text-danger fw-bold">
+                                <span id="msgError-date" class="text-danger fw-bold">
                                     <%=locals.errors?.date?.msg%>
                                 </span>
                             </p>
                             <p class="register_main_form_inp_box">
                                 <label for="gender">Género</label>
                                 <select name="gender" id="gender">
+                                    <option value="" disabled selected hidden>Elige tu género</option>
                                     <option value="hombre" <%= locals.old && (old.gender==='hombre' && 'selected') %>>Hombre</option>
                                     <option value="mujer" <%= locals.old && (old.gender==='mujer' && 'selected') %>>Mujer</option>
                                     <option value="otro" <%= locals.old && (old.gender==='otro' && 'selected') %>>Prefiero no decirlo</option>
-                                    <span class="text-danger fw-bold">
+                                    <span id="msgError-gender" class="text-danger fw-bold">
                                         <%=locals.errors?.gender?.msg%>
                                     </span>
                                 </select>
@@ -94,6 +95,7 @@
                         <div>
                             <input class="boton__general btn_register" type="submit" value="REGISTRATE" />
                         </div>
+                        <span class="text-danger fw-bold text-center" id="msgError-empty" class="text-danger fw-bold"></span>
                     </form>
                     <div class="register_main_redes">
                         <a href="https://www.instagram.com/"><i class="fab fa-instagram-square"></i></a>
@@ -104,4 +106,5 @@
                 </div>
             </main>
             <%- include("./partials/footer") %>
+            <script src="/javascripts/validationRegister.js"></script>
     </body>
