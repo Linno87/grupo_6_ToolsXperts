@@ -39,6 +39,7 @@
                                     </div>
                                 </nav>
                                 <div class="tab-content" id="nav-tabContent">
+                                    <div class="col-12">
                                     <div class="tab-pane fade show active" id="nav-home" role="tabpanel"
                                         aria-labelledby="nav-home-tab" tabindex="0">
                                         <div class="d-flex flex-column gap-2 flex-md-row justify-content-between my-3">
@@ -46,7 +47,7 @@
                                                 <a href="/products/createProduct"><button><i
                                                             class="fa-solid fa-plus fa-2xl"></i>Agregar</button></a>
                                             </div>
-                                            <form action="/admin/search" class="d-flex flex-column flex-md-row gap-2"
+                                            <form id="formAdminSearch" action="/admin/search" class="d-flex flex-column flex-md-row gap-2"
                                                 method="GET">
                                                 <select class="form-select" name="brand">
                                                     <option selected hidden value="">Filtrar por marca</option>
@@ -56,12 +57,13 @@
                                                     
                                                 </select>
                                                 <input type="text" class="form-control" placeholder="Buscar..."
-                                                    name="keywords">
+                                                    name="keywords" id="adminSearch">
                                                 <button type="submit" class="btn btn-danger">
                                                     <i class="fas fa-search"></i>
                                                 </button>
-
                                             </form>
+                                            </div>
+                                            <small id="msg-AdminSearch" class="text-danger d-flex justify-content-end"></small>
                                         </div>
                                         <div class="table-responsive">
                                             <table class="table table-striped">
@@ -100,13 +102,13 @@
                                                                 <%= brand ? brand.name : "Sin especificar" %>
                                                             </td>
                                                             <td>
-                                                                <%= price + ' $' %>
+                                                                <%= ' $'+ price %>
                                                             </td>
                                                             <td>
                                                                 <%= discount + ' %' %>
                                                             </td>
                                                             <td>
-                                                                <%= price - (discount * price / 100) + ' $' %>
+                                                                <%=  ' $' + price - (discount * price / 100) %>
                                                             </td>
                                                             <td>
                                                                 <div class="d-flex gap-2">
@@ -195,7 +197,9 @@
                 </div>
 
             </main>
+            <script src="/javascripts/searchAdmin.js"></script>
             <%- include("./partials/footer") %>
+            
     </body>
 
 </html>
