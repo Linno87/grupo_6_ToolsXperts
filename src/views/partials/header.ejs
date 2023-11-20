@@ -50,6 +50,7 @@
                     </div>
         </div>
     </div>
+    
     </div>
     <div class="bottom_bar">
         <nav class="navbar">
@@ -61,14 +62,18 @@
         </nav>
 
 
-        <form class="search_bar" action="/search" method="GET">
-            <input type="search" class="w-100" name="keywords"
-                placeholder="¿Qué estas buscando? Nosotros te lo encontramos...">
-
-            <button class="lupa" type="submit">
+        <form id="formSearch" class="search_bar" action="/search" method="GET">
+           <div class="col-10">
+           <input type="search" id="search" class="w-100" name="keywords"
+            placeholder="¿Qué estas buscando? Nosotros te lo encontramos...">
+            <span id="msg-search" class="text-danger fw-bold col-12 msg-search" >
+            </span>
+            </div>
+            <button class="lupa" id="lupa" type="submit">
                 <i class="fa-solid fa-magnifying-glass"></i>
             </button>
         </form>
+        
 
         <div class="dropdown dropdown-menu-div">
             <button class="btn burguer_menu" type="button" data-bs-toggle="dropdown" aria-expanded="false"><i
