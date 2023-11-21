@@ -16,7 +16,7 @@ window.onload = function () {
         $("msg-name").innerHTML = "Debes ingresar como minimo 5 caracteres";
         this.classList.add("is-invalid");
         break;
-      case !/^[a-zA-Z0-9]*$/.test(this.value.trim()):
+      case !/^[ a-zA-Z0-9]*$/.test(this.value.trim()):
         $("msg-name").innerHTML = "Solo se permiten letras y números";
         this.classList.add("is-invalid");
         break;
