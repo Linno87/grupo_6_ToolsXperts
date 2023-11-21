@@ -114,10 +114,20 @@
   font-weight: 600;
   font-size: 17px;
 }
+.btn_img:hover {
+  border: solid 1px var(--Rojo);
+  color: var(--Rojo);
+  background-color: var(--AzulTransparente);
+  cursor: pointer;
+}
 .btn_form:hover {
   border: solid 2px var(--Rojo);
   color: var(--Rojo);
   background-color: var(--AzulTransparente);
+}
+/* agrego borde rojo para resaltar error */
+.is-invalid{
+  border: solid 1px red !important;
 }
 
 @media (min-width: 768px) {
@@ -141,12 +151,10 @@
   }
   .clase_formularios_cajas .btn_img {
     margin: 0 auto;
+
   }
   .clase_formularios_cajas{
     width: 50%;
-  }
-  .clase_formularios_cajas_nombre{
-    width: 15%;
   }
   .tex_area {
     width:100%;
@@ -197,4 +205,5 @@
   .tex_area {
     width: 100%;
   }
+
 }

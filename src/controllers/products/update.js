@@ -1,10 +1,16 @@
 const { existsSync, unlinkSync } = require("fs");
 const db = require("../../database/models")
+const {validationResult} = require("express-validator");
+const { error } = require("console");
+
 module.exports = (req, res) => {
-  
+  const errors = validationResult(req)
+
   const id = req.params.id;
 
   const { name, categoryId, brandId, price, discount, description, rubroId } = req.body;
+  
+if (errors.isEmpty()) {
   
 /* desde la base de datos trae el producto con el método findByPk(busca por id), eh incluye las "images" de la base de datos  */
   db.Product.findByPk(id,{
@@ -63,6 +69,33 @@ module.exports = (req, res) => {
  });
 })
 .catch((error)=> console.log(error));   
+
+}else{
+ const product = db.Product.findByPk(req.params.id,{
+    include: ["images"],
+  });
+
+  const brands = db.Brand.findAll({
+    order: ["name"],
+  });
+
+  const categories = db.Category.findAll({
+    order: ["name"],
+  });
+
+  Promise.all([product, brands, categories])
+    .then(([product, brands, categories]) => {
+      
+      return res.render("editProduct", {
+        product,
+        brands,
+        categories,
+        old: req.body,
+        errors: errors.mapped()
+      });
+    })
+    .catch((error) => console.log(error));
+}
   };
 
  

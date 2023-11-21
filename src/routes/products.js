@@ -12,6 +12,8 @@ const {
 const upload = require("../middlewares/upload");
 const productAddValidator = require("../validations/productAddValidator");
 const router = express.Router();
+const productUpateValidator = require("../validations/productUpdateValidations");
+
 
 /* /products */
 router.get("/", products);
@@ -42,6 +44,7 @@ router.put(
       name: "images"
     }
   ]), 
+  productUpateValidator,
   updateProduct
 );
 router.get("/detalle/:id", detalle);
