@@ -1,65 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<%- include("./partials/head", { title: "LOGIN"}) %>
+<%- include("./partials/head", { title: "LOGIN" }) %>
 
-<body class="login">
-    <%- include("./partials/header") %>
+    <body class="login">
+        <%- include("./partials/header") %>
 
-    <!-- main -->
+            <!-- main -->
 
-    <main class="login_main">
+            <main class="login_main">
 
-        <div class="login_main_logo_box">
+                <div class="login_main_logo_box">
 
-            <a href="/"><img src="/img/Login/Logo-Toolsxperts_login.png" alt="logo_imagen"></a>
+                    <a href="/"><img src="/img/Login/Logo-Toolsxperts_login.png" alt="logo_imagen"></a>
 
 
-            <div>
-                <h1>Login</h1>
-                <h4>Sign in to continue</h4>
-                <hr>
-            </div>
-            <div>
-                <p>"Somos una empresa...</p>
-                <button class="boton__general btn_login">Learn More</button>
-            </div>
-        </div>
-        <div class="login_main_form_box">
-            <h1> Sign in</h1>
-            <form class="login_main_form" method="POST">
-                <p class="login_main_form_inp_box">
-                    <label for="email">EMAIL</label>
-                    <!-- value contiene lo que viaja por old y llega a traves del req.body (lo que ya escribió en el input que es tomado del name) -->
-                    <input type="email" name="email" id="email" value="<%= locals.old && old.email %>" placeholder="hello@ejemplo.com" />
-                    
-                        <% if (locals.errors && errors.email) { %>
-                            <small class="login_errorMsg"><%= errors.email.msg %></small>
-                            <% } %>
-                </p>
-                <p class="login_main_form_inp_box">
-                    <label for="password">PASSWORD</label>
-                    <input type="password" name="password" id="password" value="<%= locals.old && old.password %>" placeholder="Ingresa tu contraseña" />
-                </p>
-                    <small class="login_errorMsg"><%= locals.errors && errors.password.msg%></small>
-                    <label for="remember"><small style="font-size:1rem;">Recordarme!</small>  <input type="checkbox" name="remember" id="remember"></label>
-                
-                <div>
-                    <input class="boton__general btn_login" type="submit" value="Login" />
+                    <div>
+                        <h1>Login</h1>
+                        <h4>Sign in to continue</h4>
+                        <hr>
+                    </div>
+                    <div>
+                        <p>"Somos una empresa...</p>
+                        <button class="boton__general btn_login">Learn More</button>
+                    </div>
                 </div>
+                <div class="login_main_form_box">
+                    <h1> Sign in</h1>
+                    <form class="login_main_form" method="POST" enctype="multipart/form-data">
+                        <p class="login_main_form_inp_box">
+                            <label for="email">EMAIL</label>
+                            <!-- value contiene lo que viaja por old y llega a traves del req.body (lo que ya escribió en el input que es tomado del name) -->
+                            <input type="email" name="email" id="email" value="<%= locals.old && old.email %>"
+                                placeholder="hello@ejemplo.com" />
 
-            </form>
-            <div class="login_main_redes">
-                <a href="https://www.instagram.com/"><i class="fab fa-instagram-square"></i></a>
-                <a href="https://www.facebook.com/"><i class="fab fa-facebook" style="color:var(--AzulClaro)"></i></a>
-                <a href="https://myaccount.google.com"><i class="fab fa-google-plus-square"></i></a>
-            </div>
-        </div>
-    </main>
+                            <% if (locals.errors && errors.email) { %>
+                                <span id="msgError-email_login" class="text-danger fw-bold">
+                                    <%=locals.errors?.email?.msg%>
+                                </span>
+                                <% } %>
+                        </p>
+                        <p class="login_main_form_inp_box">
+                            <label for="password">PASSWORD</label>
+                            <input type="password" name="password" id="password"
+                                value="<%= locals.old && old.password %>" placeholder="Ingresa tu contraseña" />
+                        </p>
+                        <span id="msgError-password_login" class="text-danger fw-bold">
+                            <%=locals.errors?.email?.msg%>
+                        </span>
+                        <label for="remember"><small style="font-size:1rem;">Recordarme!</small> <input type="checkbox"
+                                name="remember" id="remember"></label>
 
-    <!-- footer -->
+                        <div>
+                            <input class="boton__general btn_login" type="submit" value="Login" />
+                        </div>
 
-    <%- include("./partials/footer") %>
-</body>
+                    </form>
+                    <div class="login_main_redes">
+                        <a href="https://www.instagram.com/"><i class="fab fa-instagram-square"></i></a>
+                        <a href="https://www.facebook.com/"><i class="fab fa-facebook"
+                                style="color:var(--AzulClaro)"></i></a>
+                        <a href="https://myaccount.google.com"><i class="fab fa-google-plus-square"></i></a>
+                    </div>
+                </div>
+            </main>
+
+            <!-- footer -->
+
+            <%- include("./partials/footer") %>
+    </body>
 
 </html>
