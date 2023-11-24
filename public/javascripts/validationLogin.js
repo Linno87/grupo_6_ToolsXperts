@@ -1,44 +1,44 @@
 const $ = (id) => document.getElementById(id);
 
 window.onload = function () {
-  $("email_login").addEventListener("focus", function (e) {
-    $("msgError-email_login").innerHTML = null;
+  $("email").addEventListener("focus", function (e) {
+    $("msgError-email").innerHTML = null;
     this.classList.remove("is-invalid");
     this.classList.remove("is-valid");
   });
 
-  $("email_login").addEventListener("blur", function (e) {
+  $("email").addEventListener("blur", function (e) {
     switch (true) {
       case !this.value.trim():
-        $("msgError-email_login").innerHTML = "El email es obligatorio";
+        $("msgError-email").innerHTML = "El email es obligatorio";
         this.classList.add("is-invalid");
         break;
       case !/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/.test(this.value.trim()):
-        $("msgError-email_login").innerHTML = "El formato es inválido";
+        $("msgError-email").innerHTML = "El formato es inválido";
         this.classList.add("is-invalid");
         break;
       default:
-        $("msgError-email_login").innerHTML = null;
+        $("msgError-email").innerHTML = null;
         this.classList.add("is-valid");
         this.classList.remove("is-invalid");
         break;
     }
   });
 
-  $("password_login").addEventListener("focus", function (e) {
-    $("msgError-password_login").innerHTML = null;
+  $("password").addEventListener("focus", function (e) {
+    $("msgError-password").innerHTML = null;
     this.classList.remove("is-invalid");
     this.classList.remove("is-valid");
   });
 
-  $("password_login").addEventListener("blur", function (e) {
+  $("password").addEventListener("blur", function (e) {
     switch (true) {
       case !this.value.trim():
-        $("msgError-password_login").innerHTML = "La contraseña es obligatoria";
+        $("msgError-password").innerHTML = "La contraseña es obligatoria";
         this.classList.add("is-invalid");
         break;
       default:
-        $("msgError-password_login").innerHTML = null;
+        $("msgError-password").innerHTML = null;
         this.classList.add("is-valid");
         this.classList.remove("is-invalid");
         break;
@@ -58,7 +58,7 @@ window.onload = function () {
       ) {
         error = true;
         elementsForm[i].classList.add("is-invalid");
-        $("msgError-empty_login").innerHTML = "El formulario tiene errores";
+        $("msgError-empty").innerHTML = "El formulario tiene errores";
       }
     }
 

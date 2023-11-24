@@ -27,12 +27,12 @@
                 </div>
                 <div class="login_main_form_box">
                     <h1> Sign in</h1>
-                    <form class="login_main_form" method="POST">
+                    <form id="formLogin" class="login_main_form" method="POST">
                         <p class="login_main_form_inp_box">
                             <label for="email">EMAIL</label>
                             <input type="email" name="email" id="email" value="<%= locals.old && old.email %>"
                                 placeholder="hello@ejemplo.com" />
-                            <span id="msgError-email_login" class="text-danger fw-bold">
+                            <span id="msgError-email" class="text-danger fw-bold">
                                 <%= locals.errors?.email?.msg %>
                             </span>
                         </p>
@@ -40,7 +40,7 @@
                             <label for="password">PASSWORD</label>
                             <input type="password" name="password" id="password"
                                 value="<%= locals.old && old.password %>" placeholder="Ingresa tu contraseña" />
-                            <span id="msgError-password_login" class="text-danger fw-bold">
+                            <span id="msgError-password" class="text-danger fw-bold">
                                 <%= locals.errors?.password?.msg %>
                             </span>
                         </p>
@@ -50,6 +50,8 @@
                         <div>
                             <input class="boton__general btn_login" type="submit" value="Login" />
                         </div>
+                        <span class="text-danger fw-bold text-center" id="msgError-empty"
+                            class="text-danger fw-bold"></span>
 
                     </form>
                     <div class="login_main_redes">
@@ -60,7 +62,7 @@
                     </div>
                 </div>
             </main>
-
+            <script src="/javascripts/validationLogin.js"></script>
             <!-- footer -->
 
             <%- include("./partials/footer") %>
