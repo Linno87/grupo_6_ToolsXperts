@@ -1,10 +1,11 @@
 const { existsSync, unlinkSync } = require("fs");
 const db = require("../../database/models")
 module.exports = (req, res) => {
+ 
   
   const id = req.params.id;
 
-  const { name, categoryId, brandId, price, discount, description, rubroId } = req.body;
+  const { name, category, brand, price, discount, description, rubroId } = req.body;
   
 /* desde la base de datos trae el producto con el método findByPk(busca por id), eh incluye las "images" de la base de datos  */
   db.Product.findByPk(id,{
@@ -21,8 +22,8 @@ module.exports = (req, res) => {
     description :description.trim(),
     price,
     discount,
-    brandId,
-    categoryId :categoryId,
+    brandId : brand,
+    categoryId :category,
     rubroId,
     image :req.files.image ? req.files.image[0].filename : product.image,/* actualiza la "imagen" principal */
  },
