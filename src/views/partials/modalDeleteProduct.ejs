@@ -1,0 +1,40 @@
+<div class="modal fade" id="modalDelete<%=id%>"
+    tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="main-admin-header">
+                <div class="modal-header main-admin-header">
+                    <h5 class="modal-title modal-advertencia">
+                        Advertencia</h5>
+                    <button type="button"
+                        class="btn btn-close btn-danger"
+                        data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+            </div>
+
+            <div class="modal-body modal-body-background">
+                <p>Vas a eliminar el producto
+                    <b><%- name %>,</b> ¿Estas
+                    seguro?.
+                </p>
+            </div>
+            <div class="main-admin-header">
+                <div
+                class="modal-footer main-admin-header">
+                <button type="button"
+                    class="btn btn-primary"
+                    data-bs-dismiss="modal">Cancelar</button>
+                <form
+                    action="/products/deleteProduct/<%=id%>?_method=DELETE"
+                    method="POST">
+                    <button type="submit"
+                        class="btn btn-danger">Eliminar
+                    </button>
+                </form>
+            </div>
+                </div>
+            
+        </div>
+    </div>
+</div>
