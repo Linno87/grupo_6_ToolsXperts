@@ -39,7 +39,7 @@ module.exports = {
 
   admin : (req,res) => {
     const products = db.Product.findAll({
-      include: ['images','category','brand'],
+      include: ['category','brand','images'],
       order : ['name']
     } )
     const brands = db.Brand.findAll()

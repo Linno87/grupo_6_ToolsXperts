@@ -79,7 +79,7 @@
                                                         </td>
                                                         
                                                     <% } %>
-                                                    <% products.forEach(({id, name, brand, price, discount, category, description},index)=> { %>
+                                                    <% products.forEach(({id, name, brand, price, discount, category, description,images,image},index)=> { %>
                                                         <tr>
                                                             <th scope="row">
                                                                 <%= index + 1%>
@@ -112,8 +112,9 @@
                                                                         <i class="fas fa-eye"></i>
                                                                     </button>
 
-                                                                    <%- include('partials/modalDetailProduct',{ id,
-                                                                        name, price, discount, description})%>
+                                                                    <%- include('partials/modalDetailProduct',{
+                                                                        id, name, brand, price, discount, category, description,image,images
+                                                                        })%>
                                                                         
                                                                         <a href="/products/editProduct/<%= id %>"
                                                                             class="btn btn-sm btn-success">
