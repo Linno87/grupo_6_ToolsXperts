@@ -1,155 +1,160 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<%- include("./partials/head", { title: "HOME"}) %>
+<%- include("./partials/head", { title: "HOME" }) %>
 
-<body>
-    <%- include("./partials/header") %>
-    <main class="home__main">
+    <body>
+        <%- include("./partials/header") %>
+            <main class="home__main">
 
-        <!-- CARRUSEL HOT SALE -->
-        <section class="section--hot-sale">
-            <div class="swiper mySwiper-hot-sale">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <img src="/img/ofertas/Diseño sin título.png" class="d-block w-100" alt="Hot sale 1">
+                <!-- CARRUSEL HOT SALE -->
+                <section class="section--hot-sale">
+                    <div class="swiper mySwiper-hot-sale">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img src="/img/ofertas/Diseño sin título.png" class="d-block w-100" alt="Hot sale 1">
 
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="/img/ofertas/Diseño sin título.png" class="d-block w-100" alt="Hot sale 1">
+
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="/img/ofertas/Diseño sin título.png" class="d-block w-100" alt="Hot sale 1">
+
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="/img/ofertas/Diseño sin título.png" class="d-block w-100" alt="Hot sale 1">
+
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="/img/ofertas/Diseño sin título.png" class="d-block w-100" alt="Hot sale 1">
+
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="/img/ofertas/Diseño sin título.png" class="d-block w-100" alt="Hot sale 1">
+
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="/img/ofertas/Diseño sin título.png" class="d-block w-100" alt="Hot sale 1">
+
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="/img/ofertas/Diseño sin título.png" class="d-block w-100" alt="Hot sale 1">
+
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="/img/ofertas/Diseño sin título.png" class="d-block w-100" alt="Hot sale 1">
+
+                            </div>
+                        </div>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
                     </div>
-                    <div class="swiper-slide">
-                        <img src="/img/ofertas/Diseño sin título.png" class="d-block w-100" alt="Hot sale 1">
+                </section>
 
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="/img/ofertas/Diseño sin título.png" class="d-block w-100" alt="Hot sale 1">
+                <!-- PRODUCTOS PRICIPALES -->
+                <h1>Los Productos Más Buscados</h1>
 
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="/img/ofertas/Diseño sin título.png" class="d-block w-100" alt="Hot sale 1">
+                <!-- PRODUCTOS -->
 
+                <section class="home__main__section-productos">
+                    <div class="swiper mySwiper3">
+                        <div class="swiper-wrapper">
+                            <% products.forEach(product=>{ %>
+                                <div class="swiper-slide">
+                                    <%- include('./partials/product',{ ...product.dataValues }) %>
+                                </div>
+                                <% }) %>
+                        </div>
                     </div>
-                    <div class="swiper-slide">
-                        <img src="/img/ofertas/Diseño sin título.png" class="d-block w-100" alt="Hot sale 1">
+                </section>
 
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="/img/ofertas/Diseño sin título.png" class="d-block w-100" alt="Hot sale 1">
+                <!-- NUESTROS RUBROS -->
 
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="/img/ofertas/Diseño sin título.png" class="d-block w-100" alt="Hot sale 1">
+                <div class="home__main__div--nuestros-rubros">
+                    <h1>Nuestros Rubros</h1>
 
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="/img/ofertas/Diseño sin título.png" class="d-block w-100" alt="Hot sale 1">
-
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="/img/ofertas/Diseño sin título.png" class="d-block w-100" alt="Hot sale 1">
-
-                    </div>
+                    <!-- CARRUSEL DE RUBROS -->
+                    <section class="section--rubros">
+                        <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff"
+                            class="swiper mySwiper2-rubros">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide swiper-slide-img-rubros">
+                                    <img src="/img/rubros/Common Uses for Welding.jpg" alt="rubro1">
+                                </div>
+                                <div class="swiper-slide swiper-slide-img-rubros">
+                                    <img src="/img/rubros/istockphoto-538026470-1024x1024-transformed.jpeg"
+                                        alt="rubro2">
+                                </div>
+                                <div class="swiper-slide swiper-slide-img-rubros">
+                                    <img src="/img/rubros/istockphoto-1218386420-1024x1024-transformed (1).jpeg"
+                                        alt="rubro3">
+                                </div>
+                                <div class="swiper-slide swiper-slide-img-rubros">
+                                    <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
+                                </div>
+                            </div>
+                            <div class="swiper-button-next-rubros"></div>
+                            <div class="swiper-button-prev-rubros"></div>
+                        </div>
+                        <div class="swiper mySwiper-rubros">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide swiper-slide-img-rubros2">
+                                    <img src="/img/rubros/Common Uses for Welding.jpg" class="d-block" alt="rubro1">
+                                </div>
+                                <div class="swiper-slide swiper-slide-img-rubros2">
+                                    <img src="/img/rubros/istockphoto-538026470-1024x1024-transformed.jpeg"
+                                        alt="rubro2">
+                                </div>
+                                <div class="swiper-slide swiper-slide-img-rubros2">
+                                    <img src="/img/rubros/istockphoto-1218386420-1024x1024-transformed (1).jpeg"
+                                        alt="rubro3">
+                                </div>
+                                <div class="swiper-slide swiper-slide-img-rubros2">
+                                    <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
+                                </div>
+                            </div>
+                        </div>
+                    </section>
                 </div>
-                <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div>
-            </div>
-        </section>
 
-        <!-- OFERTAS -->
+                <!-- OFERTAS -->
 
-        <h1>Ofertas Exclusivas</h1>
+                <h1>Ofertas Exclusivas</h1>
 
-        <article class="home__main__article-ofertas">
-            <a href="/search?keywords=amoladora"><img src="/img/ofertas/AMOLAORAS ofertas.png" alt="Oferta 1"></a>
-            <a href="/search?keywords=caladora"><img src="/img/ofertas/CALADORAS oferta.png" alt="Oferta 2"></a>
-            <a href="/search?keywords=taladro"><img src="/img/ofertas/Copia de TALADROS FACE.png" alt="Oferta 3"></a>
-            <a href="/search?keywords=sierra"><img src="/img/ofertas/Copia de CALADORAS FACE.png" alt="Oferta 4"></a>
-        </article>
+                <article class="home__main__article-ofertas">
+                    <a href="/search?keywords=amoladora"><img src="/img/ofertas/AMOLAORAS ofertas.png"
+                            alt="Oferta 1"></a>
+                    <a href="/search?keywords=caladora"><img src="/img/ofertas/CALADORAS oferta.png" alt="Oferta 2"></a>
+                    <a href="/search?keywords=taladro"><img src="/img/ofertas/Copia de TALADROS FACE.png"
+                            alt="Oferta 3"></a>
+                    <a href="/search?keywords=sierra"><img src="/img/ofertas/Copia de CALADORAS FACE.png"
+                            alt="Oferta 4"></a>
+                </article>
 
-        <!-- NUESTROS RUBROS -->
 
-        <div class="home__main__div--nuestros-rubros">
-            <h1>Nuestros Rubros</h1>
+                <!-- CARRUSEL DE LOGOS DE MARCAS -->
+                <section class="section--marcas">
+                    <div class="swiper mySwiper-marcas">
+                        <div class="swiper-wrapper">
+                            <% brands.forEach(brand=>{ %>
+                                <div class="swiper-slide home__main__carousel-marcas">
+                                    <img src="/img/logos/<%= brand.image %>" alt="Carrusel Logo 1">
+                                </div>
+                                <% }) %>
 
-            <!-- CARRUSEL DE RUBROS -->
-            <section class="section--rubros">
-                <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff"
-                    class="swiper mySwiper2-rubros">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide swiper-slide-img-rubros">
-                            <img src="/img/rubros/Common Uses for Welding.jpg" alt="rubro1">
-                        </div>
-                        <div class="swiper-slide swiper-slide-img-rubros">
-                            <img src="/img/rubros/istockphoto-538026470-1024x1024-transformed.jpeg" alt="rubro2">
-                        </div>
-                        <div class="swiper-slide swiper-slide-img-rubros">
-                            <img src="/img/rubros/istockphoto-1218386420-1024x1024-transformed (1).jpeg" alt="rubro3">
-                        </div>
-                        <div class="swiper-slide swiper-slide-img-rubros">
-                            <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
                         </div>
                     </div>
-                    <div class="swiper-button-next-rubros"></div>
-                    <div class="swiper-button-prev-rubros"></div>
-                </div>
-                <div class="swiper mySwiper-rubros">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide swiper-slide-img-rubros2">
-                            <img src="/img/rubros/Common Uses for Welding.jpg" class="d-block" alt="rubro1">
-                        </div>
-                        <div class="swiper-slide swiper-slide-img-rubros2">
-                            <img src="/img/rubros/istockphoto-538026470-1024x1024-transformed.jpeg" alt="rubro2">
-                        </div>
-                        <div class="swiper-slide swiper-slide-img-rubros2">
-                            <img src="/img/rubros/istockphoto-1218386420-1024x1024-transformed (1).jpeg" alt="rubro3">
-                        </div>
-                        <div class="swiper-slide swiper-slide-img-rubros2">
-                            <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </div>
+                </section>
+            </main>
+            <%- include("./partials/footer") %>
 
-        <!-- PRODUCTOS PRICIPALES -->
-        <h1>Los Productos Más Buscados</h1>
+                <!-- Swiper JS -->
+                <%- include("./partials/scripts") %>
 
-        <!-- PRODUCTOS -->
+                    <script src="/javascripts/main.js"></script>
 
-        <section class="home__main__section-productos">
-            <div class="swiper mySwiper3">
-                <div class="swiper-wrapper">
-                    <% products.forEach(product =>{ %>
-                        <div class="swiper-slide">
-                            <%- include('./partials/product',{
-                                ...product.dataValues
-                               }) %>
-                        </div>
-                    <% }) %>
-                </div>
-            </div>
-        </section>
-
-        
-        <!-- CARRUSEL DE LOGOS DE MARCAS -->
-        <section class="section--marcas">
-            <div class="swiper mySwiper-marcas">
-                <div class="swiper-wrapper">
-                    <% brands.forEach(brand =>{ %>
-                        <div class="swiper-slide home__main__carousel-marcas">
-                            <img src="/img/logos/<%= brand.image %>" alt="Carrusel Logo 1">
-                        </div>
-                    <% }) %>
-                    
-                </div>
-            </div>
-        </section>
-    </main>
-<%- include("./partials/footer") %>
-
-    <!-- Swiper JS -->
-  <%- include("./partials/scripts") %>
-
-    <script src="/javascripts/main.js"></script>
-    
-</body>
+    </body>
 
 </html>

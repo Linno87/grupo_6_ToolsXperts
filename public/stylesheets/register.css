@@ -51,8 +51,8 @@
   padding: 10px;
   border-radius: 20px;
   border: none;
-  background-color: var(--GrisClaro);
-  opacity: 25%;
+  background-color: white;
+  /* opacity: 25%; */
   width: 100%;
 }
 
@@ -68,8 +68,8 @@
   padding: 10px;
   border-radius: 20px;
   border: none;
-  background-color: var(--GrisClaro);
-  opacity: 25%;
+  background-color: white;
+  /* opacity: 25%; */
   width: 100%;
 }
 
