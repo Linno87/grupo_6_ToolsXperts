@@ -1,10 +1,10 @@
 <header class="header">
     <div class="top_bar">
 
-        <div class="dropdown dropdown-menu-div-globe">
+        <div>
             <button class="btn burguer_menu_globe" type="button" data-bs-toggle="dropdown" aria-expanded="false"><i
-                    class="fa-solid fa-globe"></i>
-            </button>
+                    class="fa-solid fa-globe globe"></i>
+            </button>       
             <ul class="dropdown-menu dropdown-menu-globe">
                 <li><a class="dropdown-item">Español</a></li>
                 <li><a class="dropdown-item">Ingles</a></li>
@@ -12,12 +12,25 @@
             </ul>
         </div>
         <% if (locals.userLogin && locals.userLogin.roleId===1 ) { %>
-            <a href="/admin"><i class="fa-solid fa-user-gear"></i></a>
+            
+            <a class="iconoAdmin" href="/admin"><i class="fas fa-user-lock"></i></a>
+            <li><a class="logout" href="/users/logout">Cerrar sesión</a><i class="far fa-window-close iconoCerrar"></i></li>
             <% } %>
                 <!--si de locals.loguin tiene información del usuario traeme su nombre, si no lo muestres-->
-                <% if (locals.userLogin) { %>
+                <% if (locals.userLogin && locals.userLogin.roleId===2) { %>
                     <!-- el botón cerrar sesión se muestra si hay usuario loguedo  -->
-                    <a class="logout" href="/users/logout">Cerrar sesión</a>
+                    <div class="dropdown">
+                    <button class="btn dropdown-menu-dark menuUser" type="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-user iconoUser"></i>
+    
+                </button>  
+                    <ul class="dropdown-menu dropdown-menu-dark menuUserFondo">
+                        <li class="dropdown-item"><a class="misCompras" href="/users/carrito">Compras</a><i class="far fa-check-circle iconoCompras"></i></li>
+                        <li class="dropdown-item"><a class="misFavoritos" href="users/favoritos">Favoritos</a><i class="far fa-star iconoFavoritos"></i></li>
+                        <li class="dropdown-item"><a class="logout logoutAdmi" href="/users/logout">Cerrar sesión</a><i class="far fa-window-close iconoCerrar"></i></li>
+                    </ul>
+                </div>
+                    
+                  
                     <h5 class="weldcome">
                         <%= `Bienvenid@ ${locals.userLogin.first_name}` %>
                     </h5>
@@ -36,18 +49,25 @@
                     <a href="/users/login"><i class="fas fa-sign-in-alt"></i></a>
                 </div>
                 <% } %>
+   
+
 
                     <div class="div_register">
-                        <% if (locals.userLogin) { %>
+                        <!-- si logueado, te muestra el perfil -->
+                        <% if (locals.userLogin  && locals.userLogin.roleId===2) { %>
                             <a href="/users/profile"><i class="fas fa-address-card"></i></a>
-                            <% }else{ %>
-                                <a href="/users/register"><i class="fas fa-address-card"></i></a>
-                                <% } %>
-
+                            <% } %>
+<!-- si no estás logueado, registrate -->
+                        <% if (!locals.userLogin) { %>
+                            <a href="/users/register"><i class="fas fa-address-card"></i></a>
+                        <% } %>  
                     </div>
+<!-- aparece carrito si sos usuario -->
+                    <% if (locals.userLogin  && locals.userLogin.roleId===2) { %>
                     <div class="div_carrito">
                         <a href="/products/carrito"><i class="fa-solid fa-cart-shopping"></i></a>
                     </div>
+                    <% } %>
         </div>
     </div>
     
