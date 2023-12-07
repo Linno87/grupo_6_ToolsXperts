@@ -1,8 +1,9 @@
 const express = require('express');
-const { checkEmail } = require('../controllers/apiController');
+const { checkEmail,addFavorite } = require('../controllers/apiController');
 const router = express.Router();
 
 /* /apis */
-router.get('/check-email', checkEmail);
+router.get('/check-email', checkEmail)
+      .get('/favoritos',addFavorite )
 
 module.exports = router;

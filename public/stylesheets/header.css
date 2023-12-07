@@ -1,17 +1,18 @@
-.top_bar {
+.top_bar{
     display: flex;
+    width: 100%;
     flex-direction: row-reverse;
     height: 32px;
     background-color: #1d3557;
     position: relative;
-    gap: 1%;
-    padding: 3px;
+    align-items: center;
+    justify-content: space-between;
 }
 
-.top_bar i {
+.globe {
     color: var(--Rojo);
-    font-size: 24px;
-    padding-right: 8px;
+    font-size: 17px;
+    padding-right: 9px;
     width: 10%;
     text-align: right;
 }
@@ -140,6 +141,8 @@
     padding: 0;
     position: relative;
     right: 6px;
+    
+
 }
 
 .burguer_menu {
@@ -170,6 +173,25 @@
 .msg-search{
     position: absolute;
     font-size: 10px;
+}
+
+.iconoCompras, .iconoFavoritos {
+    width:5%;
+    color:white;
+    font-size: 17px; 
+    padding-left: 13px;
+}
+.misFavoritos{
+    color:white;
+    font-size: 17px;
+}
+.iconoAdmin{
+position: relative;
+right: -55px;
+}
+.iconoUser{
+    color: #f1faee;
+    font-size: 17px;
 }
 
 @media (min-width: 768px) {

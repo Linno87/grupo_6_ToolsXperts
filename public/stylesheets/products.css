@@ -33,6 +33,23 @@
 .card_body h5{
     color: black
 }
+.heartFavorite{
+    position: relative;
+}
+.heart i{
+    position: absolute;
+    top:15px;
+    left: 10px;
+    cursor: pointer;
+}
+
+.relleno{
+    display: none;
+
+}
+.rellenos{
+    display: block;
+}
 
 @media (min-width: 768px) {
    
