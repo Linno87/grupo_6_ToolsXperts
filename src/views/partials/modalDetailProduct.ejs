@@ -1,0 +1,35 @@
+<div class="modal fade" id="modalDetail<%= id %>"
+    tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="main-admin-header">
+                <div class="modal-header main-admin-header">
+                    <h5  class="modal-title modal-advertencia"
+                        id="modalDetailLabel">
+                        <%= name %>
+                    </h5>
+                    <button type="button"
+                        class="btn btn-close btn-danger"
+                        data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+            </div>
+            <div class="modal-body modal-body-background">
+                <div class="row">
+                    <div class="col-12 col-md-4">
+                        <img src="/img/products/<%= image %>"
+                            class="img-fluid"
+                            alt="">
+                    </div>
+                    <div class="col-12 col-md-8">
+                        <h2><%= description %>
+                        </h2>
+                        <p>
+                          $<%= price %>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

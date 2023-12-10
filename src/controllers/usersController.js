@@ -6,5 +6,7 @@ module.exports = {
   saveUser: require("./users/saveUser"),
   profile: require("./users/profile"),
   updateProfile: require("./users/updateProfile"),
-  logout : require('./users/logout')
+  logout : require('./users/logout'),
+  carrito : require('./users/carrito'),
+  favoritos: require('./users/favoritos')
 };

@@ -110,20 +110,39 @@
 }
 
 .logout{
-    width: 40%;
+    margin: 0 0 5px 0;
+    width: 15%;
     text-align: right;
     color: #f1faee;
-    font-size: 15px;
-    margin-top: 0;
-   
+    font-size: 17px;
+    margin-left: 6px;
 }
-.weldcome{
-    width: 50%;
+.logoutAdmi{
+    margin-left:0
+}
+.iconoCerrar{
+     color:#f1faee;
+     padding-left: 3px;
+     position: relative;
+     top:2px;
+     margin-left:5px;
+    
+}
+.menuUserFondo{
+    background-color:#457b9d
+}
 
+.weldcome{
+    display: none;
+    width: 25%;
     color:#f1faee;
     text-align:left;
     margin-top: 3px;
-    font-size: 15px;
+    font-size: 12px;
+}
+.menuUser{
+    border: none;
+ 
 }
 
 @media (min-width:768px){
@@ -139,13 +158,8 @@
     .btn_login {
     padding: 5px 50px;
     }
-    .logout{
-    
-        margin-top: 0;
-       
-    }
     .weldcome{
-        margin-top: 3px;
+        display: inline-block;
       
     }
    
@@ -154,9 +168,12 @@
 @media (min-width:1024px){
 
     .logout{
+       
         width:55% ;
         margin-top:1px;
         font-size:20px ;
+padding: 5px;
+
         
       
        

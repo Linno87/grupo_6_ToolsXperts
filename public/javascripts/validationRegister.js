@@ -176,26 +176,6 @@ window.onload = function () {
     this.classList.toggle("fa-eye-slash");
   });
 
-  $("formRegister").addEventListener("submit", function (event) {
-    event.preventDefault();
-
-    const elementsForm = this.elements;
-    let error = false;
-
-    for (let i = 0; i < elementsForm.length - 1; i++) {
-      if (
-        !elementsForm[i].value.trim() ||
-        elementsForm[i].classList.contains("is-invalid")
-      ) {
-        error = true;
-        elementsForm[i].classList.add("is-invalid");
-        $("msgError-empty").innerHTML = "El formulario tiene errores";
-      }
-    }
-
-    !error && this.submit()
-  });
-  
   $("date").addEventListener("focus", function (e) {
     $("msgError-date").innerHTML = null;
     this.classList.remove("is-invalid");
@@ -246,6 +226,26 @@ window.onload = function () {
         this.classList.remove("is-invalid");
         break;
     }
+  });
+
+  $("formRegister").addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    const elementsForm = this.elements;
+    let error = false;
+
+    for (let i = 0; i < elementsForm.length - 1; i++) {
+      if (
+        !elementsForm[i].value.trim() ||
+        elementsForm[i].classList.contains("is-invalid")
+      ) {
+        error = true;
+        elementsForm[i].classList.add("is-invalid");
+        $("msgError-empty").innerHTML = "El formulario tiene errores";
+      }
+    }
+
+    !error && this.submit()
   });
   
 };

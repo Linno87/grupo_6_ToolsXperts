@@ -1,5 +1,10 @@
-<div class="card card_p">
+<div class="card card_p heartFavorite">
+    <% if (locals.userLogin) { %>
+       <span class="text-danger heart"><i class="far fa-heart fa-lg vacio"></i><i class="fas fa-heart fa-lg relleno"></i></span>
+    <% } %>
     <img src="/img/products/<%= image %>" alt="...">
+  <a href="/detalle"><%= id %></a>
+    
     <div class="card-body card_body">
         <% if (discount!==0) { %>
             <div class="descripcion_recomendados">
