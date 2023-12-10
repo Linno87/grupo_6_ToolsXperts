@@ -6,7 +6,7 @@ const router = express.Router();
 /* / */
 router.get('/', index);
 router.get('/admin', admincheck, admin)
-router.get('/search', searchProduct)
+router.get('/products/search', searchProduct)
 router.get('/admin/search',admincheck, searchAdmin)
 
 module.exports = router;

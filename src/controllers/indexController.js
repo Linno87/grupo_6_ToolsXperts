@@ -1,6 +1,21 @@
 const { readJson } = require("../data");
 const db = require('../database/models')
-const { Op } = require('sequelize')
+const { Op } = require('sequelize');
+
+rangoList = (arr, range)=>{
+  const ranges = arr.map(element=>Math.trunc(element/range));
+  
+  let result = noRpeat(ranges);
+  let resultRanges = result.map((element, index)=>element*range)
+  return resultRanges
+}
+
+noRpeat = (array)=>{
+  let result = array.filter((item,index)=>{
+    return array.indexOf(item) === index;
+  })
+  return result;
+}
 
 module.exports = {
   index: (req, res) => {
@@ -22,15 +37,34 @@ module.exports = {
   },
   searchProduct: (req, res) => {
     const key = req.query.keywords;
-    db.Product.findAll({
+
+    const products = db.Product.findAll({
       where:{
         name : { [Op.like]: `%${key}%`}
       },
-      include: ['images']
+      include: ["images","brand","category"],
+      order : ["name"]
     })
-    .then(products =>{
-      return res.render("search", {
+    
+    const brands = db.Brand.findAll({
+      order : ["name"]
+    })
+
+    const categories = db.Category.findAll({
+      order : ["name"]
+    })
+
+    Promise.all([products,categories,brands]) 
+    .then(([products,categories,brands]) => {
+      
+     
+      const prices = rangoList(products.map(product =>product.price), 10000)
+      
+      return res.render("products", {
         products,
+        brands,
+        categories,
+        prices,
         key
       });
     })

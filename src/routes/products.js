@@ -8,6 +8,7 @@ const {
   editProduct,
   updateProduct, 
   deleteProduct,
+  searchProducts,
 } = require("../controllers/productsController");
 const upload = require("../middlewares/upload");
 const productAddValidator = require("../validations/productAddValidator");
@@ -17,8 +18,8 @@ const productUpateValidator = require("../validations/productUpdateValidations")
 
 /* /products */
 router.get("/", products);
-router.get("/carrito", carrito);
 
+router.get("/carrito", carrito);
 router.get("/createProduct", add);
 router.post(
   "/createProduct",

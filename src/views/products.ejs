@@ -5,15 +5,56 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
 <body class="products_body">
     <%- include("./partials/header") %>
+
+    
+        <form class="col-12 form_search_product" action="/products" method="GET">
+            <div class="w-100 text-center align-center">
+                <h4>Filtrar por :</h4>
+            </div>
+                <select class="form-select" name="brand">
+                    <option  value="">Todas las marcas</option>
+                    <% brands.forEach(brand => { %>
+                        <option value="<%= brand.id %>"><%= brand.name %></option>
+                    <% }) %>
+                </select>
+                <select class="form-select" name="category">
+                    <option   value="">Todas las categorias</option>
+                    <% categories.forEach(category => { %>
+                        <option value="<%= category.id %>" <%=locals.old && (old.category===category.id
+                            && 'selected' )%>><%= category.name %></option>
+                    <% }) %>
+                </select>
+                <select class="form-select" name="price">
+                    <option selected value="">Todos los precios</option>
+                    <% prices.forEach( (price, index) => { %>
+                        <option value="<%= price %>"><%= price +" - "+ (prices[index+1]? (price+10000) : "max") %></option>
+                    <% }) %>
+                </select>
+                <select class="form-select" name="discount">
+                    <option selected  value="">Todos los descuentos</option>
+                    <option value="true">con descuentos </option>
+                    <option value="false">sin descuentos</option>
+                    
+                </select>
+                <button type="submit" class="boton__general ">Buscar</button>
+        </form>
+
     <main class="products_main">
-        <div class="products_cards">
-        <% products.forEach(product =>{ %>
-            <%- include('./partials/product',{
-                ...product.dataValues
-               }) %>
-            
-        <% }) %>
-        </div>
+        <% if (products.length) { %>
+            <div class="products_cards ">
+                <% products.forEach(product =>{ %>
+                   <%- include('./partials/product',{
+                    ...product.dataValues
+                   }) %>
+                       
+                <% }) %>
+                
+        <% } else{ %>
+                <div class="col-12 d-flex justify-content-center align-items-center p-5">
+                    <h2 class="py-4" style="color: black;"> No se encontraron coincidencias</h2>
+                </div>
+
+        <% } %>
     </main>
     <%- include("./partials/footer") %>
 </body>

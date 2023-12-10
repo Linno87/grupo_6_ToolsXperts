@@ -33,6 +33,19 @@
 .card_body h5{
     color: black
 }
+.form_search_product{
+    background-color: var(--AzulTransparente);
+    padding: 5px;
+    display: block;
+    gap: 5px;
+    align-items: center;
+}
+.form_search_product select{
+    padding: 10px;
+    margin: 5px;
+    border-radius: 20px;
+    background-color: var(--GrisClaro);
+}
 
 @media (min-width: 768px) {
    
@@ -41,6 +54,8 @@
         padding: 1rem;
         margin: 5px 4px;
     }
+
+    
    
 }
 @media (min-width: 1024px) {
@@ -50,5 +65,13 @@
     .products_card{
         width: 24%;
         margin-bottom: 2px;
+    }
+
+    .form_search_product{
+        
+        display: flex;
+        justify-content: center;
+        
+        
     }
 }
