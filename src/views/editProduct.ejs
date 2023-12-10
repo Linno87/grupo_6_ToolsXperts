@@ -31,21 +31,12 @@
 <!-- CATEGORIAS -->
                     <div class="clase_formularios_cajas">
                         <label for="category" class="form-label">Categoría:</label>
-                        <select class="form-select <%= locals.errors &&flo (errors.category && 'is-invalid') %>"
+                        <select class="form-select <%= locals.errors &&(errors.category && 'is-invalid') %>"
                             aria-label="Default select example" name="category" id="category">
                             
-                            <option selected hidden value=" ">
-                                <% categories.find(category => { %>
-                                    <% if (locals.old.category) { %>
-                                        <%= locals.old.category.name %>
-                                    <% } %>
-                                <% if (category.id === product.categoryId) { %>
-                                 <%= category.name %>
-                                <% } %>
-                               <% }) %>
-                          </option>
+                            
                             <% categories.forEach(category=> { %>
-                                <option value="<%= category.id %>" <%=locals.old && (old.category===category.id
+                                <option value="<%= category.id %>" <%=(product.categoryId ===category.id
                                     && 'selected' )%> >
                                     <%= category.name %>
                                 </option>
@@ -61,15 +52,9 @@
                         <select class="form-select <%= locals.errors && (errors.brand && 'is-invalid') %>"
                             aria-label="Default select example" minlength="3" maxlength="20" name="brand"
                             id="brand">
-                            <option selected hidden value="">
-                                <% brands.find(brands => { %>
-                                    <% if (brands.id === product.brandId) { %>
-                                     <%= brands.name %>
-                                    <% } %>
-                                   <% }) %>                            
-                            </option>
+                            
                             <% brands.forEach(brand=> { %>
-                                <option value="<%= brand.id %>" <%=locals.old && (old.brand===brand.id
+                                <option value="<%= brand.id %>" <%=(product.brandId===brand.id
                                     && 'selected' )%> >
                                     <%= brand.name %>
                                 </option>
