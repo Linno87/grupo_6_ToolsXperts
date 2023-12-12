@@ -36,7 +36,7 @@ const addFavorite = async (req, res) => {
       throw createError(400, 'Se precisa el id del producto')
     }
     
-        if(!req.session.userLoguin){
+        if(!req.session.userLogin){
        throw createError(403, 'El usuario no está logueado')
     }
         const favoritos = await db.Favorite.findOne({
@@ -48,7 +48,7 @@ const addFavorite = async (req, res) => {
     if (favoritos) {
       await favoritos.destroy();/* si ya no quiere al producto como favorito("lo destruye", corazón vacio)  */
     } else {
-      await db.Favorites.create({
+      await db.Favorite.create({
         productId,
         userId: req.session.userLogin.id,/* si lo quiere como favorito("lo crea",corazón relleno) */
       });

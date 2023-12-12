@@ -11,7 +11,9 @@ if(errors.isEmpty()){
 db.User.findOne({
     where: {
         email : req.body.email
-    }
+        
+    },
+    include: ["favoriteProduct"]
     
 })
 .then(user => {
@@ -19,7 +21,8 @@ db.User.findOne({
     req.session.userLogin = {
         id : user.id,
         first_name : user.first_name,
-        roleId: user.roleId
+        roleId: user.roleId,
+        favorites : user.favoriteProduct
     }
     req.body.remember != undefined && res.cookie('userRemember',req.session.userLogin,{maxAge: 1000 * 60
     }) 

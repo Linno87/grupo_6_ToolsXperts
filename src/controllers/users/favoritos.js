@@ -1,5 +1,9 @@
+
 module.exports = (req, res) => {
-    
-    return res.render("favoritos");
+/*     res.send(req.session.userLogin.favorites) */
+    return res.render("favoritos", {
+      favorites : req.session.userLogin.favorites
+    }
+    );
   };
   
