@@ -110,12 +110,12 @@
 }
 
 .logout{
-    margin: 0 0 5px 0;
-    width: 15%;
+    margin: 0 0 5px 0 !important;
+    width: 10%;
     text-align: right;
     color: #f1faee;
-    font-size: 17px;
-    margin-left: 6px;
+    font-size: 17px !important;
+
 }
 .logoutAdmi{
     margin-left:0
@@ -125,7 +125,7 @@
      padding-left: 3px;
      position: relative;
      top:2px;
-     margin-left:5px;
+   
     
 }
 .menuUserFondo{
@@ -160,6 +160,9 @@
     }
     .weldcome{
         display: inline-block;
+        margin-left: 6px;
+        padding-top: 3px;
+        font-size: 15px;
       
     }
    

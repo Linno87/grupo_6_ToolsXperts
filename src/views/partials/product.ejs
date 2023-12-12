@@ -1,5 +1,5 @@
 <div class="card card_p heartFavorite">
-    <% if (locals.userLogin) { %>
+    <% if ( locals.userLogin && locals.userLogin.roleId === 2) { %>
        <span class="text-danger heart"><i class="far fa-heart fa-lg vacio"></i><i class="fas fa-heart fa-lg relleno"></i></span>
     <% } %>
     <img src="/img/products/<%= image %>" alt="...">
