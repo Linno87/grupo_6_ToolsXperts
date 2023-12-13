@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include("./partials/head", { title: "Marcas"}) %>
+
+<body>
+    <%- include("./partials/header") %>
+    <main class="main_create">
+        <div class="main_create_cont">
+            <div class="main_create_cont_container_form">
+                <form class="clase_formularios" id="formCreateProduct" action="/brands/editbrand/<%= brand.id %>?_method=PUT"  method="POST" enctype="multipart/form-data">
+                    <div class="main__titulo-h1">
+                        <h1 >Editar marca</h1>
+                        <hr>
+                    </div>
+<!-- NOMBRE --> 
+                    <div class="w-100 clase_formularios_cajas ">
+                        
+                        <label for="name" class="form-label" style="width: 120px;" >Nombre:</label>
+                        <input type="text"
+                            class="form-control <%= locals.errors && (errors.name && 'is-invalid') %> "  id="name" name="name"
+                            value="<%= locals.old.name ? locals.old.name : brand.name %>" />
+                            <div>
+                                   <small id="msg-name" class="ms-2 text-danger d-flex justify-content-center">
+                                <%= locals.errors && (errors.name && errors.name.msg) %>
+                            </small>
+                            </div>
+                         
+                     </div>
+<!-- IMAGEN PRINCIPAL --> 
+
+<small class="ms-2 text-danger errorsUpdate">
+                            <%= locals.errors && (errors.images && errors.images.msg) %>
+                        </small>
+                     <div class="clase_formulario_botones">
+                       
+                        <div class="clase_formularios_cajas_btn_agregar">
+                            <label class="boton__general btn_img " for="image"><i
+                                    class="fa-solid fa-plus fa-2xl"></i>Imagen principal</label>
+                            <input hidden class="form-control " type="file" id="image" name="image">
+                        </div>
+
+                        <div class="clase_formularios_cajas_btn_agregar">
+                            <input class="boton__general btn_form" type="reset" value="Cancelar" onclick="window.location='/admin'"/>
+                      
+                        </div>
+                        <div class="clase_formularios_cajas_btn_agregar">
+                            
+                            <input class="boton__general btn_form" type="submit" value="Editar" />
+                        </div>
+                    </div>
+                    <small id="msg-ErrorAllElemments" class="ms-2 text-danger errorsUpdate">
+                                    
+                    </small>
+                 
+                </form>
+
+            </div>
+        </div>
+
+    </main>
+      <script src="/javascripts/productUpdateValidations.js"></script>
+    <%- include("./partials/footer") %>
+  
+</body>
+
+</html>

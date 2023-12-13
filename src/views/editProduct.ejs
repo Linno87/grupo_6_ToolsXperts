@@ -1,140 +1,154 @@
 <!DOCTYPE html>
 <html lang="en">
-    <%- include("./partials/head", { title: "Productos"}) %>
+<%- include("./partials/head", { title: "Productos" }) %>
 
-<body>
-    <%- include("./partials/header") %>
-    <main class="main_create">
-        <div class="main_create_cont">
-            <div class="main_create_cont_container_form">
-                <form class="clase_formularios" id="formCreateProduct" action="/products/editProduct/<%= product.id %>?_method=PUT"  method="POST" enctype="multipart/form-data">
-                    <div class="main__titulo-h1">
-                        <h1 >Editar producto</h1>
-                        <hr>
-                    </div>
-<!-- NOMBRE --> 
-
-
-                    <div class="w-100 clase_formularios_cajas ">
-                        
-                        <label for="name" class="form-label" style="width: 120px;" >Nombre:</label>
-                        <input type="text"
-                            class="form-control <%= locals.errors && (errors.name && 'is-invalid') %> "  id="name" name="name"
-                            value="<%= locals.old.name ? locals.old.name : product.name %>"  />
-                            <div>
-                                   <small id="msg-name" class="ms-2 text-danger d-flex justify-content-center">
-                                <%= locals.errors && (errors.name && errors.name.msg) %>
-                            </small>
+    <body>
+        <%- include("./partials/header") %>
+            <main class="main_create">
+                <div class="main_create_cont">
+                    <div class="main_create_cont_container_form">
+                        <form class="clase_formularios" id="formCreateProduct"
+                            action="/products/editProduct/<%= product.id %>?_method=PUT" method="POST"
+                            enctype="multipart/form-data">
+                            <div class="main__titulo-h1">
+                                <h1>Editar producto</h1>
+                                <hr>
                             </div>
-                         
-                     </div>
-<!-- CATEGORIAS -->
-                    <div class="clase_formularios_cajas">
-                        <label for="category" class="form-label">Categoría:</label>
-                        <select class="form-select <%= locals.errors &&(errors.category && 'is-invalid') %>"
-                            aria-label="Default select example" name="category" id="category">
-                            
-                            
-                            <% categories.forEach(category=> { %>
-                                <option value="<%= category.id %>" <%=(product.categoryId ===category.id
-                                    && 'selected' )%> >
-                                    <%= category.name %>
-                                </option>
-                                <% }) %>
-                        </select>
-                        <small class="ms-2 text-danger">
-                            <%= locals.errors && (errors.category && errors.category.msg) %>
-                        </small>
-                    </div>
-<!-- MARCAS -->
-                    <div class="clase_formularios_cajas">
-                        <label for="brand" class="form-label">Marca</label>
-                        <select class="form-select <%= locals.errors && (errors.brand && 'is-invalid') %>"
-                            aria-label="Default select example" minlength="3" maxlength="20" name="brand"
-                            id="brand">
-                            
-                            <% brands.forEach(brand=> { %>
-                                <option value="<%= brand.id %>" <%=(product.brandId===brand.id
-                                    && 'selected' )%> >
-                                    <%= brand.name %>
-                                </option>
-                                <% }) %>
-                        </select>
-                        <small id="msg-brand" class="ms-2 text-danger">
-                            <%= locals.errors && (errors.brand && errors.brand.msg) %>
-                        </small>
-                    </div>
- <!-- PRECIO -->
-                    <div class="clase_formularios_cajas">
-                        <label for="price" class="form-label">Precio ($):</label>
-                        <input type="number"
-                            class="form-control <%= locals.errors && (errors.price && 'is-invalid') %>"
-                            id="price" name="price" value="<%= locals.old.price ? locals.old.price : product.price %>">
-                        <small id="msg-price" class="ms-2 text-danger">
-                            <%= locals.errors && (errors.price && errors.price.msg) %>
-                        </small>
-                    </div>
-<!-- DESCUENTO -->
+                            <!-- NOMBRE -->
 
-                    <div class="clase_formularios_cajas descuento">
-                        <label for="discount" class="form-label">Descuento(%):</label>
-                        <input class="form-control" type="number" id="discount" name="discount" value="<%= locals.old.discount ? locals.old.discount : product.discount %>"  />
-                        <small id="msg-discount" class="ms-2 text-danger">
-                            <%= locals.errors && (errors.discount && errors.discount.msg) %>
-                        </small>    
-                    </div>
-<!-- DESCRIPCION -->
-                    <div class="clase_formularios_cajas tex_area">
-                        <label for="description" class="form-label ">Descripción</label>
-                        <textarea id="description" class="form_product_text_area" maxlength="256" rows="5" cols="20"
-                            <%=locals.errors && (errors.description && 'is-invalid' )
-                            %> style="resize: none"
+
+                            <div class="w-100 clase_formularios_cajas ">
+
+                                <label for="name" class="form-label" style="width: 120px;">Nombre:</label>
+                                <input type="text"
+                                    class="form-control <%= locals.errors && (errors.name && 'is-invalid') %> "
+                                    id="name" name="name"
+                                    value="<%= locals.old.name ? locals.old.name : product.name %>" />
+                                <div>
+                                    <small id="msg-name" class="ms-2 text-danger d-flex justify-content-center">
+                                        <%= locals.errors && (errors.name && errors.name.msg) %>
+                                    </small>
+                                </div>
+
+                            </div>
+                            <!-- CATEGORIAS -->
+                            <div class="clase_formularios_cajas">
+                                <label for="category" class="form-label">Categoría:</label>
+                                <select class="form-select <%= locals.errors &&(errors.category && 'is-invalid') %>"
+                                    aria-label="Default select example" name="category" id="category">
+
+
+                                    <% categories.forEach(category=> { %>
+                                        <option value="<%= category.id %>" <%=(product.categoryId===category.id
+                                            && 'selected' )%> >
+                                            <%= category.name %>
+                                        </option>
+                                        <% }) %>
+                                </select>
+                                <small class="ms-2 text-danger">
+                                    <%= locals.errors && (errors.category && errors.category.msg) %>
+                                </small>
+                            </div>
+                            <!-- MARCAS -->
+                            <div class="clase_formularios_cajas">
+                                <label for="brand" class="form-label">Marca</label>
+                                <select class="form-select <%= locals.errors && (errors.brand && 'is-invalid') %>"
+                                    aria-label="Default select example" minlength="3" maxlength="20" name="brand"
+                                    id="brand">
+
+                                    <% brands.forEach(brand=> { %>
+                                        <option value="<%= brand.id %>" <%=(product.brandId===brand.id && 'selected' )%>
+                                            >
+                                            <%= brand.name %>
+                                        </option>
+                                        <% }) %>
+                                </select>
+                                <small id="msg-brand" class="ms-2 text-danger">
+                                    <%= locals.errors && (errors.brand && errors.brand.msg) %>
+                                </small>
+                            </div>
+                            <!-- PRECIO -->
+                            <div class="clase_formularios_cajas">
+                                <label for="price" class="form-label">Precio ($):</label>
+                                <input type="number"
+                                    class="form-control <%= locals.errors && (errors.price && 'is-invalid') %>"
+                                    id="price" name="price"
+                                    value="<%= locals.old.price ? locals.old.price : product.price %>">
+                                <small id="msg-price" class="ms-2 text-danger">
+                                    <%= locals.errors && (errors.price && errors.price.msg) %>
+                                </small>
+                            </div>
+                            <!-- DESCUENTO -->
+
+                            <div class="clase_formularios_cajas descuento">
+                                <label for="discount" class="form-label">Descuento(%):</label>
+                                <input class="form-control" type="number" id="discount" name="discount"
+                                    value="<%= locals.old.discount ? locals.old.discount : product.discount %>" />
+                                <small id="msg-discount" class="ms-2 text-danger">
+                                    <%= locals.errors && (errors.discount && errors.discount.msg) %>
+                                </small>
+                            </div>
+                            <!-- DESCRIPCION -->
+                            <div class="col-12">
+                                <div class="clase_formularios_cajas tex_area">
+                                    <label for="description" class="form-label">Descripción</label>
+                                    <textarea class="form_product_text_area" id="description" rows="5" cols="20"
+                                        <%=locals.errors && (errors.description && 'is-invalid' ) %> style="resize: none;"
                             name="description" ><%= locals.old.description ? locals.old.description : product.description %></textarea>
-                        <small id="msg-description" class="ms-2 text-danger" >
-                            <%= locals.errors && (errors.description && errors.description.msg) %>
-                        </small>
+                                </div>
+                                <div class="col-12 d-flex justify-content-between">
+                                    <small id="msg-description" class="ms-2 text-danger">
+                                        <%= locals.errors && (errors.description && errors.description.msg) %>
+                                    </small>
+                                    <div class="d-flex justify-content-center col-2">
+                                        <p id="numWrite" class=""></p>
+                                        <p> /350</p>
+                                    </div>
+                                </div>
+                            </div>
                     </div>
-<!-- IMAGEN PRINCIPAL --> 
+                    <!-- IMAGEN PRINCIPAL -->
 
-<small class="ms-2 text-danger errorsUpdate">
-                            <%= locals.errors && (errors.images && errors.images.msg) %>
-                        </small>
-                     <div class="clase_formulario_botones">
-                       
+                    <small class="ms-2 text-danger errorsUpdate">
+                        <%= locals.errors && (errors.images && errors.images.msg) %>
+                    </small>
+                    <div class="clase_formulario_botones">
+
                         <div class="clase_formularios_cajas_btn_agregar">
                             <label class="boton__general btn_img " for="image"><i
                                     class="fa-solid fa-plus fa-2xl"></i>Imagen principal</label>
                             <input hidden class="form-control " type="file" id="image" name="image">
                         </div>
-<!-- IMAGENES SECUNDARIAS -->
+                        <!-- IMAGENES SECUNDARIAS -->
                         <div class="clase_formularios_cajas_btn_agregar">
                             <label class="boton__general btn_img" for="images"><i
                                     class="fa-solid fa-plus fa-2xl"></i>Imagenes Secundarias</label>
-                            <input hidden multiple type="file" id="images" name="images"/>
+                            <input hidden multiple type="file" id="images" name="images" />
 
                         </div>
                         <div class="clase_formularios_cajas_btn_agregar">
-                            <input class="boton__general btn_form" type="reset" value="Cancelar" onclick="window.location='/admin'"/>
-                      
+                            <input class="boton__general btn_form" type="reset" value="Cancelar"
+                                onclick="window.location='/admin'" />
+
                         </div>
                         <div class="clase_formularios_cajas_btn_agregar">
-                            
+
                             <input class="boton__general btn_form" type="submit" value="Editar" />
                         </div>
                     </div>
                     <small id="msg-ErrorAllElemments" class="ms-2 text-danger errorsUpdate">
-                                    
+
                     </small>
-                 
-                </form>
 
-            </div>
-        </div>
+                    </form>
 
-    </main>
-      <script src="/javascripts/productUpdateValidations.js"></script>
-    <%- include("./partials/footer") %>
-  
-</body>
+                </div>
+                </div>
+
+            </main>
+            <script src="/javascripts/productUpdateValidations.js"></script>
+            <%- include("./partials/footer") %>
+
+    </body>
 
 </html>

@@ -18,7 +18,7 @@
                     <div class="col-12 col-md-12 mx-auto">
                         <div class="card main-admin-container">
                             <div class="card-header main-admin-header">
-                                <h3 class="card-title">Productos</h3>
+                                <h3 class="card-title">Dashboard Admin</h3>
                             </div>
                             <div class="card-body">
                                 <nav>
@@ -31,7 +31,7 @@
                                             aria-controls="nav-profile" aria-selected="false">Marcas</button>
                                     </div>
                                 </nav>
-                                <div class="tab-content" id="nav-tabContent">
+                                <div class="tab-content" id="nav-tabContentProduct">
                                     <div class="col-12">
                                     <div class="tab-pane fade show active" id="nav-home" role="tabpanel"
                                         aria-labelledby="nav-home-tab" tabindex="0">
@@ -47,7 +47,6 @@
                                                     <% brands.forEach(brand => { %>
                                                         <option value="<%= brand.id %>"><%= brand.name %></option>
                                                     <% }) %>
-                                                    
                                                 </select>
                                                 <input type="text" class="form-control" placeholder="Buscar..."
                                                     name="keywords" id="adminSearch">
@@ -136,28 +135,84 @@
                                             </table>
                                         </div>
                                     </div>
-                                    <div class="tab-pane fade" id="nav-profile" role="tabpanel"
+                                </div>
+                                <div class="tab-content d-none" id="nav-tabContentBrand">
+                                    <div class="col-12">
+                                    <div class="tab-pane fade show active" id="nav-profile" role="tabpanel"
                                         aria-labelledby="nav-profile-tab" tabindex="0">
-                                        Todas las marcas
-                                    </div>
-                                    <div class="tab-pane fade" id="nav-contact" role="tabpanel"
-                                        aria-labelledby="nav-contact-tab" tabindex="0">
-                                        Todos los Rubros
-                                    </div>
-                                    <div class="tab-pane fade" id="nav-Inactivos" role="tabpanel"
-                                        aria-labelledby="nav-contact-tab" tabindex="0">
-                                        Productos Inactivos
+                                        <div class="d-flex flex-column gap-2 flex-md-row justify-content-between my-3">
+                                            <div class="admin_filter">
+                                                <a href="/brands/createBrand"><button><i
+                                                            class="fa-solid fa-plus fa-2xl"></i>Agregar</button></a>
+                                            </div>
+                                            </div>
+                                            <small id="msg-AdminSearch" class="text-danger d-flex justify-content-end"></small>
+                                        </div>
+                                        <div class="table-responsive">
+                                            <table class="table table-striped">
+                                                <thead>
+                                                    <tr>
+                                                        <th scope="col">#</th>
+                                                        <th scope="col">Nombre</th>
+                                                        <th scope="col">Acciones</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <% if (!brands.length) { %>
+                                                        <td class="table-danger" colspan="8">
+                                                            <h5 class="text-align-center">Marca no encontrada</h5>
+                                                        </td>
+                                                        
+                                                    <% } %>
+                                                    <% brands.forEach(({id, name,images,image},index)=> { %>
+                                                        <tr>
+                                                            <th scope="row">
+                                                                <%= index + 1%>
+                                                            </th>
+                                                            <td>
+                                                                <%= name %>
+                                                            </td>
+                                                            <td>
+                                                                <div class="d-flex gap-2">
+                                                                        <button type="button"
+                                                                        class="btn btn-sm  btn-primary"
+                                                                        data-bs-toggle="modal"
+                                                                        data-bs-target="#modalDetailBrand<%= id %>">
+                                                                        <i class="fas fa-eye"></i>
+                                                                    </button>
+
+                                                                    <%- include('partials/modalDetailBrand',{
+                                                                        id, name,image,images
+                                                                        })%>
+                                                                        
+                                                                        <a href="/brands/editBrand/<%= id %>"
+                                                                            class="btn btn-sm btn-success">
+                                                                            <i class="fas fa-edit"></i>
+                                                                        </a>
+
+                                                                        <button type="button"
+                                                                            class="btn btn-sm btn-danger"
+                                                                            data-bs-toggle="modal"
+                                                                            data-bs-target="#modalDeleteBrand<%=id%>">
+                                                                            <i class="fas fa-trash"></i>
+                                                                        </button>
+                                                                        <%- include('partials/modalDeleteBrand',{id,name}) %>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        <% }) %>
+                                                </tbody>
+                                            </table>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-
             </main>
+            <script src="/javascripts/admin.js"></script>
             <script src="/javascripts/searchAdmin.js"></script>
             <%- include("./partials/footer") %>
-            
     </body>
-
 </html>
