@@ -108,6 +108,26 @@ window.onload = function () {
         break;
     }
   });
+  
+  // Cuenta cantidad de caracteres y lo resta.
+  $("numWrite").innerText = 0;
+
+  $("description").addEventListener("focus", function (e) {
+    window.addEventListener("keyup", function (e) {
+        let liveKey = $("description").value.length;
+        let textArea = $("description").value
+        console.log(e.key);
+        if(liveKey < 350){
+            $("numWrite").innerText = liveKey;
+        }else{
+            $("description").value = textArea.substring(0,350);
+            e.preventDefault()
+        }
+    })
+
+    $("msg-description").innerHTML = null;
+    this.classList.remove("is-invalid");
+  });
 
   $("formCreateProduct").addEventListener("submit", function (event) {
     event.preventDefault();
