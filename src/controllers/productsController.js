@@ -59,6 +59,12 @@ module.exports = {
           brands,
           categories,
           prices,
+          old: { 
+            brand,
+            price,
+            category,
+            discount
+          }
         });
       })
       .catch((error) => console.log(error));

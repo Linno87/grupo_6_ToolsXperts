@@ -18,7 +18,6 @@ const productUpateValidator = require("../validations/productUpdateValidations")
 
 /* /products */
 router.get("/", products);
-
 router.get("/carrito", carrito);
 router.get("/createProduct", add);
 router.post(

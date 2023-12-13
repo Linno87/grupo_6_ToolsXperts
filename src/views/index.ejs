@@ -59,9 +59,9 @@
 
         <article class="home__main__article-ofertas">
             <a href="/products?category=4"><img src="/img/ofertas/AMOLAORAS ofertas.png" alt="Oferta 1"></a>
-            <a href="/products/search?keywords=caladora"><img src="/img/ofertas/CALADORAS oferta.png" alt="Oferta 2"></a>
-            <a href="/search?keywords=taladro"><img src="/img/ofertas/Copia de TALADROS FACE.png" alt="Oferta 3"></a>
-            <a href="/search?keywords=sierra"><img src="/img/ofertas/Copia de CALADORAS FACE.png" alt="Oferta 4"></a>
+            <a href="/products?category=3"><img src="/img/ofertas/CALADORAS oferta.png" alt="Oferta 2"></a>
+            <a href="/products?category=2"><img src="/img/ofertas/Copia de TALADROS FACE.png" alt="Oferta 3"></a>
+            <a href="/products?category=3"><img src="/img/ofertas/Copia de CALADORAS FACE.png" alt="Oferta 4"></a>
         </article>
 
         <!-- NUESTROS RUBROS -->
@@ -135,7 +135,7 @@
                 <div class="swiper-wrapper">
                     <% brands.forEach(brand =>{ %>
                         <div class="swiper-slide home__main__carousel-marcas">
-                            <img src="/img/logos/<%= brand.image %>" alt="Carrusel Logo 1">
+                            <a href="/products?brand=<%= brand.id %>"><img src="/img/logos/<%= brand.image %>" alt="Carrusel Logo 1"></a>
                         </div>
                     <% }) %>
                     

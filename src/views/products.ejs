@@ -7,14 +7,15 @@
     <%- include("./partials/header") %>
 
     
-        <form class="col-12 form_search_product" action="/products" method="GET">
+        <form class="col-12 form_search_product" action="/products" method="GET" enctype="multipart/form-data">
             <div class="w-100 text-center align-center">
                 <h4>Filtrar por :</h4>
             </div>
                 <select class="form-select" name="brand">
                     <option  value="">Todas las marcas</option>
                     <% brands.forEach(brand => { %>
-                        <option value="<%= brand.id %>"><%= brand.name %></option>
+                        <option value="<%= brand.id %>" <%= locals.old && (old.brand===brand.id
+                            && 'selected' )%>><%= brand.name %></option>
                     <% }) %>
                 </select>
                 <select class="form-select" name="category">
