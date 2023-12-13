@@ -40,6 +40,13 @@
     gap: 5px;
     align-items: center;
 }
+.form_search_product button{
+    display: flex;
+    margin: 0 auto;
+    width: 250px;
+    justify-content: center;
+    
+}
 .form_search_product select{
     padding: 10px;
     margin: 5px;
@@ -85,7 +92,6 @@
     }
 
     .form_search_product{
-        
         display: flex;
         justify-content: center;
         

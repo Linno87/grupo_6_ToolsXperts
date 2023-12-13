@@ -59,13 +59,14 @@ module.exports = {
           brands,
           categories,
           prices,
-          old: { 
-            brand,
-            price,
-            category,
-            discount
-          }
+          discount,
+          findBrand: brand,
+          findPrice : price? +Math.trunc(price/10000)*10000: -1,
+          findCategory : category,
+          
+          
         });
+        
       })
       .catch((error) => console.log(error));
   },

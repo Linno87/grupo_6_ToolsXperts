@@ -14,30 +14,28 @@
                 <select class="form-select" name="brand">
                     <option  value="">Todas las marcas</option>
                     <% brands.forEach(brand => { %>
-                        <option value="<%= brand.id %>" <%= locals.old && (old.brand===brand.id
-                            && 'selected' )%>><%= brand.name %></option>
+                        <option value="<%= brand.id %>" <%= ((brand.id === +findBrand) && "selected")%> ><%= brand.name %></option>
                     <% }) %>
                 </select>
                 <select class="form-select" name="category">
                     <option   value="">Todas las categorias</option>
                     <% categories.forEach(category => { %>
-                        <option value="<%= category.id %>" <%=locals.old && (old.category===category.id
-                            && 'selected' )%>><%= category.name %></option>
+                        <option value="<%= category.id %>"<%= ((category.id === +findCategory) && "selected")%> ><%= category.name %></option>
                     <% }) %>
                 </select>
                 <select class="form-select" name="price">
                     <option selected value="">Todos los precios</option>
                     <% prices.forEach( (price, index) => { %>
-                        <option value="<%= price %>"><%= price +" - "+ (prices[index+1]? (price+10000) : "max") %></option>
+                        <option value="<%= price %>" <%= (price===findPrice && price<findPrice+10000)&& "selected" %>><%= price +" - "+ (prices[index+1]? (price+10000) : "max") %></option>
                     <% }) %>
                 </select>
                 <select class="form-select" name="discount">
-                    <option selected  value="">Todos los descuentos</option>
-                    <option value="true">con descuentos </option>
-                    <option value="false">sin descuentos</option>
+                    <option selected  value="">Todos los productos</option>
+                    <option value="true" <%= (discount==="true")&& "selected" %>>con descuentos </option>
+                    <option value="false" <%= (discount==="false")&& "selected" %>>sin descuentos</option>
                     
                 </select>
-                <button type="submit" class="boton__general ">Buscar</button>
+                <button type="submit" class="boton__general col-2">Buscar</button>
         </form>
 
     <main class="products_main">
