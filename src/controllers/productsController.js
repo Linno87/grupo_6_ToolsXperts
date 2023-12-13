@@ -77,7 +77,7 @@ module.exports = {
 
   detalle: (req, res) => {
     const product = db.Product.findByPk(req.params.id, {
-      include: ["images","category"],
+      include: ["images","category","brand"],
     })
       
    const productsRel = db.Product.findAll({
