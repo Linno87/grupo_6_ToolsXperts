@@ -153,6 +153,15 @@
 .mySwiper_img-marcas {
   width: 100%;
 }
+/* FAVORITOS */
+.tituloFavoritos{
+  font-family: var(--tipografiaGeneral);
+  color: #457b9d;
+  border-bottom: 2px;
+  box-shadow: 2px 3px 2px #a8dadc;
+  margin-bottom: 25px;
+  margin-top:10px ;
+}
 
 @media (min-width: 768px) {
   /* HOT SALE */
