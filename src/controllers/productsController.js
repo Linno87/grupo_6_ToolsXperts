@@ -4,7 +4,11 @@ rangoList = (arr, range)=>{
   const ranges = arr.map(element=>Math.trunc(element/range));
   
   let result = noRpeat(ranges);
-  let resultRanges = result.map((element, index)=>element*range)
+  let resultRanges = result.map((element, index)=>element*range);
+  resultRanges = resultRanges.sort(function (a, b) {
+    return a - b;
+  });
+
   return resultRanges
 }
 
