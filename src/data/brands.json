@@ -6,7 +6,7 @@
         "name" :"Barovo",
         "image" : "logo barovo.png"
     },{
-        "name" : "bahco",
+        "name" : "Bahco",
         "image" : "logo bahco.png"
     },
     {
@@ -20,5 +20,13 @@
     {
         "name" : "Fischer",
         "image" : "logo fischer.png"
+    },
+    {
+        "name": "Skil",
+        "image": "SKIL_Logo.png"
+    },
+    {
+        "name": "Kushiro",
+        "image": "kushiro.png"
     }
 ]
