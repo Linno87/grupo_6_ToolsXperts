@@ -14,7 +14,7 @@
                 <select class="form-select" name="brand">
                     <option  value="">Todas las marcas</option>
                     <% brands.forEach(brand => { %>
-                        <option value="<%= brand.id %>" <%= ((brand.id === +findBrand) && "selected")%> ><%= brand.name %></option>
+                        <option value="<%= brand.id %>" <%= (((brand.id === +findBrand) && "selected"))%> ><%= brand.name %></option>
                     <% }) %>
                 </select>
                 <select class="form-select" name="category">

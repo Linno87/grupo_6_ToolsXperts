@@ -65,6 +65,10 @@ module.exports = {
         brands,
         categories,
         prices,
+        findBrand:0,
+        findPrice : -1,
+        findCategory : 0,
+        discount :"",
         key
       });
     })
