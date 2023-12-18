@@ -11,7 +11,7 @@
                         <div class="detalle__div-img">
                             <a href="#"><i class="far fa-heart"></i>Agregar a mis favoritos.</a>
                             <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
-                                <div class="carousel-inner">
+                                <div class="carousel-inner border border-2 border-dark rounded">
                                     <div class="carousel-item active" data-bs-interval="10000">
                                         <img src="/img/products/<%= product.image %>" alt="">
                                     </div>
@@ -20,9 +20,8 @@
                                             <div class="carousel-item" data-bs-interval="2000">
                                                 <img src="/img/products/<%= image.file %>" alt="">
                                             </div>
-                                            <% } %>
-                                                <% }) %>
-
+                                        <% } %>
+                                    <% }) %>
                                 </div>
                                 <button class="carousel-control-prev" type="button"
                                     data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
@@ -127,9 +126,9 @@
             </main>
             <%- include("./partials/footer") %>
 
-                <%- include("./partials/scripts") %>
+            <%- include("./partials/scripts") %>
 
-                    <script src="/javascripts/detalle.js"></script>
+        <script src="/javascripts/detalle.js"></script>
     </body>
 
 </html>

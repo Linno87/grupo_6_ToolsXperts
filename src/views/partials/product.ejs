@@ -3,8 +3,6 @@
        <span class="text-danger heart"><i class="far fa-heart fa-lg vacio"></i><i class="fas fa-heart fa-lg relleno"></i></span>
     <% } %>
     <img src="/img/products/<%= image %>" alt="...">
-  <a href="/detalle"><%= id %></a>
-    
     <div class="card-body card_body">
         <% if (discount!==0) { %>
             <div class="descripcion_recomendados">
@@ -12,8 +10,8 @@
             </div>
         <% } %>
         
-        <h5 class="card-title"><%= name %></h5>
-        <p class="card-text"><%= description && description.substr(0,60)%>...</p>
+        <h5 class="card-title"><%= name && name.substr(0,30) %></h5>
+        <p class="card-text"><%= description && description.substr(0,30)%>...</p>
         <a href="/products/detalle/<%= id %>" class="home__main__article--product-descripcion">ver más</a>
     </div>
 </div>
