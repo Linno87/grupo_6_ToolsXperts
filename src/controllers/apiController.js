@@ -73,7 +73,7 @@ const addFavorite = async (req, res) => {
   }
 };
 
-  const getAllProducts = async (req,res) => {
+const getAllProducts = async (req,res) => {
     try {
       
       const products = await db.Product.findAll({
