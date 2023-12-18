@@ -4,7 +4,8 @@ const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const methodOverride = require('method-override');
-const session = require('express-session')
+const session = require('express-session');
+const cors = require('cors');
 
 /* enrutadores */
 const indexRouter = require('./routes/index');
@@ -20,6 +21,8 @@ const { admin } = require('./controllers/indexController');
 const admincheck = require('./middlewares/admincheck');
 
 const app = express();
+
+app.use(cors());
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
