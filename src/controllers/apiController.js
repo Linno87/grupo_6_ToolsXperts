@@ -1,5 +1,8 @@
 const db = require("../database/models");
-const createError = require('http-errors')
+const sendErrorResponse = require("../helpers/sendErrorResponse");
+const sendSuccessResponse = require("../helpers/sendSuccessResponse");
+const addOrRemoveToFavorite = require("../services/favoriteService");
+const getAllProducts = require("../services/productsService");
 
 const checkEmail = async (req, res) => {
   try {
@@ -27,52 +30,73 @@ const checkEmail = async (req, res) => {
   }
 };
 const addFavorite = async (req, res) => {
+ try {
+  const { id } = req.session.userLogin;
+  const { productId } = req.body;
+  const { isRemove } = await addOrRemoveToFavorite({
+    userId: id,
+    productId,
+  });
+
+
+  sendSuccessResponse(res, { data: { isRemove } });
+ } catch (error) {
+  sendErrorResponse(res, error);
+ }
+
+};
+
+const list = async (req,res) => {
   try {
-    const productId =
-      req.query
-        .productId; /* recibo el id del producto por query y lo busco en la base de datos (Favorite), con findOne por coincidencia con el id que llega por query */
-   const userId = req.query.userId
-        if(!userId){
-      throw createError(400, 'Se precisa el id del producto')
+    const { withPagination = "true",page = 1, limit = 6 } = req.query;  
+    const { count, products, pages } = await getAllProducts(req, {
+      withPagination,
+      page,
+      limit: +limit,
+    });
+
+    const pagina = Object.keys(req.query).join(" ");
+    const currentPage = pagina.charAt(pagina.length - 1) 
+
+    let data = {
+      count,
+      products,
     }
+
+    if(withPagination === "true"){
+      data = {
+        pages,
+        page,
+        nextPage: +currentPage < pages ? `http://localhost:3000/apis/products?page${+currentPage + 1}`: "",
+        prevPage: +currentPage == 0 || +currentPage == 1 ? "" : `http://localhost:3000/apis/products?page${+currentPage - 1}`,
+        ...data,
+        
+
+      
+      }
+    }
+           
     
-        if(!req.session.userLogin){
-       throw createError(403, 'El usuario no está logueado')
-    }
-        const favoritos = await db.Favorite.findOne({
-      where: {
-        productId,
-        userId
+    return res.status(200).json({
+      ok: true,
+      data,
+    });
+  } catch (error) {
+    console.log(error);
+    return res.status(error.status || 500).json({
+      ok: false,
+      error: {
+        status: error.status || 500,
+        message: error.message || "Upss, hubo un error",
       },
     });
-    if (favoritos) {
-      await favoritos.destroy();/* si ya no quiere al producto como favorito("lo destruye", corazón vacio)  */
-    } else {
-      await db.Favorite.create({
-        productId,
-        userId: req.session.userLogin.id,/* si lo quiere como favorito("lo crea",corazón relleno) */
-      });
-    }
-    /* devuelvo los favoritos del usuario*/
- const favorites = await db.Favorite.findAll({
-    where: {
-        userId
-      }
- })
- return res.status(200).json({
-    ok: true,
-    data: favorites
-  });
-  } catch (error) {
-    {
-      return res.status(error.status || 500).json({
-        ok: false,
-        msg: error.message || "Hubo un error",
-      });
-    }
   }
-};
+}
+
+
+
 module.exports = {
   checkEmail,
   addFavorite,
+  list
 };

@@ -38,25 +38,12 @@
                 <button type="submit" class="boton__general col-2">Buscar</button>
         </form>
 
-    <main class="products_main">
-        <% if (products.length) { %>
-            <div class="products_cards ">
-                <% products.forEach(product =>{ %>
-                   <%- include('./partials/product',{
-                    ...product.dataValues
-                   }) %>
-                       
-                <% }) %>
-                
-        <% } else{ %>
-                <div class="col-12 d-flex justify-content-center align-items-center p-5">
-                    <h2 class="py-4" style="color: black;"> No se encontraron coincidencias</h2>
-                </div>
-
-        <% } %>
+    <main class="products_main" id="paginator">
+     
     </main>
     <%- include("./partials/footer") %>
     <script src="/javascripts/products.js"></script>
+    <script src="/javascripts/productPaginate.js"></script>
     
 </body>
 

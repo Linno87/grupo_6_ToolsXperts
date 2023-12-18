@@ -21,4 +21,5 @@ router.get("/profile", userLoginchek, profile);
 router.put('/profile', uploadUser.single("avatar"), profileValidations, updateProfile);
 router.get('/carrito', carrito)
 router.get('/favoritos', favoritos)
+
 module.exports = router;

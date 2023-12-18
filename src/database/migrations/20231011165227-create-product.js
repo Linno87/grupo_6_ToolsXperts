@@ -11,7 +11,9 @@ module.exports = {
       },
       name: {
         type: Sequelize.STRING,
-        allowNull: false
+        allowNull: false,
+        charset: 'utf8mb4', // Ajusta según tus necesidades
+        collate: 'utf8mb4_unicode_ci', // Ajusta según tus necesidades
       },
       description: {
         type: Sequelize.TEXT,
@@ -57,6 +59,9 @@ module.exports = {
         allowNull: false,
         type: Sequelize.DATE
       }
+    }, {
+      charset: 'utf8mb4', // Ajusta según tus necesidades
+      collate: 'utf8mb4_unicode_ci' // Ajusta según tus necesidades
     });
   },
   async down(queryInterface, Sequelize) {
