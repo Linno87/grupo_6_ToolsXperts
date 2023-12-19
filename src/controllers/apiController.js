@@ -91,8 +91,188 @@ const addFavorite = async (req, res) => {
     }
   }
 
+  const getProductDetails = async (req, res) => {
+    try {
+      const product = await db.Product.findByPk(req.params.id, {
+        include: ["brand", "category"],
+      });
+  
+      if (!product) {
+        throw createError(404, 'Producto no encontrado');
+      }
+  
+      return res.status(200).json({
+        ok: true,
+        data: product,
+      });
+    } catch (error) {
+      return res.status(error.status || 500).json({
+        ok: false,
+        msg: error.message || "Hubo un error",
+      });
+    }
+  };
+
+  const createProduct = async (req,res) => {
+    try {
+
+      const {name, price ,discount, description, brandId, categoryId} = req.body
+
+      const {id} = await db.Product.create({
+        name : name.trim(),
+        price: price,
+        discount: discount || 0,
+        description: description.trim(),
+        brandId,
+        categoryId,
+        image : req.files[0].filename,
+      });
+
+      const product = await db.Product.findByPk(id, {
+        include: ["brand", "category"],
+      });
+
+      product.image = `${req.protocol}://${req.get('host')}/img/products/${product.image}`
+      
+      return res.status(200).json({
+        ok : true,
+        msg: 'El producto fue creado con éxito',
+        data : product
+      });
+      
+    } catch (error) {
+      return res.status(error.status || 500).json({
+        ok: false,
+        msg: error.message || "Hubo un error",
+        data: null
+      });
+    }
+  }
+
+  const updateProduct = async (req, res) => {
+    try {
+      const { name, discount, price, description, brandId, categoryId } = req.body;
+  
+      const product = await db.Product.findByPk(req.params.id, {
+        include: ["brand", "category","images"],
+      });
+  
+      await db.Product.update(
+        {
+          name: name.trim(),
+          discount: discount || 0,
+          price,
+          description: description.trim(),
+          brandId,
+          categoryId,
+          image : req.files.length ? req.files[0].filename : product.image
+        },
+        {
+          where: {
+            id: req.params.id,
+          },
+        }
+      );
+
+      if(req.files.length){
+         const [imageRow, isCreated] = await db.Image.findOrCreate(
+            {
+              where : {
+                productId : req.params.id,
+                main : true
+              },
+              defaults : {
+                productId : req.params.id,
+                main : true,
+                file : req.files[0].filename,
+    
+              }
+            },
+          )
+          console.log(imageRow, isCreated);
+    
+        }
+
+      product.reload();
+      product.image = `${req.protocol}://${req.get('host')}/img/products/${product.image}`;
+  
+  
+      return res.status(200).json({
+        ok: true,
+        msg: "El producto fue actualizado con éxito",
+        data: product,
+      });
+    } catch (error) {
+      return res.status(error.status || 500).json({
+        ok: false,
+        msg: error.message || "Upss, hubo un error",
+        data: null,
+      });
+    }
+  };
+
+  const deleteProduct = async (req, res) => {
+    try {
+      await db.Product.destroy({
+        where: {
+          id: req.params.id,
+        },
+      });
+  
+      return res.status(200).json({
+        ok: true,
+        msg: "El producto fue eliminado con éxito",
+        data: null,
+      });
+    } catch (error) {
+      return res.status(error.status || 500).json({
+        ok: false,
+        msg: error.message || "Upss, hubo un error",
+        data: null,
+      });
+    }
+  };
+
+  const getAllBrands = async (req,res) => {
+    try {
+      
+      const brands = await db.Brand.findAll();
+      return res.status(200).json({
+        ok : true,
+        data : brands
+      });
+    } catch (error) {
+      return res.status(error.status || 500).json({
+        ok: false,
+        msg: error.message || "Hubo un error",
+      });
+    }
+  }
+
+  const getAllCategories = async (req,res) => {
+    try {
+      
+      const categories = await db.Category.findAll();
+      return res.status(200).json({
+        ok : true,
+        data : categories
+      });
+    } catch (error) {
+      return res.status(error.status || 500).json({
+        ok: false,
+        msg: error.message || "Hubo un error",
+      });
+    }
+  }
+
 module.exports = {
   checkEmail,
   addFavorite,
-  getAllProducts
+  getAllProducts,
+  getProductDetails,
+  createProduct,
+  updateProduct,
+  deleteProduct,
+  getAllBrands,
+  getAllCategories
 };
