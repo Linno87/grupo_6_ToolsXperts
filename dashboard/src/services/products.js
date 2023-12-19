@@ -1,3 +1,5 @@
+
+
 export const getProducts = async () => {
     try {
 

@@ -22,7 +22,12 @@ const admincheck = require('./middlewares/admincheck');
 
 const app = express();
 
-app.use(cors());
+app.use(cors({
+  origin: "*",
+  method: "GET, HEAD, PUT, PATCH, POST, DELETE",
+  credentials: true
+}
+));
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));

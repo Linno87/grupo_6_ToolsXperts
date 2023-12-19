@@ -127,6 +127,11 @@ window.onload = function () {
         this.classList.add("is-invalid");
         break;
 
+      case !/^[0-9 a-zA-ZñÑáéíóúÁÉÍÓÚ !@#$%^&*()_+:,.?/-]+$/.test(this.value.trim()):
+        $("msg-description").innerHTML = "Solo se permiten letras, números y caracteres";
+        this.classList.add("is-invalid");
+        break;
+
       default:
         $("aboutError").innerHTML = null;
         this.classList.add("is-valid");
