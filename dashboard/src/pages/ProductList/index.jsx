@@ -5,9 +5,6 @@ import { useEffect, useState } from "react"
 import { deleteProduct, getProducts } from "../../services/products"
 import { TableProducts } from "../../components/TableProducts"
 
-//import { TableItemProduct } from "../../components/TableItemProduct"
-//import { FormSearchProduct } from "../../components/FormSearchProduct"
-
 
 export const ProductsListPage = () => {
   const [products, setProducts] = useState([])
@@ -39,6 +36,7 @@ export const ProductsListPage = () => {
     });
   };
   const handleDeleteProduct = async (id) => {
+    
     await deleteProduct(id);
     const productsFiltered = products.filter((product) => product.id !== id);
 

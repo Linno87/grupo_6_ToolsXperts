@@ -81,7 +81,7 @@ export const FormProduct = ({
             const result = await updateProduct(formValues, formValues.id);
 
             const productsUpdated = products.map((product) => {
-                if (product.id === formValues.id) {
+                if (product.id == formValues.id) {
                     product = result.data;
                 }
                 return product;

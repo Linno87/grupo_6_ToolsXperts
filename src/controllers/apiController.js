@@ -79,9 +79,13 @@ const getAllProducts = async (req,res) => {
       const products = await db.Product.findAll({
         include : ["brand", "category"],
       });
+      const productsWithImage = products.map(product => {
+        product.image = `${req.protocol}://${req.get('host')}/img/products/${product.image}`
+        return product
+      })
       return res.status(200).json({
         ok : true,
-        data : products
+        data : productsWithImage
       });
     } catch (error) {
       return res.status(error.status || 500).json({
@@ -154,7 +158,7 @@ const getAllProducts = async (req,res) => {
       const { name, discount, price, description, brandId, categoryId } = req.body;
   
       const product = await db.Product.findByPk(req.params.id, {
-        include: ["brand", "category","images"],
+        include: ["brand", "category"],
       });
   
       await db.Product.update(
@@ -213,6 +217,19 @@ const getAllProducts = async (req,res) => {
 
   const deleteProduct = async (req, res) => {
     try {
+
+      await db.Favorite.destroy({
+        where: {
+          productId : req.params.id
+        }
+      })
+
+      await db.Image.destroy({
+        where: {
+          productId : req.params.id
+        }
+      })
+
       await db.Product.destroy({
         where: {
           id: req.params.id,
