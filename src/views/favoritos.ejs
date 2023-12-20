@@ -5,39 +5,13 @@
 
 <body>
     <%- include("./partials/header") %>
-   <main style="padding: 20px;">
-    <h1 class="tituloFavoritos">Mis Favoritos</h1>
-    <% favorites.forEach(product => { %>
-     
-  
-    <div class="card card_p heartFavorite">
-      <% if (locals.userLogin) { %>
-         <span class="text-danger heart"><i class="far fa-heart fa-lg vacio"></i><i class="fas fa-heart fa-lg relleno"></i></span>
-      <% } %>
-      <img src="/img/products/<%= product.image %>" alt="...">
-    <a href="/detalle"><%= product.id %></a>
-      
-      <div class="card-body card_body">
-          <% if (product.discount!==0) { %>
-              <div class="descripcion_recomendados">
-                  <h5 class="text-light" ><%= product.discount %> %</h5>
-              </div>
-          <% } %>
-          
-          <h5 class="card-title"><%= product.name %></h5>
-          <p class="card-text"><%= product.description && product.description.substr(0,60)%>...</p>
-          <a href="/products/detalle/<%= product.id %>" class="home__main__article--product-descripcion">ver más</a>
-      </div>
+<main>
+ <h1 class="tituloFavoritos">Favoritos</h1>
+  <div class="products_cards" id="cards-container">
+ 
   </div>
-  <% }) %>
-
-
-
-
-
-   </main>
-
-
+</main>
+ 
 
 
    
@@ -46,8 +20,8 @@
     <!-- Swiper JS -->
   <%- include("./partials/scripts") %>
 
-    <script src="/javascripts/main.js"></script>
-    
+    <script src="/javascripts/favorites.js"></script>
+   
 </body>
 
 </html>
