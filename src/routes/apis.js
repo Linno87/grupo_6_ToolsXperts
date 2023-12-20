@@ -1,11 +1,13 @@
 const express = require('express');
-const { checkEmail,addFavorite, getAllProducts, getAllBrands, getAllCategories, createProduct, updateProduct, deleteProduct, getProductDetails } = require('../controllers/apiController');
+const { checkEmail, getAllProducts, getAllBrands, getAllCategories, createProduct, updateProduct, deleteProduct, getProductDetails, getAllUsers } = require('../controllers/apiController');
 const upload = require('../middlewares/upload')
+const {getFavorite,toggleFavorite } = require('../controllers/favoriteController');
 const router = express.Router();
 
 /* /apis */
 router.get('/check-email', checkEmail)
-      .get('/favoritos',addFavorite)
+      .get('/favoritos',getFavorite)
+      .get('/users', getAllUsers)
       .get('/products', getAllProducts)
       .get('/products/:id', getProductDetails)
       .post('/products', upload.any(), createProduct)
@@ -13,6 +15,6 @@ router.get('/check-email', checkEmail)
       .delete('/products/:id',deleteProduct)
       .get('/brands', getAllBrands)
       .get('/categories', getAllCategories)
-
+      .post('/favorites/toggle',toggleFavorite)
 
 module.exports = router;

@@ -103,6 +103,12 @@
 .carrito__main__unidad__producto select {
   width: 60%;
 }
+.botonCarrito{
+  background-color: var(--AzulClaro);
+  border:none;
+  border-radius: 3px ;
+  padding:10px ;
+}
 
 @media (min-width: 768px) {
   .carrito__main__section__div-article-texto {
