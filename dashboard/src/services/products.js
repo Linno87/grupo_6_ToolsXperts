@@ -1,4 +1,14 @@
+export const getUsers = async () => {
+    try {
 
+        const response = await fetch(`${import.meta.env.VITE_API_URL}/apis/users`)
+        const result = await response.json();
+        return result
+        
+    } catch (error) {
+        console.log(error)
+    }
+}
 
 export const getProducts = async () => {
     try {

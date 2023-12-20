@@ -73,6 +73,25 @@ const addFavorite = async (req, res) => {
   }
 };
 
+const getAllUsers = async (req,res) => {
+  try {
+
+    const users = await db.User.findAll()
+
+    return res.status(200).json({
+      ok:true,
+      data: users
+    })
+    
+  } catch (error) {
+    return res.status(error.status || 500).json({
+      ok: false,
+      msg: error.message || "Hubo un error",
+    });
+  }
+}
+
+
 const getAllProducts = async (req,res) => {
     try {
       
@@ -285,6 +304,7 @@ const getAllProducts = async (req,res) => {
 module.exports = {
   checkEmail,
   addFavorite,
+  getAllUsers,
   getAllProducts,
   getProductDetails,
   createProduct,
