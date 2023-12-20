@@ -1,3 +1,5 @@
+import { Toast } from "../utils/toast";
+
 export const getUsers = async () => {
     try {
 
@@ -61,6 +63,13 @@ export const createProduct = async (data) => {
         })
         const result = await response.json();
 
+        if (result.ok) {
+            Toast.fire({
+                icon: "success",
+                title: result.msg
+            })
+        }
+
         return result
         
     } catch (error) {
@@ -82,6 +91,13 @@ export const updateProduct = async(data, id) => {
         })
         const result = await response.json();
 
+        if (result.ok) {
+            Toast.fire({
+                icon: "success",
+                title: result.msg
+            })
+        }
+
         return result
         
     } catch (error) {
@@ -97,19 +113,16 @@ export const deleteProduct = async(id) => {
         })
         const result = await response.json();
 
+        if (result.ok) {
+            Toast.fire({
+                icon: "success",
+                title: result.msg
+            })
+        }
+
         return result
         
     } catch (error) {
         console.log(error);
-    }
-}
-
-export const getProductDetails = async(id) => {
-    try {
-        const response = await fetch(`${import.meta.env.VITE_API_URL}/apis/products/${id}`)
-        const result = await response.json();
-        return result
-    } catch (error) {
-        console.error
     }
 }
