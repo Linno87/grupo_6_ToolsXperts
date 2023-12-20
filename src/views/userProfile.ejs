@@ -1,108 +1,153 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<%- include("partials/head", { title: "Perfil"}) %>
+<%- include("partials/head", { title: "Perfil" }) %>
 
     <body>
         <%- include("partials/header") %>
-        <main class="main_profile">
+            <main class="main_profile">
 
-            <h2 class="text-center w-100 p-1 perfil_usuario"><strong>Perfil de usuario</strong></h2>
+                <h2 class="text-center w-100 p-1 perfil_usuario"><strong>Perfil de usuario</strong></h2>
 
-            <div class="login_main profile_main">
+                <div class="login_main profile_main">
 
-                <!-- FORMULARIO  -->
-                <form id="profileForm" class="d-flex justify-content-center flex-wrap gap-3 p-5 " action="/users/profile?_method=PUT" method="POST" enctype="multipart/form-data">
+                    <!-- FORMULARIO  -->
+                    <form id="profileForm" class="d-flex justify-content-center flex-wrap gap-3 p-5 "
+                        action="/users/profile?_method=PUT" method="POST" enctype="multipart/form-data">
 
-                <!-- AVATAR -->    
-                    <div class="col-11 col-md-4 my-auto py-2 position-relative">
-                        <img src="/img/users/<%= avatar ? avatar : "defaultUserImg.jpg" %>" 
-                        class="img-fluid rounded-1 shadow-sm">
-                        <label for="avatar" class="profile_btn_edit"><i class="fa-solid fa-file-pen fs-3"></i>
-                        <input hidden class="form-control" type="file" id="avatar" name="avatar"></label>
-                    </div>
-                    <div class="d-flex justify-content-between flex-wrap gap-2 col-md-6">
-
-                <!-- FIRT NAME -->
-                    <div class="col-12 col-md-6">
-                        <label for="first_name"> Nombre:</label>
-                        <input class="form-control" name="first_name" id="name" value="<%= locals.old && (old.first_name && old.first_name) || first_name %>"/>
-                        <small id="firstNameError" class="ms-2 text-danger d-block"><%= locals.errors && (errors.first_name && errors.first_name.msg) %></small>
-                    </div>
-                    <!-- LAST NAME -->
-                    <div class="col-12 col-md-5">
-                        <label for="last_name">Apellido:</label>
-                        <input class="form-control" name="last_name" id="last_name" value="<%= locals.old && (old.last_name && old.last_name) || last_name %>"/>
-                        <small id="lastNameError" class="ms-2 text-danger d-block"><%= locals.errors && (errors.last_name && errors.last_name.msg) %></small>
-                    </div>
-                    <!-- EMAIL -->
-                    <div class="col-12 col-md-12">
-                        <label for="email">Email:</label>
-                        <input class="form-control email" name="email" id="email" value="<%= email %>" disabled/>
-                        <small id="emailError" class="ms-2 text-danger d-block">
-                            <%= locals.errors && (errors.email && errors.email.msg) %>
-                        </small>
-                    </div>
-                    <!-- DATE -->
-                    <div class="col-12 col-md-5">
-                        <label for="date">Nacimiento:</label>
-                        
-                        <input class="form-control" type="date" name="date" id="date" value="<%= locals.old && (old.date && old.date) || date %>"/>
-                        <small id="dateError" class="ms-2 text-danger d-block"><%= locals.errors && (errors.date && errors.date.msg) %></small>
-                    </div>
-                    <!-- GENDER-->
-                    <div class="col-12 col-md-5">
-                        <label for="gender">Género</label>
-                        <select  class="form-control" name="gender" id="gender">
-                            <option value="hombre" <%= gender==='hombre' && 'selected' %>>Hombre</option>
-                            <option value="mujer" <%= gender==='mujer' && 'selected' %>>Mujer</option>
-                            <option value="otro" <%= gender==='otro' && 'selected' %>>Prefiero no decirlo</option>
-                            <span class="text-danger fw-bold">
-                                <%=locals.errors?.gender?.msg%>
-                            </span>
-                        </select>
-                        <small id="genderError" class="ms-2 text-danger fw-bold">
-                            <%= locals.errors?.gender?.msg %>
-                        </small>
-                    </div>
-
-                    <!-- ADDRESS -->
-                    <div class="col-12 col-md-12">
-                        <label for="address">Dirección:</label>
-                        <input class="form-control direction" name="address" id="direction" value="<%= locals.old && old.address ? old.address : address[0].address %>">
-                   
-
-                       <label for="city">Ciudad:</label>
-                       <input class="form-control direction" name="city" type="text" id="city" value="<%= locals.old && old.address ? old.city : address[0].city %>" >
-
-                       <label for="province">Provincia:</label>
-                       <input class="form-control direction" name="province" type="text" id="province" value="<%= locals.old && old.address ? old.province : address[0].province %>">
+                        <!-- AVATAR -->
 
 
-                        <small id="addressError" class="ms-2 text-danger d-block"><%= locals.errors && (errors.address && errors.address.msg) %></small>
-                    </div>
 
-                    <!-- PREFERENCIAS BORRADAS -->
-                   
-                    
-                    </div>
-                    <!-- ABOUT -->
-                    <div class=" col-12 col-md-10">
-                        <label for="about">Sobre Mí: </label>
-                        <textarea class="form-control" name="about" style="height: 100px;" id="floatingTextarea2"><%= locals.old && (old.about && old.about) || about %></textarea>
-                        <small id="aboutError" class="ms-2 text-danger d-block"><%= locals.errors && (errors.about && errors.about.msg) %></small>
-                        
-                    </div>
-                    <div class="col-12 col-md-10 d-flex justify-content-end gap-3 ">
-                        <button type="reset" class="boton__general btn_login btn_profile">Cancelar</button>
-                        <button type="submit" class=" boton__general btn_login btn_profile ">Editar</button>
-                    </div>
-                    
-                <form>
+
+                        <div class="col-11 col-md-4 my-auto py-2 position-relative">
+
+                            <img src="/img/users/<%= avatar ? avatar : " defaultUserImg.jpg" %>"
+                            class="img-fluid rounded-1 shadow-sm">
+                            <div class="card text-center">
+                                <div class="card-header">
+                                    <ul class="d-grid gap-2 d-md-flex justify-content-md-end">
+                                        <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal"
+                                            data-bs-target="#modalAvatarProfile<%=id%>">
+                                            <i class="fa-solid fa-file-pen fs-3"></i>
+                                        </button>
+
+                                        <button type="button" class="btn btn-outline-danger" data-bs-toggle="modal"
+                                            data-bs-target="#modalDeleteAvatar<%=id%>">
+                                            <i class="fa-solid fa-trash fs-3"></i>
+                                        </button>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="d-flex justify-content-between flex-wrap gap-2 col-md-6">
+
+                            <!-- FIRT NAME -->
+                            <div class="col-12 col-md-6">
+                                <label for="first_name"> Nombre:</label>
+                                <input class="form-control" name="first_name" id="name"
+                                    value="<%= locals.old && (old.first_name && old.first_name) || first_name %>" />
+                                <small id="firstNameError" class="ms-2 text-danger d-block">
+                                    <%= locals.errors && (errors.first_name && errors.first_name.msg) %>
+                                </small>
+                            </div>
+                            <!-- LAST NAME -->
+                            <div class="col-12 col-md-5">
+                                <label for="last_name">Apellido:</label>
+                                <input class="form-control" name="last_name" id="last_name"
+                                    value="<%= locals.old && (old.last_name && old.last_name) || last_name %>" />
+                                <small id="lastNameError" class="ms-2 text-danger d-block">
+                                    <%= locals.errors && (errors.last_name && errors.last_name.msg) %>
+                                </small>
+                            </div>
+                            <!-- EMAIL -->
+                            <div class="col-12 col-md-12">
+                                <label for="email">Email:</label>
+                                <input class="form-control email" name="email" id="email" value="<%= email %>"
+                                    disabled />
+                                <small id="emailError" class="ms-2 text-danger d-block">
+                                    <%= locals.errors && (errors.email && errors.email.msg) %>
+                                </small>
+                            </div>
+                            <!-- DATE -->
+                            <div class="col-12 col-md-5">
+                                <label for="date">Nacimiento:</label>
+
+                                <input class="form-control" type="date" name="date" id="date"
+                                    value="<%= locals.old && (old.date && old.date) || date %>" />
+                                <small id="dateError" class="ms-2 text-danger d-block">
+                                    <%= locals.errors && (errors.date && errors.date.msg) %>
+                                </small>
+                            </div>
+                            <!-- GENDER-->
+                            <div class="col-12 col-md-5">
+                                <label for="gender">Género</label>
+                                <select class="form-control" name="gender" id="gender">
+                                    <option value="hombre" <%=gender==='hombre' && 'selected' %>>Hombre</option>
+                                    <option value="mujer" <%=gender==='mujer' && 'selected' %>>Mujer</option>
+                                    <option value="otro" <%=gender==='otro' && 'selected' %>>Prefiero no decirlo
+                                    </option>
+                                    <span class="text-danger fw-bold">
+                                        <%=locals.errors?.gender?.msg%>
+                                    </span>
+                                </select>
+                                <small id="genderError" class="ms-2 text-danger fw-bold">
+                                    <%= locals.errors?.gender?.msg %>
+                                </small>
+                            </div>
+
+                            <!-- ADDRESS -->
+                            <div class="col-12 col-md-12">
+                                <label for="address">Dirección:</label>
+                                <input class="form-control direction" name="address" id="direction"
+                                    value="<%= locals.old && old.address ? old.address : address[0].address %>">
+
+                                <label for="province">Provincia:</label>
+                                <select id="province" class="form-control" name="province">
+                                    <option selected hidden>Seleccione su provincia</option>
+                                </select>
+                                <small id="provinceError" class="ms-2 text-danger d-block">
+                                    <%= locals.errors && (errors.address && errors.address.msg) %>
+                                </small>
+
+
+                                <label for="city">Ciudad:</label>
+                                <select id="city" class="form-control" name="city">
+                                    <option selected hidden>Seleccione su cuidad</option>
+                                </select>
+                                <small id="cityError" class="ms-2 text-danger d-block">
+                                    <%= locals.errors && (errors.address && errors.address.msg) %>
+                                </small>
+
+                            </div>
+
+
+                            <!-- PREFERENCIAS BORRADAS -->
+
+
+                        </div>
+                        <!-- ABOUT -->
+                        <div class=" col-12 col-md-10">
+                            <label for="about">Sobre Mí: </label>
+                            <textarea class="form-control" name="about" style="height: 100px;"
+                                id="floatingTextarea2"><%= locals.old && (old.about && old.about) || about %></textarea>
+                            <small id="aboutError" class="ms-2 text-danger d-block">
+                                <%= locals.errors && (errors.about && errors.about.msg) %>
+                            </small>
+
+                        </div>
+                        <div class="col-12 col-md-10 d-flex justify-content-end gap-3 ">
+                            <button type="reset" class="boton__general btn_login btn_profile">Cancelar</button>
+                            <button type="submit" class=" boton__general btn_login btn_profile ">Editar</button>
+                        </div>
+
+                        <form>
                 </div>
-        </main>
-        <script src="/javascripts/validationProfile.js"></script>
-        
-        <%- include("partials/footer") %>
+            </main>
+            <script src="/javascripts/validationProfile.js"></script>
+            <%- include('partials/modalAvatarProfile', { id: id }) %>
+                <%- include('partials/modalDeleteAvatar', { id: id }) %>
+                    <%- include("partials/footer") %>
     </body>
 </html>
