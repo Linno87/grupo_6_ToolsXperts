@@ -11,7 +11,7 @@
                         <div class="detalle__div-img">
                             <a href="#"><i class="far fa-heart"></i>Agregar a mis favoritos.</a>
                             <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
-                                <div class="carousel-inner">
+                                <div class="carousel-inner border border-2 border-dark rounded">
                                     <div class="carousel-item active" data-bs-interval="10000">
                                         <img src="/img/products/<%= product.image %>" alt="">
                                     </div>
@@ -20,9 +20,8 @@
                                             <div class="carousel-item" data-bs-interval="2000">
                                                 <img src="/img/products/<%= image.file %>" alt="">
                                             </div>
-                                            <% } %>
-                                                <% }) %>
-
+                                        <% } %>
+                                    <% }) %>
                                 </div>
                                 <button class="carousel-control-prev" type="button"
                                     data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
@@ -44,24 +43,30 @@
                         <h3 class="text-uppercase mt-5">
                             <%= product.name %>
                         </h3>
+                        
                         <% if (product.discount!==0) { %>
                             <div class="detalle__section-article-precio text-decoration-line-through">Por: $ <%=
                                     product.price %>
                             </div>
-                            <div class="detalle__section-article-descuento">$ <%= product.price - ((product.price*product.discount)/100)%>
+                            <div class="detalle__section-article-descuento fs-1">$ <%= product.price - ((product.price*product.discount)/100)%>
                             </div>
                             <% } else { %>
                                 <div class="detalle__section-article-precio">Por: $ <%= product.price %>
                                 </div>
                                 <% } %>
-
-                                    <section class="detalle__section-botones">
+                               <section class="detalle__section-botones">
                                         <div class="detalle__div-botones">
                                             <a class="más" href="#"><i class="fas fa-plus"></i></a>
                                             <a class="uno" href="#">1</a>
                                             <a class="menos" href="#"><i class="fas fa-window-minimize"></i></a>
-                                        </div><a class="detalle__a-boton" href="#">COMPRAR ARTÍCULO</a>
-                                    </section>
+                                        </div>
+                                        <a class="detalle__a-boton" href="#">COMPRAR ARTÍCULO</a>
+                                </section>
+                                <div class="col-12 px-md-5 d-block d-md-flex justify-content-between">
+                                    <h5 class="fs-6">Marca : <%= product.brand.name %></h5>
+                                    <h5 class="fs-6">Categoría : <%= product.category.name %></h5>
+
+                                </div>
                     </article>
                     <article class="detalle__section-article-04">
                         <div class="w-100">
@@ -121,9 +126,9 @@
             </main>
             <%- include("./partials/footer") %>
 
-                <%- include("./partials/scripts") %>
+            <%- include("./partials/scripts") %>
 
-                    <script src="/javascripts/detalle.js"></script>
+        <script src="/javascripts/detalle.js"></script>
     </body>
 
 </html>

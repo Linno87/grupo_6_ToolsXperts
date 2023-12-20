@@ -1,5 +1,5 @@
 const express = require('express');
-const { register, login, users, saveUser, processLogin, profile, updateProfile, logout } = require('../controllers/usersController');
+const { register, login, users, saveUser, processLogin, profile, updateProfile, logout,carrito,favoritos } = require('../controllers/usersController');
 const uploadUser = require("../middlewares/uploadUser");
 const profileValidations = require('../validations/profileValidations');
 
@@ -18,6 +18,7 @@ router.post('/login' , loginValiations, processLogin);
 router.get("/", users);
 router.get("/logout",logout);/* ruta para cerrar session */
 router.get("/profile", userLoginchek, profile);
-router.put('/profile', uploadUser.single("avatar"), profileValidations, updateProfile)
-
+router.put('/profile', uploadUser.single("avatar"), profileValidations, updateProfile);
+router.get('/carrito', carrito)
+router.get('/favoritos', favoritos)
 module.exports = router;

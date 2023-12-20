@@ -198,6 +198,7 @@ div.detalle__div-img {
 
 /* titulo 2do carrusel */
 .tituloDestacados {
+  margin: 25px 0 45px 0;
   text-align: center;
   text-decoration: underline;
   font-size: 20px;

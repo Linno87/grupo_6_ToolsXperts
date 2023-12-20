@@ -4,12 +4,14 @@ const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const methodOverride = require('method-override');
-const session = require('express-session')
+const session = require('express-session');
+const cors = require('cors');
 
 /* enrutadores */
 const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
 const productsRouter = require('./routes/products');
+const brandsRouter = require('./routes/brands');
 const apiRouter = require('./routes/apis');
 
 /* middlewares */
@@ -19,6 +21,13 @@ const { admin } = require('./controllers/indexController');
 const admincheck = require('./middlewares/admincheck');
 
 const app = express();
+
+app.use(cors({
+  origin: "*",
+  method: "GET, HEAD, PUT, PATCH, POST, DELETE",
+  credentials: true
+}
+));
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -42,6 +51,7 @@ app.use(localsCheck);
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/products', productsRouter);
+app.use('/brands', brandsRouter);
 app.use('/apis', apiRouter);
 
 

@@ -1,180 +1,162 @@
 [
   {
-    "id": "916d506a-33ef-47c5-8bb7-7b45eec84579",
     "name": "Amoladora Angular 700 W",
-    "category": "amoladoras",
-    "brand": "skill",
-    "model": "9002",
+    "categoryId": 4,
+    "brandId": 7,
+    "rubroId": 1,
     "price": 19500,
     "discount": 10,
     "description": "Amoladora Angular 700 W - Skill",
-    "image": "9002-removebg-preview.png",
-    "createdAt": "2023-08-29T00:37:28.390Z"
+    "image": "9002_alta.png"
   },
   {
-    "id": "906d506a-33ef-47c5-8bb7-7b45eec84579",
     "name": "Amoladora angular 7″ BAROVO AA2KB",
-    "category": "amoladoras",
-    "brand": "barovo",
-    "model": "AA2KB",
+    "categoryId": 4,
+    "brandId": 2,
+    "rubroId": 1,
     "price": 15350,
     "discount": 15,
     "description": "Amoladora Angular 7” Barovo (AA2KB)",
-    "image": "AA2KB-removebg-preview.png",
-    "createdAt": "2023-08-29T00:56:48.857Z"
+    "image": "e15c30f2b1f5c50234ea68e045c1213effe8d9b4.jpg"
   },
   {
-    "id": "926d506a-33ef-47c5-8bb7-7b45eec84579",
     "name": "Amoladora Esmeriladora Angular 750 W",
-    "category": "amoladoras",
-    "brand": "barovo",
-    "model": "AA758",
+    "categoryId": 4,
+    "brandId": 2,
+    "rubroId": 1,
     "price": 19500,
     "discount": 10,
     "description": "Amoladora Angular 700 W - Skill",
-    "image": "AA75B-removebg-preview.png"
+    "image": "AA75B.jpg"
   },
   {
-    "id": "936d506a-33ef-47c5-8bb7-7b45eec84579",
     "name": "Sierra Caladora Skil 4550",
-    "category": "caladoras",
-    "brand": "skil",
-    "model": "4550",
+    "categoryId": 3,
+    "brandId": 7,
+    "rubroId": 1,
     "price": 34740,
     "discount": 5,
     "description": "Sierra Caladora Skil 4550 550w 220v En Caja De Cartón",
-    "image": "4550-removebg-preview.png"
+    "image": "SKIL_4550_(9).png"
   },
   {
-    "id": "946d506a-33ef-47c5-8bb7-7b45eec84579",
     "name": "Sierra Caladora Electrica 400w",
-    "category": "caladoras",
-    "brand": "barovo",
-    "model": "BAC400",
+    "categoryId": 3,
+    "brandId": 2,
+    "rubroId": 1,
     "price": 20125,
     "discount": 7,
     "description": "Sierra Caladora Electrica 400w + Maletin + Hoja Corte Madera",
-    "image": "BAC400-removebg-preview-removebg-preview.png"
+    "image": "sierra-caladora-650w-vel-variable-barovo-sci-am65.jpg"
   },
   {
-    "id": "956d506a-33ef-47c5-8bb7-7b45eec84579",
     "name": "Sierra Caladora De Banco Barovo Sc120a",
-    "category": "caladoras",
-    "brand": "barovo",
-    "model": "SC120A",
+    "categoryId": 3,
+    "brandId": 2,
+    "rubroId": 1,
     "price": 80600,
     "discount": 15,
     "description": "Sierra Caladora De Banco Barovo Sc120a 120w Vv Y Luz",
-    "image": "BAROVO_SC120A-removebg-preview.png"
+    "image": "sierra-caladora-banco-120w-velocidad-variable-barovo-sc120-a.jpg"
   },
   {
-    "id": "966d506a-33ef-47c5-8bb7-7b45eec84579",
     "name": "Multifunción Ion Litio",
-    "category": "lijadoras",
-    "brand": "barovo",
-    "model": "BIL-MH",
+    "categoryId": 6,
+    "brandId": 2,
+    "rubroId": 1,
     "price": 30700,
     "discount": 0,
     "description": "Amoladora Angular 700 W - Skill",
-    "image": "BIL-MH-removebg-preview.png"
+    "image": "mom26m1-2d6c79f8e0027980cd16720889390993-1024-1024.png"
   },
   {
-    "id": "976d506a-33ef-47c5-8bb7-7b45eec84579",
     "name": "Lijadora profesional de banda Barovo LBP-80",
-    "category": "lijadoras",
-    "brand": "skil",
-    "model": "LBP-80",
+    "categoryId": 6,
+    "brandId": 7,
+    "rubroId": 1,
     "price": 47981,
     "discount": 0,
     "description": "Lijadora profesional de banda Barovo LBP-80 amarilla 800W 220V",
-    "image": "LBP-80-removebg-preview.png"
+    "image": "barovo-lijadora-de-banda-profesional-31-0127e3d101441322eb16837501524473-1024-1024.jpg"
   },
   {
-    "id": "986d506a-33ef-47c5-8bb7-7b45eec84579",
     "name": "Pistola Pintar Latex Salpicre",
-    "category": "pintor",
-    "brand": "skil",
-    "model": "ATK-5",
+    "categoryId": 22,
+    "brandId": 7,
+    "rubroId": 1,
     "price": 15500,
     "discount": 5,
     "description": "Pistola Pintar Latex Salpicre Con Tolva Texturado Neumatico",
-    "image": "ATK-5-removebg-preview.png"
+    "image": "833073-MLA46763845697_072021-F.jpg"
   },
   {
-    "id": "996d506a-33ef-47c5-8bb7-7b45eec84579",
     "name": "Maquina De Pintar 650w Kushiro",
-    "category": "pintor",
-    "brand": "kushiro",
-    "model": "k001",
+    "categoryId": 22,
+    "brandId": 8,
+    "rubroId": 1,
     "price": 20300,
     "discount": 0,
     "description": "Amoladora Angular 700 W - Skill",
-    "image": "equipo_para_pintar_kushiro_k001_de_500_600w.webp"
+    "image": "D_NQ_NP_812186-MLA46806967470_072021-O.png"
   },
   {
-    "id": "916d516a-33ef-47c5-8bb7-7b45eec84579",
     "name": "Compresor de aire eléctrico Kushiro K100-4B",
-    "category": "pintor",
-    "brand": "kushiro",
-    "model": "K100-4B",
+    "categoryId": 7,
+    "brandId":8,
+    "rubroId": 1,
     "price": 305841,
     "discount": 10,
     "description": "Compresor de aire eléctrico Kushiro K100-4B monofásico 100L 4hp 220V negro",
-    "image": "K100-4B-removebg-preview.png"
+    "image": "D_NQ_NP_763038-MLA50953142517_082022-O.png"
   },
   {
-    "id": "916d526a-33ef-47c5-8bb7-7b45eec84579",
     "name": "Sierra Circular 7 1/4 1500w",
-    "category": "sierras_circulares",
-    "brand": "ford",
-    "model": "fx1-70",
+    "categoryId": 3,
+    "brandId": 3,
+    "rubroId": 1,
     "price": 83000,
     "discount": 0,
     "description": "Sierra Circular 7 1/4 1500w Guia Laser+led Ford Tools Fx1-70",
-    "image": "fx1-70-removebg-preview.png"
+    "image": "sierra_bahco.jpg"
   },
   {
-    "id": "916d536a-33ef-47c5-8bb7-7b45eec84579",
     "name": "Sierra Circular 7 1/4 20mm Inalambrica",
-    "category": "sierras_circulares",
-    "brand": "barovo",
-    "model": "SCIL714",
+    "categoryId": 3,
+    "brandId": 2,
+    "rubroId": 1,
     "price": 75600,
     "discount": 18,
     "description": "Sierra Circular 7 1/4 20mm Inalambrica 18v Barovo Scil714",
-    "image": "SCIL714-removebg-preview.png"
+    "image": "D_NQ_NP_847512-MLA48985911589_012022-O.png"
   },
   {
-    "id": "916d546a-33ef-47c5-8bb7-7b45eec84579",
     "name": "Atornillador 220v Durlero Durlock Barovo",
-    "category": "taladros",
-    "brand": "barovo",
-    "model": "ADW10A",
+    "categoryId": 2,
+    "brandId": 2,
+    "rubroId": 1,
     "price": 14030,
     "discount": 7,
     "description": "Atornillador 220v Durlero Durlock Barovo Adw10a 500w",
     "image": "ADW10A-removebg-preview.png"
   },
   {
-    "id": "916d556a-33ef-47c5-8bb7-7b45eec84579",
     "name": "Martillo Demoledor 15 Joules",
-    "category": "taladros",
-    "brand": "barovo",
-    "model": "MPB-45L",
+    "categoryId": 2,
+    "brandId": 2,
+    "rubroId": 1,
     "price": 19500,
     "discount": 10,
     "description": "Martillo Demoledor 15 Joules - Encastre Sds Max 1500w Barovo",
     "image": "MPB-45L-removebg-preview.png"
   },
   {
-    "id": "916d566a-33ef-47c5-8bb7-7b45eec84579",
     "name": "Hoja Sierra Circular Bosch",
-    "category": "varios",
-    "brand": "bosch",
-    "model": "MADERA",
+    "categoryId": 2,
+    "brandId": 4,
+    "rubroId": 1,
     "price": 7000,
     "discount": 13,
     "description": "Hoja Sierra Circular Bosch Para Madera 184mm 40 Dient 7 1/4",
-    "image": "24D DISCO MADERA.png"
+    "image": "hoja-sierra-circular-9-14-40-dientes-235mm-bosch.jpg"
   }
 ]

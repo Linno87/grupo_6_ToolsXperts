@@ -1,10 +1,10 @@
 <header class="header">
     <div class="top_bar">
 
-        <div class="dropdown dropdown-menu-div-globe">
+        <div>
             <button class="btn burguer_menu_globe" type="button" data-bs-toggle="dropdown" aria-expanded="false"><i
-                    class="fa-solid fa-globe"></i>
-            </button>
+                    class="fa-solid fa-globe globe"></i>
+            </button>       
             <ul class="dropdown-menu dropdown-menu-globe">
                 <li><a class="dropdown-item">Español</a></li>
                 <li><a class="dropdown-item">Ingles</a></li>
@@ -12,12 +12,28 @@
             </ul>
         </div>
         <% if (locals.userLogin && locals.userLogin.roleId===1 ) { %>
-            <a href="/admin"><i class="fa-solid fa-user-gear"></i></a>
+            <div class="d-flex justify-content-aroud iconoAdmin">
+                <a href="/admin"><i class="fas fa-user-lock"></i></a>
+                <a href="http://localhost:5173/"><i class="fa-brands fa-react"></i></a>
+            </div>
+            
+            <li><a class="logout" href="/users/logout">Cerrar sesión</a><i class="far fa-window-close iconoCerrar"></i></li>
             <% } %>
                 <!--si de locals.loguin tiene información del usuario traeme su nombre, si no lo muestres-->
-                <% if (locals.userLogin) { %>
+                <% if (locals.userLogin && locals.userLogin.roleId===2) { %>
                     <!-- el botón cerrar sesión se muestra si hay usuario loguedo  -->
-                    <a class="logout" href="/users/logout">Cerrar sesión</a>
+                    <div class="dropdown">
+
+                <button class="btn dropdown-menu-dark menuUser" type="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-user iconoUser"></i>
+                </button>  
+                    <ul class="dropdown-menu dropdown-menu-dark menuUserFondo">
+                        <li class="dropdown-item"><a class="misCompras" href="/users/carrito">Compras</a><i class="far fa-check-circle iconoCompras"></i></li>
+                        <li class="dropdown-item"><a class="misFavoritos" href="/users/favoritos">Favoritos</a><i class="far fa-star iconoFavoritos"></i></li>
+                        <li class="dropdown-item"><a class="logout logoutAdmi" href="/users/logout">Cerrar sesión</a><i class="far fa-window-close iconoCerrar"></i></li>
+                    </ul>
+                </div>
+                    
+                  
                     <h5 class="weldcome">
                         <%= `Bienvenid@ ${locals.userLogin.first_name}` %>
                     </h5>
@@ -36,18 +52,25 @@
                     <a href="/users/login"><i class="fas fa-sign-in-alt"></i></a>
                 </div>
                 <% } %>
+   
+
 
                     <div class="div_register">
-                        <% if (locals.userLogin) { %>
+                        <!-- si logueado, te muestra el perfil -->
+                        <% if (locals.userLogin  && locals.userLogin.roleId===2) { %>
                             <a href="/users/profile"><i class="fas fa-address-card"></i></a>
-                            <% }else{ %>
-                                <a href="/users/register"><i class="fas fa-address-card"></i></a>
-                                <% } %>
-
+                            <% } %>
+<!-- si no estás logueado, registrate -->
+                        <% if (!locals.userLogin) { %>
+                            <a href="/users/register"><i class="fas fa-address-card"></i></a>
+                        <% } %>  
                     </div>
+<!-- aparece carrito si sos usuario -->
+                    <% if (locals.userLogin  && locals.userLogin.roleId===2) { %>
                     <div class="div_carrito">
                         <a href="/products/carrito"><i class="fa-solid fa-cart-shopping"></i></a>
                     </div>
+                    <% } %>
         </div>
     </div>
     
@@ -60,27 +83,22 @@
                 <li><a href="#footer">Envios</a></li>
             </ul>
         </nav>
-
-
-        <form id="formSearch" class="search_bar" action="/search" method="GET">
-           <div class="col-10">
-           <input type="search" id="search" class="w-100" name="keywords"
-            placeholder="¿Qué estas buscando? Nosotros te lo encontramos...">
-            <span id="msg-search" class="text-danger fw-bold col-12 msg-search" >
-            </span>
-            </div>
-            <button class="lupa" id="lupa" type="submit">
-                <i class="fa-solid fa-magnifying-glass"></i>
-            </button>
-        </form>
         
-
+        <div class="home__header__busqueda">
+            <div class="col-10">
+                <form action="/products/search" id="formSearch" method="GET" class="search-form">
+                    <input type="text" id="search" name="keywords" placeholder="¿Qué estas buscando? Nosotros te lo encontramos..." class="search-form_input">
+                    <button id="lupa" type="submit" class="search-form_button"><i class="fas fa-search"></i></button>
+                </form>
+            </div>
+        </div>
+        
         <div class="dropdown dropdown-menu-div">
             <button class="btn burguer_menu" type="button" data-bs-toggle="dropdown" aria-expanded="false"><i
                     class="fa-solid fa-bars"></i>
             </button>
             <ul class="dropdown-menu dropdown-menu-background">
-                <li><a class="dropdown-item" href="/products/">Productos</a></li>
+                <li><a class="dropdown-item" href="/products">Productos</a></li>
                 <li><a class="dropdown-item" href="#footer">Contacto</a></li>
                 <li><a class="dropdown-item" href="#footer">Envios</a></li>
             </ul>
