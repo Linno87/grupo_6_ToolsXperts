@@ -4,8 +4,8 @@ export const TableItemProduct = ({product : {id, name, price, discount, brand, c
   return (
     <tr>
       <td>{name}</td>
-      <td>{price}</td>
-      <td>{discount}</td>
+      <td>${price}</td>
+      <td>{discount}%</td>
       <td>{brand?.name}</td>
       <td>{category?.name}</td>
       <td>

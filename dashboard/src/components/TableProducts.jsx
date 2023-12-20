@@ -57,10 +57,10 @@ export const TableProducts = ({
                         <thead>
                             <tr>
                                 <th scope="col">Nombre</th>
-                                <th scope="col">Categoria</th>
-                                <th scope="col">Marca</th>
                                 <th scope="col">Precio</th>
                                 <th scope="col">Descuento</th>
+                                <th scope="col">Categoria</th>
+                                <th scope="col">Marca</th>
                                 <th scope="col">Acciones</th>
                             </tr>
                         </thead>

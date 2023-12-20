@@ -12,8 +12,11 @@
             </ul>
         </div>
         <% if (locals.userLogin && locals.userLogin.roleId===1 ) { %>
+            <div class="d-flex justify-content-aroud iconoAdmin">
+                <a href="/admin"><i class="fas fa-user-lock"></i></a>
+                <a href="http://localhost:5173/"><i class="fa-brands fa-react"></i></a>
+            </div>
             
-            <a class="iconoAdmin" href="/admin"><i class="fas fa-user-lock"></i></a>
             <li><a class="logout" href="/users/logout">Cerrar sesión</a><i class="far fa-window-close iconoCerrar"></i></li>
             <% } %>
                 <!--si de locals.loguin tiene información del usuario traeme su nombre, si no lo muestres-->
