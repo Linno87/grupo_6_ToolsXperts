@@ -1,11 +1,11 @@
 import PropTypes from 'prop-types';
 
-export const ContentRowItemBrand = ({ title }) => {
+export const ContentRowItemBrand = ({brandName}) => {
     return (
         <div className="col-lg-6 mb-4">
             <div className="card bg-dark text-white shadow">
                 <div className="card-body">
-                    {title}
+                    {brandName}
                 </div>
             </div>
         </div>
@@ -13,5 +13,5 @@ export const ContentRowItemBrand = ({ title }) => {
 }
 
 ContentRowItemBrand.propTypes = {
-    title: PropTypes.string,
+    brandName: PropTypes.string,
 }
