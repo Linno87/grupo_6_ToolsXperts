@@ -1,7 +1,6 @@
 const express = require('express');
-const { checkEmail,addFavorite, getAllProducts, getAllBrands, getAllCategories, createProduct, updateProduct, deleteProduct, getProductDetails } = require('../controllers/apiController');
+const { checkEmail, getAllProducts, getAllBrands, getAllCategories, createProduct, updateProduct, deleteProduct, getProductDetails } = require('../controllers/apiController');
 const upload = require('../middlewares/upload')
-const { checkEmail, getAllProducts } = require('../controllers/apiController');
 const {getFavorite,toggleFavorite } = require('../controllers/favoriteController');
 const router = express.Router();
 
