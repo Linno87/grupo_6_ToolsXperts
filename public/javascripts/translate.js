@@ -6,12 +6,12 @@ let translatePt = document.querySelector("#translatePt");
 let elementTraslate = document.querySelectorAll("h1, h2, h3, h4,thead>tr>th, p, label, option, a, button")
 
 const translateFunction = async (source, target, text)=>{
-	const url = 'https://text-translator2.p.rapidapi.com/translate';
+		const url = 'https://text-translator2.p.rapidapi.com/translate';
 		const options = {
 		method: 'POST',
 		headers: {
 			'content-type': 'application/x-www-form-urlencoded',
-			'X-RapidAPI-Key': '0e421f7099msh5a9dedcef0624e0p16403ejsnf6ad076db3e4',
+			'X-RapidAPI-Key': '4f48313959mshbba10b577cf08f6p1fa056jsn58c8ce306e1d',
 			'X-RapidAPI-Host': 'text-translator2.p.rapidapi.com'
 		},
 		body: new URLSearchParams({
@@ -28,7 +28,7 @@ const functionModifyText = async (elementsArray, idioma) =>{
 	for (let index = 0; index < elementsArray.length; index++) {
 		let textTranslate = elementsArray[index].innerText;
 		if(elementsArray[index].textContent && textTranslate){
-		const result = await translateFunction("auto", idioma, textTranslate)
+		const result = await translateFunction("auto",idioma, textTranslate)
 		elementsArray[index].innerText = result.data.translatedText
 		elementsArray[index].classList.remove(idioma)
 		}
