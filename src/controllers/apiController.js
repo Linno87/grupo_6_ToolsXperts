@@ -124,6 +124,8 @@ const getProductDetails = async (req, res) => {
       throw createError(404, "Producto no encontrado");
     }
 
+    product.image = `${req.protocol}://${req.get("host")}/img/products/${product.image}`;
+
     return res.status(200).json({
       ok: true,
       data: product,
