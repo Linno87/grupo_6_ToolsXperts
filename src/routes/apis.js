@@ -3,6 +3,8 @@ const { checkEmail, getAllProducts, getAllBrands, getAllCategories, createProduc
 const upload = require('../middlewares/upload')
 const {getFavorite,toggleFavorite } = require('../controllers/favoriteController');
 const router = express.Router();
+const {addProduct,cleanCart, getOrderPending,lessQuantity,moreQuantity,removeProduct,statusOrder } = require('../controllers/cartApiController');
+
 
 /* /apis */
 router.get('/check-email', checkEmail)
@@ -11,10 +13,16 @@ router.get('/check-email', checkEmail)
       .get('/products/:id', getProductDetails)
       .post('/products', upload.any(), createProduct)
       .put('/products/:id',upload.any(), updateProduct)
-      .delete('/products/:id',deleteProduct)
+      .delete('/products/:id',deleteProduct)   
       .get('/brands', getAllBrands)
       .get('/categories', getAllCategories)
 
+      .delete('/cart/removeProduct',removeProduct)
+      .delete('/cart/cleanCart',cleanCart)
       .post('/favorites/toggle',toggleFavorite)
-
+      .post('/cart/addProduct',addProduct)
+      .get('/cart/getOrderPending',getOrderPending)
+      .put('/cart/moreQuantity',moreQuantity)
+      .put('/cart/lessQuantity',lessQuantity)
+      .put('/cart/statusOrder',statusOrder )
 module.exports = router;
