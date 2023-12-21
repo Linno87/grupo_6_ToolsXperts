@@ -1,12 +1,14 @@
 module.exports = {
-  register: require('./users/register') ,
-  login: require('./users/login'),
-  processLogin: require('./users/processLogin'),
-  users: require('./users/users'),
+  register: require("./users/register"),
+  login: require("./users/login"),
+  processLogin: require("./users/processLogin"),
+  users: require("./users/users"),
   saveUser: require("./users/saveUser"),
   profile: require("./users/profile"),
   updateProfile: require("./users/updateProfile"),
-  logout : require('./users/logout'),
-  carrito : require('./users/carrito'),
-  favoritos: require('./users/favoritos')
+  logout: require("./users/logout"),
+  carrito: require("./users/carrito"),
+  favoritos: require("./users/favoritos"),
+  updateProfileAvatar: require("./users/updateProfileAvatar"),
+  deleteAvatar: require("./users/deleteAvatar"),
 };

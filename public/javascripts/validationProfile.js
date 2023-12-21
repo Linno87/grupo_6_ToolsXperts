@@ -1,6 +1,7 @@
 const $ = (id) => document.getElementById(id);
+const baseURL = "https://apis.datos.gob.ar/georef/api";
 
-window.onload = function () {
+window.onload = async function (e) {
   $("name").addEventListener("focus", function (e) {
     $("firstNameError").innerHTML = null;
     this.classList.remove("is-invalid");
@@ -91,29 +92,6 @@ window.onload = function () {
     this.classList.remove("is-valid");
   });
 
-  ["address", "city", "province"].forEach(function (field) {
-    $(field).addEventListener("focus", function (e) {
-      $("addressError").innerHTML = null;
-      this.classList.remove("is-invalid");
-      this.classList.remove("is-valid");
-    });
-
-    $(field).addEventListener("blur", function (e) {
-      switch (true) {
-        case !this.value.trim():
-          $("addressError").innerHTML = "Este campo es obligatorio";
-          this.classList.add("is-invalid");
-          break;
-
-        default:
-          $("addressError").innerHTML = null;
-          this.classList.add("is-valid");
-          this.classList.remove("is-invalid");
-          break;
-      }
-    });
-  });
-
   $("floatingTextarea2").addEventListener("focus", function (e) {
     $("aboutError").innerHTML = null;
     this.classList.remove("is-invalid");
@@ -127,8 +105,11 @@ window.onload = function () {
         this.classList.add("is-invalid");
         break;
 
-      case !/^[0-9 a-zA-ZñÑáéíóúÁÉÍÓÚ !@#$%^&*()_+:,.?/-]+$/.test(this.value.trim()):
-        $("msg-description").innerHTML = "Solo se permiten letras, números y caracteres";
+      case !/^[0-9 a-zA-ZñÑáéíóúÁÉÍÓÚ !@#$%^&*()_+:,.?/-]+$/.test(
+        this.value.trim()
+      ):
+        $("msg-description").innerHTML =
+          "Solo se permiten letras, números y caracteres";
         this.classList.add("is-invalid");
         break;
 
@@ -158,5 +139,70 @@ window.onload = function () {
     }
 
     !error && this.submit();
+  });
+
+  try {
+    const response = await fetch(`${baseURL}/provincias`);
+    const result = await response.json();
+
+    result.provincias
+      .sort((a, b) => (a.nombre > b.nombre ? 1 : a.nombre < b.nombre ? -1 : 0))
+      .forEach(({ nombre }) => {
+        $(
+          "province"
+        ).innerHTML += `<option value="${nombre}">${nombre}</option>`;
+      });
+  } catch (error) {
+    console.error(error);
+  }
+
+  $("province").addEventListener("change", async function (e) {
+    $("city").disabled = true;
+
+    try {
+      const response = await fetch(
+        `${baseURL}/localidades?provincia=${this.value}&max=1000`
+      );
+      const result = await response.json();
+
+      if (result) {
+        $("city").disabled = false;
+
+        $("city").innerHTML = `<option value="">Seleccione...</option>`;
+
+        result.localidades
+          .sort((a, b) => a.nombre.localeCompare(b.nombre))
+          .forEach(({ nombre }) => {
+            $(
+              "city"
+            ).innerHTML += `<option value="${nombre}">${nombre}</option>`;
+          });
+      }
+    } catch (error) {
+      console.error(error);
+    }
+  });
+
+  ["address", "city", "province"].forEach(function (field) {
+    $(field).addEventListener("focus", function (e) {
+      $("addressError").innerHTML = null;
+      this.classList.remove("is-invalid");
+      this.classList.remove("is-valid");
+    });
+
+    $(field).addEventListener("blur", function (e) {
+      switch (true) {
+        case !this.value.trim():
+          $("addressError").innerHTML = "Este campo es obligatorio";
+          this.classList.add("is-invalid");
+          break;
+
+        default:
+          $("addressError").innerHTML = null;
+          this.classList.add("is-valid");
+          this.classList.remove("is-invalid");
+          break;
+      }
+    });
   });
 };
