@@ -9,36 +9,38 @@
                         aria-label="Close"></button>
                 </div>
             </div>
+            <form id="form_avatar" enctype="multipart/form-data" action="/users/profile/avatar/<%= id %>?_method=PUT" method="POST">
+                <div class="modal-body modal-body-background">
 
-            <div class="modal-body modal-body-background">
-                <div class="d-flex justify-content-between align-items-center" style="margin-bottom: 1rem;">
-                    <p class="mb-0">Elije la nueva imagen que quieras subir</p>
+                    <div class="d-flex justify-content-between align-items-center" style="margin-bottom: 1rem;">
+                        <p class="mb-0">Elije la nueva imagen que quieras subir</p>
+                        <div>
+                            <input class="form-control" type="file" id="avatar" name="avatar" style="display:none;">
+                            <label for="avatar" class="input-group-text btn btn-outline-primary ms-2">
+                                <i class="fa-solid fa-image"></i>
+                            </label>
+                        </div>
+                    </div>
+
+
+
                     <div>
-                        <input class="form-control" type="file" id="avatar" name="avatar" style="display:none;">
-                        <label for="avatar" class="input-group-text btn btn-outline-primary ms-2">
-                            <i class="fa-solid fa-image"></i>
-                        </label>
+                        <img id="previewAvatar" class="img-fluid rounded-1 shadow-sm"
+                            src="/img/users/<%= avatar ? avatar : 'defaultUserImg.jpg' %>"
+                            alt="Vista previa del avatar">
                     </div>
                 </div>
 
+                <div class="main-admin-header">
+                    <div class="modal-footer main-admin-header">
+                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
 
-
-                <div>
-                    <img id="previewAvatar" class="img-fluid rounded-1 shadow-sm"
-                        src="/img/users/<%= avatar ? avatar : 'defaultUserImg.jpg' %>" alt="Vista previa del avatar">
-                </div>
-            </div>
-
-            <div class="main-admin-header">
-                <div class="modal-footer main-admin-header">
-                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
-                    <form action="/users/profile?_method=PUT" method="POST">
-                        <button type="submit" class="btn btn-primary">Guardar
+                        <button type="submit" class="btn btn-primary">Actualizar
                         </button>
-                    </form>
-                </div>
-            </div>
 
+                    </div>
+                </div>
+            </form>
         </div>
     </div>
 </div>

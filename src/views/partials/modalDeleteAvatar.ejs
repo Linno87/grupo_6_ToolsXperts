@@ -9,26 +9,26 @@
                         aria-label="Close"></button>
                 </div>
             </div>
+            <form action="/users/deleteAvatar/avatar/<%= id %>?_method=DELETE" method="POST">
+                <div class="modal-body modal-body-background">
+                    <p>Vas a eliminar tu avatar ¿Estas
+                        seguro?.
+                    </p>
+                </div>
+                <div>
+                    <img src="/img/users/<%= avatar ? avatar : " defaultUserImg.jpg" %>"
+                    class="img-fluid rounded-1 shadow-sm">
+                </div>
+                <div class="main-admin-header">
+                    <div class="modal-footer main-admin-header">
+                        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Cancelar</button>
 
-            <div class="modal-body modal-body-background">
-                <p>Vas a eliminar tu avatar ¿Estas
-                    seguro?.
-                </p>
-            </div>
-            <div>
-                <img src="/img/users/<%= avatar ? avatar : " defaultUserImg.jpg" %>"
-                class="img-fluid rounded-1 shadow-sm">
-            </div>
-            <div class="main-admin-header">
-                <div class="modal-footer main-admin-header">
-                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Cancelar</button>
-                    <form action="/users/profile?_method=DELETE" method="POST">
                         <button type="submit" class="btn btn-danger">Eliminar
                         </button>
-                    </form>
-                </div>
-            </div>
 
+                    </div>
+            </form>
         </div>
     </div>
+</div>
 </div>

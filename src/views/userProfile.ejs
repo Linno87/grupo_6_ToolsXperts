@@ -12,34 +12,35 @@
                 <div class="login_main profile_main">
 
                     <!-- FORMULARIO  -->
-                    <form id="profileForm" class="d-flex justify-content-center flex-wrap gap-3 p-5 "
-                        action="/users/profile?_method=PUT" method="POST" enctype="multipart/form-data">
 
-                        <!-- AVATAR -->
+                    <!-- AVATAR -->
 
 
 
 
-                        <div class="col-11 col-md-4 my-auto py-2 position-relative">
+                    <div class="col-11 col-md-4 my-auto py-2 position-relative">
 
-                            <img src="/img/users/<%= avatar ? avatar : " defaultUserImg.jpg" %>"
-                            class="img-fluid rounded-1 shadow-sm">
-                            <div class="card text-center">
-                                <div class="card-header">
-                                    <ul class="d-grid gap-2 d-md-flex justify-content-md-end">
-                                        <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal"
-                                            data-bs-target="#modalAvatarProfile<%=id%>">
-                                            <i class="fa-solid fa-file-pen fs-3"></i>
-                                        </button>
+                        <img src="/img/users/<%= avatar ? avatar : " defaultUserImg.jpg" %>"
+                        class="img-fluid rounded-1 shadow-sm">
+                        <div class="card text-center">
+                            <div class="card-header">
+                                <ul class="d-grid gap-2 d-md-flex justify-content-md-end">
+                                    <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal"
+                                        data-bs-target="#modalAvatarProfile<%=id%>">
+                                        <i class="fa-solid fa-file-pen fs-3"></i>
+                                    </button>
 
-                                        <button type="button" class="btn btn-outline-danger" data-bs-toggle="modal"
-                                            data-bs-target="#modalDeleteAvatar<%=id%>">
-                                            <i class="fa-solid fa-trash fs-3"></i>
-                                        </button>
-                                    </ul>
-                                </div>
+                                    <button type="button" class="btn btn-outline-danger" data-bs-toggle="modal"
+                                        data-bs-target="#modalDeleteAvatar<%=id%>">
+                                        <i class="fa-solid fa-trash fs-3"></i>
+                                    </button>
+                                </ul>
                             </div>
                         </div>
+                    </div>
+                    
+                    <form id="profileForm" class="d-flex justify-content-center flex-wrap gap-3 p-5 "
+                        action="/users/profile?_method=PUT" method="POST" enctype="multipart/form-data">
 
                         <div class="d-flex justify-content-between flex-wrap gap-2 col-md-6">
 
@@ -142,7 +143,7 @@
                             <button type="submit" class=" boton__general btn_login btn_profile ">Editar</button>
                         </div>
 
-                        <form>
+                    </form>
                 </div>
             </main>
             <script src="/javascripts/validationProfile.js"></script>
@@ -150,4 +151,5 @@
                 <%- include('partials/modalDeleteAvatar', { id: id }) %>
                     <%- include("partials/footer") %>
     </body>
+
 </html>
