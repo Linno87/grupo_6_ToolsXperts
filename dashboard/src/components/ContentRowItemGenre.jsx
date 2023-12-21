@@ -18,5 +18,5 @@ export const ContentRowItemBrand = ({ brandName, brandId }) => {
 
 ContentRowItemBrand.propTypes = {
     brandName: PropTypes.string,
-    brandId: PropTypes.string
+    brandId: PropTypes.number
 }
