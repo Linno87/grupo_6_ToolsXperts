@@ -17,7 +17,7 @@ window.onload = function () {
         this.classList.add("is-invalid");
         break;
         
-      case !/^[0-9 a-zA-ZñÑáéíóúÁÉÍÓÚ !@#$%^&*()_+:,.?/-]+$/.test(this.value.trim()):
+      case !/^[0-9 a-zA-ZñÑáéíóúÁÉÍÓÚ !@#$%^&*"~()_+:,.?/-]+$/.test(this.value.trim()):
         $("msg-name").innerHTML = "Solo se permiten letras, números y caracteres";
         this.classList.add("is-invalid");
         break;
@@ -145,7 +145,7 @@ window.onload = function () {
 
   $("description").addEventListener("blur", function (e) {
     switch (true) {
-      case !/^[0-9 a-zA-ZñÑáéíóúÁÉÍÓÚ !@#$%^&*()_+:,.?/-]+$/.test(this.value.trim()):
+      case !/^[0-9 a-zA-ZñÑáéíóúÁÉÍÓÚ !@#$%^&*()"~_+:,.?/-]+$/.test(this.value.trim()):
         $("msg-description").innerHTML = "Solo se permiten letras, números y caracteres";
         this.classList.add("is-invalid");
         break;

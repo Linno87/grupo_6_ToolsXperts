@@ -48,7 +48,7 @@ module.exports = {
         
 
 
-        const prices = rangoList(products.map(product =>product.price), 10000)
+        const prices = rangoList(filterArray.map(product =>product.price), 10000)
         
         if(discount==="true"){
           filterArray = filterArray.filter(product =>product.discount>0)
