@@ -1,4 +1,4 @@
-const $ = (id) => document.getElementById(id);
+let $ = (id) => document.getElementById(id);
 
 window.onload = function () {
   $("first_name").addEventListener("focus", function (e) {
@@ -202,6 +202,26 @@ window.onload = function () {
         break;
       default:
         $("msgError-date").innerHTML = null;
+        this.classList.add("is-valid");
+        this.classList.remove("is-invalid");
+        break;
+    }
+  });
+
+  $("gender").addEventListener("focus", function (e) {
+    $("msgError-gender").innerHTML = null;
+    this.classList.remove("is-invalid");
+    this.classList.remove("is-valid");
+  });
+  
+  $("gender").addEventListener("blur", function (e) {
+    switch (true) {
+      case !this.value.trim():
+        $("msgError-gender").innerHTML = "El género es obligatorio";
+        this.classList.add("is-invalid");
+        break;
+      default:
+        $("msgError-gender").innerHTML = null;
         this.classList.add("is-valid");
         this.classList.remove("is-invalid");
         break;

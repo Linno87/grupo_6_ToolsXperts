@@ -1,5 +1,3 @@
-
-
 const { validationResult } = require("express-validator");
 const { hashSync } = require("bcryptjs");
 const db = require('../../database/models')

@@ -81,7 +81,7 @@
                             </div>
                             <div class="col-12 col-md-6 mb-3 register_main_form_inp_box">
                                 <label class="form-label" for="gender">Género</label>
-                                <select class="form-select" name="gender" id="gender">
+                                <select class="form-select" name="gender">
                                     <option value="" disabled selected hidden>Elige tu género</option>
                                     <option value="hombre" <%=locals.old && (old.gender==='hombre' && 'selected' ) %>
                                         >Hombre
@@ -92,9 +92,7 @@
                                     <option value="otro" <%=locals.old && (old.gender==='otro' && 'selected' ) %>
                                         >Prefiero no
                                         decirlo</option>
-                                    <span id="msgError-gender" class="ms-2 text-danger fw-bold">
-                                        <%=locals.errors?.gender?.msg%>
-                                    </span>
+                                    
                                 </select>
                             </div>
                             <div>

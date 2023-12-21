@@ -47,4 +47,9 @@ module.exports = [
       }
       return true;
     }).withMessage("Las contraseñas no coinciden"),
+  check("gender")
+    .notEmpty()
+    .withMessage("Debes seleccionar una categoría")
+    .bail(),
+ 
 ];
