@@ -1,4 +1,4 @@
-import { getProducts } from "../services/products";
+import { getProducts } from "../../services/products";
 
 export const loader = async () => {
     try {
@@ -6,11 +6,9 @@ export const loader = async () => {
 
         if (!response) throw new Error("Error al traer los productos")
 
-        console.log(response.data);
         return response.data
 
     } catch (error) {
         console.log(error);
-        return null;
     }
 }

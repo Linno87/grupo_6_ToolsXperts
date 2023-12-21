@@ -53,16 +53,24 @@
             </div>
         </section>
 
-        <!-- OFERTAS -->
+      <!-- PRODUCTOS PRICIPALES -->
+      <h1>Los Productos Más Buscados</h1>
 
-        <h1>Ofertas Exclusivas</h1>
+      <!-- PRODUCTOS -->
 
-        <article class="home__main__article-ofertas">
-            <a href="/products?category=4"><img src="/img/ofertas/AMOLAORAS ofertas.png" alt="Oferta 1"></a>
-            <a href="/products?category=3"><img src="/img/ofertas/CALADORAS oferta.png" alt="Oferta 2"></a>
-            <a href="/products?category=2"><img src="/img/ofertas/Copia de TALADROS FACE.png" alt="Oferta 3"></a>
-            <a href="/products?category=3"><img src="/img/ofertas/Copia de CALADORAS FACE.png" alt="Oferta 4"></a>
-        </article>
+      <section class="home__main__section-productos">
+          <div class="swiper mySwiper3">
+              <div class="swiper-wrapper">
+                  <% products.forEach(product =>{ %>
+                      <div class="swiper-slide">
+                          <%- include('./partials/product',{
+                              ...product.dataValues
+                             }) %>
+                      </div>
+                  <% }) %>
+              </div>
+          </div>
+      </section>
 
         <!-- NUESTROS RUBROS -->
 
@@ -109,25 +117,16 @@
             </section>
         </div>
 
-        <!-- PRODUCTOS PRICIPALES -->
-        <h1>Los Productos Más Buscados</h1>
+          <!-- OFERTAS -->
 
-        <!-- PRODUCTOS -->
+          <h1>Ofertas Exclusivas</h1>
 
-        <section class="home__main__section-productos">
-            <div class="swiper mySwiper3">
-                <div class="swiper-wrapper">
-                    <% products.forEach(product =>{ %>
-                        <div class="swiper-slide">
-                            <%- include('./partials/product',{
-                                ...product.dataValues
-                               }) %>
-                        </div>
-                    <% }) %>
-                </div>
-            </div>
-        </section>
-
+          <article class="home__main__article-ofertas">
+              <a href="/products?category=4"><img src="/img/ofertas/AMOLAORAS ofertas.png" alt="Oferta 1"></a>
+              <a href="/products?category=3"><img src="/img/ofertas/CALADORAS oferta.png" alt="Oferta 2"></a>
+              <a href="/products?category=2"><img src="/img/ofertas/Copia de TALADROS FACE.png" alt="Oferta 3"></a>
+              <a href="/products?category=3"><img src="/img/ofertas/Copia de CALADORAS FACE.png" alt="Oferta 4"></a>
+          </article>
         
         <!-- CARRUSEL DE LOGOS DE MARCAS -->
         <section class="section--marcas">
