@@ -21,7 +21,6 @@ const { admin } = require('./controllers/indexController');
 const admincheck = require('./middlewares/admincheck');
 
 const app = express();
-
 app.use(cors({
   origin: "*",
   method: "GET, HEAD, PUT, PATCH, POST, DELETE",

@@ -6,15 +6,15 @@
                     class="fa-solid fa-globe globe"></i>
             </button>       
             <ul class="dropdown-menu dropdown-menu-globe">
-                <li><a class="dropdown-item">Español</a></li>
-                <li><a class="dropdown-item">Ingles</a></li>
-                <li><a class="dropdown-item">Portugues</a></li>
+                <li><a class="dropdown-item" id="translateEs">Español</a></li>
+                <li><a class="dropdown-item" id ="translateIn">Ingles</a></li>
+                <li><a class="dropdown-item" id="translatePt">Portugues</a></li>
             </ul>
         </div>
         <% if (locals.userLogin && locals.userLogin.roleId===1 ) { %>
             
             <a class="iconoAdmin" href="/admin"><i class="fas fa-user-lock"></i></a>
-            <li><a class="logout" href="/users/logout">Cerrar sesión</a><i class="far fa-window-close iconoCerrar"></i></li>
+            <li><a class="logout" href="/users/logout" id="es">Cerrar sesión</a><i class="far fa-window-close iconoCerrar"></i></li>
             <% } %>
                 <!--si de locals.loguin tiene información del usuario traeme su nombre, si no lo muestres-->
                 <% if (locals.userLogin && locals.userLogin.roleId===2) { %>

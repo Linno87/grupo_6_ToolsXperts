@@ -73,6 +73,8 @@ const addFavorite = async (req, res) => {
   }
 };
 
+
+
 const getAllProducts = async (req,res) => {
     try {
       
