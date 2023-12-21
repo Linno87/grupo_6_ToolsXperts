@@ -79,12 +79,12 @@
     background-color: #ffffff;
     border-radius: 53%;
     height: 26px;
-    width: 25px;
+    width: 30px;
     margin-left: 0px;
 }
 
 .login_main_redes i{
-    font-size: 31px;
+    font-size: 35px;
     margin-top: -3px;
     margin-left: -1px;
     color: var(--Rojo);
