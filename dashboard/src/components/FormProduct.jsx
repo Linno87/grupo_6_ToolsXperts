@@ -22,6 +22,8 @@ export const FormProduct = ({
     const inputImage = useRef(null);
     const [changeImage, setChangeImage] = useState(false);
 
+    const [errors, setErrors] = useState({});
+
     useEffect(() => {
         const getData = async () => {
             try {
@@ -47,7 +49,7 @@ export const FormProduct = ({
             }
         };
         getData()
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 
     const handleInputChange = ({ target }) => {
@@ -55,6 +57,13 @@ export const FormProduct = ({
             ...formValues,
             [target.name]: target.value,
         });
+
+        if (target.value) {
+            setErrors({
+                ...errors,
+                [target.name]: null,
+            });
+        }
     };
 
     const handleCleanForm = () => {
@@ -71,11 +80,52 @@ export const FormProduct = ({
         btnPrev.current.classList.remove('fa-sync-alt');
         imgPrev.current.src = "/img/products/producto-sin-imagen.png";
         setChangeImage(false)
+        setErrors({});
 
     };
 
+    const validateForm = () => {
+        let formErrors = {};
+
+        if (!formValues.name) {
+            formErrors.name = "El nombre es requerido";
+        }
+
+        if (!formValues.price) {
+            formErrors.price = "El precio es requerido";
+        }
+
+        if (!formValues.discount) {
+            formErrors.discount = "El descuento es requerido";
+        } else if (formValues.discount < 0 || formValues.discount > 100) {
+            formErrors.discount = "El descuento debe ser entre 0% y 100%"
+        }
+
+        if (!formValues.brandId) {
+            formErrors.brandId = "La marca es requerida";
+        }
+
+        if (!formValues.categoryId) {
+            formErrors.categoryId = "La categoria es requerida";
+        }
+
+        if (!formValues.description) {
+            formErrors.description = "La descripcion es requerida";
+        }else if(formValues.description.length < 20){
+            formErrors.description = "La descripcion debe tener como minímo 20 caracteres"
+        }
+
+        setErrors(formErrors);
+        return Object.keys(formErrors).length === 0;
+    };
+
+
     const handleSubmitForm = async (event) => {
         event.preventDefault();
+
+        if (!validateForm()) {
+            return;
+        }
 
         if (formValues.id) {
             const result = await updateProduct(formValues, formValues.id);
@@ -154,7 +204,12 @@ export const FormProduct = ({
                                 name="name"
                                 onChange={handleInputChange}
                                 value={formValues.name}
+                                isInvalid={!!errors.name}
+                                isValid={formValues.name && !errors.name}
                             />
+                            <Form.Control.Feedback type="invalid">
+                                {errors.name}
+                            </Form.Control.Feedback>
                         </Form.Group>
                     </div>
 
@@ -165,7 +220,12 @@ export const FormProduct = ({
                             name="price"
                             onChange={handleInputChange}
                             value={formValues.price}
+                            isInvalid={!!errors.price}
+                            isValid={formValues.price && !errors.price}
                         />
+                        <Form.Control.Feedback type="invalid">
+                            {errors.price}
+                        </Form.Control.Feedback>
                     </Form.Group>
                     <Form.Group className="mb-3 col-12 col-md-6">
                         <Form.Label>Descuento</Form.Label>
@@ -174,7 +234,12 @@ export const FormProduct = ({
                             name="discount"
                             onChange={handleInputChange}
                             value={formValues.discount}
+                            isInvalid={!!errors.discount}
+                            isValid={formValues.discount && !errors.discount}
                         />
+                        <Form.Control.Feedback type="invalid">
+                            {errors.discount}
+                        </Form.Control.Feedback>
                     </Form.Group>
                     <Form.Group className="mb-3 col-12">
                         <Form.Label>Marca</Form.Label>
@@ -183,6 +248,8 @@ export const FormProduct = ({
                             name="brandId"
                             onChange={handleInputChange}
                             value={formValues.brandId}
+                            isInvalid={!!errors.brandId}
+                            isValid={formValues.brandId && !errors.brandId}
                         >
                             {data.loading ? (
                                 <option hidden value="">
@@ -201,6 +268,9 @@ export const FormProduct = ({
                                 </>
                             )}
                         </Form.Select>
+                        <Form.Control.Feedback type="invalid">
+                            {errors.brandId}
+                        </Form.Control.Feedback>
                     </Form.Group>
                     <Form.Group className="mb-3 col-12">
                         <Form.Label>Categoria</Form.Label>
@@ -209,7 +279,8 @@ export const FormProduct = ({
                             name="categoryId"
                             onChange={handleInputChange}
                             value={formValues.categoryId}
-
+                            isInvalid={!!errors.categoryId}
+                            isValid={formValues.categoryId && !errors.categoryId}
                         >
                             {data.loading ? (
                                 <option hidden value="">
@@ -228,6 +299,9 @@ export const FormProduct = ({
                                 </>
                             )}
                         </Form.Select>
+                        <Form.Control.Feedback type="invalid">
+                            {errors.categoryId}
+                        </Form.Control.Feedback>
                     </Form.Group>
                     <Form.Group className="mb-3 col-12">
                         <Form.Label>Descripción</Form.Label>
@@ -237,7 +311,12 @@ export const FormProduct = ({
                             onChange={handleInputChange}
                             value={formValues.description}
                             style={{ resize: "none" }}
+                            isInvalid={!!errors.description}
+                            isValid={formValues.description && !errors.description}
                         />
+                        <Form.Control.Feedback type="invalid">
+                            {errors.description}
+                        </Form.Control.Feedback>
                     </Form.Group>
                     <div className="d-flex justify-content-around w-100">
                         <Button
