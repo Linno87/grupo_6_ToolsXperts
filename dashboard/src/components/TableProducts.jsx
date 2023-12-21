@@ -1,5 +1,4 @@
 import { Card, Table } from "react-bootstrap"
-import { FormSearchProduct } from "./FormSearchProduct"
 import PropTypes from "prop-types";
 import { TableItemProduct } from "./TableItemProduct";
 import ReactPaginate from "react-paginate";
@@ -26,8 +25,7 @@ export const TableProducts = ({
     return (
         <Card>
             <Card.Body>
-                <div className="d-flex justify-content-between">
-                    <FormSearchProduct />
+                <div className="d-flex justify-content-end">
 
                     <ReactPaginate
                         pageCount={pageCount}
@@ -76,6 +74,29 @@ export const TableProducts = ({
                         </tbody>
                     </Table>
                 )}
+                <div className="d-flex justify-content-end">
+
+                    <ReactPaginate
+                        pageCount={pageCount}
+                        breakLabel="..."
+                        nextLabel=">"
+                        previousLabel="<"
+                        pageRangeDisplayed={4}
+                        onPageChange={handlePageClick}
+                        breakClassName="page-item"
+                        breakLinkClassName="page-link"
+                        marginPagesDisplayed={2}
+                        containerClassName="pagination justify-content-center cursorPage"
+                        pageClassName="page-item"
+                        pageLinkClassName="page-link"
+                        previousClassName="page-item"
+                        previousLinkClassName="page-link"
+                        nextClassName="page-item"
+                        nextLinkClassName="page-link"
+                        activeClassName="active"
+
+                    />
+                </div>
             </Card.Body>
         </Card>
     )
@@ -86,5 +107,5 @@ TableProducts.propTypes = {
     products: PropTypes.array,
     handleEditProduct: PropTypes.func,
     handleDeleteProduct: PropTypes.func,
-    itemsPerPage : PropTypes.number
-  };
+    itemsPerPage: PropTypes.number
+};
