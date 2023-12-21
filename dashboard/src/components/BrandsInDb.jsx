@@ -22,7 +22,7 @@ export const BrandsInDb = () => {
                 <div className="card-body">
                     <div className="row">
                         {brands.map((brand, index) => (
-                            <ContentRowItemBrand key={index} brandName={brand.name} />
+                            <ContentRowItemBrand key={index} brandName={brand.name} brandId={brand.id} />
                         ))}
                     </div>
                 </div>
